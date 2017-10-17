@@ -36,7 +36,7 @@ FACT2:
 		Amount: 1
 	ProvidesPrerequisite@buildingname:
 	Production:
-		Produces: Building.Fact, Defenses.Fact, Infantry.Fact
+		Produces: Building.Fact, Defenses.Fact, Infantry.Fact, Infantry1.Fact
 	ProductionQueue@FactBuilding:
 		Type: Building.Fact
 		Factions: gdi, nod
@@ -60,7 +60,15 @@ FACT2:
 		BuildSpeed: 40
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
+		ReadyAudio: 
+	ProductionQueue@FactInfUpgrade2:
+		Type: Infantry1.Fact
+		Factions: gdi, nod
+		Group: Infantry
+		BuildSpeed: 40
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: 
 	BaseBuilding:
 	ProductionBar@DefenseFact:
 		ProductionType: Defenses.Fact
@@ -68,6 +76,8 @@ FACT2:
 		ProductionType: Building.Fact
 	ProductionBar@InfantryFact:
 		ProductionType: Infantry.Fact
+	ProductionBar@Infantry1Fact:
+		ProductionType: Infantry1.Fact
 	BaseProvider:
 		Cooldown: 35
 		Range: 18c0   
@@ -183,7 +193,7 @@ E22FACTORY:
 		BuildDuration: 300
 		BuildPaletteOrder: 65
 		Queue: Building.Fact
-		Prerequisites: nuk2new
+		Prerequisites: nukenew, nuk2new
 		Description: Trains Mortar infantry.\n Strong vs large ammounts of Units.
 	Building:
 		Footprint: xx xx ==
@@ -320,7 +330,7 @@ E5FACTORY:
 		BuildDuration: 300
 		BuildPaletteOrder: 100
 		Queue: Building.Fact
-		Prerequisites: newhosp
+		Prerequisites: labnew, newhosp
 		Description: Trains chemical infantry. \n Instant kills nearly every other infantry, very tanky.
 	Building:
 		Footprint: xx xx ==
@@ -366,7 +376,7 @@ RMBOFACTORY:
 		BuildDuration: 300
 		BuildPaletteOrder: 90
 		Queue: Building.Fact
-		Prerequisites: radarnew, forb
+		Prerequisites: nukenew, nuk2new, radarnew, labnew, newhosp, forb
 		Description: Trains Commando infantry.\n Elite sniper infantry unit.\n  Strong vs Infantry.
 	Building:
 		Footprint: xx xx ==
@@ -517,7 +527,7 @@ CARFACTORY2:
 		BuildDuration: 300
 		BuildPaletteOrder: 80
 		Queue: Building.Fact
-		Prerequisites: hammo
+		Prerequisites: lammo, hammo
 		Description: Produces Medium Tanks.\n General-Purpose Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
 	Building:
 		Footprint: xxx === ===
@@ -568,7 +578,7 @@ CARFACTORY3:
 		BuildDuration: 300
 		BuildPaletteOrder: 70
 		Queue: Building.Fact
-		Prerequisites: fammo
+		Prerequisites: lammo, hammo, fammo
 		Description: Produces Multi Launch Rocket Systems.\n Long range rocket artillery.\n  Strong vs all Ground units.
 	Building:
 		Footprint: _x_ xxx x=x ===
@@ -619,7 +629,7 @@ CARFACTORY4:
 		BuildDuration: 300
 		BuildPaletteOrder: 170
 		Queue: Building.Fact
-		Prerequisites: fammo, forb
+		Prerequisites: lammo, hammo, fammo, labnew, newhosp, forb
 		Description: Produces Mammoth Tanks.\n Heavily armored Tank.\nCan attack Aircraft.\n  Strong vs Everything
 	Building:
 		Footprint: _____ xxxxx xxxxx xxxxx xxxxx =====
@@ -665,7 +675,7 @@ SECRETFACTORY1:
 		BuildDuration: 300
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
-		Prerequisites: forb, fammo, ~tmplnew
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, ~tmplnew
 		Description: Produces Flying Obelisk's. \n Attacks ground only!
 	Building:
 		Footprint: xxx xxx xxx ===
@@ -709,7 +719,7 @@ SECRETFACTORY2:
 		BuildDuration: 300
 		BuildPaletteOrder: 310
 		Queue: Building.Fact
-		Prerequisites: forb, radarnew, ~missnew
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, ~missnew
 		Description: Produces Flying Advanced Guardtower's.\n Can Attack ground and air units.
 	Building:
 		Footprint: xxx xxx xxx ===
@@ -754,7 +764,7 @@ SECRETFACTORY3:
 		BuildDuration: 300
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
-		Prerequisites: fammo, radarnew, ~tmplnew
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, ~tmplnew
 		Description: Produces Nuclear Command Vehicle's.\n Kills everything, weak vs aircraft.
 	Building:
 		Footprint: ____ xxxx xxxx ====
@@ -801,7 +811,7 @@ SECRETFACTORY4:
 		BuildDuration: 300
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
-		Prerequisites: newhosp, nuk2new, ~missnew
+		Prerequisites: labnew, newhosp, nukenew, nuk2new, ~missnew
 		Description: Produces Mobile Ioncannon's. The Ultimative Blob killer.
 	Building:
 		Footprint: ____ xxxx xxxx ====
@@ -889,7 +899,7 @@ AIRFACT1:
 		BuildDuration: 300
 		BuildPaletteOrder: 140
 		Queue: Building.Fact
-		Prerequisites: newhosp, hammo
+		Prerequisites: labnew, newhosp, lammo, hammo
 		Description: Produces Orca's.\n Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Cannot target Infantry
 	Building:
 		Footprint: xx xx
@@ -932,7 +942,7 @@ AIRFACT2:
 		BuildDuration: 300
 		BuildPaletteOrder: 150
 		Queue: Building.Fact
-		Prerequisites: newhosp, nuk2new
+		Prerequisites: labnew, newhosp, nukenew, nuk2new
 		Description: Produces Apache Longbow's.\n Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and Aircraft\n  Can't target Tanks
 	Building:
 		Footprint: xx xx
@@ -976,7 +986,7 @@ CARFACTORY5:
 		BuildDuration: 300
 		BuildPaletteOrder: 160
 		Queue: Building.Fact
-		Prerequisites: radarnew
+		Prerequisites: nukenew, nuk2new, radarnew
 		Description: Produces Artillery.\n Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
 	Building:
 		Footprint: __xx xxxx xxxx ====
@@ -1024,7 +1034,7 @@ CARFACTORY6:
 		BuildDuration: 300
 		BuildPaletteOrder: 70
 		Queue: Building.Fact
-		Prerequisites: forb
+		Prerequisites: labnew, newhosp, forb
 		Description: Produces Flametanks.\n Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
 	Building:
 		Footprint: ___ xxx x=x ===
@@ -1070,7 +1080,7 @@ CARFACTORY7:
 		BuildDuration: 300
 		BuildPaletteOrder: 110
 		Queue: Building.Fact
-		Prerequisites: newhosp
+		Prerequisites: labnew, newhosp
 		Description: Produces Anti Air Rocket Launcher.\n Most powerful anti-air unit.\nCannot attack Ground units.
 	Building:
 		Footprint: xxxx xxxx ====
@@ -1168,7 +1178,7 @@ CARFACTORY10:
 		BuildDuration: 300
 		BuildPaletteOrder: 100
 		Queue: Building.Fact
-		Prerequisites: nuk2new, fammo
+		Prerequisites: nukenew, nuk2new, lammo, hammo, fammo
 		Description: Produces Stealth Tanks.\n Long-range missile tank that can cloak.\n Attacks only Buildings!
 	Building:
 		Footprint: xxx xxx ===
@@ -1510,7 +1520,6 @@ SILLYFACT6:
 		Range: 5c0
 	WithBuildingBib:
 		HasMinibib: Yes
-	
 	Exit@1:
 		SpawnOffset: -0,-0,0
 		ExitCell: 0,2

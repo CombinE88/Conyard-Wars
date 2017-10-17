@@ -29,7 +29,7 @@ CASH:
 		Amount: 2
 		ShowTicks: true
 	Valued:
-		Cost: 800
+		Cost: 400
 	Tooltip:
 		Name: Economic Center
 	Buildable:
@@ -38,6 +38,7 @@ CASH:
 		BuildLimit: 1 
 		IconPalette: ra
 		Description: Provides Economic Techtree
+		Prerequisites: cashtech1, !cash, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -51,9 +52,12 @@ CASH:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname: 
 	WithDeathAnimation:
-		DeathSequencePalette: raplayer	 
+		DeathSequencePalette: raplayer	
+	ProvidesPrerequisite@self: 
+		Prerequisite: cash 
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
 
 CASH2:
 	Inherits: ^BaseBuilding2
@@ -61,14 +65,14 @@ CASH2:
 	RenderSprites:
 		Image: stockm
 	Valued:
-		Cost: 1600
+		Cost: 400
 	Tooltip:
 		Name: Stock Market
 	Buildable:
 		BuildPaletteOrder: 130
 		Queue: Defenses.Fact
 		BuildLimit: 1 
-		Prerequisites: cash
+		Prerequisites: cashtech2, cash, !cash2, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Description: Provides better Economic Techtree.\n Every minute you earn 10% of you opponents combined cash.
 	Building:
 		Footprint: xx xx ==
@@ -83,7 +87,10 @@ CASH2:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:	 
+	ProvidesPrerequisite@self: 
+		Prerequisite: cash2	 
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
  
 CASH3:
 	Inherits: ^BaseBuilding2
@@ -92,14 +99,14 @@ CASH3:
 		Image: cash3
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 2250
+		Cost: 400
 	Tooltip:
 		Name: Bounty Station
 	Buildable:
 		BuildPaletteOrder: 160
 		Queue: Defenses.Fact
 		BuildLimit: 1 
-		Prerequisites: cash2
+		Prerequisites: cashtech3, cash2, !cash3, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		IconPalette: ra
 		Description: You gain a % money of the unitsvalue you kill.
 	Building:
@@ -115,9 +122,12 @@ CASH3:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname: 
 	WithDeathAnimation:
-		DeathSequencePalette: raplayer	  
+		DeathSequencePalette: raplayer	
+	ProvidesPrerequisite@self: 
+		Prerequisite: cash3  
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
  
 OILER:
 	Inherits: ^BaseBuilding2
@@ -139,12 +149,11 @@ OILER:
 	Tooltip:
 		Name: Oil Pump
 	Buildable:
-		BuildDuration: 1000
 		BuildPaletteOrder: 110
 		Queue: Defenses.Fact
-		BuildLimit: 3 
+		BuildLimit: 1
 		IconPalette: ra
-		Prerequisites: cash
+		Prerequisites: cash, ~!oiler, ~!oilert2
 		Description: Generates Money.\n Requires Economic Center Center to operate!
 	Building:
 		Footprint: x
@@ -185,12 +194,11 @@ OILER2:
 	Tooltip:
 		Name: Large Oil Pump
 	Buildable:
-		BuildDuration: 2600
 		BuildPaletteOrder: 140
 		Queue: Defenses.Fact
-		BuildLimit: 3 
+		BuildLimit: 1
 		IconPalette: ra
-		Prerequisites: cash2
+		Prerequisites: cash2, ~!oiler2, ~!oiler2t2
 		Description: Generates Money.\n Requires Economic Center Center to operate!
 	Building:
 		Footprint: __ xx ==
@@ -218,16 +226,15 @@ ARRAY:
 		Image: array
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 1500
+		Cost: 400
 	Tooltip:
 		Name: Secret upgrades monitoring station
 	Buildable:
-		BuildDuration: 2600
 		BuildPaletteOrder: 400
 		Queue: Defenses.Fact
 		BuildLimit: 1
 		IconPalette: ra
-		Prerequisites: labnew, nukenew, lammo
+		Prerequisites: labnew, nukenew, lammo, !array, , ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Description: Grants unit specific special upgrades.
 	Building:
 		Footprint: __ xx ==
@@ -242,7 +249,6 @@ ARRAY:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname: 
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer 
 	Production:
@@ -259,6 +265,10 @@ ARRAY:
 		SpawnOffset: 0,0,0
 		ExitCell: 0,0
 		ExitDelay: 0
+	ProvidesPrerequisite@self: 
+		Prerequisite: array
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
 		
 LABNEW:
 	Inherits: ^BaseBuilding2
@@ -268,7 +278,7 @@ LABNEW:
 	RenderSprites:
 		Image: bio
 	Valued:
-		Cost: 1350
+		Cost: 400
 	Tooltip:
 		Name: Experimental Weapons Center
 	Buildable:
@@ -276,6 +286,7 @@ LABNEW:
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		Description: Provides Technology
+        Prerequisites: !labnew, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -289,7 +300,12 @@ LABNEW:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:  
+	ProvidesPrerequisite@self: 
+		Prerequisite: labnew
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
+	ProvidesPrerequisite@cashtech1: 
+		Prerequisite: cashtech1 
 
 NEWHOSP:
 	Inherits: ^BaseBuilding2
@@ -299,12 +315,12 @@ NEWHOSP:
 	RenderSprites:
 		Image: newhosp
 	Valued:
-		Cost: 2100
+		Cost: 400
 	Tooltip:
 		Name: Advanced Experimental Weapons Center
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: labnew
+		Prerequisites: labnew, !newhosp, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		Description: Provides Technology
@@ -321,7 +337,12 @@ NEWHOSP:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:   
+	ProvidesPrerequisite@self: 
+		Prerequisite: newhosp
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
+	ProvidesPrerequisite@cashtech2: 
+		Prerequisite: cashtech2
 	
 	
 FORB:
@@ -333,13 +354,12 @@ FORB:
 		Image: lfact
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 3150
+		Cost: 400
 	Tooltip:
 		Name: Forbidden Weapons Center
 	Buildable:
-		BuildDuration: 4200
 		BuildPaletteOrder: 90
-		Prerequisites: newhosp
+		Prerequisites: newhosp, !forb, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		IconPalette: ra
@@ -356,7 +376,6 @@ FORB:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:	
 	AirstrikePower@AirstrikeBomB:
 		Prerequisites: ~techlevel.superweapons
 		Icon: c17bombs
@@ -387,6 +406,12 @@ FORB:
 		DeathSequencePalette: raplayer	
 	ProvidesPrerequisite@Endgame: 
 		Prerequisite: endgame
+	ProvidesPrerequisite@self: 
+		Prerequisite: forb
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
+	ProvidesPrerequisite@cashtech3: 
+		Prerequisite: cashtech3
         
 NUKENEW:
 	Inherits: ^BaseBuilding2
@@ -394,12 +419,13 @@ NUKENEW:
 	RenderSprites:
 		Image: nuke
 	Valued:
-		Cost: 900
+		Cost: 400
 	Tooltip:
 		Name: Powerplant
 	Buildable:
 		BuildPaletteOrder: 10
 		Queue: Defenses.Fact
+        Prerequisites: !nukenew, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
 		Description: Provides Technology
 	Building:
@@ -415,9 +441,14 @@ NUKENEW:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname: 
 	SelectionDecorations:
 		VisualBounds: 48,60,0,-3 
+	ProvidesPrerequisite@self: 
+		Prerequisite: nukenew
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
+	ProvidesPrerequisite@cashtech1: 
+		Prerequisite: cashtech1 
 
 LFACT:
 	Inherits: ^BaseBuilding2
@@ -426,7 +457,7 @@ LFACT:
 		Image: lfact
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 3000
+		Cost: 400
 	Tooltip:
 		Name: Factory
 	Building:
@@ -441,11 +472,14 @@ LFACT:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname: 
 	SelectionDecorations:
 		VisualBounds: 48,60,0,-3
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
+	ProvidesPrerequisite@self: 
+		Prerequisite: lfact
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
 		
 
 NUK2NEW:
@@ -454,13 +488,13 @@ NUK2NEW:
 	RenderSprites:
 		Image: hq
 	Valued:
-		Cost: 1650
+		Cost: 400
 	Tooltip:
 		Name: Communications Center
 	Buildable:
 		BuildPaletteOrder: 40
 		Queue: Defenses.Fact
-		Prerequisites: nukenew
+		Prerequisites: nukenew, !nuk2new, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
 		Description: Provides Technology and Radar
 	Building:
@@ -476,10 +510,15 @@ NUK2NEW:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:
 	ProvidesRadar:
 	SelectionDecorations:
-		VisualBounds: 48,60,0,-3		 
+		VisualBounds: 48,60,0,-3	
+	ProvidesPrerequisite@self: 
+		Prerequisite: nuk2new	
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0  
+	ProvidesPrerequisite@cashtech2: 
+		Prerequisite: cashtech2
 
 RADARNEW:
 	Inherits: ^BaseBuilding2
@@ -489,13 +528,12 @@ RADARNEW:
 	RenderSprites:
 		Image: b2new
 	Valued:
-		Cost: 2250
+		Cost: 400
 	Tooltip:
 		Name: Advance Communications Center
 	Buildable:
-		BuildDuration: 3000
 		BuildPaletteOrder: 70
-		Prerequisites: nuk2new
+		Prerequisites: nuk2new, !radarnew, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		Description: Provides Technology
@@ -512,7 +550,6 @@ RADARNEW:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:
 	IonCannonPower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: ioncannon
@@ -531,6 +568,12 @@ RADARNEW:
 	SupportPowerChargeBar:
 	ProvidesPrerequisite@Endgame: 
 		Prerequisite: endgame
+	ProvidesPrerequisite@self: 
+		Prerequisite: radarnew
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
+	ProvidesPrerequisite@cashtech3: 
+		Prerequisite: cashtech3
 		
 LAMMO:
 	Inherits: ^BaseBuilding2
@@ -540,12 +583,13 @@ LAMMO:
 	RenderSprites:
 		Image: nukenew
 	Valued:
-		Cost: 1050
+		Cost: 400
 	Tooltip:
 		Name: Light Weapon Depot
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Defenses.Fact
+        Prerequisites: !lammo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
 		Description: Provides Technology
 	Building:
@@ -561,9 +605,14 @@ LAMMO:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname: 
 	SelectionDecorations:
 		VisualBounds: 48,60,0,-3  
+	ProvidesPrerequisite@self: 
+		Prerequisite: lammo
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
+	ProvidesPrerequisite@cashtech1: 
+		Prerequisite: cashtech1 
 	
 HAMMO:
 	Inherits: ^BaseBuilding2
@@ -573,12 +622,12 @@ HAMMO:
 	RenderSprites:
 		Image: nuk2new
 	Valued:
-		Cost: 1950
+		Cost: 400
 	Tooltip:
 		Name: Heavy Weapon Depot
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: lammo
+		Prerequisites: lammo, !hammo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		Description: Provides Technology
@@ -595,9 +644,14 @@ HAMMO:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname: 
 	SelectionDecorations:
 		VisualBounds: 72,64,0,-5
+	ProvidesPrerequisite@self: 
+		Prerequisite: hammo
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
+	ProvidesPrerequisite@cashtech2: 
+		Prerequisite: cashtech2
 FAMMO:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
@@ -606,13 +660,12 @@ FAMMO:
 	RenderSprites:
 		Image: fixnew
 	Valued:
-		Cost: 2850
+		Cost: 400
 	Tooltip:
 		Name: Ammo Factory
 	Buildable:
-		BuildDuration: 3800
 		BuildPaletteOrder: 80
-		Prerequisites: hammo
+		Prerequisites: hammo, !fammo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		Description: Provides Technology, grants Airstrike
@@ -653,11 +706,18 @@ FAMMO:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@Endgame: 
 		Prerequisite: endgame
+	ProvidesPrerequisite@self: 
+		Prerequisite: fammo
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
+	ProvidesPrerequisite@cashtech3: 
+		Prerequisite: cashtech3
    
-		
+
+# -- neutral buildings capturable ---
+   
 MISSNEW:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x2Shape
@@ -688,9 +748,6 @@ MISSNEW:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
 
-	
-		
-		
 FIXTECH:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
@@ -763,13 +820,12 @@ SILLYONE:
 		Image: pdox
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 3000
+		Cost: 400
 	Tooltip:
 		Name: Silly ChronoSphere
 	Buildable:
-		BuildDuration: 4000
 		BuildPaletteOrder: 300
-		Prerequisites: forb, fammo
+		Prerequisites: forb, fammo, !sillyone, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		Description: Enables Silly Technology!
@@ -787,9 +843,12 @@ SILLYONE:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
+	ProvidesPrerequisite@self: 
+		Prerequisite: sillyone
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
 	
 SILLYTWO:
 	Inherits: ^BaseBuilding2
@@ -800,13 +859,12 @@ SILLYTWO:
 		Image: stek
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 4500
+		Cost: 400
 	Tooltip:
 		Name: Silly Research Center
 	Buildable:
 		BuildPaletteOrder: 310
-		BuildDuration: 6000
-		Prerequisites: fammo, radarnew
+		Prerequisites: fammo, radarnew, !sillytwo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		IconPalette: ra
@@ -824,9 +882,12 @@ SILLYTWO:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:	
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer  
+	ProvidesPrerequisite@self: 
+		Prerequisite: sillytwo
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
 		
 		
 SILLYTHREE:
@@ -840,13 +901,12 @@ SILLYTHREE:
 		Image: iron
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 3150
+		Cost: 400
 	Tooltip:
 		Name: Silly Curtain
 	Buildable:
 		BuildPaletteOrder: 320
-		BuildDuration: 4200
-		Prerequisites: forb, radarnew
+		Prerequisites: forb, radarnew, !sillythree, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		IconPalette: ra
@@ -864,12 +924,36 @@ SILLYTHREE:
 	Reservable:
 	Power:
 		Amount: 0
-	ProvidesPrerequisite@buildingname:	
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer  
+	ProvidesPrerequisite@self: 
+		Prerequisite: sillythree
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0 
 
 endgame:
+	AlwaysVisible:
 	Tooltip:
 		Name: Atleast 1 finished Techtree
 	ProvidesPrerequisite@Endgame: 
 		Prerequisite: endgame
+
+CASHTECH1:
+	AlwaysVisible:
+	Tooltip:
+		Name: Atleast 1 level 1 Tech-building
+	ProvidesPrerequisite@buildingname: 
+    
+
+CASHTECH2:
+	AlwaysVisible:
+	Tooltip:
+		Name: Atleast 1 level 2 Tech-building
+	ProvidesPrerequisite@buildingname: 
+    
+
+CASHTECH3:
+	AlwaysVisible:
+	Tooltip:
+		Name: Atleast 1 level 3 Tech-building
+	ProvidesPrerequisite@buildingname: 

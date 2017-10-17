@@ -470,7 +470,7 @@ Upgrade.mtnkUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: carfactory2
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -487,7 +487,7 @@ Upgrade.mtnkUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 81
 		Prerequisites: carfactory2
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -504,7 +504,7 @@ Upgrade.mtnkUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 82
 		Prerequisites: carfactory2
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -513,23 +513,7 @@ Upgrade.mtnkUpgradeReload:
 		Image: Upgrademtnkicon3
 	ProvidesPrerequisite@mtnkUpgradeReload: 
 		Prerequisite: mtnkUpgradeReload
-		
-Upgrade.mtnknapalm:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Medium Tank Chembomb
-	Buildable:
-		BuildPaletteOrder: 80
-		Prerequisites: carfactory2
-		Queue: Upgrade.Array
-		BuildLimit: 1
-		Description: Increase massive the weapon spread and damage to infantry.
-	Valued:
-		Cost: 2500
-	RenderSprites:
-		Image: mtkchemupgrade
-	ProvidesPrerequisite@mtnknapalm: 
-		Prerequisite: mtnknapalm  
+
 	
 Upgrade.htnkUpgradeDamage:
 	AlwaysVisible:
@@ -538,7 +522,7 @@ Upgrade.htnkUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 170
 		Prerequisites: carfactory4
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -555,7 +539,7 @@ Upgrade.htnkUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 171
 		Prerequisites: carfactory4
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -572,7 +556,7 @@ Upgrade.htnkUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 172
 		Prerequisites: carfactory4
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -587,7 +571,7 @@ Upgrade.msamUpgradeDamage:
 	Tooltip:
 		Name: upgrade Rocket Launcher Damage 
 	Buildable:
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 75
 		Prerequisites: carfactory3
 		Queue: Infantry.Fact
 		BuildLimit: 1
@@ -604,7 +588,7 @@ Upgrade.msamUpgradeHealth:
 	Tooltip:
 		Name: upgrade Rocket Launcher Health
 	Buildable:
-		BuildPaletteOrder: 71
+		BuildPaletteOrder: 76
 		Prerequisites: carfactory3
 		Queue: Infantry.Fact
 		BuildLimit: 1
@@ -621,7 +605,7 @@ Upgrade.msamUpgradeReload:
 	Tooltip:
 		Name: upgrade Rocket Launcher Reload
 	Buildable:
-		BuildPaletteOrder: 72
+		BuildPaletteOrder: 77
 		Prerequisites: carfactory3
 		Queue: Infantry.Fact
 		BuildLimit: 1
@@ -640,7 +624,7 @@ Upgrade.heliUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 150
 		Prerequisites: airfact2
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -657,7 +641,7 @@ Upgrade.heliUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 151
 		Prerequisites: airfact2
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -674,7 +658,7 @@ Upgrade.heliUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 152
 		Prerequisites: airfact2
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -692,7 +676,7 @@ Upgrade.orcaUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 140
 		Prerequisites: airfact1
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -709,7 +693,7 @@ Upgrade.orcaUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 141
 		Prerequisites: airfact1
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -726,7 +710,7 @@ Upgrade.orcaUpgradeRange:
 	Buildable:
 		BuildPaletteOrder: 142
 		Prerequisites: airfact1
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -742,9 +726,9 @@ Upgrade.stnkUpgradeDamage:
 	Tooltip:
 		Name: upgrade Stealth Tank Damage 
 	Buildable:
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 105
 		Prerequisites: carfactory10
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -759,9 +743,9 @@ Upgrade.stnkUpgradeHealth:
 	Tooltip:
 		Name: upgrade Stealth Tank Health
 	Buildable:
-		BuildPaletteOrder: 101
+		BuildPaletteOrder: 106
 		Prerequisites: carfactory10
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -776,9 +760,9 @@ Upgrade.stnkUpgradeReload:
 	Tooltip:
 		Name: upgrade Stealth Tank Reload
 	Buildable:
-		BuildPaletteOrder: 102
+		BuildPaletteOrder: 107
 		Prerequisites: carfactory10
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -846,7 +830,7 @@ Upgrade.mlrsUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 110
 		Prerequisites: carfactory7
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -863,7 +847,7 @@ Upgrade.mlrsUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 111
 		Prerequisites: carfactory7
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -880,7 +864,7 @@ Upgrade.mlrsUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 112
 		Prerequisites: carfactory7
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 35%
 	Valued:
@@ -1001,7 +985,7 @@ Upgrade.fawrUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 300
 		Prerequisites: secretfactory2, ~missnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -1018,7 +1002,7 @@ Upgrade.fawrUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 301
 		Prerequisites: secretfactory2, ~missnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -1035,7 +1019,7 @@ Upgrade.fawrUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 302
 		Prerequisites: secretfactory2, ~missnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -1052,7 +1036,7 @@ Upgrade.tmplsUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 310
 		Prerequisites: secretfactory1, ~tmplnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -1069,7 +1053,7 @@ Upgrade.tmplsUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 311
 		Prerequisites: secretfactory1, ~tmplnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -1086,7 +1070,7 @@ Upgrade.tmplsUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 312
 		Prerequisites: secretfactory1, ~tmplnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -1104,7 +1088,7 @@ Upgrade.guntnkUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 330
 		Prerequisites: secretfactory3, ~tmplnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -1121,7 +1105,7 @@ Upgrade.guntnkUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 331
 		Prerequisites: secretfactory3, ~tmplnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -1138,7 +1122,7 @@ Upgrade.guntnkUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 332
 		Prerequisites: secretfactory3, ~tmplnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -1156,7 +1140,7 @@ Upgrade.moicoUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 320
 		Prerequisites: secretfactory4, ~missnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -1173,7 +1157,7 @@ Upgrade.moicoUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 321
 		Prerequisites: secretfactory4, ~missnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -1190,7 +1174,7 @@ Upgrade.moicoUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 322
 		Prerequisites: secretfactory4, ~missnew
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -1207,7 +1191,7 @@ Upgrade.tranUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 135
 		Prerequisites: airfact0
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
@@ -1224,7 +1208,7 @@ Upgrade.tranUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 136
 		Prerequisites: airfact0
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
@@ -1241,7 +1225,7 @@ Upgrade.tranUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 137
 		Prerequisites: airfact0
-		Queue: Infantry.Fact
+		Queue: Infantry1.Fact
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:

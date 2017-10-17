@@ -17,6 +17,24 @@ Upgrade.e1fire:
 	ProvidesPrerequisite@e1fire: 
 		Prerequisite: e1fire
 		
+		
+Upgrade.mtnknapalm:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Medium Tank Chembomb
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: carfactory2
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Increase massive the weapon spread and damage to infantry.
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: mtkchemupgrade
+	ProvidesPrerequisite@mtnknapalm: 
+		Prerequisite: mtnknapalm  
+        
 Upgrade.msamfire:
 	AlwaysVisible:
 	Tooltip:

@@ -19,6 +19,11 @@ CashValuesRight = {0,0,0}
 ExtraCash = function()	
 	for i = 1,#TeamLeft do
 		if TeamLeft[i] ~= nil and TeamLeft[i].HasPrerequisites({"cash2"}) then
+		
+			local stockmarked = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
+				return C.Owner == TeamLeft[i] and (C.Type == "cash2" or C.Type == "cash2t2" or C.Type == "cash2t3" or C.Type == "cash2t4" or C.Type == "cash2t5" or C.Type == "cash2t6" or C.Type == "cash2t7" or C.Type == "cash2t8" or C.Type == "cash2t9" or C.Type == "cash2t10" or C.Type == "cash2t11" or C.Type == "cash2t12" or C.Type == "cash2t13" or C.Type == "cash2t14" or C.Type == "cash2t15" or C.Type == "cash2t16")
+			end)	
+		
 			local cashier = 0
 			for a=1,#TeamRight do
 				if TeamRight[a] ~= nil and not TeamRight[a].HasNoRequiredUnits() then
@@ -26,13 +31,17 @@ ExtraCash = function()
 				end
 			end		
 			TeamLeft[i].Cash = TeamLeft[i].Cash + cashier
-			local stockmarked = TeamLeft[i].GetActorsByType("cash2")
 			Media.FloatingText("+" .. tostring(cashier) .. "$", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, TeamLeft[i].Color)
-			
+			Media.DisplayMessage("Player " .. TeamLeft[i].Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!", prefix = "Stockmarked: ", TeamLeft[i].Color)
 		end
 	end
 	for i = 1,#TeamRight do
 		if TeamRight[i] ~= nil and TeamRight[i].HasPrerequisites({"cash2"}) then
+			
+			local stockmarked = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
+				return C.Owner == TeamLeft[i] and (C.Type == "cash2" or C.Type == "cash2t2" or C.Type == "cash2t3" or C.Type == "cash2t4" or C.Type == "cash2t5" or C.Type == "cash2t6" or C.Type == "cash2t7" or C.Type == "cash2t8" or C.Type == "cash2t9" or C.Type == "cash2t10" or C.Type == "cash2t11" or C.Type == "cash2t12" or C.Type == "cash2t13" or C.Type == "cash2t14" or C.Type == "cash2t15" or C.Type == "cash2t16")
+			end)
+			
 			local cashier = 0
 			for a=1,#TeamLeft do
 				if TeamLeft[a] ~= nil and not TeamLeft[a].HasNoRequiredUnits() then
@@ -42,7 +51,7 @@ ExtraCash = function()
 			TeamRight[i].Cash = TeamRight[i].Cash + cashier
 			local stockmarked = TeamRight[i].GetActorsByType("cash2")
 			Media.FloatingText("+" .. tostring(cashier) .. "$", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, TeamRight[i].Color)
-			
+			Media.DisplayMessage("Player " .. TeamLeft[i].Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!", prefix = "Stockmarked: ", Color, TeamRight[i].Color)
 		end
 	end
 	for i=1,3 do
@@ -255,6 +264,13 @@ WorldLoaded = function()
 				end
 			end
 		end
+		Media.DisplayMessage("Welcome to Conyard Wars!", prefix = "Conyard Wars: ")
+		Trigger.AfterDelay(DateTime.Seconds(3), function()
+			Media.DisplayMessage("Keep in mind: the price of each tech-building will increase by '400' with each tech-building you already build!", prefix = "Conyard Wars: ")
+		end)
+		Trigger.AfterDelay(DateTime.Seconds(10), function()
+			Media.DisplayMessage("Regular unit-upgrades are found in two tabs under the 'Heading'!", prefix = "Conyard Wars: ")
+		end)
 	end)
 	
 	-- more AI/ Bots cheats
@@ -512,9 +528,10 @@ KilledUnit = function(Unit,self,killer)
 		Media.FloatingText("+" .. tostring(cashgrant) .. "$", self.CenterPosition + WVec.New(0,-100,0), 20, OwnerKiller.Color)
 		OwnerKiller.Cash = OwnerKiller.Cash + cashgrant
 		local Bounty = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-			return C.Type == "cash3" and C.Owner == OwnerKiller
+			return C.Owner == OwnerKiller and (C.Type == "cash3" or C.Type == "cash3t2" or C.Type == "cash3t3" or C.Type == "cash3t4" or C.Type == "cash3t5" or C.Type == "cash3t6" or C.Type == "cash3t7" or C.Type == "cash3t8" or C.Type == "cash3t9" or C.Type == "cash3t10" or C.Type == "cash3t11" or C.Type == "cash3t12" or C.Type == "cash3t13" or C.Type == "cash3t14" or C.Type == "cash3t15" or C.Type == "cash3t16")
 		end)
 		Media.FloatingText("+" .. tostring(cashgrant) .. "$", Bounty[1].CenterPosition + WVec.New(0,-100,0), 20, OwnerKilled.Color)
+
 	end
 end
 

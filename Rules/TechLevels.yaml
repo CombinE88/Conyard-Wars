@@ -1,0 +1,2360 @@
+CASHT2:
+	Inherits: CASH
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+CASHT3:
+	Inherits: CASHT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+CASHT4:
+	Inherits: CASHT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+CASHT5:
+	Inherits: CASHT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+CASHT6:
+	Inherits: CASHT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+CASHT7:
+	Inherits: CASHT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+CASHT8:
+	Inherits: CASHT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+CASHT9:
+	Inherits: CASHT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+CASHT10:
+	Inherits: CASHT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+CASHT11:
+	Inherits: CASHT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+CASHT12:
+	Inherits: CASHT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+CASHT13:
+	Inherits: CASHT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+CASHT14:
+	Inherits: CASHT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+CASHT15:
+	Inherits: CASHT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+CASHT16:
+	Inherits: CASHT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: cashtech1, !cash, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+# ---- cash 2 ----
+
+        
+CASH2T2:
+	Inherits: CASH2
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+CASH2T3:
+	Inherits: CASH2T2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+CASH2T4:
+	Inherits: CASH2T3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+CASH2T5:
+	Inherits: CASH2T4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+CASH2T6:
+	Inherits: CASH2T5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+CASH2T7:
+	Inherits: CASH2T6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+CASH2T8:
+	Inherits: CASH2T7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+CASH2T9:
+	Inherits: CASH2T8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+CASH2T10:
+	Inherits: CASH2T9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+CASH2T11:
+	Inherits: CASH2T10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+CASH2T12:
+	Inherits: CASH2T11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+CASH2T13:
+	Inherits: CASH2T12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+CASH2T14:
+	Inherits: CASH2T13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+CASH2T15:
+	Inherits: CASH2T14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+CASH2T16:
+	Inherits: CASH2T15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: cashtech2, cash, !cash2, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+# ---- cash 3 ----
+
+        
+CASH3T2:
+	Inherits: CASH3
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+CASH3T3:
+	Inherits: CASH3T2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+CASH3T4:
+	Inherits: CASH3T3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+CASH3T5:
+	Inherits: CASH3T4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+CASH3T6:
+	Inherits: CASH3T5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+CASH3T7:
+	Inherits: CASH3T6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+CASH3T8:
+	Inherits: CASH3T7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+CASH3T9:
+	Inherits: CASH3T8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+CASH3T10:
+	Inherits: CASH3T9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+CASH3T11:
+	Inherits: CASH3T10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+CASH3T12:
+	Inherits: CASH3T11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+CASH3T13:
+	Inherits: CASH3T12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+CASH3T14:
+	Inherits: CASH3T13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+CASH3T15:
+	Inherits: CASH3T14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+CASH3T16:
+	Inherits: CASH3T15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: cashtech3, cash, cash2, !cash3, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+# ---- ARRAY ----
+
+        
+ARRAYT2:
+	Inherits: ARRAY
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+ARRAYT3:
+	Inherits: ARRAYT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+ARRAYT4:
+	Inherits: ARRAYT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+ARRAYT5:
+	Inherits: ARRAYT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+ARRAYT6:
+	Inherits: ARRAYT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+ARRAYT7:
+	Inherits: ARRAYT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+ARRAYT8:
+	Inherits: ARRAYT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+ARRAYT9:
+	Inherits: ARRAYT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+ARRAYT10:
+	Inherits: ARRAYT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+ARRAYT11:
+	Inherits: ARRAYT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+ARRAYT12:
+	Inherits: ARRAYT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+ARRAYT13:
+	Inherits: ARRAYT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+ARRAYT14:
+	Inherits: ARRAYT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+ARRAYT15:
+	Inherits: ARRAYT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+ARRAYT16:
+	Inherits: ARRAYT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+# ---- LABNEW ----
+
+        
+LABNEWT2:
+	Inherits: LABNEW
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+LABNEWT3:
+	Inherits: LABNEWT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+LABNEWT4:
+	Inherits: LABNEWT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+LABNEWT5:
+	Inherits: LABNEWT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+LABNEWT6:
+	Inherits: LABNEWT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+LABNEWT7:
+	Inherits: LABNEWT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+LABNEWT8:
+	Inherits: LABNEWT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+LABNEWT9:
+	Inherits: LABNEWT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+LABNEWT10:
+	Inherits: LABNEWT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+LABNEWT11:
+	Inherits: LABNEWT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+LABNEWT12:
+	Inherits: LABNEWT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+LABNEWT13:
+	Inherits: LABNEWT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+LABNEWT14:
+	Inherits: LABNEWT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+LABNEWT15:
+	Inherits: LABNEWT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+LABNEWT16:
+	Inherits: LABNEWT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: !labnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+# ---- NEWHOSP ----
+
+        
+NEWHOSPT2:
+	Inherits: NEWHOSP
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+NEWHOSPT3:
+	Inherits: NEWHOSPT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+NEWHOSPT4:
+	Inherits: NEWHOSPT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+NEWHOSPT5:
+	Inherits: NEWHOSPT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+NEWHOSPT6:
+	Inherits: NEWHOSPT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+NEWHOSPT7:
+	Inherits: NEWHOSPT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+NEWHOSPT8:
+	Inherits: NEWHOSPT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+NEWHOSPT9:
+	Inherits: NEWHOSPT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+NEWHOSPT10:
+	Inherits: NEWHOSPT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+NEWHOSPT11:
+	Inherits: NEWHOSPT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+NEWHOSPT12:
+	Inherits: NEWHOSPT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+NEWHOSPT13:
+	Inherits: NEWHOSPT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+NEWHOSPT14:
+	Inherits: NEWHOSPT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+NEWHOSPT15:
+	Inherits: NEWHOSPT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+NEWHOSPT16:
+	Inherits: NEWHOSPT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: labnew, !newhosp, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+# ---- FORB ----
+
+        
+FORBT2:
+	Inherits: FORB
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+FORBT3:
+	Inherits: FORBT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+FORBT4:
+	Inherits: FORBT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+FORBT5:
+	Inherits: FORBT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+FORBT6:
+	Inherits: FORBT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+FORBT7:
+	Inherits: FORBT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+FORBT8:
+	Inherits: FORBT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+FORBT9:
+	Inherits: FORBT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+FORBT10:
+	Inherits: FORBT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+FORBT11:
+	Inherits: FORBT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+FORBT12:
+	Inherits: FORBT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+FORBT13:
+	Inherits: FORBT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+FORBT14:
+	Inherits: FORBT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+FORBT15:
+	Inherits: FORBT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+FORBT16:
+	Inherits: FORBT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: labnew, newhosp, !forb, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+# ---- NUKENEW ----
+
+        
+NUKENEWT2:
+	Inherits: NUKENEW
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+NUKENEWT3:
+	Inherits: NUKENEWT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+NUKENEWT4:
+	Inherits: NUKENEWT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+NUKENEWT5:
+	Inherits: NUKENEWT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+NUKENEWT6:
+	Inherits: NUKENEWT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+NUKENEWT7:
+	Inherits: NUKENEWT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+NUKENEWT8:
+	Inherits: NUKENEWT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+NUKENEWT9:
+	Inherits: NUKENEWT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+NUKENEWT10:
+	Inherits: NUKENEWT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+NUKENEWT11:
+	Inherits: NUKENEWT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+NUKENEWT12:
+	Inherits: NUKENEWT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+NUKENEWT13:
+	Inherits: NUKENEWT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+NUKENEWT14:
+	Inherits: NUKENEWT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+NUKENEWT15:
+	Inherits: NUKENEWT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+NUKENEWT16:
+	Inherits: NUKENEWT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: !nukenew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+# ---- LFACT ----
+
+        
+LFACTT2:
+	Inherits: LFACT
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+LFACTT3:
+	Inherits: LFACTT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+LFACTT4:
+	Inherits: LFACTT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+LFACTT5:
+	Inherits: LFACTT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+LFACTT6:
+	Inherits: LFACTT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+LFACTT7:
+	Inherits: LFACTT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+LFACTT8:
+	Inherits: LFACTT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+LFACTT9:
+	Inherits: LFACTT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+LFACTT10:
+	Inherits: LFACTT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+LFACTT11:
+	Inherits: LFACTT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+LFACTT12:
+	Inherits: LFACTT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+LFACTT13:
+	Inherits: LFACTT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+LFACTT14:
+	Inherits: LFACTT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+LFACTT15:
+	Inherits: LFACTT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+LFACTT16:
+	Inherits: LFACTT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: !lfact, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+        
+# ---- NUK2NEW ----
+
+        
+NUK2NEWT2:
+	Inherits: NUK2NEW
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+NUK2NEWT3:
+	Inherits: NUK2NEWT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+NUK2NEWT4:
+	Inherits: NUK2NEWT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+NUK2NEWT5:
+	Inherits: NUK2NEWT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+NUK2NEWT6:
+	Inherits: NUK2NEWT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+NUK2NEWT7:
+	Inherits: NUK2NEWT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+NUK2NEWT8:
+	Inherits: NUK2NEWT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+NUK2NEWT9:
+	Inherits: NUK2NEWT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+NUK2NEWT10:
+	Inherits: NUK2NEWT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+NUK2NEWT11:
+	Inherits: NUK2NEWT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+NUK2NEWT12:
+	Inherits: NUK2NEWT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+NUK2NEWT13:
+	Inherits: NUK2NEWT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+NUK2NEWT14:
+	Inherits: NUK2NEWT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+NUK2NEWT15:
+	Inherits: NUK2NEWT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+NUK2NEWT16:
+	Inherits: NUK2NEWT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: nukenew, !nuk2new, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+        
+# ---- RADARNEW ----
+
+        
+RADARNEWT2:
+	Inherits: RADARNEW
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+RADARNEWT3:
+	Inherits: RADARNEWT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+RADARNEWT4:
+	Inherits: RADARNEWT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+RADARNEWT5:
+	Inherits: RADARNEWT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+RADARNEWT6:
+	Inherits: RADARNEWT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+RADARNEWT7:
+	Inherits: RADARNEWT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+RADARNEWT8:
+	Inherits: RADARNEWT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+RADARNEWT9:
+	Inherits: RADARNEWT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+RADARNEWT10:
+	Inherits: RADARNEWT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+RADARNEWT11:
+	Inherits: RADARNEWT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+RADARNEWT12:
+	Inherits: RADARNEWT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+RADARNEWT13:
+	Inherits: RADARNEWT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+RADARNEWT14:
+	Inherits: RADARNEWT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+RADARNEWT15:
+	Inherits: RADARNEWT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+RADARNEWT16:
+	Inherits: RADARNEWT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: nukenew, nuk2new, !radarnew, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+        
+# ---- LAMMO ----
+
+        
+LAMMOT2:
+	Inherits: LAMMO
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+LAMMOT3:
+	Inherits: LAMMOT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+LAMMOT4:
+	Inherits: LAMMOT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+LAMMOT5:
+	Inherits: LAMMOT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+LAMMOT6:
+	Inherits: LAMMOT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+LAMMOT7:
+	Inherits: LAMMOT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+LAMMOT8:
+	Inherits: LAMMOT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+LAMMOT9:
+	Inherits: LAMMOT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+LAMMOT10:
+	Inherits: LAMMOT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+LAMMOT11:
+	Inherits: LAMMOT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+LAMMOT12:
+	Inherits: LAMMOT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+LAMMOT13:
+	Inherits: LAMMOT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+LAMMOT14:
+	Inherits: LAMMOT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+LAMMOT15:
+	Inherits: LAMMOT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+LAMMOT16:
+	Inherits: LAMMOT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: !lammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+        
+# ---- HAMMO ----
+
+        
+HAMMOT2:
+	Inherits: HAMMO
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+HAMMOT3:
+	Inherits: HAMMOT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+HAMMOT4:
+	Inherits: HAMMOT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+HAMMOT5:
+	Inherits: HAMMOT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+HAMMOT6:
+	Inherits: HAMMOT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+HAMMOT7:
+	Inherits: HAMMOT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+HAMMOT8:
+	Inherits: HAMMOT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+HAMMOT9:
+	Inherits: HAMMOT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+HAMMOT10:
+	Inherits: HAMMOT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+HAMMOT11:
+	Inherits: HAMMOT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+HAMMOT12:
+	Inherits: HAMMOT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+HAMMOT13:
+	Inherits: HAMMOT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+HAMMOT14:
+	Inherits: HAMMOT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+HAMMOT15:
+	Inherits: HAMMOT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+HAMMOT16:
+	Inherits: HAMMOT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: lammo, !hammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+
+        
+# ---- FAMMO ----
+
+        
+FAMMOT2:
+	Inherits: FAMMO
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+FAMMOT3:
+	Inherits: FAMMOT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+FAMMOT4:
+	Inherits: FAMMOT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+FAMMOT5:
+	Inherits: FAMMOT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+FAMMOT6:
+	Inherits: FAMMOT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+FAMMOT7:
+	Inherits: FAMMOT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+FAMMOT8:
+	Inherits: FAMMOT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+FAMMOT9:
+	Inherits: FAMMOT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+FAMMOT10:
+	Inherits: FAMMOT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+FAMMOT11:
+	Inherits: FAMMOT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+FAMMOT12:
+	Inherits: FAMMOT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+FAMMOT13:
+	Inherits: FAMMOT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+FAMMOT14:
+	Inherits: FAMMOT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+FAMMOT15:
+	Inherits: FAMMOT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+FAMMOT16:
+	Inherits: HAMMOT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+        
+# ---- SILLYONE ----
+
+        
+SILLYONET2:
+	Inherits: SILLYONE
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+SILLYONET3:
+	Inherits: SILLYONET2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+SILLYONET4:
+	Inherits: SILLYONET3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+SILLYONET5:
+	Inherits: SILLYONET4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+SILLYONET6:
+	Inherits: SILLYONET5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+SILLYONET7:
+	Inherits: SILLYONET6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+SILLYONET8:
+	Inherits: SILLYONET7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+SILLYONET9:
+	Inherits: SILLYONET8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+SILLYONET10:
+	Inherits: SILLYONET9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+SILLYONET11:
+	Inherits: SILLYONET10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+SILLYONET12:
+	Inherits: SILLYONET11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+SILLYONET13:
+	Inherits: SILLYONET12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+SILLYONET14:
+	Inherits: SILLYONET13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+SILLYONET15:
+	Inherits: SILLYONET14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+SILLYONET16:
+	Inherits: HAMMOT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+        
+# ---- SILLYTWO ----
+
+        
+SILLYTWOT2:
+	Inherits: SILLYTWO
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+SILLYTWOT3:
+	Inherits: SILLYTWOT2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+SILLYTWOT4:
+	Inherits: SILLYTWOT3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+SILLYTWOT5:
+	Inherits: SILLYTWOT4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+SILLYTWOT6:
+	Inherits: SILLYTWOT5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+SILLYTWOT7:
+	Inherits: SILLYTWOT6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+SILLYTWOT8:
+	Inherits: SILLYTWOT7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+SILLYTWOT9:
+	Inherits: SILLYTWOT8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+SILLYTWOT10:
+	Inherits: SILLYTWOT9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+SILLYTWOT11:
+	Inherits: SILLYTWOT10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+SILLYTWOT12:
+	Inherits: SILLYTWOT11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+SILLYTWOT13:
+	Inherits: SILLYTWOT12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+SILLYTWOT14:
+	Inherits: SILLYTWOT13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+SILLYTWOT15:
+	Inherits: SILLYTWOT14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+SILLYTWOT16:
+	Inherits: HAMMOT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+        
+# ---- SILLYTHREE ----
+
+        
+SILLYTHREET2:
+	Inherits: SILLYTHREE
+	Valued:
+		Cost: 800
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~!tech1
+	ProvidesPrerequisite@tech1: 
+		Prerequisite: tech1 
+        
+SILLYTHREET3:
+	Inherits: SILLYTHREET2
+	Valued:
+		Cost: 1200
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~!tech2
+	ProvidesPrerequisite@tech2: 
+		Prerequisite: tech2
+        
+SILLYTHREET4:
+	Inherits: SILLYTHREET3
+	Valued:
+		Cost: 1600
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~!tech3
+	ProvidesPrerequisite@tech3: 
+		Prerequisite: tech3
+        
+SILLYTHREET5:
+	Inherits: SILLYTHREET4
+	Valued:
+		Cost: 2000
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+	ProvidesPrerequisite@tech4: 
+		Prerequisite: tech4  
+        
+SILLYTHREET6:
+	Inherits: SILLYTHREET5
+	Valued:
+		Cost: 2400
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+	ProvidesPrerequisite@tech5: 
+		Prerequisite: tech5 
+        
+SILLYTHREET7:
+	Inherits: SILLYTHREET6
+	Valued:
+		Cost: 2800
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+	ProvidesPrerequisite@tech6: 
+		Prerequisite: tech6
+        
+SILLYTHREET8:
+	Inherits: SILLYTHREET7
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+	ProvidesPrerequisite@tech7: 
+		Prerequisite: tech7
+        
+SILLYTHREET9:
+	Inherits: SILLYTHREET8
+	Valued:
+		Cost: 3600
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+	ProvidesPrerequisite@tech8: 
+		Prerequisite: tech8
+        
+SILLYTHREET10:
+	Inherits: SILLYTHREET9
+	Valued:
+		Cost: 4000
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+	ProvidesPrerequisite@tech9: 
+		Prerequisite: tech9
+        
+SILLYTHREET11:
+	Inherits: SILLYTHREET10
+	Valued:
+		Cost: 4400
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+	ProvidesPrerequisite@tech10: 
+		Prerequisite: tech10
+        
+SILLYTHREET12:
+	Inherits: SILLYTHREET11
+	Valued:
+		Cost: 4800
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+	ProvidesPrerequisite@tech11: 
+		Prerequisite: tech11
+        
+SILLYTHREET13:
+	Inherits: SILLYTHREET12
+	Valued:
+		Cost: 5200
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+	ProvidesPrerequisite@tech12: 
+		Prerequisite: tech12
+        
+SILLYTHREET14:
+	Inherits: SILLYTHREET13
+	Valued:
+		Cost: 5600
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+	ProvidesPrerequisite@tech13: 
+		Prerequisite: tech13
+        
+SILLYTHREET15:
+	Inherits: SILLYTHREET14
+	Valued:
+		Cost: 6000
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+	ProvidesPrerequisite@tech14: 
+		Prerequisite: tech14
+        
+SILLYTHREET16:
+	Inherits: HAMMOT15
+	Valued:
+		Cost: 6400
+	Buildable:
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+
+        
+# ---- OILER ----
+
+        
+OILERT2:
+	Inherits: OILER
+	Valued:
+		Cost: 1250
+	Buildable:
+		Prerequisites: ~oiler, ~!oilert2
+	ProvidesPrerequisite@oilert2: 
+		Prerequisite: oilert2
+        
+OILERT3:
+	Inherits: OILERT2
+	Valued:
+		Cost: 1800
+	Buildable:
+		Prerequisites: ~oilert2
+	ProvidesPrerequisite@oilert2: 
+		Prerequisite: oilert2
+        
+# ---- OILER2 ----
+
+        
+OILER2T2:
+	Inherits: OILER2
+	Valued:
+		Cost: 3200
+	Buildable:
+		Prerequisites: ~oiler2t2, ~!oiler2t2
+	ProvidesPrerequisite@oiler2t2: 
+		Prerequisite: oiler2t2
+        
+OILER2T3:
+	Inherits: OILER2T2
+	Valued:
+		Cost: 3500
+	Buildable:
+		Prerequisites: ~oiler2t2
+	ProvidesPrerequisite@oiler2t2: 
+		Prerequisite: oiler2t2

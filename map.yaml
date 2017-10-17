@@ -965,9 +965,9 @@ Actors:
 		Owner: Neutral
 		Location: 107,62
 
-Rules: Rules/Settings.yaml, Rules/Defaults.yaml, Rules/AI.yaml, Rules/Defenses.yaml, Rules/Factories.yaml, Rules/Techbuildings.yaml, Rules/Units.yaml, Rules/UnitLeviathan.yaml, Rules/UpgradesSpecial.yaml, Rules/UpgradesRegular.yaml, Rules/UpgradesLeviathan.yaml
+Rules: Rules/Settings.yaml, Rules/Defaults.yaml, Rules/AI.yaml, Rules/Defenses.yaml, Rules/Factories.yaml, Rules/Techbuildings.yaml, Rules/Units.yaml, Rules/UnitLeviathan.yaml, Rules/UpgradesSpecial.yaml, Rules/UpgradesRegular.yaml, Rules/UpgradesLeviathan.yaml ,Rules/TechLevels.yaml
 
-Sequences: Rules/sequences.yaml
+Sequences: Rules/Sequences.yaml
 
 Weapons: Rules/Weapons.yaml
 
