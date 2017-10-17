@@ -9,6 +9,8 @@ SecTechMid = {FIXT1, FIXT2, FIXT3}
 
 
 Factorys = {"e1factory","e2factory" ,"e3factory" ,"e4factory" ,"e5factory" ,"e22factory", "rmbofactory" ,"carfactory1", "carfactory2", "carfactory3", "carfactory4", "carfactory5", "carfactory6", "carfactory7" ,"carfactory8", "airfact1" ,"airfact2", "secretfactory1", "secretfactory2", "secretfactory3", "secretfactory4", "carfactorybg","carfactory10", "airfact0" , "sillyfact1", "sillyfact2", "sillyfact3", "sillyfact4", "sillyfact5", "sillyfact6", "leviathanfact"}
+IndexedFactorys = {}
+FactorysExits = {CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(2,2),CVec.New(1,5),CVec.New(3,3),CVec.New(2,3),CVec.New(3,1),CVec.New(3,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,-1),CVec.New(1,-1),CVec.New(2,3),CVec.New(2,3),CVec.New(0,2),CVec.New(0,2),CVec.New(1,1),CVec.New(1,2),CVec.New(1,2),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(2,3)}
 QueueUnits = {"e1new", "e2new","e3new","e4new","e5new","e22new","rmbonew", "jeepnew","mtnknew","msamnew","htnknew", "artynew", "ftnknew","mlrsnew","bikenew","orcanew","helinew","tmplangel","fatwr","guntank","moico","bggynew","stnknew", "trannew", "sillyca", "harvnew", "sillybadr", "flagplat", "discthrow", "lstnew", "leviathan"}
 QueueUnitsIndex = {}
 Values = {10,14,20,18,25,25,100, 30,45,50,100, 40, 30,20,20,55,60,120,120,70,160,30,45,25,200,150,200,175,100,150,1000}
@@ -18,40 +20,57 @@ CashValuesRight = {0,0,0}
 -- The Cash Bonus of the Stock Marked building
 ExtraCash = function()	
 	for i = 1,#TeamLeft do
-		if TeamLeft[i] ~= nil and TeamLeft[i].HasPrerequisites({"cash2"}) then
-		
-			local stockmarked = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-				return C.Owner == TeamLeft[i] and (C.Type == "cash2" or C.Type == "cash2t2" or C.Type == "cash2t3" or C.Type == "cash2t4" or C.Type == "cash2t5" or C.Type == "cash2t6" or C.Type == "cash2t7" or C.Type == "cash2t8" or C.Type == "cash2t9" or C.Type == "cash2t10" or C.Type == "cash2t11" or C.Type == "cash2t12" or C.Type == "cash2t13" or C.Type == "cash2t14" or C.Type == "cash2t15" or C.Type == "cash2t16")
-			end)	
+	
+		local _player = TeamLeft[i]
+	
+		if _player ~= nil and _player.HasPrerequisites({"cash2"}) then
 		
 			local cashier = 0
+			
 			for a=1,#TeamRight do
 				if TeamRight[a] ~= nil and not TeamRight[a].HasNoRequiredUnits() then
 					cashier = cashier + CashValuesRight[a]
 				end
 			end		
-			TeamLeft[i].Cash = TeamLeft[i].Cash + cashier
-			Media.FloatingText("+" .. tostring(cashier) .. "$", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, TeamLeft[i].Color)
-			Media.DisplayMessage("Player " .. TeamLeft[i].Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!","Stockmarked: ", TeamLeft[i].Color)
-		end
-	end
-	for i = 1,#TeamRight do
-		if TeamRight[i] ~= nil and TeamRight[i].HasPrerequisites({"cash2"}) then
+			
+			_player.Cash = _player.Cash + cashier
 			
 			local stockmarked = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-				return C.Owner == TeamLeft[i] and (C.Type == "cash2" or C.Type == "cash2t2" or C.Type == "cash2t3" or C.Type == "cash2t4" or C.Type == "cash2t5" or C.Type == "cash2t6" or C.Type == "cash2t7" or C.Type == "cash2t8" or C.Type == "cash2t9" or C.Type == "cash2t10" or C.Type == "cash2t11" or C.Type == "cash2t12" or C.Type == "cash2t13" or C.Type == "cash2t14" or C.Type == "cash2t15" or C.Type == "cash2t16")
+				return C.Owner == _player and (C.Type == "cash2" or C.Type == "cash2t2" or C.Type == "cash2t3" or C.Type == "cash2t4" or C.Type == "cash2t5" or C.Type == "cash2t6" or C.Type == "cash2t7" or C.Type == "cash2t8" or C.Type == "cash2t9" or C.Type == "cash2t10" or C.Type == "cash2t11" or C.Type == "cash2t12" or C.Type == "cash2t13" or C.Type == "cash2t14" or C.Type == "cash2t15" or C.Type == "cash2t16")
 			end)
 			
+			if stockmarked ~= nil then
+				Media.FloatingText("+" .. tostring(cashier) .. "$", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, _player.Color)
+				
+				Media.DisplayMessage("Player " .. _player.Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!","Stockmarked", _player.Color)
+			end
+		end
+	end
+
+	for i = 1,#TeamRight do
+	
+		local _player = TeamRight[i]
+	
+		if _player ~= nil and _player.HasPrerequisites({"cash2"}) then
+		
 			local cashier = 0
 			for a=1,#TeamLeft do
 				if TeamLeft[a] ~= nil and not TeamLeft[a].HasNoRequiredUnits() then
 					cashier = cashier + CashValuesLeft[a]
 				end
 			end
-			TeamRight[i].Cash = TeamRight[i].Cash + cashier
-			local stockmarked = TeamRight[i].GetActorsByType("cash2")
-			Media.FloatingText("+" .. tostring(cashier) .. "$", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, TeamRight[i].Color)
-			Media.DisplayMessage("Player " .. TeamLeft[i].Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!","Stockmarked: ", Color, TeamRight[i].Color)
+			
+			_player.Cash = _player.Cash + cashier
+			
+			local stockmarked = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
+				return C.Owner == _player and (C.Type == "cash2" or C.Type == "cash2t2" or C.Type == "cash2t3" or C.Type == "cash2t4" or C.Type == "cash2t5" or C.Type == "cash2t6" or C.Type == "cash2t7" or C.Type == "cash2t8" or C.Type == "cash2t9" or C.Type == "cash2t10" or C.Type == "cash2t11" or C.Type == "cash2t12" or C.Type == "cash2t13" or C.Type == "cash2t14" or C.Type == "cash2t15" or C.Type == "cash2t16")
+			end)
+			
+			if stockmarked ~= nil then
+				Media.FloatingText("+" .. tostring(cashier) .. "$", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, _player.Color)
+				
+				Media.DisplayMessage("Player " .. _player.Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!","Stockmarked", _player.Color)
+			end
 		end
 	end
 	for i=1,3 do
@@ -148,7 +167,7 @@ StartBuilding = function(Bldng)
 			Producer.Build({Queue},function(u) 
 		end)
 		Trigger.OnIdle(Producer,function(a) TriggerBuildagain(a,Queue,Number) end)
-			local act = Actor.Create(Queue,true,{Owner = Producer.Owner,Location = Producer.Location+CVec.New(0,2), Facing = 0})
+			local act = Actor.Create(Queue,true,{Owner = Producer.Owner,Location = Producer.Location+FactorysExits[IndexedFactorys[Producer.Type]], Facing = 0})
 			break
 		end
 	end
@@ -212,6 +231,10 @@ WorldLoaded = function()
 	for i,v in ipairs(QueueUnits) do
 		QueueUnitsIndex[v] = i
 	end
+	for i,v in ipairs(Factorys) do
+		IndexedFactorys[v] = i
+	end
+	
 	-- Basic Trigger Start: Unitmovement/ Factorie production/ MCV unfolding
 	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(64,64)),WDist.FromCells(128), function(a, id)
 		for k,v in ipairs(QueueUnits) do
@@ -264,12 +287,12 @@ WorldLoaded = function()
 				end
 			end
 		end
-		Media.DisplayMessage("Welcome to Conyard Wars!","Conyard Wars: ")
+		Media.DisplayMessage("Welcome to Conyard Wars!","Conyard Wars")
 		Trigger.AfterDelay(DateTime.Seconds(3), function()
-			Media.DisplayMessage("Keep in mind: the price of each tech-building will increase by '400' with each tech-building you have already be build!","Conyard Wars: ")
+			Media.DisplayMessage("Keep in mind: the price of each tech-building will increase by '400' with each tech-building you have already be build!","Conyard Wars")
 		end)
 		Trigger.AfterDelay(DateTime.Seconds(10), function()
-			Media.DisplayMessage("Regular unit-upgrades are found in two tabs under the 'Heading'!","Conyard Wars: ")
+			Media.DisplayMessage("Regular unit-upgrades are found in two tabs under the heading 'Infantry'!","Conyard Wars")
 		end)
 	end)
 	

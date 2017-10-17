@@ -6,7 +6,7 @@ Leviathan.Main.Msam:
 		Name: Rocketlauncher
 	Buildable:
 		BuildPaletteOrder: 10
-		Prerequisites: leviathanfact, !MainA10, !MainCannon
+		Prerequisites:  radarnew, ~leviathanfact, !MainA10, !MainCannon
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: The MainCannon is a Strong Rocketlauncher
@@ -23,7 +23,7 @@ Leviathan.Main.Cannon:
 		Name: MammothCannon
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: leviathanfact, !MainA10, !MainRocket
+		Prerequisites: ~leviathanfact, !MainA10, !MainRocket
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: The MainCannon is a Strong MammothCannon
@@ -40,7 +40,7 @@ Leviathan.Main.Flame:
 		Name: Flamethrower
 	Buildable:
 		BuildPaletteOrder: 30
-		Prerequisites: leviathanfact, !MainCannon, !MainRocket
+		Prerequisites: forb, ~leviathanfact, !MainCannon, !MainRocket
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: The MainCannon is a Strong Flamethrower
@@ -59,7 +59,7 @@ Leviathan.Front.Tow:
 		Name: TOW Rocket
 	Buildable:
 		BuildPaletteOrder: 40
-		Prerequisites: leviathanfact, !FrontMtnk, !FrontCommando
+		Prerequisites: forb, ~leviathanfact, !FrontMtnk, !FrontCommando
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: Upgrade Front to TOW Rocket wich shoot air.
@@ -76,7 +76,7 @@ Leviathan.Front.Commando:
 		Name: Sniper Turrets
 	Buildable:
 		BuildPaletteOrder: 50
-		Prerequisites: leviathanfact, !FrontMtnk, !FrontTow
+		Prerequisites: radarnew, ~leviathanfact, !FrontMtnk, !FrontTow
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: Upgrade Front to sniper turrets.
@@ -93,7 +93,7 @@ Leviathan.Front.Mtnk:
 		Name: Medium Tank Cannons
 	Buildable:
 		BuildPaletteOrder: 60
-		Prerequisites: leviathanfact, !FrontTow, !FrontCommando
+		Prerequisites: fammo, ~leviathanfact, !FrontTow, !FrontCommando
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: Upgrade Front to tank cannons.
@@ -112,7 +112,7 @@ Leviathan.Side.ltnk:
 		Name: Auto Cannon
 	Buildable:
 		BuildPaletteOrder: 70
-		Prerequisites: leviathanfact, !SuppArty, !SuppAtRock
+		Prerequisites: radarnew, ~leviathanfact, !SuppArty, !SuppAtRock
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: Upgrade Side to auto-cannons\n Can also shoot Aircrafts.
@@ -129,7 +129,7 @@ Leviathan.Side.ATRockets:
 		Name: Anti Tank Rockets
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites: leviathanfact, !SuppArty, !SuppLtnk
+		Prerequisites: fammo, ~leviathanfact, !SuppArty, !SuppLtnk
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: Upgrade Side to anti tank rockets.
@@ -146,7 +146,7 @@ Leviathan.Side.arty:
 		Name: Artillery Shells
 	Buildable:
 		BuildPaletteOrder: 90
-		Prerequisites: leviathanfact, !SuppLtnk, !SuppAtRock
+		Prerequisites: forb, ~leviathanfact, !SuppLtnk, !SuppAtRock
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: Upgrade Side to artillery shells.
@@ -165,7 +165,7 @@ Leviathan.Support.Range.lv1:
 		Name: Range Upgrade
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: leviathanfact, !SuppSpeed1, !SuppHealth1
+		Prerequisites: radarnew, ~leviathanfact, !SuppSpeed1, !SuppHealth1
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: significant increases range of all guns.
@@ -182,7 +182,7 @@ Leviathan.Support.Health.lv1:
 		Name: Armor Upgrade
 	Buildable:
 		BuildPaletteOrder: 110
-		Prerequisites: leviathanfact, !SuppRange1, !SuppSpeed1
+		Prerequisites: fammo, ~leviathanfact, !SuppRange1, !SuppSpeed1
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: significant increases armor and health.
@@ -199,7 +199,7 @@ Leviathan.Support.speed.lv1:
 		Name: Speed Upgrade
 	Buildable:
 		BuildPaletteOrder: 120
-		Prerequisites: leviathanfact, !SuppRange1, !SuppHealth1
+		Prerequisites: forb, ~leviathanfact, !SuppRange1, !SuppHealth1
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: significant increases speed and reload time of the leviathan.
@@ -216,7 +216,7 @@ Leviathan.Support.Range.lv2:
 		Name: Range Upgrade
 	Buildable:
 		BuildPaletteOrder: 130
-		Prerequisites: leviathanfact, !SuppSpeed2, !SuppHealth2
+		Prerequisites: radarnew, ~leviathanfact, !SuppSpeed2, !SuppHealth2
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: significant increases range of all guns.
@@ -233,7 +233,7 @@ Leviathan.Support.Health.lv2:
 		Name: Armor Upgrade
 	Buildable:
 		BuildPaletteOrder: 140
-		Prerequisites: leviathanfact, !SuppRange2, !SuppSpeed2
+		Prerequisites: fammo, ~leviathanfact, !SuppRange2, !SuppSpeed2
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: significant increases armor and health.
@@ -250,7 +250,7 @@ Leviathan.Support.speed.lv2:
 		Name: Speed Upgrade
 	Buildable:
 		BuildPaletteOrder: 150
-		Prerequisites: leviathanfact, !SuppRange2, !SuppHealth2
+		Prerequisites: forb, ~leviathanfact, !SuppRange2, !SuppHealth2
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: significant increases speed and reload time of the leviathan.

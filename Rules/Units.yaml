@@ -3290,6 +3290,12 @@ LSTNEW:
 		Weapon: Minelauncher
 		LocalOffset: 0,265,512, 0,-265,512
 		RequiresCondition: !empdisable
+	Armament:
+		Name: secondary
+		Turret: primary
+		Weapon: MinelauncherAir
+		LocalOffset: 0,265,512, 0,-265,512
+		RequiresCondition: !empdisable
 	AttackTurreted:
 	SpawnActorOnDeath:
 		Actor: LSTNEW.Husk

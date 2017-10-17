@@ -1259,7 +1259,7 @@ Minelauncher:
 	Burst: 10
 	BurstDelay: 3
 	Report: bazook1.aud
-	ValidTargets: Air, Structure
+	ValidTargets: Structure
 	Projectile: Missile
 		Arm: 0
 		Blockable: false
@@ -1272,13 +1272,44 @@ Minelauncher:
 		ContrailLength: 8
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		ValidTargets: Air, Structure
+		ValidTargets: Structure
 		Versus:
 			None: 100
 			Wood: 100
 			Light: 100
 			Heavy: 75
 		Damage: 32
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@3Eff: CreateEffect
+		Explosions: building
+		ImpactSounds: xplos.aud
+        
+MinelauncherAir:
+	ReloadDelay: 100
+	Range: 8c0
+	Burst: 10
+	BurstDelay: 3
+	Report: bazook1.aud
+	ValidTargets: Air
+	Projectile: Missile
+		Arm: 0
+		Blockable: false
+		HorizontalRateOfTurn: 20
+		Speed: 265
+		RangeLimit: 10c614
+		Inaccuracy: 0c812
+		Image: DRAGON
+		TrailImage: smokey
+		ContrailLength: 8
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		ValidTargets: Air
+		Versus:
+			None: 100
+			Wood: 100
+			Light: 100
+			Heavy: 75
+		Damage: 100
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: building

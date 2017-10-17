@@ -226,7 +226,7 @@ LEVIATHAN:
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk:
 		Turret: SuppLtnk
-		Offset: 258,1024,10
+		Offset: 258,1024,-50
 	Armament@SuppLtnk:
 		Name: SuppLtnk
 		Weapon: LeviAutoCannon
@@ -243,7 +243,7 @@ LEVIATHAN:
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk1:
 		Turret: SuppLtnk1
-		Offset: -158,1024,10
+		Offset: -258,1024,-50
 	Armament@SuppLtnk1:
 		Name: SuppLtnk1
 		Weapon: LeviAutoCannon
@@ -261,7 +261,7 @@ LEVIATHAN:
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk2:
 		Turret: SuppLtnk2
-		Offset: 769,1024,10
+		Offset: 769,1024,-50
 	Armament@SuppLtnk2:
 		Name: SuppLtnk2
 		Weapon: LeviAutoCannon
@@ -279,7 +279,7 @@ LEVIATHAN:
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk3:
 		Turret: SuppLtnk3
-		Offset: 258,-1024,10
+		Offset: 258,-1024,-50
 	Armament@SuppLtnk3:
 		Name: SuppLtnk3
 		Weapon: LeviAutoCannon
@@ -297,7 +297,7 @@ LEVIATHAN:
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk4:
 		Turret: SuppLtnk4
-		Offset: -158,-1024,10
+		Offset: -258,-1024,-50
 	Armament@SuppLtnk4:
 		Name: SuppLtnk4
 		Weapon: LeviAutoCannon
@@ -315,7 +315,7 @@ LEVIATHAN:
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk5:
 		Turret: SuppLtnk5
-		Offset: 769,-1024,10
+		Offset: 769,-1024,-50
 	Armament@SuppLtnk5:
 		Name: SuppLtnk5
 		Weapon: LeviAutoCannon
@@ -349,7 +349,7 @@ LEVIATHAN:
 		RequiresCondition: SuppAtRock
 	Turreted@SuppAtRock1:
 		Turret: SuppAtRock1
-		Offset: -158,1024,10
+		Offset: -258,1024,10
 	Armament@SuppAtRock1:
 		Name: SuppAtRock1
 		Weapon: LeviathanATmiss
@@ -394,7 +394,7 @@ LEVIATHAN:
 		RequiresCondition: SuppAtRock
 	Turreted@SuppAtRock4:
 		Turret: SuppAtRock4
-		Offset: -158,-1024,10
+		Offset: -258,-1024,10
 	Armament@SuppAtRock4:
 		Name: SuppAtRock4
 		Weapon: LeviathanATmiss
@@ -441,7 +441,7 @@ LEVIATHAN:
 		RequiresCondition: SuppArty
 	Turreted@SuppArty2:
 		Turret: SuppArty2
-		Offset: -158,1024,10
+		Offset: -258,1024,10
 	Armament@SuppArty2:
 		Name: SuppArty2
 		Weapon: ArtilleryShellLeviathan
@@ -489,7 +489,7 @@ LEVIATHAN:
 		RequiresCondition: SuppArty
 	Turreted@SuppArty5:
 		Turret: SuppArty5
-		Offset: -158,-1024,10
+		Offset: -258,-1024,10
 	Armament@SuppArty5:
 		Name: SuppArty5
 		Weapon: ArtilleryShellLeviathan
@@ -529,12 +529,12 @@ LEVIATHAN:
 		Prerequisites: SuppSpeed1
 		
 	SelfHealing@SuppHealth1:
-		Delay: 25
+		Delay: 75
 		PercentageStep: 0
-		Step: 15
+		Step: 10
 		HealIfBelow: 100
 		DamageCooldown: 0
-		RequiresCondition: SuppHealth1 || SuppHealth2 && (!SuppHealth1 && !SuppHealth2)
+		RequiresCondition: (SuppHealth1 && SuppHealth2) == 1
 
 	WithIdleOverlay@SuppSpeed1:
 		Sequence: speedup
@@ -561,7 +561,7 @@ LEVIATHAN:
 		RequiresCondition: SuppHealth1
 	DamageMultiplier@SuppHealth1:
 		Modifier: 60
-		RequiresCondition: SuppHealth1	
+		RequiresCondition: (SuppHealth1 && SuppHealth2) == 1	
 		
 	GrantConditionOnPrerequisite@SuppRange2:
 		Condition: SuppRange2
@@ -573,13 +573,13 @@ LEVIATHAN:
 		Condition: SuppSpeed2
 		Prerequisites: SuppSpeed2
 		
-	SelfHealing@SuppHealth1SuppHealth2:
-		Delay: 25
+	SelfHealing@SuppHealth1:
+		Delay: 50
 		PercentageStep: 0
-		Step: 40
+		Step: 10
 		HealIfBelow: 100
 		DamageCooldown: 0
-		RequiresCondition: SuppHealth1 && SuppHealth2
+		RequiresCondition: (SuppHealth1 && SuppHealth2) == 2
 
 	WithIdleOverlay@SuppSpeed2:
 		Sequence: speedup
@@ -605,8 +605,8 @@ LEVIATHAN:
 		Offset: -1024,-413,10
 		RequiresCondition: SuppHealth2
 	DamageMultiplier@SuppHealth2:
-		Modifier: 60
-		RequiresCondition: SuppHealth2	
+		Modifier: 40
+		RequiresCondition: (SuppHealth1 && SuppHealth2) == 2	
 		
 # rest code
 		
@@ -619,7 +619,7 @@ LEVIATHAN:
 		Turret: BasicTurret1
 	Turreted@BasicTurret1:
 		Turret: BasicTurret1
-		Offset: 1069,697,10
+		Offset: 1069,697,-50
 	Armament@BasicTurret1:
 		Weapon: MachineGunLeviathan
 		Name: MachineGun1
@@ -634,7 +634,7 @@ LEVIATHAN:
 		Turret: BasicTurret2
 	Turreted@BasicTurret2:
 		Turret: BasicTurret2
-		Offset: 1069,-697,10
+		Offset: 1069,-697,-50
 	Armament@BasicTurret2:
 		Weapon: MachineGunLeviathan
 		Name: MachineGun2
@@ -649,31 +649,6 @@ LEVIATHAN:
 		ScanRadius: 12
 	SelectionDecorations:
 		VisualBounds: 72,72,0,-3
-
-	WithIdleOverlay@tracks2:
-		Sequence: tracks
-		Turret: tracks2
-		Offset: -966,555,-40
-	WithIdleOverlay@tracks3:
-		Sequence: tracks
-		Turret: tracks3
-		Offset: 400,1066,-40
-	WithIdleOverlay@tracks5:
-		Sequence: tracks
-		Turret: tracks5
-		Offset: 1412,512,-40
-	WithIdleOverlay@tracks6:
-		Sequence: tracks
-		Turret: tracks6
-		Offset: -966,-555,-40
-	WithIdleOverlay@tracks7:
-		Sequence: tracks
-		Turret: tracks7
-		Offset: 400,-1066,-40
-	WithIdleOverlay@tracks8:
-		Sequence: tracks
-		Turret: tracks8
-		Offset: 1412,-512,-40
 	SpawnActorOnDeath:
 		Actor: LEVIATHAN.Husk
 	ProvidesPrerequisite@buildingname:
@@ -690,24 +665,6 @@ LEVIATHAN.Husk:
 		Offset: 1069,-697,10
 	RenderSprites:
 		Image: leviathan
-	WithIdleOverlay@tracks2:
-		Sequence: tracks
-		Offset: -966,555,-40
-	WithIdleOverlay@tracks3:
-		Sequence: tracks
-		Offset: 400,1066,-40
-	WithIdleOverlay@tracks5:
-		Sequence: tracks
-		Offset: 1412,512,-40
-	WithIdleOverlay@tracks6:
-		Sequence: tracks
-		Offset: -966,-555,-40
-	WithIdleOverlay@tracks7:
-		Sequence: tracks
-		Offset: 400,-1066,-40
-	WithIdleOverlay@tracks8:
-		Sequence: tracks
-		Offset: 1412,-512,-40
         
 
 PLACEHOLDERLEVI:

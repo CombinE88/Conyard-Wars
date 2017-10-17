@@ -14,7 +14,7 @@ FACT2:
 	Valued:
 		Cost: 4000
 	Tooltip:
-		Name: Nexus
+		Name: Construction Yard
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -1614,6 +1614,9 @@ LEVIATHANFACT:
 	Exit@1:
 		SpawnOffset: -0,-0,0
 		ExitCell: 2,5
+	Exit@2:
+		SpawnOffset: -0,-0,0
+		ExitCell: 2,-1
 	Production:
 		Produces: leviathan.Fact, Upgrade.Levi
 	ProductionQueue:

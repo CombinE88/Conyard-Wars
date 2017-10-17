@@ -2169,7 +2169,7 @@ minemissile:
 		
 leviathan:
 	idle: leviathantd
-		Facings: 32
+		Facings: 64
 	tracks: htnk
 		Facings: 32
 		ZOffset: -265
