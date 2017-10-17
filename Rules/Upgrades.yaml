@@ -1,0 +1,1887 @@
+
+Upgrade.rmboUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Commando Range 
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: rmbofactory
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 40%
+	Valued:
+		Cost: 2200
+	RenderSprites:
+		Image: Upgradermboicon1
+	ProvidesPrerequisite@rmboUpgradeDamage: 
+		Prerequisite: rmboUpgradeDamage
+		
+Upgrade.rmboUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Commando Health
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: rmbofactory
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2200
+	RenderSprites:
+		Image: Upgradermboicon2
+	ProvidesPrerequisite@rmboUpgradeHealth: 
+		Prerequisite: rmboUpgradeHealth
+		
+Upgrade.rmboUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Commando Reload
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: rmbofactory
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 20%
+	Valued:
+		Cost: 2200
+	RenderSprites:
+		Image: Upgradermboicon3
+	ProvidesPrerequisite@rmboUpgradeReload: 
+		Prerequisite: rmboUpgradeReload
+	
+
+Upgrade.E1UpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rifle-infantry Damage 
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: e1factory
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 25%
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: Upgradee1icon1
+	ProvidesPrerequisite@E1UpgradeDamage: 
+		Prerequisite: E1UpgradeDamage
+		
+Upgrade.E1UpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rifle-infantry Health
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: e1factory
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: Upgradee1icon2
+	ProvidesPrerequisite@E1UpgradeHealth: 
+		Prerequisite: E1UpgradeHealth
+		
+Upgrade.E1UpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rifle-infantry Reload
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: e1factory
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 20%
+	Valued:
+		Cost: 500
+	RenderSprites:
+		Image: Upgradee1icon3
+	ProvidesPrerequisite@E1UpgradeReload: 
+		Prerequisite: E1UpgradeReload
+
+
+Upgrade.e2UpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade grenadiers Damage 
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: e2factory
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 700
+	RenderSprites:
+		Image: Upgradee2icon1
+	ProvidesPrerequisite@e2UpgradeDamage: 
+		Prerequisite: e2UpgradeDamage
+		
+Upgrade.e2UpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade grenadiers Health
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: e2factory
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 700
+	RenderSprites:
+		Image: Upgradee2icon2
+	ProvidesPrerequisite@e2UpgradeHealth: 
+		Prerequisite: e2UpgradeHealth
+		
+Upgrade.e2UpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade grenadiers Reload
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: e2factory
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 30%
+	Valued:
+		Cost: 700
+	RenderSprites:
+		Image: Upgradee2icon3
+	ProvidesPrerequisite@e2UpgradeReload: 
+		Prerequisite: e2UpgradeReload
+	
+
+
+Upgrade.e22UpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mortar Soldier Damage 
+	Buildable:
+		BuildPaletteOrder: 65
+		Prerequisites: e22factory
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 30%
+	Valued:
+		Cost: 900
+	RenderSprites:
+		Image: upgradee22icon1
+	ProvidesPrerequisite@e22UpgradeDamage: 
+		Prerequisite: e22UpgradeDamage
+		
+Upgrade.e22UpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mortar Soldier Health
+	Buildable:
+		BuildPaletteOrder: 65
+		Prerequisites: e22factory
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 900
+	RenderSprites:
+		Image: upgradee22icon2
+	ProvidesPrerequisite@e22UpgradeHealth: 
+		Prerequisite: e22UpgradeHealth
+		
+Upgrade.e22UpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mortar Soldier Reload
+	Buildable:
+		BuildPaletteOrder: 65
+		Prerequisites: e22factory
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 900
+	RenderSprites:
+		Image: upgradee22icon3
+	ProvidesPrerequisite@e22UpgradeReload: 
+		Prerequisite: e22UpgradeReload
+  
+Upgrade.e3UpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rocket Soldier Damage 
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: e3factory
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: Upgradee3icon1
+	ProvidesPrerequisite@e3UpgradeDamage: 
+		Prerequisite: e3UpgradeDamage
+		
+Upgrade.e3UpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rocket Soldier Health
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: e3factory
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: Upgradee3icon2
+	ProvidesPrerequisite@e3UpgradeHealth: 
+		Prerequisite: e3UpgradeHealth
+		
+Upgrade.e3UpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rocket Soldier Reload
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: e3factory
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 40%
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: Upgradee3icon3
+	ProvidesPrerequisite@e3UpgradeReload: 
+		Prerequisite: e3UpgradeReload
+
+Upgrade.e4UpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Flamethrower Damage 
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: e4factory
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 30%
+	Valued:
+		Cost: 850
+	RenderSprites:
+		Image: Upgradee4icon1
+	ProvidesPrerequisite@e4UpgradeDamage: 
+		Prerequisite: e4UpgradeDamage
+		
+Upgrade.e4UpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Flamethrower Health
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: e4factory
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 25%
+	Valued:
+		Cost: 850
+	RenderSprites:
+		Image: Upgradee4icon2
+	ProvidesPrerequisite@e4UpgradeHealth: 
+		Prerequisite: e4UpgradeHealth
+		
+Upgrade.e4UpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Flamethrower Reload
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: e4factory
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 850
+	RenderSprites:
+		Image: Upgradee4icon3
+	ProvidesPrerequisite@e4UpgradeReload: 
+		Prerequisite: e4UpgradeReload
+ 
+Upgrade.e5UpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Chemical Warrior Damage 
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: e5factory
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1650
+	RenderSprites:
+		Image: Upgradee5icon1
+	ProvidesPrerequisite@e5UpgradeDamage: 
+		Prerequisite: e5UpgradeDamage
+		
+Upgrade.e5UpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Chemical Warrior Health
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: e5factory
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 50%
+	Valued:
+		Cost: 1650
+	RenderSprites:
+		Image: Upgradee5icon2
+	ProvidesPrerequisite@e5UpgradeHealth: 
+		Prerequisite: e5UpgradeHealth
+		
+Upgrade.e5UpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Chemical Warrior Reload
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: e5factory
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1650
+	RenderSprites:
+		Image: Upgradee5icon3
+	ProvidesPrerequisite@e5UpgradeReload: 
+		Prerequisite: e5UpgradeReload
+
+Upgrade.jeepUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Hum-Vee Damage 
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: carfactory1, ~buildings.gdi
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1100
+	RenderSprites:
+		Image: upgradejeepicon1
+	ProvidesPrerequisite@jeepUpgradeDamage: 
+		Prerequisite: jeepUpgradeDamage
+		
+Upgrade.jeepUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Hum-Vee Health
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: carfactory1, ~buildings.gdi
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 35%
+	Valued:
+		Cost: 1100
+	RenderSprites:
+		Image: upgradejeepicon2
+	ProvidesPrerequisite@jeepUpgradeHealth: 
+		Prerequisite: jeepUpgradeHealth
+		
+Upgrade.jeepUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Hum-Vee Reload
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: carfactory1, ~buildings.gdi
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 50%
+	Valued:
+		Cost: 1100
+	RenderSprites:
+		Image: upgradejeepicon3
+	ProvidesPrerequisite@jeepUpgradeReload: 
+		Prerequisite: jeepUpgradeReload   
+	  
+	
+Upgrade.buggyUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Buggy Damage 
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: carfactorybg, ~buildings.nod
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1100
+	RenderSprites:
+		Image: Upgradebggyicon1
+	ProvidesPrerequisite@buggyUpgradeDamage: 
+		Prerequisite: buggyUpgradeDamage
+		
+Upgrade.buggyUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Buggy Health
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: carfactorybg, ~buildings.nod
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 35%
+	Valued:
+		Cost: 1100
+	RenderSprites:
+		Image: Upgradebggyicon2
+	ProvidesPrerequisite@buggyUpgradeHealth: 
+		Prerequisite: buggyUpgradeHealth
+		
+Upgrade.buggyUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Buggy Reload
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: carfactorybg, ~buildings.nod
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 50%
+	Valued:
+		Cost: 1100
+	RenderSprites:
+		Image: Upgradebggyicon3
+	ProvidesPrerequisite@buggyUpgradeReload: 
+		Prerequisite: buggyUpgradeReload
+   
+Upgrade.mtnkUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Medium Tank Damage 
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: carfactory2
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1750
+	RenderSprites:
+		Image: Upgrademtnkicon1
+	ProvidesPrerequisite@mtnkUpgradeDamage: 
+		Prerequisite: mtnkUpgradeDamage
+		
+Upgrade.mtnkUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Medium Tank Health
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: carfactory2
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1750
+	RenderSprites:
+		Image: Upgrademtnkicon2
+	ProvidesPrerequisite@mtnkUpgradeHealth: 
+		Prerequisite: mtnkUpgradeHealth
+		
+Upgrade.mtnkUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Medium Tank Reload
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: carfactory2
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1750
+	RenderSprites:
+		Image: Upgrademtnkicon3
+	ProvidesPrerequisite@mtnkUpgradeReload: 
+		Prerequisite: mtnkUpgradeReload
+		
+Upgrade.mtnknapalm:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Medium Tank Chembomb
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: carfactory2
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Increase massive the weapon spread and damage to infantry.
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: mtkchemupgrade
+	ProvidesPrerequisite@mtnknapalm: 
+		Prerequisite: mtnknapalm  
+	
+Upgrade.htnkUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mammoth Tank Damage 
+	Buildable:
+		BuildPaletteOrder: 170
+		Prerequisites: carfactory4
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 3250
+	RenderSprites:
+		Image: Upgradehtnkicon1
+	ProvidesPrerequisite@htnkUpgradeDamage: 
+		Prerequisite: htnkUpgradeDamage
+		
+Upgrade.htnkUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mammoth Tank Health
+	Buildable:
+		BuildPaletteOrder: 170
+		Prerequisites: carfactory4
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 3250
+	RenderSprites:
+		Image: Upgradehtnkicon2
+	ProvidesPrerequisite@htnkUpgradeHealth: 
+		Prerequisite: htnkUpgradeHealth
+		
+Upgrade.htnkUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mammoth Tank Reload
+	Buildable:
+		BuildPaletteOrder: 170
+		Prerequisites: carfactory4
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 3250
+	RenderSprites:
+		Image: Upgradehtnkicon3
+	ProvidesPrerequisite@htnkUpgradeReload: 
+		Prerequisite: htnkUpgradeReload		
+
+Upgrade.msamUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rocket Launcher Damage 
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: carfactory3
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1750
+	RenderSprites:
+		Image: Upgrademsamicon1
+	ProvidesPrerequisite@msamUpgradeDamage: 
+		Prerequisite: msamUpgradeDamage
+		
+Upgrade.msamUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rocket Launcher Health
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: carfactory3
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1750
+	RenderSprites:
+		Image: Upgrademsamicon2
+	ProvidesPrerequisite@msamUpgradeHealth: 
+		Prerequisite: msamUpgradeHealth
+		
+Upgrade.msamUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rocket Launcher Reload
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: carfactory3
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1750
+	RenderSprites:
+		Image: Upgrademsamicon3
+	ProvidesPrerequisite@msamUpgradeReload: 
+		Prerequisite: msamUpgradeReload		
+ 
+Upgrade.heliUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Apache Longbow Damage 
+	Buildable:
+		BuildPaletteOrder: 150
+		Prerequisites: airfact2
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1600
+	RenderSprites:
+		Image: Upgradeheliicon1
+	ProvidesPrerequisite@heliUpgradeDamage: 
+		Prerequisite: heliUpgradeDamage
+		
+Upgrade.heliUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Apache Longbow Health
+	Buildable:
+		BuildPaletteOrder: 150
+		Prerequisites: airfact2
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1600
+	RenderSprites:
+		Image: Upgradeheliicon2
+	ProvidesPrerequisite@heliUpgradeHealth: 
+		Prerequisite: heliUpgradeHealth
+		
+Upgrade.heliUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Apache Longbow Range
+	Buildable:
+		BuildPaletteOrder: 150
+		Prerequisites: airfact2
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1600
+	RenderSprites:
+		Image: Upgradeheliicon3
+	ProvidesPrerequisite@heliUpgradeReload: 
+		Prerequisite: heliUpgradeReload
+
+ 
+Upgrade.orcaUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Orca Damage 
+	Buildable:
+		BuildPaletteOrder: 140
+		Prerequisites: airfact1
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1700
+	RenderSprites:
+		Image: Upgradeorcaicon1
+	ProvidesPrerequisite@orcaUpgradeDamage: 
+		Prerequisite: orcaUpgradeDamage
+		
+Upgrade.orcaUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Orca Health
+	Buildable:
+		BuildPaletteOrder: 140
+		Prerequisites: airfact1
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1700
+	RenderSprites:
+		Image: Upgradeorcaicon2
+	ProvidesPrerequisite@orcaUpgradeHealth: 
+		Prerequisite: orcaUpgradeHealth
+		
+Upgrade.orcaUpgradeRange:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Orca Range
+	Buildable:
+		BuildPaletteOrder: 140
+		Prerequisites: airfact1
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1700
+	RenderSprites:
+		Image: Upgradeorcaicon3
+	ProvidesPrerequisite@orcaUpgradeReload: 
+		Prerequisite: orcaUpgradeReload  
+
+Upgrade.orcafire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Orca with TV missiles
+	Buildable:
+		BuildPaletteOrder: 140
+		Prerequisites: airfact1
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Very destructive oneshot missile!
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: orcatvupgrade
+	ProvidesPrerequisite@orcafire: 
+		Prerequisite: orcafire		
+ 
+Upgrade.stnkUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Stealth Tank Damage 
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: carfactory10
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1850
+	RenderSprites:
+		Image: Upgradestnkicon1
+	ProvidesPrerequisite@stnkUpgradeDamage: 
+		Prerequisite: stnkUpgradeDamage
+		
+Upgrade.stnkUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Stealth Tank Health
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: carfactory10
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1850
+	RenderSprites:
+		Image: upgradestnkicon2
+	ProvidesPrerequisite@stnkUpgradeHealth: 
+		Prerequisite: stnkUpgradeHealth
+		
+Upgrade.stnkUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Stealth Tank Reload
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: carfactory10
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1850
+	RenderSprites:
+		Image: upgradestnkicon3
+	ProvidesPrerequisite@stnkUpgradeReload: 
+		Prerequisite: stnkUpgradeReload 
+   
+Upgrade.bikeUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Light Tank Damage 
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: carfactory8
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1350
+	RenderSprites:
+		Image: Upgradeltnkicon1
+	ProvidesPrerequisite@bikeUpgradeDamage: 
+		Prerequisite: bikeUpgradeDamage
+		
+Upgrade.bikeUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Light Tank Health
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: carfactory8
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1350
+	RenderSprites:
+		Image: Upgradeltnkicon2
+	ProvidesPrerequisite@bikeUpgradeHealth: 
+		Prerequisite: bikeUpgradeHealth
+		
+Upgrade.bikeUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Light Tank Reload
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: carfactory8
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1350
+	RenderSprites:
+		Image: Upgradeltnkicon3
+	ProvidesPrerequisite@bikeUpgradeReload: 
+		Prerequisite: bikeUpgradeReload
+	
+Upgrade.mlrsUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mobile S.A.M. Damage 
+	Buildable:
+		BuildPaletteOrder: 110
+		Prerequisites: carfactory7
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1300
+	RenderSprites:
+		Image: Upgrademlrsicon1
+	ProvidesPrerequisite@mlrsUpgradeDamage: 
+		Prerequisite: mlrsUpgradeDamage
+		
+Upgrade.mlrsUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mobile S.A.M. Health
+	Buildable:
+		BuildPaletteOrder: 110
+		Prerequisites: carfactory7
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1300
+	RenderSprites:
+		Image: Upgrademlrsicon2
+	ProvidesPrerequisite@mlrsUpgradeHealth: 
+		Prerequisite: mlrsUpgradeHealth
+		
+Upgrade.mlrsUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mobile S.A.M. Range
+	Buildable:
+		BuildPaletteOrder: 110
+		Prerequisites: carfactory7
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 35%
+	Valued:
+		Cost: 1300
+	RenderSprites:
+		Image: Upgrademlrsicon3
+	ProvidesPrerequisite@mlrsUpgradeReload: 
+		Prerequisite: mlrsUpgradeReload
+		
+Upgrade.mlrsfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mobile S.A.M. weapon to EMP
+	Buildable:
+		BuildPaletteOrder: 110
+		Prerequisites: carfactory7
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Can disable aircrafts and buildings!
+	Valued:
+		Cost: 1900
+	RenderSprites:
+		Image: mlrsupgrade
+	ProvidesPrerequisite@mlrsfire: 
+		Prerequisite: mlrsfire
+  
+Upgrade.artyUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Artillery Damage 
+	Buildable:
+		BuildPaletteOrder: 160
+		Prerequisites: carfactory5
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1750
+	RenderSprites:
+		Image: Upgradeartyicon1
+	ProvidesPrerequisite@artyUpgradeDamage: 
+		Prerequisite: artyUpgradeDamage
+		
+Upgrade.artyUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Artillery Health
+	Buildable:
+		BuildPaletteOrder: 160
+		Prerequisites: carfactory5
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1750
+	RenderSprites:
+		Image: Upgradeartyicon2
+	ProvidesPrerequisite@artyUpgradeHealth: 
+		Prerequisite: artyUpgradeHealth
+		
+Upgrade.artyUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Artillery Reload
+	Buildable:
+		BuildPaletteOrder: 160
+		Prerequisites: carfactory5
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1750
+	RenderSprites:
+		Image: Upgradeartyicon3
+	ProvidesPrerequisite@artyUpgradeReload: 
+		Prerequisite: artyUpgradeReload
+
+Upgrade.ftnkUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Flame Tank Damage 
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: carfactory6
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1700
+	RenderSprites:
+		Image: Upgradftnkicon1
+	ProvidesPrerequisite@ftnkUpgradeDamage: 
+		Prerequisite: ftnkUpgradeDamage
+		
+Upgrade.ftnkUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Flame Tank Health
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: carfactory6
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1700
+	RenderSprites:
+		Image: Upgradftnkicon2
+	ProvidesPrerequisite@ftnkUpgradeHealth: 
+		Prerequisite: ftnkUpgradeHealth
+		
+Upgrade.ftnkUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Flame Tank Reload
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: carfactory6
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1700
+	RenderSprites:
+		Image: Upgradftnkicon3
+	ProvidesPrerequisite@ftnkUpgradeReload: 
+		Prerequisite: ftnkUpgradeReload		
+
+Upgrade.ftnknapalm:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Flame Tank napalm type
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: carfactory6
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Increase the weapon spread and damage dealt to heavy targets.
+	Valued:
+		Cost: 1500
+	RenderSprites:
+		Image: ftnkupgrade
+	ProvidesPrerequisite@ftnknapalm: 
+		Prerequisite: ftnknapalm  
+
+Upgrade.fawrUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Flying Advanced Guardtower Damage 
+	Buildable:
+		BuildPaletteOrder: 310
+		Prerequisites: secretfactory2, ~missnew
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: Upgradefatwricon1
+	ProvidesPrerequisite@fawrUpgradeDamage: 
+		Prerequisite: fawrUpgradeDamage
+		
+Upgrade.fawrUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Flying Advanced Guardtower Health
+	Buildable:
+		BuildPaletteOrder: 310
+		Prerequisites: secretfactory2, ~missnew
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: Upgradefatwricon2
+	ProvidesPrerequisite@fawrUpgradeHealth: 
+		Prerequisite: fawrUpgradeHealth
+		
+Upgrade.fawrUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Flying Advanced Guardtower Reload
+	Buildable:
+		BuildPaletteOrder: 310
+		Prerequisites: secretfactory2, ~missnew
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: Upgradefatwricon3
+	ProvidesPrerequisite@fawrUpgradeReload: 
+		Prerequisite: fawrUpgradeReload
+
+Upgrade.tmplsUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Temple Angel Damage 
+	Buildable:
+		BuildPaletteOrder: 300
+		Prerequisites: secretfactory1, ~tmplnew
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 2800
+	RenderSprites:
+		Image: Upgradeobliicon1
+	ProvidesPrerequisite@tmplsUpgradeDamage: 
+		Prerequisite: tmplsUpgradeDamage
+		
+Upgrade.tmplsUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Temple Angel Health
+	Buildable:
+		BuildPaletteOrder: 300
+		Prerequisites: secretfactory1, ~tmplnew
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2800
+	RenderSprites:
+		Image: Upgradeobliicon2
+	ProvidesPrerequisite@tmplsUpgradeHealth: 
+		Prerequisite: tmplsUpgradeHealth
+		
+Upgrade.tmplsUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Temple Angel Reload
+	Buildable:
+		BuildPaletteOrder: 300
+		Prerequisites: secretfactory1, ~tmplnew
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2800
+	RenderSprites:
+		Image: Upgradeobliicon3
+	ProvidesPrerequisite@tmplsUpgradeReload: 
+		Prerequisite: tmplsUpgradeReload
+
+
+Upgrade.guntnkUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Nuclear Command Vehicle Damage 
+	Buildable:
+		BuildPaletteOrder: 300
+		Prerequisites: secretfactory3, ~tmplnew
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: Upgradenukeicon1
+	ProvidesPrerequisite@guntnkUpgradeDamage: 
+		Prerequisite: guntnkUpgradeDamage
+		
+Upgrade.guntnkUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Nuclear Command Vehicle Range
+	Buildable:
+		BuildPaletteOrder: 300
+		Prerequisites: secretfactory3, ~tmplnew
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: Upgradenukeicon2
+	ProvidesPrerequisite@guntnkUpgradeHealth: 
+		Prerequisite: guntnkUpgradeHealth
+		
+Upgrade.guntnkUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Nuclear Command Vehicle Reload
+	Buildable:
+		BuildPaletteOrder: 300
+		Prerequisites: secretfactory3, ~tmplnew
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: Upgradenukeicon3
+	ProvidesPrerequisite@guntnkUpgradeReload: 
+		Prerequisite: guntnkUpgradeReload
+
+
+Upgrade.moicoUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mobile Ion Cannon Damage 
+	Buildable:
+		BuildPaletteOrder: 300
+		Prerequisites: secretfactory4, ~missnew
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: Upgradeioncicon1
+	ProvidesPrerequisite@moicoUpgradeDamage: 
+		Prerequisite: moicoUpgradeDamage
+		
+Upgrade.moicoUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mobile Ion Cannon Range
+	Buildable:
+		BuildPaletteOrder: 300
+		Prerequisites: secretfactory4, ~missnew
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: Upgradeioncicon2
+	ProvidesPrerequisite@moicoUpgradeHealth: 
+		Prerequisite: moicoUpgradeHealth
+		
+Upgrade.moicoUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Mobile Ion Cannon Reload
+	Buildable:
+		BuildPaletteOrder: 300
+		Prerequisites: secretfactory4, ~missnew
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: Upgradeioncicon3
+	ProvidesPrerequisite@moicoUpgradeReload: 
+		Prerequisite: moicoUpgradeReload   
+
+Upgrade.tranUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Chinook Cannon Damage 
+	Buildable:
+		BuildPaletteOrder: 135
+		Prerequisites: airfact0
+		Queue: Infantry.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: upgradetranicon1
+	ProvidesPrerequisite@tranUpgradeDamage: 
+		Prerequisite: tranUpgradeDamage
+		
+Upgrade.tranUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgradeChinook Cannon Range
+	Buildable:
+		BuildPaletteOrder: 135
+		Prerequisites: airfact0
+		Queue: Vehicle.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: upgradetranicon2
+	ProvidesPrerequisite@tranUpgradeHealth: 
+		Prerequisite: tranUpgradeHealth
+		
+Upgrade.tranUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Chinook Cannon Reload
+	Buildable:
+		BuildPaletteOrder: 135
+		Prerequisites: airfact0
+		Queue: Aircraft.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: upgradetranicon3
+	ProvidesPrerequisite@tranUpgradeReload: 
+		Prerequisite: tranUpgradeReload   
+		
+		
+# -------- special upgrades 
+
+Upgrade.e1fire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rifle-infantry Weapon
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: e1factory
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Rifle-infantry gets a Lasergun
+	Valued:
+		Cost: 1600
+	RenderSprites:
+		Image: e1upgrade
+	ProvidesPrerequisite@e1fire: 
+		Prerequisite: e1fire
+		
+Upgrade.msamfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: double MRLS Packsize
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: carfactory3
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: The MRLS fires now double that much missiles but is more innacurate
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: doublepack
+	ProvidesPrerequisite@msamfire: 
+		Prerequisite: msamfire
+		
+
+
+Upgrade.jeepfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Hum-Vee/ Buggy with TOW missile
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: jeepfireupgrade
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: a missile that deals massive damage to aircrafts and Vehicles\nHas a long reload time.
+	Valued:
+		Cost: 1600
+	RenderSprites:
+		Image: towupgrade
+	ProvidesPrerequisite@jeepfire: 
+		Prerequisite: jeepfire
+		
+jeepfireupgrade:
+	ProvidesPrerequisite@buildingname: 
+		Prerequisite: jeepfireupgrade
+	Tooltip:
+		Name: Hum-Vee/ Buggy Factory
+	
+
+Upgrade.e3fire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Rocketsoldier with a tripple missile.
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: e3factory
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: a tripple rocketlauncher.
+	Valued:
+		Cost: 1500
+	RenderSprites:
+		Image: tripplefire
+	ProvidesPrerequisite@e3fire: 
+		Prerequisite: e3fire  
+		
+
+Upgrade.helifire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Apache with sniper
+	Buildable:
+		BuildPaletteOrder: 150
+		Prerequisites: airfact2
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Snipe every infantry away.
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: heli
+	ProvidesPrerequisite@helifire: 
+		Prerequisite: helifire
+		
+Upgrade.grenadefire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Grenadier bag
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: e2factory
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: throws a pack of grenades.
+	Valued:
+		Cost: 1100
+	RenderSprites:
+		Image: grenadierfire
+	ProvidesPrerequisite@grenadefire: 
+		Prerequisite: grenadefire
+		
+Upgrade.flamerfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade ranged Flamethrower
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: e4factory
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: launches bullets of fire.
+	Valued:
+		Cost: 1500
+	RenderSprites:
+		Image: flamerfire
+	ProvidesPrerequisite@flamerfire: 
+		Prerequisite: flamerfire
+		
+Upgrade.ltnkfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Laser Sights
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: carfactory8
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Adds a laser sight to the lighttank optik.\n Lets him fire from far away
+	Valued:
+		Cost: 1900
+	RenderSprites:
+		Image: ltnkfire
+	ProvidesPrerequisite@ltnkfire: 
+		Prerequisite: ltnkfire
+		
+Upgrade.artyfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Five Shot
+	Buildable:
+		BuildPaletteOrder: 160
+		Prerequisites: carfactory5
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Adds a Magazin to the Artillery wich fires 5 times in a short delay.
+	Valued:
+		Cost: 2600
+	RenderSprites:
+		Image: artyfire
+	ProvidesPrerequisite@artyfire: 
+		Prerequisite: artyfire
+		
+Upgrade.mammofire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Tusk Laser
+	Buildable:
+		BuildPaletteOrder: 170
+		Prerequisites: carfactory4
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Replaces the Tusk-rockets with the might Tusk-Laser.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: mammofire
+	ProvidesPrerequisite@mammofire: 
+		Prerequisite: mammofire
+		
+Upgrade.rmbofire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade twin barrel
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: rmbofactory
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Commando can shoot tow times at once.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: rmbofire
+	ProvidesPrerequisite@rmbofire: 
+		Prerequisite: rmbofire
+		
+Upgrade.stnkfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade stealthsystem
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: carfactory10
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Stealthtank will faster go in stealth mode after detection.
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: stnkfire
+	ProvidesPrerequisite@stnkfire: 
+		Prerequisite: stnkfire
+		
+Upgrade.e22fire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade to Javelin
+	Buildable:
+		BuildPaletteOrder: 65
+		Prerequisites: e22factory
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Ugrades the mortar to a mighty Javelin, deals massive damage in a large radius.
+	Valued:
+		Cost: 1800
+	RenderSprites:
+		Image: e22fire
+	ProvidesPrerequisite@e22fire: 
+		Prerequisite: e22fire
+		
+		
+Upgrade.chemfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: Carry Backpack with vesceroid
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: e5factory
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: chemical infantry spawn a friendly vesceroid on death.
+	Valued:
+		Cost: 2300
+	RenderSprites:
+		Image: chemfire
+	ProvidesPrerequisite@chemfire: 
+		Prerequisite: chemfire
+		
+Upgrade.tranfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: Twin Anti Air Rockets
+	Buildable:
+		BuildPaletteOrder: 135
+		Prerequisites: airfact0
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Upgrades the helicopter with two packs of medium anti air / structure rockets.
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: tranfire
+	ProvidesPrerequisite@tranfire: 
+		Prerequisite: tranfire
+		
+# ---- Leviathan Addons -----
+
+Leviathan.Main.Msam:
+	AlwaysVisible:
+	Tooltip:
+		Name: Rocketlauncher
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: leviathanfact, !MainA10, !MainCannon
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: The MainCannon is a Strong Rocketlauncher
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: mlrsfact
+	ProvidesPrerequisite@MainRocket: 
+		Prerequisite: MainRocket
+		
+Leviathan.Main.Cannon:
+	AlwaysVisible:
+	Tooltip:
+		Name: MammothCannon
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: leviathanfact, !MainA10, !MainRocket
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: The MainCannon is a Strong MammothCannon
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: carfact4
+	ProvidesPrerequisite@MainCannon: 
+		Prerequisite: MainCannon
+		
+Leviathan.Main.Flame:
+	AlwaysVisible:
+	Tooltip:
+		Name: Flamethrower
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: leviathanfact, !MainCannon, !MainRocket
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: The MainCannon is a Strong Flamethrower
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: carfact6
+	ProvidesPrerequisite@MainA10: 
+		Prerequisite: MainA10
+		
+# --- Front guns ---
+
+Leviathan.Front.Tow:
+	AlwaysVisible:
+	Tooltip:
+		Name: TOW Rocket
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: leviathanfact, !FrontMtnk, !FrontCommando
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Front to TOW Rocket wich shoot air.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: towupgrade
+	ProvidesPrerequisite@FrontTow: 
+		Prerequisite: FrontTow
+		
+Leviathan.Front.Commando:
+	AlwaysVisible:
+	Tooltip:
+		Name: Sniper Turrets
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: leviathanfact, !FrontMtnk, !FrontTow
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Front to sniper turrets.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: rmbofact
+	ProvidesPrerequisite@FrontCommando: 
+		Prerequisite: FrontCommando
+		
+Leviathan.Front.Mtnk:
+	AlwaysVisible:
+	Tooltip:
+		Name: Medium Tank Cannons
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: leviathanfact, !FrontTow, !FrontCommando
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Front to tank cannons.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: carfact2
+	ProvidesPrerequisite@FrontMtnk: 
+		Prerequisite: FrontMtnk	
+		
+# --- Side guns ---
+
+Leviathan.Side.ltnk:
+	AlwaysVisible:
+	Tooltip:
+		Name: Auto Cannon
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: leviathanfact, !SuppArty, !SuppAtRock
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Side to auto-cannons\n Can also shoot Aircrafts.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: ltnk
+	ProvidesPrerequisite@SuppLtnk: 
+		Prerequisite: SuppLtnk
+		
+Leviathan.Side.ATRockets:
+	AlwaysVisible:
+	Tooltip:
+		Name: Anti Tank Rockets
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: leviathanfact, !SuppArty, !SuppLtnk
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Side to anti tank rockets.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: stnk
+	ProvidesPrerequisite@SuppAtRock: 
+		Prerequisite: SuppAtRock
+		
+Leviathan.Side.arty:
+	AlwaysVisible:
+	Tooltip:
+		Name: Artillery Shells
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: leviathanfact, !SuppLtnk, !SuppAtRock
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Side to artillery shells.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: arty
+	ProvidesPrerequisite@SuppArty: 
+		Prerequisite: SuppArty   
+
+# --- Support upgrades ---  
+		
+Leviathan.Support.Range.lv1:
+	AlwaysVisible:
+	Tooltip:
+		Name: Range Upgrade
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: leviathanfact, !SuppSpeed1, !SuppHealth1
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases range of all guns.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: bombupupgrade
+	ProvidesPrerequisite@SuppRange1: 
+		Prerequisite: SuppRange1
+		
+Leviathan.Support.Health.lv1:
+	AlwaysVisible:
+	Tooltip:
+		Name: Armor Upgrade
+	Buildable:
+		BuildPaletteOrder: 110
+		Prerequisites: leviathanfact, !SuppRange1, !SuppSpeed1
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases armor and health.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: brik
+	ProvidesPrerequisite@SuppHealth1: 
+		Prerequisite: SuppHealth1
+		
+Leviathan.Support.speed.lv1:
+	AlwaysVisible:
+	Tooltip:
+		Name: Speed Upgrade
+	Buildable:
+		BuildPaletteOrder: 120
+		Prerequisites: leviathanfact, !SuppRange1, !SuppHealth1
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases speed and reload time of the leviathan.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: bike
+	ProvidesPrerequisite@SuppSpeed1: 
+		Prerequisite: SuppSpeed1 
+		
+Leviathan.Support.Range.lv2:
+	AlwaysVisible:
+	Tooltip:
+		Name: Range Upgrade
+	Buildable:
+		BuildPaletteOrder: 130
+		Prerequisites: leviathanfact, !SuppSpeed2, !SuppHealth2
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases range of all guns.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: bombupupgrade
+	ProvidesPrerequisite@SuppRange2: 
+		Prerequisite: SuppRange2
+		
+Leviathan.Support.Health.lv2:
+	AlwaysVisible:
+	Tooltip:
+		Name: Armor Upgrade
+	Buildable:
+		BuildPaletteOrder: 140
+		Prerequisites: leviathanfact, !SuppRange2, !SuppSpeed2
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases armor and health.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: brik
+	ProvidesPrerequisite@SuppHealth2: 
+		Prerequisite: SuppHealth2
+		
+Leviathan.Support.speed.lv2:
+	AlwaysVisible:
+	Tooltip:
+		Name: Speed Upgrade
+	Buildable:
+		BuildPaletteOrder: 150
+		Prerequisites: leviathanfact, !SuppRange2, !SuppHealth2
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases speed and reload time of the leviathan.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: bike
+	ProvidesPrerequisite@SuppSpeed2: 
+		Prerequisite: SuppSpeed2
+		
+Master.Upgrade.10k:
+	AlwaysVisible:
+	Tooltip:
+		Name: Master Upgrade 10k
+	Buildable:
+		BuildDuration: 250
+		BuildPaletteOrder: 1000
+		Queue: Defenses.Fact
+		Prerequisites: endgame
+		BuildLimit: 1
+		Description: Increase the Power and Health of al Units by 50% and Range by 10%.
+	Valued:
+		Cost: 10000
+	RenderSprites:
+		Image: 10kicon
+	ProvidesPrerequisite@Master10k: 
+		Prerequisite: Master10k
+		
+Master.Upgrade.50k:
+	AlwaysVisible:
+	Tooltip:
+		Name: Master Upgrade 50k
+	Buildable:
+		BuildDuration: 250
+		BuildPaletteOrder: 1010
+		Prerequisites: Master10k, forb, fammo, radarnew
+		Queue: Defenses.Fact
+		BuildLimit: 1
+		Description: Increase the Power and Health of al Units by 100% and Range by 25%.
+	Valued:
+		Cost: 50000
+	RenderSprites:
+		Image: 50kicon
+	ProvidesPrerequisite@Master50k: 
+		Prerequisite: Master50k
+
+		
+Master.Upgrade.100k:
+	AlwaysVisible:
+	Tooltip:
+		Name: Master Upgrade 100k
+	Buildable:
+		BuildDuration: 250
+		BuildPaletteOrder: 1020
+		Prerequisites: Master50k, sillyone, sillytwo, sillythree
+		Queue: Defenses.Fact
+		BuildLimit: 1
+		Description: Increase the Power and Health of al Units by 200% and Range by 50%..
+	Valued:
+		Cost: 100000
+	RenderSprites:
+		Image: 100kicon
+	ProvidesPrerequisite@Master100k: 
+		Prerequisite: Master100k

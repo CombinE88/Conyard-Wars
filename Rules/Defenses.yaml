@@ -1,0 +1,239 @@
+       
+GUN:
+	Inherits: ^Defense
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Turret
+	Buildable:
+        BuildDuration: 3500
+		BuildPaletteOrder: 150
+		Queue: Defenses.Fact
+        Prerequisites: lammo
+        BuildLimit: 1 
+		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
+	Building:
+	Health:
+		HP: 1500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+	-WithSpriteBody:
+	Armament:
+		Weapon: TurretGun
+		LocalOffset: 512,0,112
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithMuzzleOverlay:
+	-WithDeathAnimation:
+	DetectCloaked:
+		Range: 3c0
+	Power:
+		Amount: 0
+	BodyOrientation:
+		UseClassicFacingFudge: True
+    -Sellable:
+
+
+OBLI:
+	Inherits: ^Defense
+	Inherits@IDISABLE: ^DisabledOverlay
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Obelisk of Light
+	Buildable:
+        BuildDuration: 6000
+		BuildPaletteOrder: 180
+		Queue: Defenses.Fact
+        Prerequisites: forb
+        BuildLimit: 1
+    	Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
+	FreeActor@1:
+		Actor: brik
+		SpawnOffset: 2,1
+		Facing: 0
+    FreeActor@2:
+		Actor: brik
+		SpawnOffset: 2,2
+		Facing: 0
+    FreeActor@3:
+		Actor: brik
+		SpawnOffset: 1,2
+		Facing: 0
+    FreeActor@4:
+		Actor: brik
+		SpawnOffset: 0,2
+		Facing: 0
+    FreeActor@5:
+		Actor: brik
+		SpawnOffset: 0,1
+		Facing: 0
+    FreeActor@6:
+		Actor: brik
+		SpawnOffset: 0,0
+		Facing: 0
+    FreeActor@7:
+		Actor: brik
+		SpawnOffset: 1,0
+		Facing: 0
+    FreeActor@8:
+		Actor: brik
+		SpawnOffset: 2,0
+		Facing: 0
+    Building:
+		Footprint: === =x= ===
+		Dimensions: 3,3
+	-Sellable:
+    Selectable:
+		Bounds: 24,24,0,12
+	SelectionDecorations: 
+		VisualBounds: 22,42
+	RequiresPower:
+	Health:
+		HP: 1500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	WithChargeAnimation:
+	Armament:
+		Weapon: Laser
+		LocalOffset: 0,-85,1280
+	AttackCharges:
+		ChargeLevel: 50
+		ChargingCondition: charging
+	AmbientSound:
+		RequiresCondition: charging
+		SoundFiles: obelpowr.aud
+		Interval: 30, 40
+	DetectCloaked:
+		Range: 5c0
+	Power:
+		Amount: 0
+
+GTWR:
+	Inherits: ^Defense
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Guard Tower
+	Buildable:
+        BuildDuration: 3500
+		BuildPaletteOrder: 130
+		Queue: Defenses.Fact
+        Prerequisites: nukenew
+        BuildLimit: 1
+		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+	Building:
+	Health:
+		HP: 1500
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Armament:
+		Weapon: HighV
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	BodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 3c0
+	WithMuzzleOverlay:
+	Turreted:
+		TurnSpeed: 255
+	Power:
+		Amount: 0
+    -Sellable:
+
+ATWR:
+	Inherits@IDISABLE: ^DisabledOverlay
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Advanced Guard Tower
+	Buildable:
+        BuildDuration: 6000
+		BuildPaletteOrder: 170
+        Prerequisites: radarnew
+		Queue: Defenses.Fact
+        BuildLimit: 1
+		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+	FreeActor@1:
+		Actor: brik
+		SpawnOffset: 2,1
+		Facing: 0
+    FreeActor@2:
+		Actor: brik
+		SpawnOffset: 2,2
+		Facing: 0
+    FreeActor@3:
+		Actor: brik
+		SpawnOffset: 1,2
+		Facing: 0
+    FreeActor@4:
+		Actor: brik
+		SpawnOffset: 0,2
+		Facing: 0
+    FreeActor@5:
+		Actor: brik
+		SpawnOffset: 0,1
+		Facing: 0
+    FreeActor@6:
+		Actor: brik
+		SpawnOffset: 0,0
+		Facing: 0
+    FreeActor@7:
+		Actor: brik
+		SpawnOffset: 1,0
+		Facing: 0
+    FreeActor@8:
+		Actor: brik
+		SpawnOffset: 2,0
+		Facing: 0
+    Building:
+		Footprint: === =x= ===
+		Dimensions: 3,3
+	-Sellable:
+	Selectable:
+		Bounds: 24,24,0,12
+	SelectionDecorations:
+		VisualBounds: 24,48,0,-3
+	RequiresPower:
+	Health:
+		HP: 1500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Turreted:
+		TurnSpeed: 255
+		Offset: 128,128,0
+	Armament@PRIMARY:
+		Weapon: TowerMissile
+		LocalOffset: 256,128,0, 256,-128,0
+		LocalYaw: -100,100
+	Armament@SECONDARY:
+		Weapon: TowerAAMissile
+		LocalOffset: 256,128,0, 256,-128,0
+		LocalYaw: -100,100
+	AttackTurreted:
+	BodyOrientation:
+		QuantizedFacings: 8
+	DetectCloaked:
+		Range: 5c0
+	Power:
+		Amount: 0
+

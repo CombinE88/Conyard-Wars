@@ -1,0 +1,875 @@
+EXTRACASH:
+	Inherits: ^TechBuilding
+	CashTrickler:
+		Period: 50
+		Amount: 50
+		ShowTicks: true
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Tooltip:
+		Name: Oil Derrick
+	SpawnActorOnDeath:
+		Actor: V19.Husk
+	RenderSprites:
+		Image: V19
+	-Selectable:
+	-Targetable:
+	DamageMultiplier:
+		Modifier: 0
+
+CASH:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: cash
+		PlayerPalette: raplayer
+	CashTrickler:
+		Period: 25
+		Amount: 2
+		ShowTicks: true
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Economic Center
+	Buildable:
+		BuildPaletteOrder: 100
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		IconPalette: ra
+		Description: Provides Economic Techtree
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 200
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer	 
+
+CASH2:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: stockm
+	Valued:
+		Cost: 1600
+	Tooltip:
+		Name: Stock Market
+	Buildable:
+		BuildPaletteOrder: 130
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		Prerequisites: cash
+		Description: Provides better Economic Techtree.\n Every minute you earn 10% of you opponents combined cash.
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 300
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:	 
+ 
+CASH3:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: cash3
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 2250
+	Tooltip:
+		Name: Bounty Station
+	Buildable:
+		BuildPaletteOrder: 160
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		Prerequisites: cash2
+		IconPalette: ra
+		Description: You gain a % money of the unitsvalue you kill.
+	Building:
+		Footprint: __ xx xx ==
+		Dimensions: 2,4
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 300
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer	  
+ 
+OILER:
+	Inherits: ^BaseBuilding2
+	SelectionDecorations:
+		VisualBounds: 24,24,0,-3     
+	RenderSprites:
+		Image: oiler
+		PlayerPalette: raplayer
+	CashTrickler:
+		Period: 50
+		Amount: 6
+		ShowTicks: true
+		RequiresCondition: cash
+	GrantConditionOnPrerequisite@cash:
+		Condition: cash
+		Prerequisites: cash   
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Oil Pump
+	Buildable:
+		BuildDuration: 1000
+		BuildPaletteOrder: 110
+		Queue: Defenses.Fact
+		BuildLimit: 3 
+		IconPalette: ra
+		Prerequisites: cash
+		Description: Generates Money.\n Requires Economic Center Center to operate!
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	-Selectable:
+	Health:
+		HP: 200
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer		 
+ 
+
+OILER2:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x1Shape
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3 
+	RenderSprites:
+		Image: oiler2
+		PlayerPalette: raplayer
+	CashTrickler:
+		Period: 60
+		Amount: 16
+		ShowTicks: true
+		RequiresCondition: cash
+	GrantConditionOnPrerequisite@cash:
+		Condition: cash
+		Prerequisites: cash   
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Large Oil Pump
+	Buildable:
+		BuildDuration: 2600
+		BuildPaletteOrder: 140
+		Queue: Defenses.Fact
+		BuildLimit: 3 
+		IconPalette: ra
+		Prerequisites: cash2
+		Description: Generates Money.\n Requires Economic Center Center to operate!
+	Building:
+		Footprint: __ xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer	  
+
+ARRAY:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x1Shape
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3 
+	RenderSprites:
+		Image: array
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Secret upgrades monitoring station
+	Buildable:
+		BuildDuration: 2600
+		BuildPaletteOrder: 400
+		Queue: Defenses.Fact
+		BuildLimit: 1
+		IconPalette: ra
+		Prerequisites: labnew, nukenew, lammo
+		Description: Grants unit specific special upgrades.
+	Building:
+		Footprint: __ xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer 
+	Production:
+		Produces: Upgrade.Array
+	ProductionQueue@FactBuilding:
+		Type: Upgrade.Array
+		Factions: gdi, nod
+		Group: Building
+		BuildSpeed: 40
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	Exit@1:
+		SpawnOffset: 0,0,0
+		ExitCell: 0,0
+		ExitDelay: 0
+		
+LABNEW:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3 
+	RenderSprites:
+		Image: bio
+	Valued:
+		Cost: 1350
+	Tooltip:
+		Name: Experimental Weapons Center
+	Buildable:
+		BuildPaletteOrder: 30
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		Description: Provides Technology
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 500
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:  
+
+NEWHOSP:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3 
+	RenderSprites:
+		Image: newhosp
+	Valued:
+		Cost: 2100
+	Tooltip:
+		Name: Advanced Experimental Weapons Center
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: labnew
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		Description: Provides Technology
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 800
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:   
+	
+	
+FORB:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	SelectionDecorations:
+		VisualBounds: 72,72,0,-3 
+	RenderSprites:
+		Image: lfact
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 3150
+	Tooltip:
+		Name: Forbidden Weapons Center
+	Buildable:
+		BuildDuration: 4200
+		BuildPaletteOrder: 90
+		Prerequisites: newhosp
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		IconPalette: ra
+		Description: Provides Technology
+	Building:
+		Footprint: ___ xxx xx= ===
+		Dimensions: 3,4
+	-Selectable:
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:	
+	AirstrikePower@AirstrikeBomB:
+		Prerequisites: ~techlevel.superweapons
+		Icon: c17bombs
+		ChargeTime: 750
+		SquadSize: 1
+		QuantizedFacings: 32
+		SquadOffset: 0,0,0
+		BeaconDistanceOffset: 12c0
+		Description: Air Strike
+		LongDesc: Deploy an linear bomblets strike.
+		EndChargeSound: airredy1.aud
+		SelectTargetSound: select1.aud
+		InsufficientPowerSound: nopower1.aud
+		IncomingSound: enemya.aud
+		UnitType: c17bomb
+		DisplayBeacon: True
+		BeaconPoster: airstrike
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		AllowMultiple: true
+		OrderName: Bomberstrike
+	SupportPowerChargeBar:   
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer	
+	ProvidesPrerequisite@Endgame: 
+		Prerequisite: endgame
+        
+NUKENEW:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: nuke
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Powerplant
+	Buildable:
+		BuildPaletteOrder: 10
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		Description: Provides Technology
+	Building:
+		Footprint: _x xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3 
+
+LFACT:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x3Shape
+	RenderSprites:
+		Image: lfact
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Factory
+	Building:
+		Footprint: ___ xxx xx= ===
+		Dimensions: 3,4
+	-Selectable:
+	Health:
+		HP: 2000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+		
+
+NUK2NEW:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: hq
+	Valued:
+		Cost: 1650
+	Tooltip:
+		Name: Communications Center
+	Buildable:
+		BuildPaletteOrder: 40
+		Queue: Defenses.Fact
+		Prerequisites: nukenew
+		BuildLimit: 1 
+		Description: Provides Technology and Radar
+	Building:
+		Footprint: x_ xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 500
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	ProvidesRadar:
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3		 
+
+RADARNEW:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3 
+	RenderSprites:
+		Image: b2new
+	Valued:
+		Cost: 2250
+	Tooltip:
+		Name: Advance Communications Center
+	Buildable:
+		BuildDuration: 3000
+		BuildPaletteOrder: 70
+		Prerequisites: nuk2new
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		Description: Provides Technology
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 700
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	IonCannonPower:
+		Prerequisites: ~techlevel.superweapons
+		Icon: ioncannon
+		Cursor: ioncannon
+		ChargeTime: 600
+		Description: Ion Cannon
+		LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+		BeginChargeSound: ionchrg1.aud
+		EndChargeSound: ionredy1.aud
+		LaunchSound: ion1.aud
+		SelectTargetSound: select1.aud
+		InsufficientPowerSound: nopower1.aud
+		DisplayRadarPing: True
+		CameraActor: camera.small
+		Weapon: IonCannonNew
+	SupportPowerChargeBar:
+	ProvidesPrerequisite@Endgame: 
+		Prerequisite: endgame
+		
+LAMMO:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x1Shape
+	SelectionDecorations:
+		VisualBounds: 24,60,0,-3 
+	RenderSprites:
+		Image: nukenew
+	Valued:
+		Cost: 1050
+	Tooltip:
+		Name: Light Weapon Depot
+	Buildable:
+		BuildPaletteOrder: 20
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		Description: Provides Technology
+	Building:
+		Footprint: __ xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3  
+	
+HAMMO:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x3Shape
+	SelectionDecorations:
+		VisualBounds: 72,72,0,-3 
+	RenderSprites:
+		Image: nuk2new
+	Valued:
+		Cost: 1950
+	Tooltip:
+		Name: Heavy Weapon Depot
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: lammo
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		Description: Provides Technology
+	Building:
+		Footprint: ___ xxx xxx ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 700
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-5
+FAMMO:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3 
+	RenderSprites:
+		Image: fixnew
+	Valued:
+		Cost: 2850
+	Tooltip:
+		Name: Ammo Factory
+	Buildable:
+		BuildDuration: 3800
+		BuildPaletteOrder: 80
+		Prerequisites: hammo
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		Description: Provides Technology, grants Airstrike
+	AirstrikePower:
+		Prerequisites: ~techlevel.superweapons
+		Icon: airstrike
+		ChargeTime: 1050
+		SquadSize: 5
+		QuantizedFacings: 2
+		SquadOffset: -1500,1936,0
+		BeaconDistanceOffset: 9c0
+		Description: Air Strike
+		LongDesc: Deploy an aerial napalm strike.\nBurns vehicles and infantry along a line.
+		EndChargeSound: airredy1.aud
+		SelectTargetSound: select1.aud
+		InsufficientPowerSound: nopower1.aud
+		IncomingSound: enemya.aud
+		UnitType: a10striker
+		DisplayBeacon: True
+		BeaconPoster: airstrike
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+	SupportPowerChargeBar:
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@Endgame: 
+		Prerequisite: endgame
+   
+		
+MISSNEW:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	SelectionDecorations:
+		VisualBounds: 72,60,0,-3 
+	RenderSprites:
+		Image: miss
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Secret Weapons Center
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	-Targetable:
+	-Sellable:
+	DamageMultiplier:
+		Modifier: 0
+	Health:
+		HP: 1900
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+
+	
+		
+		
+FIXTECH:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3 
+	RenderSprites:
+		Image: fixtech
+	CashTrickler:
+		Period: 40
+		Amount: 7
+		ShowTicks: true
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Secret Weapons Center
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	-Targetable:
+	-Sellable:
+	Health:
+		HP: 1900
+	RevealsShroud:
+		Range: 5c0
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	DamageMultiplier:
+		Modifier: 0
+		
+TMPLNEW:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	SelectionDecorations:
+		VisualBounds: 72,60,0,-3 
+	RenderSprites:
+		Image: tmpl
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Secret Weapons Center
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	-Targetable:
+	-Sellable:
+	Health:
+		HP: 1900
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	DamageMultiplier:
+		Modifier: 0
+		
+SILLYONE:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3 
+	RenderSprites:
+		Image: pdox
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 3000
+	Tooltip:
+		Name: Silly ChronoSphere
+	Buildable:
+		BuildDuration: 4000
+		BuildPaletteOrder: 300
+		Prerequisites: forb, fammo
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		Description: Enables Silly Technology!
+		IconPalette: ra
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 2000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer
+	
+SILLYTWO:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	SelectionDecorations:
+		VisualBounds: 72,72,0,-3 
+	RenderSprites:
+		Image: stek
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 4500
+	Tooltip:
+		Name: Silly Research Center
+	Buildable:
+		BuildPaletteOrder: 310
+		BuildDuration: 6000
+		Prerequisites: fammo, radarnew
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		IconPalette: ra
+		Description: Attention! Level gets more Dangerous!
+	Building:
+		Footprint: ___ xxx xx= ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 4000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:	
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer  
+		
+		
+SILLYTHREE:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x1Shape
+	Selectable:
+		Bounds: 48,28,0,2
+	SelectionDecorations:
+		VisualBounds: 50,50,0,-12
+	RenderSprites:
+		Image: iron
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 3150
+	Tooltip:
+		Name: Silly Curtain
+	Buildable:
+		BuildPaletteOrder: 320
+		BuildDuration: 4200
+		Prerequisites: forb, radarnew
+		Queue: Defenses.Fact
+		BuildLimit: 1 
+		IconPalette: ra
+		Description: Attention! Level gets more Dangerous!
+	Building:
+		Footprint: xx ==
+		Dimensions: 2,2
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 4000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:	
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer  
+
+endgame:
+	Tooltip:
+		Name: Atleast 1 finished Techtree
+	ProvidesPrerequisite@Endgame: 
+		Prerequisite: endgame

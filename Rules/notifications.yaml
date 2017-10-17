@@ -1,0 +1,21 @@
+Speech:
+    Notifications:
+        Blank:
+		LowPower: none
+		SilosNeeded: none
+		BaseAttack: none
+		HarvesterAttack: none
+		StartGame: none
+		UnitReady: none
+		NoBuild: none
+		Training: none
+		OnHold: none
+		Cancelled: none
+		Building: none
+		Reinforce: none
+		UnitLost: none
+		CivilianKilled: none
+        
+Sounds:
+	Notifications:
+		LevelUp: none

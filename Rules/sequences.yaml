@@ -1,0 +1,2273 @@
+placeholder:
+	idle: e1
+	dead: e1
+	make: e1
+	icon: ResetIcon.shp
+		AddExtension: False
+
+ranks: 
+	rank1: rank
+		Start: 0
+	rank2: rank
+		Start: 1
+	rank3: rank
+		Start: 3
+		
+masterrank:
+	master10: pip-hazmat
+		Length: *
+		Offset: 0,0
+	master50: pip-hazmat
+		Length: *
+		Offset: -5,0
+	master100: pip-hazmat
+		Length: *
+		Offset: 5,0
+		
+trannew:
+	idle: tran
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor: lrotor
+		Length: 4
+	rotor2: rrotor
+		Length: 4
+	slow-rotor: lrotor
+		Start: 4
+		Length: 8
+	slow-rotor2: rrotor
+		Start: 4
+		Length: 8
+	open: tran
+		Start: 32
+		Length: 4
+	unload: tran
+		Start: 35
+	icon: tranicnh.tem
+		AddExtension: False  
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	turret: transam
+		Facings: 32
+		
+upgradesymbs: 
+	rocket: specialsmall
+		Start: 0
+	hazard: specialsmall
+		Start: 1
+	minigun: specialsmall
+		Start: 2
+	grenade: specialsmall
+		Start: 3
+	cross: specialsmall
+		Start: 4
+	earth: earth
+		Start: 0
+	skull: rapid
+		Start: 0
+	violetping: moveflsh
+		Start: 0
+	greenrocket: missile2
+		Start: 1
+	orangeball: invun
+		Start: 0
+	fire: fire1
+		Start: 6
+	empball: empulse
+		Start: 13 
+	dollar: dollar
+		Start: 0 
+	missile: deviator
+		Start: 2   
+	blueball: stealth2
+		Start: 0 
+	repair: select
+		Start: 3
+	tripple: e2fireupgradeRank
+		Start: 0	 
+	msamdouble: msamupgraderank
+		Start: 0   
+	grenadier: grenadierplus
+		Start: 0	 
+	flamer: flamerrplus
+		Start: 0 
+	ltnk: ltnkplus
+		Start: 0 
+	artyfive: artyplus
+		Start: 0 
+	mammoplus: mammoplus
+		Start: 0 
+	stnkplus: stnkplus
+		Start: 0 
+	e22plus: e22plus
+		Start: 0 
+	chemplus: chemplus
+		Start: 0 
+	tranplus: tranplus
+		Start: 0 
+##-- special upgrades---
+
+tripplefire:
+	idle: e1
+	icon: e2fireupgrade.shp
+		AddExtension: False	   
+		
+doublepack:
+	idle: e1
+	icon: msamupgrade.shp
+		AddExtension: False	  
+
+grenadierfire:
+	idle: e1 
+	icon: grenadierfire.shp
+		AddExtension: False	   
+		
+flamerfire:
+	idle: e1
+	icon: flamerfire.shp
+		AddExtension: False	  	
+		
+ltnkfire:
+	idle: e1
+	icon: ltnkfire.shp
+		AddExtension: False	  
+		
+artyfire:
+	idle: e1
+	icon: artyfive.shp
+		AddExtension: False
+
+mammofire:
+	idle: e1
+	icon: mammofire.shp
+		AddExtension: False   
+
+rmbofire:
+	idle: e1
+	icon: rmbofire.shp
+		AddExtension: False  
+
+stnkfire:
+	idle: e1
+	icon: stnkfire.shp
+		AddExtension: False	 
+
+e22fire:
+	idle: e1
+	icon: e22fire.shp
+		AddExtension: False
+chemfire:
+	idle: e1
+	icon: chemfire.shp
+		AddExtension: False
+tranfire:
+	idle: e1
+	icon: tranfire.shp
+		AddExtension: False
+		
+
+# end  
+		
+		
+nuk2new:
+	idle: advdp
+		Offset: 0,20,0
+	damaged-idle: advdp
+		Offset: 0,20,0
+		Start: 1
+	dead: advdp
+		Offset: 0,20,0
+		Start: 2
+		Tick: 800
+	make: advdpmake
+		Offset: 0,20,0
+		Length: *
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: advdpcameo.shp
+		AddExtension: False
+
+array:
+	idle: array
+	damaged-idle: array
+		Start: 1
+	dead: array
+		Start: 2
+		Tick: 800
+	make: arraymake
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: arraycameo.shp
+		AddExtension: False
+
+e1upgrade:
+	idle: e1
+	icon: e1icnh2.shp
+		AddExtension: False
+
+ftnkupgrade:
+	idle: e1
+	icon: ftnkicnh2.shp
+		AddExtension: False
+
+mlrsupgrade:
+	idle: e1
+	icon: mlrsicnh2.shp
+		AddExtension: False
+
+towupgrade:
+	idle: e1
+	icon: towcnh.shp
+		AddExtension: False
+		
+orcatvupgrade:
+	idle: e1
+	icon: orcacnh2.shp
+		AddExtension: False
+		
+mtkchemupgrade:
+	idle: e1
+	icon: mtnkicnh2.shp
+		AddExtension: False
+		
+ 
+		
+upgradee22icon1:
+	idle: e1
+	icon: upgradeicons2.shp
+		Start: 0
+		AddExtension: False
+upgradee22icon2:
+	idle: e1
+	icon: upgradeicons2.shp
+		Start: 1
+		AddExtension: False
+upgradee22icon3:
+	idle: e1
+	icon: upgradeicons2.shp
+		Start: 2
+		AddExtension: False
+upgradetranicon1:
+	idle: e1
+	icon: upgradeicons2.shp
+		Start: 3
+		AddExtension: False
+upgradetranicon2:
+	idle: e1
+	icon: upgradeicons2.shp
+		Start: 4
+		AddExtension: False
+upgradetranicon3:
+	idle: e1
+	icon: upgradeicons2.shp
+		Start: 5
+		AddExtension: False
+upgradee1icon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 39
+		AddExtension: False
+upgradee1icon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 40
+		AddExtension: False
+upgradee1icon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 41
+		AddExtension: False
+upgradee2icon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 36
+		AddExtension: False
+upgradee2icon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 37
+		AddExtension: False
+upgradee2icon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 38
+		AddExtension: False
+upgradee3icon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 33
+		AddExtension: False
+upgradee3icon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 34
+		AddExtension: False
+upgradee3icon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 35
+		AddExtension: False
+upgradee4icon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 30
+		AddExtension: False
+upgradee4icon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 31
+		AddExtension: False
+upgradee4icon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 32
+		AddExtension: False
+upgradee5icon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 27
+		AddExtension: False
+upgradee5icon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 28
+		AddExtension: False
+upgradee5icon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 29
+		AddExtension: False
+upgradermboicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 3
+		AddExtension: False
+upgradermboicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 4
+		AddExtension: False
+upgradermboicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 5
+		AddExtension: False
+upgradestnkicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 0
+		AddExtension: False
+upgradestnkicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 1
+		AddExtension: False
+upgradestnkicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 2
+		AddExtension: False
+upgradeorcaicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 6
+		AddExtension: False
+upgradeorcaicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 7
+		AddExtension: False
+upgradeorcaicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 8
+		AddExtension: False
+upgradeobliicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 9
+		AddExtension: False
+upgradeobliicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 10
+		AddExtension: False
+upgradeobliicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 11
+		AddExtension: False
+upgrademsamicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 12
+		AddExtension: False
+upgrademsamicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 13
+		AddExtension: False
+upgrademsamicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 14
+		AddExtension: False
+upgradeltnkicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 15
+		AddExtension: False
+upgradeltnkicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 16
+		AddExtension: False
+upgradeltnkicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 17
+		AddExtension: False
+upgradeioncicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 18
+		AddExtension: False
+upgradeioncicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 19
+		AddExtension: False
+upgradeioncicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 20
+		AddExtension: False
+upgradehtnkicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 21
+		AddExtension: False
+upgradehtnkicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 22
+		AddExtension: False
+upgradehtnkicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 23
+		AddExtension: False
+upgradeheliicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 24
+		AddExtension: False
+upgradeheliicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 25
+		AddExtension: False
+upgradeheliicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 26
+		AddExtension: False
+upgradebggyicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 42
+		AddExtension: False
+upgradebggyicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 43
+		AddExtension: False
+upgradebggyicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 44
+		AddExtension: False
+upgradefatwricon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 45
+		AddExtension: False
+upgradefatwricon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 46
+		AddExtension: False
+upgradefatwricon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 47
+		AddExtension: False
+upgradenukeicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 48
+		AddExtension: False
+upgradenukeicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 49
+		AddExtension: False
+upgradenukeicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 50
+		AddExtension: False
+upgradeartyicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 51
+		AddExtension: False
+upgradeartyicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 52
+		AddExtension: False
+upgradeartyicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 53
+		AddExtension: False
+upgrademtnkicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 57
+		AddExtension: False
+upgrademtnkicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 58
+		AddExtension: False
+upgrademtnkicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 59
+		AddExtension: False
+upgradejeepicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 54
+		AddExtension: False
+upgradejeepicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 55
+		AddExtension: False
+upgradejeepicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 56
+		AddExtension: False
+upgrademlrsicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 60
+		AddExtension: False
+upgrademlrsicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 61
+		AddExtension: False
+upgrademlrsicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 62
+		AddExtension: False
+upgradftnkicon1:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 63
+		AddExtension: False
+upgradftnkicon2:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 64
+		AddExtension: False
+upgradftnkicon3:
+	idle: e1
+	icon: upgradeicons.shp
+		Start: 65
+		AddExtension: False
+ftnk:
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle:
+		Combine:
+			flame-n:
+				Length: *
+				Offset: 3,6
+			flame-nw:
+				Length: *
+				Offset: 8,7
+			flame-w:
+				Length: *
+				Offset: 8,2
+			flame-sw:
+				Length: *
+				Offset: 7,-2
+			flame-s:
+				Length: *
+				Offset: 3,-2
+			flame-se:
+				Length: *
+				Offset: -5,-2
+			flame-e:
+				Length: *
+				Offset: -7,2
+			flame-ne:
+				Length: *
+				Offset: -7,8
+	muzzlechem:
+		Combine:
+			chem-n:
+				Length: *
+				Offset: 3,6
+			chem-nw:
+				Length: *
+				Offset: 8,7
+			chem-w:
+				Length: *
+				Offset: 8,2
+			chem-sw:
+				Length: *
+				Offset: 7,-2
+			chem-s:
+				Length: *
+				Offset: 3,-2
+			chem-se:
+				Length: *
+				Offset: -5,-2
+			chem-e:
+				Length: *
+				Offset: -7,2
+			chem-ne:
+				Length: *
+				Offset: -7,8
+		Facings: 8
+		Length: 13
+	icon: ftnkicnh.tem
+		AddExtension: False	   
+		
+nukenew:
+	idle: wpdp
+		Offset: 0,20,0
+	damaged-idle: wpdp
+		Offset: 0,20,0
+		Start: 1
+	dead: wpdp
+		Offset: 0,20,0
+		Start: 2
+		Tick: 800
+	make: wpdpmake
+		Offset: 0,20,0
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: wpdpcameo.shp
+		AddExtension: False
+		
+lfact:
+	idle: lfact
+		Length: 9
+		Tick: 100
+	damaged-idle: lfact
+		Start: 9
+		Length: 9
+		Tick: 100
+	dead: lfact
+		Start: 18
+		Tick: 800
+	make: lfactmake
+		Length: *
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: lfactcameo.shp
+		AddExtension: False
+
+cash:
+	idle: cash
+	damaged-idle: cash
+		Start: 1
+	dead: cash
+		Start: 2
+		Tick: 800
+	make: cashmake
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: cashcamo.shp
+		AddExtension: False	  
+cash3:
+	idle: gdshl
+		Length: 8
+		Tick: 120
+	damaged-idle: gdshl
+		Start: 8
+		Length: 6
+		Tick: 120
+	dead: gdshl
+		Start: 14
+		Tick: 800
+	make: gdshlmake
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: gdshlcameo.shp
+		AddExtension: False  
+		
+oiler:
+	idle: oiler
+		Length: 9
+		Tick: 120
+	damaged-idle: oiler
+		Length:9
+		Start: 9
+		Tick: 120
+	dead: oiler
+		Start: 18
+		Tick: 800
+	make: oilermake
+		Length: *
+		Tick: 80
+	bib: mbOBLI
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+		Length: *
+		Offset: 0,0
+	icon: oilercameo.shp
+		AddExtension: False			
+oiler2:
+	idle: oiler2
+		Length: 10
+		Tick: 120
+		Offset: 0,14
+	damaged-idle: oiler2
+		Length:10
+		Start: 10
+		Tick: 120
+		Offset: 0,14
+	dead: oiler2
+		Start: 18
+		Tick: 800
+		Offset: 0,14
+	make: oiler2make
+		Length: *
+		Tick: 80
+		Offset: 0,14
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: oiler2cameo.shp
+		AddExtension: False   
+		
+e22: 
+	stand:
+		Facings: 8
+	stand2:
+		Start: 8
+		Facings: 8
+	run:
+		Start: 16
+		Length: 6
+		Facings: 8
+		Tick: 100
+	throw:
+		Start: 64
+		Length: 20
+		Facings: 8
+	# stand -> prone transition
+	liedown:
+		Start: 224
+		Length: 2
+		Facings: 8
+	# prone -> stand transition
+	standup:
+		Start: 272
+		Length: 2
+		Facings: 8
+	prone-stand:
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-stand2:
+		Start: 240
+		Stride: 4
+		Facings: 8
+	prone-run:
+		Start: 240
+		Length: 4
+		Facings: 8
+		Tick: 100
+	prone-throw:
+		Start: 288
+		Length: 12
+		Facings: 8
+	idle1:
+		Start: 384
+		Length: 16
+		Tick: 120
+	idle2:
+		Start: 400
+		Length: 13
+		Tick: 120
+	cheer:
+		Start: 494
+		Length: 3
+		Facings: 8
+		Tick: 120
+	# Shot
+	die1:
+		Start: 424
+		Length: 9
+		Tick: 80
+	# Explode
+	die2:
+		Start: 432
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3:
+		Start: 440
+		Length: 12
+		Tick: 80
+	# Fly through air squish on ground
+	die4:
+		Start: 440
+		Length: 12
+		Tick: 80
+	# Burn
+	die5:
+		Start: 452
+		Length: 18
+		Tick: 80
+	# Tib
+	die6:
+		Start: 424
+		Length: 9
+		Tick: 80
+	die-crushed: e2rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	icon: e22iconcnc.shp
+		AddExtension: False
+
+
+secret1:
+	idle: rsilob
+	damaged-idle: rsilob
+		Start: 1
+	dead: rsilo
+		Start: 12
+		Tick: 800
+	build-top: rsilo
+		Start: 0
+		Length: 9
+		ZOffset: -1024
+		Tick: 130
+	damaged-build-top: rsilo
+		Start: 9
+		Length: 9
+		ZOffset: -1024
+		Tick: 130
+	make: rsilomake
+		Length: *
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: obliicnh.tem
+		AddExtension: False  
+	   
+	   
+secret2:
+	idle: rsilob
+	damaged-idle: rsilob
+		Start: 1
+	dead: rsilo
+		Start: 12
+		Tick: 800
+	build-top: rsilo
+		Start: 0
+		Length: 9
+		ZOffset: -1024
+		Tick: 130
+	damaged-build-top: rsilo
+		Start: 9
+		Length: 9
+		ZOffset: -1024
+		Tick: 130
+	make: rsilomake
+		Length: *
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: atwricnh.tem
+		AddExtension: False 
+
+secret3: 
+	idle: ltmplse
+	damaged-idle: ltmplse
+		Start: 1
+	dead: ltmpls
+		Start: 12
+		Tick: 800
+	build-top: ltmpls
+		Start: 0
+		Length: 6
+	damaged-build-top: ltmpls
+		Start: 6
+		Length: 6
+	make: ltmplsmake
+		Length: *
+		Tick: 80
+	bib: bib1
+		UseTilesetExtension: true
+		Length: *
+	icon: atomicnh.tem
+		AddExtension: False	
+
+secret4:
+	idle: lfactb2
+	damaged-idle: lfactb2
+		Start: 1
+	dead: lfact2
+		Start: 12
+		Tick: 800
+	build-top: lfact2
+		Length: 6
+		ZOffset: -1024
+	damaged-build-top: lfact2
+		Start: 6
+		Length: 6
+		ZOffset: -1024
+	make: lfactmake2
+		Length: *
+		Tick: 80
+	bib: bib1
+		UseTilesetExtension: true
+		Length: *
+	icon: ionicnh.tem
+		AddExtension: False			 
+
+stankfact:
+	idle: sfact
+		Start:1
+	damaged-idle: sfact
+		Start: 2
+	dead: sfact
+		Start: 3
+		Tick: 800
+	build-top: sfactdoor
+		Length: 8
+		ZOffset: -1024
+	damaged-build-top: sfactddoor
+		Length: 8
+		ZOffset: -1024
+	make: sfactmake
+		Length: *
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: stnkicnh.tem
+		AddExtension: False  
+		
+mlrsfact:
+	idle: nextref
+		Start:0
+		Length: 9
+		Tick: 90
+		Offset: 0,-12
+	damaged-idle: nextrefd
+		Start:0
+		Length: 9
+		Tick: 90
+		Offset: 0,-12
+	dead: nextref
+		Start: 9
+		Tick: 800
+		Offset: 0,-12
+	build-top: nextrefdoor
+		Length: 9
+		ZOffset: -1024
+		Offset: 0,-12
+	damaged-build-top: nextrefdoor
+		Length: 9
+		ZOffset: -1024
+		Offset: 0,-12
+	make: nextrefmake
+		Length: *
+		Tick: 80
+		Offset: 0,-12
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: msamicnh.tem
+		AddExtension: False  
+		
+rmbofact:
+	idle: b2
+	damaged-idle: b2
+		Start: 1
+	dead: b2
+		Start: 2
+		Tick: 800
+	make: b2make
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: rmboicnh.tem
+		AddExtension: False
+
+
+e1fact:
+	idle: hand
+	damaged-idle: hand
+		Start: 1
+	dead: hand
+		Start: 2
+		Tick: 800
+	make: handmake
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: e1icnh.tem
+		AddExtension: False
+		
+e2fact:
+	idle: pyle
+		Length: 10
+		Tick: 100		
+	damaged-idle: pyle
+		Start: 10
+		Length: 10
+		Tick: 100		
+	dead: pyle
+		Start: 20
+		Tick: 800
+	make: pylemake
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: e2icnh.tem
+		AddExtension: False
+		
+e22fact:
+	idle: mtrbarr		
+	damaged-idle: newbarr
+		Start: 1	
+	dead: mtrbarr
+		Start: 2
+		Tick: 800
+ 	make: mtrbarrmake
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: e22iconcnc.shp
+		AddExtension: False
+		
+e3fact:
+	idle: rkbarr		
+	damaged-idle: rkbarr
+		Start: 1		
+	dead: rkbarr
+		Start: 2
+		Tick: 800
+	make: rkbarrmake
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: e3icnh.tem
+		AddExtension: False
+		
+e4fact:
+	idle: flbarr
+	damaged-idle: flbarr
+		Start: 1
+	dead: flbarr
+		Start: 2
+		Tick: 800
+	make: flbarrmake
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: e4icnh.tem
+		AddExtension: False
+		
+e5fact:
+	idle: chbarr
+	damaged-idle: chbarr
+		Start: 1
+	dead: chbarr
+		Start: 2
+		Tick: 800
+	make: flbarrmake
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: e5icnh.tem
+		AddExtension: False
+		
+		
+carfact1:
+	idle: scweap
+		ZOffset: 1024
+	damaged-idle: scweap
+		Start: 2
+		ZOffset: 1024
+	dead: scweap
+		Start: 4
+		Tick: 800
+	build-top: scweap
+		Start: 1
+		ZOffset: -1024
+	damaged-build-top: scweap
+		Start: 3
+		ZOffset: -1024
+	make: scweapmake
+		Length: *
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: jeepicnh.tem
+		AddExtension: False
+
+icon:
+	c17bombs: c17strike.shp
+		
+carfact1b:
+	idle: scweap
+		ZOffset: 1024
+	damaged-idle: scweap
+		Start: 2
+		ZOffset: 1024
+	dead: scweap
+		Start: 4
+		Tick: 800
+	build-top: scweap
+		Start: 1
+		ZOffset: -1024
+	damaged-build-top: scweap
+		Start: 3
+		ZOffset: -1024
+	make: scweapmake
+		Length: *
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: bggyicnh.tem
+		AddExtension: False
+		
+carfact2:
+	idle: weap
+	damaged-idle: weap
+		Start: 1
+	dead: weap
+		Start: 2
+		Tick: 800
+	build-top: weap2
+		Length: 10
+		ZOffset: -1024
+	damaged-build-top: weap2
+		Start: 10
+		Length: 10
+		ZOffset: -1024
+	make: weapmake
+		Length: *
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: mtnkicnh.tem
+		AddExtension: False
+	  
+carfact3:
+	idle: weap
+	damaged-idle: weap
+		Start: 1
+	dead: weap
+		Start: 2
+		Tick: 800
+	build-top: weap2
+		Length: 10
+		ZOffset: -1024
+	damaged-build-top: weap2
+		Start: 10
+		Length: 10
+		ZOffset: -1024
+	make: weapmake
+		Length: *
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: msamicnh.tem
+		AddExtension: False
+ 
+carfact4:
+	idle: supfact
+	damaged-idle: supfact
+		Start: 1
+	dead: supfact
+		Start: 2
+		Tick: 800
+	build-top: supfactdoor
+		Length: 1
+		ZOffset: 1024
+	damaged-build-top: supfactdoor
+		Start: 1
+		Length: 1
+		ZOffset: 1024
+	make: supfactmake
+		Length: *
+		Tick: 80
+	bib: bib1
+		UseTilesetExtension: true
+		Length: *
+	icon: htnkicnh.tem
+		AddExtension: False
+		
+carfact5:
+	idle: artyfact
+	damaged-idle: artyfact
+		Start: 1
+	dead: artyfact
+		Start: 2
+		Tick: 800 
+	make: artyfactmake
+		Length: *
+		Tick: 80
+	build-top: artyfactdoor
+		Length: 1
+		ZOffset: -1024
+	damaged-build-top: artyfactdoor
+		Length: 1
+		ZOffset: -1024
+	bib: bib1
+		UseTilesetExtension: true
+		Length: *
+	icon: artyicnh.tem
+		AddExtension: False
+
+		
+carfact6:
+	idle: ftfld
+		ZOffset: -1023
+	damaged-idle: ftfld
+		Start: 1
+		ZOffset: -1023
+	dead: ftfld
+		Start: 2
+		ZOffset: -1023
+		Tick: 800
+	make: ftfldmake
+		Length: *
+		Tick: 80
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *
+	icon: ftnkicnh.tem
+		AddExtension: False
+		
+carfact7:
+	idle: afld
+		Tick: 120
+		ZOffset: -1023
+	damaged-idle: afld
+		Start: 16
+		Tick: 120
+		ZOffset: -1023
+	active: afld
+		Length: 16
+		Tick: 120
+		ZOffset: -1023
+	damaged-active:
+		Start: 16
+		Length: 16
+		Tick: 120
+		ZOffset: -1023
+	idle-dish: afld_d
+		Length: 16
+		Tick: 160
+	damaged-idle-dish: afld_d
+		Start: 16
+		Length: 16
+		Tick: 160
+	dead: afld
+		Start: 32
+		ZOffset: -1023
+		Tick: 800
+	make: afldmake
+		Length: *
+		Tick: 80
+	bib: bib1
+		UseTilesetExtension: true
+		Length: *
+	icon: mlrsicnh.tem
+		AddExtension: False   
+
+carfact8:
+	idle: afld
+		Tick: 120
+		ZOffset: -1023
+	damaged-idle: afld
+		Start: 16
+		Tick: 120
+		ZOffset: -1023
+	active: afld
+		Length: 16
+		Tick: 120
+		ZOffset: -1023
+	damaged-active:
+		Start: 16
+		Length: 16
+		Tick: 120
+		ZOffset: -1023
+	idle-dish: afld_d
+		Length: 16
+		Tick: 160
+	damaged-idle-dish: afld_d
+		Start: 16
+		Length: 16
+		Tick: 160
+	dead: afld
+		Start: 32
+		ZOffset: -1023
+		Tick: 800
+	make: afldmake
+		Length: *
+		Tick: 80
+	bib: bib1
+		UseTilesetExtension: true
+		Length: *
+	icon: ltnkicnh.tem
+		AddExtension: False   
+airfact0:
+	idle: hpad
+		ZOffset: -1023 
+	damaged-idle: hpad
+		Start: 7
+		ZOffset: -1023
+	active: hpad
+		Start: 1
+		Length: 6
+		Tick: 100
+		ZOffset: -1023
+	damaged-active:
+		Start: 8
+		Length: 6
+		Tick: 100		
+		ZOffset: -1023
+	dead: hpad
+		Start: 14
+		ZOffset: -1023
+		Tick: 800
+	make: hpadmake
+		Length: *
+		Tick: 80
+	icon: tranicnh.tem
+		AddExtension: False		
+airfact1:
+	idle: hpad
+		ZOffset: -1023 
+	damaged-idle: hpad
+		Start: 7
+		ZOffset: -1023
+	active: hpad
+		Start: 1
+		Length: 6
+		Tick: 100
+		ZOffset: -1023
+	damaged-active:
+		Start: 8
+		Length: 6
+		Tick: 100		
+		ZOffset: -1023
+	dead: hpad
+		Start: 14
+		ZOffset: -1023
+		Tick: 800
+	make: hpadmake
+		Length: *
+		Tick: 80
+	icon: heliicnh.tem
+		AddExtension: False
+
+airfact2:
+	idle: hpad
+		ZOffset: -1023 
+	damaged-idle: hpad
+		Start: 7
+		ZOffset: -1023
+	active: hpad
+		Start: 1
+		Length: 6
+		Tick: 100
+		ZOffset: -1023
+	damaged-active:
+		Start: 8
+		Length: 6
+		Tick: 100		
+		ZOffset: -1023
+	dead: hpad
+		Start: 14
+		ZOffset: -1023
+		Tick: 800
+	make: hpadmake
+		Length: *
+		Tick: 80
+	icon: orcaicnh.tem
+		AddExtension: False		
+		
+newhosp:
+	idle: hosp2
+		Length: 4
+		Tick: 100
+		Offset: 0,-2
+	damaged-idle: hosp2
+		Start: 4
+		Length: 4
+		Offset: 0,-2
+	make: hospmake
+		Length: *
+		Tick: 80
+		Offset: 0,-2
+	dead: hosp2
+		Start: 2
+		ZOffset: -1023
+		Tick: 800
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *   
+	icon: hospcameo.shp
+		AddExtension: False
+		
+stockm:
+	idle: b1
+	damaged-idle: b1
+		Start: 1
+	make: b1make
+		Length: *
+		Tick: 80
+	dead: b1
+		Start: 2
+		Tick: 800
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *   
+	icon: b1cameo.shp
+		AddExtension: False
+
+		
+
+b2new:
+	idle: eye
+		Length: 16
+		Tick: 100
+	damaged-idle: eye
+		Start: 16
+		Length: 16
+		Tick: 100
+	dead: eye
+		Start: 32
+		Tick: 800
+	make: eyemake
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: eyeicnh.tem
+		AddExtension: False
+
+biggun:
+	idle: canon2
+		Start: 1
+		Facings: 32
+		UseClassicFacingFudge: True
+	recoil: canon2
+		Start: 1
+		Facings: 32
+		UseClassicFacingFudge: True
+	damaged-idle: canon2dmg
+		Start: 1
+		Facings: 32
+		UseClassicFacingFudge: True
+	damaged-recoil: canon2dmg
+		Start: 1
+		Facings: 32
+		UseClassicFacingFudge: True
+	make: canon2make
+		Start: 2
+		Length: *
+		Tick: 80
+	muzzle: veh-hit1
+		Length: *
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: canon2cameo.shp
+		AddExtension: False
+		
+fixnew:
+	idle: amof
+		Length: 3
+		Tick: 600
+		Offset: 0,10,0
+	damaged-idle: amof
+		Start: 3
+		Tick: 600
+		Length: 3
+		Offset: 0,10,0
+	make: amofmake
+		Length: *
+		Tick: 80
+		Offset: 0,10,0
+	dead: amof
+		Start: 6
+		Tick: 800
+		Offset: 0,10,0
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *   
+	icon: amofcameo.shp
+		AddExtension: False
+		
+fixtech:
+	idle: silo
+		Length: 5
+		Tick: 200
+	damaged-idle: silo
+		Start: 5
+		Length: 5
+		Tick: 200
+	make: silomake
+		Length: *
+		Tick: 80
+	dead: silo
+		Start: 10
+		Tick: 800 
+	icon: advdpticon.shp
+		AddExtension: False
+bio:
+	icon: biocameo.shp
+		AddExtension: False
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	dead: bio
+		Start: 2
+		ZOffset: -1023
+		Tick: 800
+
+miss:
+	dead: miss
+		Start: 2
+		ZOffset: -1023
+		Tick: 800
+		Offset: 0,-1
+	icon: eyeicnh.tem
+		AddExtension: False
+		
+miss2:
+	idle: miss
+		Offset: 0,5,0
+	damaged-idle: miss
+		Offset: 0,5,0
+		Start: 1
+	dead: miss
+		Offset: 0,5,0
+		Start: 2
+		Tick: 800
+	make: missmake
+		Offset: 0,5,0
+		Length: *
+		Tick: 80
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: misscameo.shp
+		AddExtension: False
+oblirev:
+	idle: oblirev
+	damaged-idle: oblirev
+		Start: 4
+	active: oblirev
+		Length: 4
+		Tick: 680
+	damaged-active: oblirev
+		Start: 4
+		Length: 4
+		Tick: 680
+	dead: oblirev
+		Start: 8
+		Tick: 800
+	make: oblitransform
+		Length: 26
+		Frames: 25,24,23,22,21,20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1,0
+		Tick: 100
+	bib: mbOBLI
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+		Length: *
+		Offset: -1,-3
+	icon: obliicnh.tem
+		AddExtension: False
+
+e1rock:
+	stand: e1carry
+		Start: 0
+		Facings: 8
+	run: e1carry
+		Start: 8
+		Facings: 8
+		Length: 6
+		Tick: 100
+	shoot: e1throw
+		Start: 0
+		Facings: 8
+		Length: 4
+		Tick: 100
+	turret: afldmake
+		Offset: 0,-19,0
+		Start: 0
+		Facings: 1
+		Length: 1
+	turret0: afldmake
+		Facings: 1
+		Length: 1
+		Start: 0
+		Offset: 0,-19,0
+	turret1: sbag
+		Palette: terrain
+		Facings: 1
+		Length: 1
+		Start: 0
+		Offset: 0,-19,0
+	die1: e1
+		Start: 381
+		Length: 9
+		Tick: 80
+	# Explode
+	die2: e1
+		Start: 390
+		Length: 8
+		Tick: 80
+	# Fly and explode in air
+	die3: e1
+		Start: 398
+		Length: 8
+		Tick: 80
+	# Fly through air squish on ground
+	die4: e1
+		Start: 406
+		Length: 12
+		Tick: 80
+	# Burn
+	die5: e1
+		Start: 418
+		Length: 18
+		Tick: 80
+	# Tib
+	die6: e1
+		Start: 366
+		Length: 11
+		Tick: 80
+	die-crushed: e1rot
+		Start: 16
+		Length: 4
+		Tick: 1600
+		ZOffset: -511
+	cheer: e1
+		Start: 460
+		Length: 3
+		Facings: 8
+		Tick: 120
+	# Dancing
+	idle4: e1
+		Start: 517
+		Length: 9
+		Tick: 120
+rockes: 
+	idle: sbag
+		Offset: 0,0,0
+		Start: 0
+		Facings: 1
+		Length: 1
+		ZOffset: 1023
+
+
+guntank:
+	idle: mcv
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret: gun
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret2: stnk
+		Facings: 32
+		UseClassicFacingFudge: True  
+	spinner1: mhq
+		Start: 32
+		Facings: 32
+	spinneridle: mhq
+		Start: 32
+		Length: 32
+	IonCannon: ionsfx
+		Length: *
+		Offset: 0, -78
+		ZOffset: 1023 
+	muzzle: gunfire2
+		Length: *
+	icon: gunicnh.tem
+		AddExtension: False
+	
+				
+moico:
+	idle: htnk
+		Facings: 32
+		UseClassicFacingFudge: True
+	spinner: atwrmake
+		Start: 2
+		Facings: 1
+		Length: 1
+		Offset: 2,-23,0
+	turret: radarcrate
+		Start: 4
+		Facings: 1
+		Length: 16
+	attack: radarcrate
+		Frames: 12,13,14,15,16,17,18,19,20,4,5,6,7,8,9,10,11
+		Facings: 16
+	IonCannon: ionsfx
+		Length: *
+		Offset: 0, -78
+		ZOffset: 1023
+	icon: ionicnh.tem
+		AddExtension: False
+		
+c17warhead:
+	idle: c17
+		Start: 0
+		Facings: 32
+
+
+tmplangel:
+	idle: obli
+		Start: 0
+		Facings: 1
+		Offset: -5,0,0
+		ZOffset: 1200
+	body: obli
+		Start: 0
+		Facings: 1
+		Offset: 0,0,0
+		ZOffset: 1200
+	shadow: tmplmake
+		Start: 6
+		Length: 20
+		Offset: 0,-3,0
+		ZOffset: 80
+		Tick: 97
+		Frames:7,8,9,10,11,12,13,14,15,16,17,16,15,14,13,12,11,10,9,8
+	wings: tmplmake
+		Start: 6
+		Length: 20
+		Offset: 0,-13,0
+		ZOffset: 100
+		Tick: 20
+		Frames:7,8,9,10,11,12,13,14,15,16,17,16,15,14,13,12,11,10,9,8
+	empty: afldmake
+		Facings: 1
+		Length: 1
+		Start: 0
+	icon: obliicnh.tem
+		AddExtension: False
+	  
+		
+fatwr:
+	idle: atwr
+		Facings: 1
+		Offset: 0,0,0
+		ZOffset: 200
+	shadow: atwr
+		Facings: 1
+		Offset: 0,0,0
+		ZOffset: 100
+	rotor: lrotor
+		Length: 4
+		Offset: 0,0,0
+		ZOffset: 300
+	slow-rotor: lrotor
+		Start: 4
+		Length: 8
+		Offset: 0,0,0
+		ZOffset: 300
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+		Offset: 0,0,0
+	icon: heliicnh.tem
+		AddExtension: False
+	empty: afldmake
+		Facings: 1
+		Length: 1
+		Start: 0
+	icon: atwricnh.tem
+		AddExtension: False
+	idle-overlay: lrotor
+		Length: 4
+		Offset: 0,0,0
+		ZOffset: 300
+	
+
+explosion:
+	IonCannon: ionsfx
+		Length: *
+		Offset: 0, -78
+		ZOffset: 1023  
+	Atoman: invun
+		Length: *
+		ZOffset: 1023
+	SmokPoof: smokey
+		Length: *
+		ZOffset: 1023
+	Kashing: dollar
+		Start: 3
+		Length: 14
+		ZOffset: 1023
+	BurningHam: burn-l
+		Length: *
+		Offset: 0,-3
+		ZOffset: 1023
+	earthbreak: earth
+		Start: 4
+		Length: 6
+		Facings:1
+	planec17: 17bomb
+		Start: 0
+		Length: *
+		Facings:1
+		Tick:60
+		ZOffset: 2048
+	chemlarge: chemlarge
+		Length: 13
+	disc: discthrow
+	
+50cal:
+	idle:
+		ZOffset: 1023	
+		
+pdox:
+	idle:
+	damaged-idle:
+		Start: 29
+	dead: 
+		Start: 29
+		Tick: 800
+	active:
+		Length: 29
+	damaged-active:
+		Start: 29
+		Length: 29
+	make: pdoxmake
+		Length: *
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: pdoxicon
+	
+stek:
+	idle:
+	damaged-idle:
+		Start: 1
+	make: stekmake
+		Length: *
+	dead: 
+		Start: 1
+		Tick: 800
+	bib: bib2
+		Length: *
+		UseTilesetExtension: true
+	icon: stekicon
+	
+syrd:
+	idle:
+	damaged-idle:
+		Start: 1
+	dead: 
+		Start: 1
+		Tick: 800
+	make: syrdmake
+		Length: *
+	icon: caicon
+	bib: bib2
+		Length: *
+		UseTilesetExtension: true
+	
+ca:
+	idle:
+		Facings: 16
+	turret: turr
+		Facings: 32
+	muzzle: gunfire2
+		Length: 5
+	icon: caicon
+	
+proc:
+	icon: harvicnh.tem
+		AddExtension: False
+
+afldn:
+	idle: afldidlen
+		Length: 8
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,-4
+	damaged-idle: afldidlen
+		Start: 8
+		Length: 8
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,-4
+	dead: afldidlen
+		Start: 8
+		Offset: 0,-4
+		Tick: 800
+	active: afldn
+		Length: 8
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,-4
+	damaged-active: afldn
+		Start: 8
+		Length: 8
+		Tick: 160
+		ZOffset: -1023
+		Offset: 0,-4
+	make: afldmaken
+		Length: *
+		Offset: 0,-4
+	dead: afldn
+		Start: 15
+		Tick: 800
+	icon: badricon
+	
+badr:
+	idle:
+		Facings: 16
+	turret: ssam
+		Facings: 32
+	icon: badricon		
+	
+iron:
+	idle:
+		Offset: 0,-12
+	active:
+		Length: 11
+		Offset: 0,-12
+	damaged-idle:
+		Start: 11
+		Offset: 0,-12
+	dead:
+		Start: 11
+		Offset: 0,-12
+		Tick: 800
+	damaged-active:
+		Start: 11
+		Length: 11
+		Offset: 0,-12
+	make: ironmake
+		Length: *
+		Offset: 0,-12
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *
+	icon: ironicon
+	
+	
+flagplat:
+	idle: hpadmakera
+		Start: 7
+		Offset: 1,3
+	turret: agun
+		Facings: 32
+		ZOffset: 265
+	tracks: apcra
+		Facings: 32
+		ZOffset: -265
+	muzzle: gunfire2ra
+		Start: 1
+		Length: 4
+	icon: agunicon
+	
+flagplat.destroyed:
+	idle: hpadmakera
+		Start: 7
+		Offset: 1,3
+		ZOffset: -512
+	turret: agun
+		Facings: 32
+		ZOffset: -512
+	tracks: apcra
+		Facings: 32
+		ZOffset: -265
+	
+weapra:
+	idle: weapra
+	damaged-idle: weapra
+		Start: 1
+	dead: weapra
+		Start: 1
+		Tick: 800
+	make: weapmakera
+		Length: *
+	build-top: weap3ra
+		Length: 10
+	damaged-build-top: weap2ra
+		Start: 4
+		Length: 4
+	bib: bib2
+		Length: *
+		UseTilesetExtension: true
+	icon: agunicon
+	
+	
+mgg:
+	idle: mgg
+		Facings: 32
+	turret: tranra
+		Frames: 8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,0,1,2,3,4,5,6,7
+		Facings: 32
+		Tick: 30
+	rotor: lrotor
+		ZOffset: 512
+		Length: 4
+	icon: mggicon
+	
+discs:
+	idle: discthrow
+		Start: 0
+		Length: 4
+		Tick: 30
+		
+fix:
+	icon: mggicon
+		AddExtension: true
+		
+flyinglst:
+	idle: lstnew
+		UseClassicFacingFudge: True
+		Facings: 32
+	roof: lstnew2
+		UseClassicFacingFudge: True
+		Facings: 32
+	icon: lsticnh.tem
+		AddExtension: False
+	rotor: lrotor
+		ZOffset: -1024
+		Length: 4
+	rotor2: rrotor
+		ZOffset: -1024
+		Length: 4
+	slow-rotor: lrotor
+		ZOffset: -1024
+		Start: 4
+		Length: 8
+	slow-rotor2: rrotor
+		ZOffset: -1024
+		Start: 4
+		Length: 8
+	turret: gtwr
+		Start: 0
+	
+fixra:
+	idle: fixra
+		Offset: 0,1
+		ZOffset: -1c511
+	damaged-idle: fixra
+		Start: 7
+		Offset: 0,1
+		ZOffset: -1c511
+	active: fixra
+		Start: 1
+		Length: 6
+		Offset: 0,1
+		ZOffset: -1c511
+	damaged-active: fixra
+		Start: 8
+		Length: 6
+		Offset: 0,1
+		ZOffset: -1c511
+	make: fixmakera
+		Length: *
+		Offset: 0,1
+	dead: 
+		Start: 7
+		Tick: 800
+		Offset: 0,1
+		ZOffset: -1c511
+	icon: lsticnh.tem
+		AddExtension: False
+	bib: mbFIX
+		UseTilesetExtension: true
+		TilesetOverrides:
+			WINTER: TEMPERAT
+			JUNGLE: TEMPERAT
+			SNOW: TEMPERAT
+		Length: *
+		Offset: 0,-9
+
+	
+minemissile:
+	idle: mine
+		Start: 2
+		
+leviathan:
+	idle: leviathantd
+		Facings: 32
+	tracks: htnk
+		Facings: 32
+		ZOffset: -265
+	icon: facticnh
+		AddExtension: true
+	htnkturret: htnk
+		Facings: 32
+		Start: 32
+		ZOffset: 265
+	msamturret: msam
+		Facings: 32
+		Start: 32
+		ZOffset: 265
+	a10gun: ftnk
+		Facings: 32
+		ZOffset: 265
+	normalturret: mtnk
+		Facings: 32
+		Start: 32
+		ZOffset: 265
+	artillery: arty
+		Facings: 32
+		ZOffset: 265
+	guardtower: gtwr
+	antiairturret: mlrs
+		Facings: 32
+		Start: 32
+		ZOffset: 265
+	ltnkturret: ltnk
+		Facings: 32
+		Start: 32
+		ZOffset: 265
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	healthup: healcrate
+		Start: 3
+		Length: 16
+		Tick: 60
+		ZOffset: 265
+		Scale: 50
+	rangeup: invun
+		Start: 24
+		Length: 11
+		Tick: 60
+		ZOffset: 265
+		Scale: 50
+	speedup: empulse
+		Start: 0
+		Length: 9
+		Tick: 60
+		ZOffset: 265
+		Scale: 50
+		
+livafact:
+	pin: atomicup
+	idle: fixmake
+	holes: fix
+	damaged-idle: fixmake
+	holesmake: fixmake
+		Length: *
+		Tick: 80
+	make: fixmake
+	side: hospmake
+		Start: 3
+		Offset: 0,4
+	sidemake: hospmake
+		Start: 0
+		Length: 3
+		Tick: 80
+		Offset: 0,4
+	icon: leviicnh
+		AddExtension: true
+		
+bombupupgrade:
+	idle: e1
+	icon: bombicnh.tem
+		AddExtension: false
+		
+levifinish:
+	idle: e1
+	icon: lefinicnh
+		AddExtension: true
+		
+leviextra:
+	idle: e1
+	icon: lepluicnh
+		AddExtension: true
+		
+10kicon:
+	idle: e1
+	icon: 10kicnh
+		AddExtension: true		
+50kicon:
+	idle: e1
+	icon: 50kicnh
+		AddExtension: true		
+100kicon:
+	idle: e1
+	icon: 100kicnh
+		AddExtension: true

@@ -1,0 +1,4268 @@
+MCV:
+	Mobile:
+		Speed: 0   
+	Transforms:
+		IntoActor: fact2
+		Offset: -1,-1
+		Facing: 108
+		TransformSounds: constru2.aud, hvydoor1.aud
+		NoTransformNotification: BuildingCannotPlaceAudio
+
+RMBONEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@rmboDamage:
+		Condition: rmboDamage
+		Prerequisites: rmboUpgradeDamage
+	GrantConditionOnPrerequisite@rmboHealth:
+		Condition: rmboHealth
+		Prerequisites: rmboUpgradeHealth
+	GrantConditionOnPrerequisite@rmboReload:
+		Condition: rmboReload
+		Prerequisites: rmboUpgradeReload
+	GrantConditionOnPrerequisite@rmbofire:
+		Condition: rmbofire
+		Prerequisites: rmbofire
+	RangeMultiplier:
+		Modifier: 140
+		RequiresCondition: rmboDamage
+	DamageMultiplier:
+		RequiresCondition: rmboHealth
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: rmboReload
+		Modifier: 80
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (rmboDamage + rmboHealth + rmboReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (rmboDamage + rmboHealth + rmboReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (rmboDamage + rmboHealth + rmboReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: cross
+		RequiresCondition: rmboDamage
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Soldier
+	RenderSprites:
+		Image: rmbo
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Commando
+	Buildable:
+		BuildDuration: 4800
+		BuildPaletteOrder: 50
+		Queue: E6Infantery
+		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
+	Mobile:
+		Speed: 71
+		Voice: Move
+	Guard:
+		Voice: Move
+	Health:
+		HP: 150
+	Passenger:
+		PipType: Red
+		Voice: Move
+	RevealsShroud:
+		Range: 6c0
+		RequiresCondition: !rmboDamage
+	RevealsShroud@Upgraded:
+		Range: 10c0
+		RequiresCondition: rmboDamage
+	AutoTarget:
+		ScanRadius: 8
+	Armament:
+		Weapon: Sniper
+		RequiresCondition: !rmbofire
+	Armament@second:
+		Weapon: DualSniper
+		RequiresCondition: rmbofire
+	AttackFrontal:
+		Voice: Attack
+	AttackMove:
+		Voice: Attack
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle1,idle2,idle3
+	Voiced:
+		VoiceSet: CommandoVoice	
+		
+	RejectsOrders:
+E1New:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^AutoTargetInfantry
+
+	GrantConditionOnPrerequisite@E1Damage:
+		Condition: E1Damage
+		Prerequisites: E1UpgradeDamage
+	GrantConditionOnPrerequisite@E1Health:
+		Condition: E1Health
+		Prerequisites: E1UpgradeHealth
+	GrantConditionOnPrerequisite@E1Reload:
+		Condition: E1Reload
+		Prerequisites: E1UpgradeReload
+	GrantConditionOnPrerequisite@e1fire:
+		Condition: e1fire
+		Prerequisites: e1fire
+	FirepowerMultiplier:
+		Modifier: 125
+		RequiresCondition: E1Damage
+	DamageMultiplier:
+		RequiresCondition: E1Health
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: E1Reload
+		Modifier: 80
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (E1Reload + E1Health + E1Damage) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (E1Reload + E1Health + E1Damage) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (E1Reload + E1Health + E1Damage) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: orangeball
+		RequiresCondition: e1fire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Soldier
+	-Selectable:
+	RenderSprites:
+		Image: e1
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Minigunner
+	Buildable:
+		BuildDuration: 1300
+		BuildPaletteOrder: 10
+		Queue: E1Infantery
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 50
+	Armament@m16:
+		Weapon: M16
+		RequiresCondition: !e1fire
+	Armament@laser:
+		Weapon: MLaser
+		LocalOffset: 0,50,300
+		RequiresCondition: e1fire
+	AttackFrontal:
+	WithInfantryBody:
+		IdleSequences: idle1,idle2,idle3,idle4
+		DefaultAttackSequence: shoot
+	RejectsOrders:
+
+PLACEHOLDER:
+	Inherits: ^Vehicle
+	-Selectable:
+	RenderSprites:
+		Image: placeholder
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Reset yor Factorys
+	Buildable:
+		BuildDuration: 50
+		BuildPaletteOrder: 10000
+		Queue: Defenses.Fact
+		Description: Resets all your factorys, they start producing at the same time.\n Good to generate waves.
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 1
+	AttackFrontal:  
+  
+E2New:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@e2Damage:
+		Condition: e2Damage
+		Prerequisites: e2UpgradeDamage
+	GrantConditionOnPrerequisite@e2Health:
+		Condition: e2Health
+		Prerequisites: e2UpgradeHealth
+	GrantConditionOnPrerequisite@e2Reload:
+		Condition: e2Reload
+		Prerequisites: e2UpgradeReload
+	GrantConditionOnPrerequisite@grenadefire:
+		Condition: e2efire
+		Prerequisites: grenadefire
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: e2Damage
+	DamageMultiplier:
+		RequiresCondition: e2Health
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: e2Reload
+		Modifier: 70
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (e2Damage + e2Health + e2Reload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (e2Damage + e2Health + e2Reload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (e2Damage + e2Health + e2Reload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: grenadier
+		RequiresCondition: e2efire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Soldier
+
+	-Selectable:
+	RenderSprites:
+		Image: e2
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Grenadier
+	Buildable:
+		BuildDuration: 1400
+		BuildPaletteOrder: 10
+		Queue: E2Infantery
+		Description: Fast infantry armed with grenades. \n  Strong vs Buildings, slow-moving targets
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 50
+	Armament:
+		Weapon: Grenade
+		LocalOffset: 0,0,427
+		FireDelay: 15
+		RequiresCondition: !e2efire
+	Armament@bag:
+		Weapon: GrenadeBag
+		LocalOffset: 0,0,427
+		FireDelay: 15
+		RequiresCondition: e2efire
+	AttackFrontal:
+	WithInfantryBody:
+		DefaultAttackSequence: throw
+	Explodes:
+		Weapon: GrenadierExplode
+		EmptyWeapon: GrenadierExplode
+		Chance: 50
+	RejectsOrders:
+	
+E22New:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@e22Damage:
+		Condition: e22Damage
+		Prerequisites: e22UpgradeDamage
+	GrantConditionOnPrerequisite@e22Health:
+		Condition: e22Health
+		Prerequisites: e22UpgradeHealth
+	GrantConditionOnPrerequisite@e22Reload:
+		Condition: e22Reload
+		Prerequisites: e22UpgradeReload
+	GrantConditionOnPrerequisite@e22fire:
+		Condition: e22fire
+		Prerequisites: e22fire
+	FirepowerMultiplier:
+		Modifier: 130
+		RequiresCondition: e22Damage
+	DamageMultiplier:
+		RequiresCondition: e22Health
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: e22Reload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (e22Damage + e22Health + e22Reload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (e22Damage + e22Health + e22Reload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (e22Damage + e22Health + e22Reload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: e22plus
+		RequiresCondition: e22fire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+		
+	Inherits: ^Soldier
+
+	-Selectable:
+	RenderSprites:
+		Image: e22
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Mortar Soldier
+	Buildable:
+		BuildDuration: 2800
+		BuildPaletteOrder: 10
+		Queue: E22Infantery
+		Description: Slow infantry armed with a Mortar. \n  Strong vs Buildings, slow-moving targets
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 34
+	Health:
+		HP: 75
+	Armament:
+		Weapon: MortarShell
+		LocalOffset: 200,0,10
+		FireDelay: 10
+		RequiresCondition: !e22fire
+	Armament@JevalinMissile:
+		Weapon: JevalinMissile
+		Name: secondary
+		LocalOffset: 200,0,10
+		FireDelay: 10
+		RequiresCondition: e22fire
+		LocalYaw: 0,0,0
+	AttackFrontal:
+	WithInfantryBody:
+		DefaultAttackSequence: throw
+	Explodes:
+		Weapon: GrenadierExplode
+		EmptyWeapon: GrenadierExplode
+		Chance: 50
+	AutoTarget:
+		InitialStanceAI: Defend
+		ScanRadius: 10
+	RejectsOrders:
+	
+E3New:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^AutoTargetVehicleAircrafts
+	GrantConditionOnPrerequisite@e3fire:
+		Condition: e3fire
+		Prerequisites: e3fire
+	GrantConditionOnPrerequisite@e3Damage:
+		Condition: e3Damage
+		Prerequisites: e3UpgradeDamage
+	GrantConditionOnPrerequisite@e3Health:
+		Condition: e3Health
+		Prerequisites: e3UpgradeHealth
+	GrantConditionOnPrerequisite@e3Reload:
+		Condition: e3Reload
+		Prerequisites: e3UpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: e3Damage
+	DamageMultiplier:
+		RequiresCondition: e3Health
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: e3Reload
+		Modifier: 60
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (e3Damage + e3Health + e3Reload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (e3Damage + e3Health + e3Reload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (e3Damage + e3Health + e3Reload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: tripple
+		RequiresCondition: e3fire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Soldier
+	-Selectable:
+	RenderSprites:
+		Image: e3
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Rocket Soldier
+	Buildable:
+		BuildDuration: 2700
+		BuildPaletteOrder: 10
+		Queue: E3Infantery
+		Description: Anti-tank/Anti-aircraft infantry. \n  Strong vs Tanks, Aircraft\n  Weak vs Infantry
+	Mobile:
+		Speed: 42
+	Health:
+		HP: 45
+	AutoTarget:
+		ScanRadius: 6
+	Armament:
+		Weapon: Rockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+		RequiresCondition: !e3fire
+	Armament@Tripple:
+		Weapon: TrippelRockets
+		LocalOffset: 256,43,341
+		FireDelay: 5
+		RequiresCondition: e3fire
+	AttackFrontal:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	RejectsOrders:
+
+E4New:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@e4Damage:
+		Condition: e4Damage
+		Prerequisites: e4UpgradeDamage
+	GrantConditionOnPrerequisite@e4Health:
+		Condition: e4Health
+		Prerequisites: e4UpgradeHealth
+	GrantConditionOnPrerequisite@e4Reload:
+		Condition: e4Reload
+		Prerequisites: e4UpgradeReload
+	GrantConditionOnPrerequisite@flamerfire:
+		Condition: e4fire
+		Prerequisites: flamerfire
+	FirepowerMultiplier:
+		Modifier: 130
+		RequiresCondition: e4Damage
+	DamageMultiplier:
+		RequiresCondition: e4Health
+		Modifier: 75
+	ReloadDelayMultiplier:
+		RequiresCondition: e4Reload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (e4Damage + e4Health + e4Reload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (e4Damage + e4Health + e4Reload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (e4Damage + e4Health + e4Reload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: flamer
+		RequiresCondition: e4fire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Soldier
+
+	-Selectable:
+	RenderSprites:
+		Image: e4
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Flamethrower
+	Buildable:
+		BuildDuration: 1400
+		BuildPaletteOrder: 10
+		Queue: E4Infantery
+		Description: Advanced Anti-infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 90
+	Armament:
+		Weapon: Flamethrower
+		LocalOffset: 341,0,256
+		FireDelay: 3
+		MuzzleSequence: muzzle
+		RequiresCondition: !e4fire
+	Armament@FlameGrenade:
+		Weapon: FlameGrenade
+		LocalOffset: 341,0,256
+		RequiresCondition: e4fire
+	AttackFrontal:
+	WithMuzzleOverlay:
+		RequiresCondition: !e4fire
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	RejectsOrders:
+
+
+E5New:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@e5Damage:
+		Condition: e5Damage
+		Prerequisites: e5UpgradeDamage
+	GrantConditionOnPrerequisite@e5Health:
+		Condition: e5Health
+		Prerequisites: e5UpgradeHealth
+	GrantConditionOnPrerequisite@e5Reload:
+		Condition: e5Reload
+		Prerequisites: e5UpgradeReload
+	GrantConditionOnPrerequisite@chemfire:
+		Condition: chemfire
+		Prerequisites: chemfire
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: e5Damage
+	DamageMultiplier:
+		RequiresCondition: e5Health
+		Modifier: 50
+	ReloadDelayMultiplier:
+		RequiresCondition: e5Reload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (e5Damage + e5Health + e5Reload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (e5Damage + e5Health + e5Reload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (e5Damage + e5Health + e5Reload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: chemplus
+		RequiresCondition: chemfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Soldier
+
+	-Selectable:
+	RenderSprites:
+		Image: e5
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Chemical Warrior
+	Buildable:
+		BuildDuration: 2800
+		BuildPaletteOrder: 10
+		Queue: E5Infantery
+		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 90
+	Armament:
+		Weapon: Chemspray
+		LocalOffset: 341,0,256
+		FireDelay: 3
+		MuzzleSequence: muzzle
+	AttackFrontal:
+	WithMuzzleOverlay:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	RejectsOrders:
+	SpawnActorOnDeath:
+		Actor: VICE
+		RequiresCondition: chemfire
+	
+VICE:
+	-Selectable:
+	RejectsOrders:
+	GrantConditionOnPrerequisite@e5Damage:
+		Condition: e5Damage
+		Prerequisites: e5UpgradeDamage
+	GrantConditionOnPrerequisite@e5Health:
+		Condition: e5Health
+		Prerequisites: e5UpgradeHealth
+	GrantConditionOnPrerequisite@e5Reload:
+		Condition: e5Reload
+		Prerequisites: e5UpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: e5Damage
+	DamageMultiplier:
+		RequiresCondition: e5Health
+		Modifier: 50
+	ReloadDelayMultiplier:
+		RequiresCondition: e5Reload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (e5Damage + e5Health + e5Reload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (e5Damage + e5Health + e5Reload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (e5Damage + e5Health + e5Reload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+		  
+
+JEEPNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^AutoTargetInfantry
+	GrantConditionOnPrerequisite@jeepfire:
+		Condition: jeepfire
+		Prerequisites: jeepfire
+	GrantConditionOnPrerequisite@jeepDamage:
+		Condition: jeepDamage
+		Prerequisites: jeepUpgradeDamage
+	GrantConditionOnPrerequisite@jeepHealth:
+		Condition: jeepHealth
+		Prerequisites: jeepUpgradeHealth
+	GrantConditionOnPrerequisite@jeepReload:
+		Condition: jeepReload
+		Prerequisites: jeepUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: jeepDamage
+	DamageMultiplier:
+		RequiresCondition: jeepHealth
+		Modifier: 65
+	ReloadDelayMultiplier:
+		RequiresCondition: jeepReload
+		Modifier: 50
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (jeepReload + jeepDamage + jeepHealth) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (jeepReload + jeepDamage + jeepHealth) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (jeepReload + jeepDamage + jeepHealth) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: grenade
+		RequiresCondition: jeepfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Vehicle
+
+	RenderSprites:
+		Image: jeep
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Hum-Vee
+	Buildable:
+		BuildDuration: 2800
+		BuildPaletteOrder: 20
+		Queue: Jeep.Fact
+		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+	Targetable:
+		TargetTypes: Ground, Vehicle, Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 156
+	Health:
+		HP: 160
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: -85,0,128
+	Armament@Gun:
+		Weapon: MachineGun
+		LocalOffset: 171,0,85
+		MuzzleSequence: muzzle
+	Armament@Tow:
+		Weapon: TOWMissile
+		LocalOffset: 25,20,85
+		RequiresCondition: jeepfire
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	SpawnActorOnDeath:
+		Actor: JEEP.Husk
+	SelectionDecorations:
+		VisualBounds: 32,32
+	RejectsOrders:
+ 
+BGGYNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^AutoTargetInfantry  
+	GrantConditionOnPrerequisite@jeepfire:
+		Condition: jeepfire
+		Prerequisites: jeepfire
+	GrantConditionOnPrerequisite@buggyDamage:
+		Condition: buggyDamage
+		Prerequisites: buggyUpgradeDamage
+	GrantConditionOnPrerequisite@buggyHealth:
+		Condition: buggyHealth
+		Prerequisites: buggyUpgradeHealth
+	GrantConditionOnPrerequisite@buggyReload:
+		Condition: buggyReload
+		Prerequisites: buggyUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: buggyDamage
+	DamageMultiplier:
+		RequiresCondition: buggyHealth
+		Modifier: 65
+	ReloadDelayMultiplier:
+		RequiresCondition: buggyReload
+		Modifier: 50
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (buggyDamage + buggyHealth + buggyReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (buggyDamage + buggyHealth + buggyReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (buggyDamage + buggyHealth + buggyReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: grenade
+		RequiresCondition: jeepfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Vehicle
+
+	RenderSprites:
+		Image: bggy
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Buggy
+	Buildable:
+		BuildDuration: 2800
+		BuildPaletteOrder: 20
+		Queue: Jeep2.Fact
+		Description: Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+	Targetable:
+		TargetTypes: Ground, Vehicle, Light
+	Mobile:
+		TurnSpeed: 10
+		Speed: 156
+	Health:
+		HP: 160
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 10
+		Offset: -85,0,128
+	Armament@Gun:
+		Weapon: MachineGun
+		LocalOffset: 171,0,85
+		MuzzleSequence: muzzle
+	Armament@Tow:
+		Weapon: TOWMissile
+		LocalOffset: 25,20,85
+		RequiresCondition: jeepfire
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	SpawnActorOnDeath:
+		Actor: JEEP.Husk
+	SelectionDecorations:
+		VisualBounds: 32,32
+	RejectsOrders:
+ 
+MTNKNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll		  
+	Inherits: ^AutoTargetVehicle
+	GrantConditionOnPrerequisite@mtnknapalm:
+		Condition: mtnknapalm
+		Prerequisites: mtnknapalm
+	GrantConditionOnPrerequisite@mtnkDamage:
+		Condition: mtnkDamage
+		Prerequisites: mtnkUpgradeDamage
+	GrantConditionOnPrerequisite@mtnkHealth:
+		Condition: mtnkHealth
+		Prerequisites: mtnkUpgradeHealth
+	GrantConditionOnPrerequisite@mtnkReload:
+		Condition: mtnkReload
+		Prerequisites: mtnkUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: mtnkDamage
+	DamageMultiplier:
+		RequiresCondition: mtnkHealth
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: mtnkReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (mtnkDamage + mtnkHealth + mtnkReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (mtnkDamage + mtnkHealth + mtnkReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (mtnkDamage + mtnkHealth + mtnkReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: hazard
+		RequiresCondition: mtnknapalm
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Tank
+	RenderSprites:
+		Image: mtnk
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Medium Tank
+	Buildable:
+		BuildDuration: 4800
+		BuildPaletteOrder: 40
+		Queue: Car2.Fact
+		Description: General-Purpose GDI Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
+	Mobile:
+		Speed: 85
+	Health:
+		HP: 450
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 5
+	Armament@normal:
+		Weapon: 120mm
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+		RequiresCondition: !mtnknapalm
+	Armament@Napalm:
+		Weapon: 120mmSplash
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+		RequiresCondition: mtnknapalm
+
+	AttackTurreted:
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	SpawnActorOnDeath:
+		Actor: MTNK.Husk
+	SelectionDecorations:
+		VisualBounds: 32,32
+	RejectsOrders:
+
+HTNKNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll	   
+	Inherits: ^AutoTargetVehicle
+	GrantConditionOnPrerequisite@htnkDamage:
+		Condition: htnkDamage
+		Prerequisites: htnkUpgradeDamage
+	GrantConditionOnPrerequisite@htnkHealth:
+		Condition: htnkHealth
+		Prerequisites: htnkUpgradeHealth
+	GrantConditionOnPrerequisite@htnkReload:
+		Condition: htnkReload
+		Prerequisites: htnkUpgradeReload
+	GrantConditionOnPrerequisite@mammofire:
+		Condition: mammofire
+		Prerequisites: mammofire
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: htnkDamage
+	DamageMultiplier:
+		RequiresCondition: htnkHealth
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: htnkReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (htnkDamage + htnkHealth + htnkReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (htnkDamage + htnkHealth + htnkReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (htnkDamage + htnkHealth + htnkReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: mammoplus
+		RequiresCondition: mammofire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Tank
+
+	RenderSprites:
+		Image: htnk
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Mammoth Tank
+	Buildable:
+		BuildDuration: 7000
+		BuildPaletteOrder: 60
+		Queue: Car3.Fact
+		Description: Heavily armored GDI Tank.\nCan attack Aircraft.\n  Strong vs Everything
+	Mobile:
+		Crushes: wall, heavywall, crate, infantry
+		Speed: 56
+		TurnSpeed: 3
+	Health:
+		HP: 1600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	WithSpriteTurret:
+	Turreted:
+		TurnSpeed: 3
+	Armament@PRIMARY:
+		Weapon: 120mmDual
+		LocalOffset: 900,180,340, 900,-180,340
+		Recoil: 170
+		RecoilRecovery: 42
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: MammothMissiles
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100, 100
+		Recoil: 10
+		MuzzleSequence: muzzle
+		RequiresCondition: !mammofire
+	Armament@SECONDARYLaser:
+		Name: secondary
+		Weapon: TuskLaser
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100, 100
+		RequiresCondition: mammofire
+	Armament@SECONDARYLaserSecond:
+		Name: third
+		Weapon: TuskLaser
+		FireDelay: 25
+		LocalOffset: -85,384,340, -85,-384,340
+		LocalYaw: -100, 100
+		RequiresCondition: mammofire
+	AttackTurreted:
+		Armaments: primary, secondary, third
+	WithMuzzleOverlay:
+	AutoTarget:
+	SelfHealing:
+		Delay: 10
+		HealIfBelow: 50
+		DamageCooldown: 200
+	SpawnActorOnDeath:
+		Actor: HTNK.Husk
+	SelectionDecorations:
+		VisualBounds: 34,34,0,-3
+	RejectsOrders:
+
+MSAMNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@msamDamage:
+		Condition: msamDamage
+		Prerequisites: msamUpgradeDamage
+	GrantConditionOnPrerequisite@msamHealth:
+		Condition: msamHealth
+		Prerequisites: msamUpgradeHealth
+	GrantConditionOnPrerequisite@msamReload:
+		Condition: msamReload
+		Prerequisites: msamUpgradeReload
+	GrantConditionOnPrerequisite@msamfire:
+		Condition: msamfire
+		Prerequisites: msamfire
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: msamDamage
+	DamageMultiplier:
+		RequiresCondition: msamHealth
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: msamReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (msamDamage + msamHealth + msamReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (msamDamage + msamHealth + msamReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (msamDamage + msamHealth + msamReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: msamdouble
+		RequiresCondition: msamfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Tank
+
+	RenderSprites:
+		Image: msam
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Rocket Launcher
+	Buildable:
+		BuildDuration: 6500
+		BuildPaletteOrder: 50
+		Queue: Car4.Fact
+		Description: Long range rocket artillery.\n  Strong vs Vehicles.\n CANNOT ATTACK INFANTRY ANYMORE!
+	Targetable:
+		TargetTypes: Ground, Vehicle, Light
+	Mobile:
+		Speed: 85
+		TurnSpeed: 4
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 255
+		Offset: -256,0,128
+	Armament@PRIMARY:
+		Weapon: Heavy227mm
+		LocalOffset: 213,128,0, 213,-128,0
+		RequiresCondition: !msamfire
+	Armament@SECONDARY:
+		Weapon: Heavy227mm
+		LocalOffset: 213,-128,0, 213,128,0
+		RequiresCondition: !msamfire
+	Armament@NEWPRIMARY:
+		Weapon: Quad227mm
+		LocalOffset: 213,128,0, 213,-128,0
+		RequiresCondition: msamfire
+	Armament@NEWSECONDARY:
+		Weapon: Quad227mm
+		LocalOffset: 213,-128,0, 213,128,0
+		RequiresCondition: msamfire
+	AttackFrontal:
+	WithSpriteTurret:
+		AimSequence: aim
+	AutoTarget:
+	SpawnActorOnDeath:
+		Actor: MSAM.Husk
+	CustomSelectionSize:
+		CustomBounds: 36,36,0,-5
+	RejectsOrders:
+
+HELINEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^EMPNoGuns
+	Inherits: ^AutoTargetInfantry	 
+	GrantConditionOnPrerequisite@helifire:
+		Condition: helifire
+		Prerequisites: helifire
+	GrantConditionOnPrerequisite@heliDamage:
+		Condition: heliDamage
+		Prerequisites: heliUpgradeDamage
+	GrantConditionOnPrerequisite@heliHealth:
+		Condition: heliHealth
+		Prerequisites: heliUpgradeHealth
+	GrantConditionOnPrerequisite@heliReload:
+		Condition: heliReload
+		Prerequisites: heliUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: heliDamage
+	DamageMultiplier:
+		RequiresCondition: heliHealth
+		Modifier: 85
+	RangeMultiplier:
+		RequiresCondition: heliReload
+		Modifier: 115
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (heliDamage + heliHealth + heliReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (heliDamage + heliHealth + heliReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (heliDamage + heliHealth + heliReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: cross
+		RequiresCondition: helifire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Helicopter
+
+	RenderSprites:
+		Image: heli
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Apache Longbow
+	Buildable:
+		BuildDuration: 4600
+		BuildPaletteOrder: 20
+		Queue: Fly2.Fact
+		Description: Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and\n  Aircraft\n  Can't target Tanks
+	Aircraft:
+		RearmBuildings: hpad
+		InitialFacing: 224
+		TurnSpeed: 4
+		Speed: 186
+		RepulsionSpeed: 700
+	Health:
+		HP: 125
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	Armament@PRIMARY:
+		Weapon: HeliAGGunNew
+		LocalOffset: 128,-213,-85, 128,213,-85
+		MuzzleSequence: muzzle
+		RequiresCondition: !helifire && !empdisable
+	
+	Armament@newprimary:
+		Weapon: HeliAGGunnoInf
+		LocalOffset: 128,-213,-85, 128,213,-85
+		MuzzleSequence: muzzle
+		RequiresCondition: helifire && !empdisable
+	
+	
+	Armament@Snipe:
+		Weapon: HeliSnipe
+		LocalOffset: 128,-213,-85, 128,213,-85
+		MuzzleSequence: muzzle
+		RequiresCondition: helifire && !empdisable
+	
+	
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: HeliAAGun
+		LocalOffset: 128,-213,-85, 128,213,-85
+		MuzzleSequence: muzzle
+		RequiresCondition: !empdisable
+	AttackHeli:
+		FacingTolerance: 20
+	AmmoPool:
+		Ammo: 10
+		PipCount: 5
+		SelfReloads: true
+		ReloadCount: 10
+		SelfReloadDelay: 200
+	WithIdleOverlay@ROTORAIR:
+		Offset: 0,0,85
+		Sequence: rotor
+		RequiresCondition: airborne
+	
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 0,0,85
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	
+	WithMuzzleOverlay:
+	SpawnActorOnDeath:
+		Actor: HELI.Husk
+	AutoTarget:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	-Selectable:
+	RejectsOrders:
+
+ORCANEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^EMPNoGuns  
+	Inherits: ^AutoTargetVehicleAircrafts
+	GrantConditionOnPrerequisite@orcafire:
+		Condition: orcafire
+		Prerequisites: orcafire
+	GrantConditionOnPrerequisite@orcaDamage:
+		Condition: orcaDamage
+		Prerequisites: orcaUpgradeDamage
+	GrantConditionOnPrerequisite@orcaHealth:
+		Condition: orcaHealth
+		Prerequisites: orcaUpgradeHealth
+	GrantConditionOnPrerequisite@orcaReload:
+		Condition: orcaReload
+		Prerequisites: orcaUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: orcaDamage
+	DamageMultiplier:
+		RequiresCondition: orcaHealth
+		Modifier: 85
+	RangeMultiplier:
+		RequiresCondition: orcaReload
+		Modifier: 115
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (orcaDamage + orcaHealth + orcaReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (orcaDamage + orcaHealth + orcaReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (orcaDamage + orcaHealth + orcaReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: rocket
+		RequiresCondition: orcafire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Helicopter
+
+	RenderSprites:
+		Image: orca
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Orca
+	Buildable:
+		BuildDuration: 4800
+		BuildPaletteOrder: 20
+		Queue: Fly1.Fact
+		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
+	Aircraft:
+		RearmBuildings: hpad
+		InitialFacing: 224
+		TurnSpeed: 4
+		Speed: 186
+		RepulsionSpeed: 600
+	Health:
+		HP: 90
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	Armament@PRIMARY:
+		Weapon: OrcaAGMissilesNew
+		LocalOffset: 427,-171,-213, 427,171,-213
+		AmmoPoolName: Rockets
+		RequiresCondition: !empdisable
+	Armament@SECONDARY:
+		Weapon: OrcaAAMissiles
+		LocalOffset: 427,-171,-213, 427,171,-213
+		AmmoPoolName: Rockets
+		RequiresCondition: !empdisable
+	Armament@TVMissile:
+		Weapon: TVMissile
+		LocalOffset: 427,0,-213
+		RequiresCondition: orcafire && !empdisable
+	
+	
+		AmmoPoolName: TVMissile
+	AttackHeli:
+		FacingTolerance: 20
+	AmmoPool@normal:
+		Name: Rockets
+		Ammo: 6
+		PipCount: 6
+		SelfReloads: true
+		ReloadCount: 2
+		SelfReloadDelay: 100
+	AmmoPool@TVmissile:
+		Name: TVMissile
+		Ammo: 1
+		PipCount: 1
+		SelfReloads: true
+		ReloadCount: 1
+		PipType: Blue
+		SelfReloadDelay: 350
+		RequiresCondition: orcafire
+	
+	
+	SpawnActorOnDeath:
+		Actor: ORCA.Husk
+	AutoTarget:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	WithMoveAnimation:
+		MoveSequence: move
+	-Selectable:
+	RejectsOrders:
+
+STNKNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@stnkDamage:
+		Condition: stnkDamage
+		Prerequisites: stnkUpgradeDamage
+	GrantConditionOnPrerequisite@stnkHealth:
+		Condition: stnkHealth
+		Prerequisites: stnkUpgradeHealth
+	GrantConditionOnPrerequisite@stnkReload:
+		Condition: stnkReload
+		Prerequisites: stnkUpgradeReload
+	GrantConditionOnPrerequisite@stnkfire:
+		Condition: stnkfire
+		Prerequisites: stnkfire	   
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: stnkDamage
+	DamageMultiplier:
+		RequiresCondition: stnkHealth
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: stnkReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (stnkDamage + stnkHealth + stnkReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (stnkDamage + stnkHealth + stnkReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (stnkDamage + stnkHealth + stnkReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: stnkplus
+		RequiresCondition: stnkfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Vehicle
+	Valued:
+		Cost: 0
+	RenderSprites:
+		Image: stnk
+	Tooltip:
+		Name: Stealth Tank
+	Buildable:
+		BuildDuration: 4000
+		BuildPaletteOrder: 85
+		Queue: Car10.Fact
+		Description: Long-range missile tank that can cloak.\nCan attack Aircraft.\nHas weak armor. Can be spotted by infantry and defense structures.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry.
+	Mobile:
+		TurnSpeed: 10
+		Speed: 142
+		Crushes: crate, infantry
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+	Cloak:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: trans1.aud
+		UncloakSound: trans1.aud
+		RequiresCondition: !stnkfire
+	Cloak@Better:
+		InitialDelay: 25
+		CloakDelay: 25
+		CloakSound: trans1.aud
+		UncloakSound: trans1.aud
+		RequiresCondition: stnkfire
+	Armament:
+		Weapon: 227mm.new
+		LocalOffset: 213,43,128, 213,-43,128
+	AttackFrontal:
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	Targetable:
+	SpawnActorOnDeath:
+		Actor: STNK.Husk
+	-MustBeDestroyed:
+
+	-Selectable:
+	RejectsOrders:
+
+BIKENEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@bikeDamage:
+		Condition: bikeDamage
+		Prerequisites: bikeUpgradeDamage
+	GrantConditionOnPrerequisite@bikeHealth:
+		Condition: bikeHealth
+		Prerequisites: bikeUpgradeHealth
+	GrantConditionOnPrerequisite@bikeReload:
+		Condition: bikeReload
+		Prerequisites: bikeUpgradeReload
+	GrantConditionOnPrerequisite@ltnkfire:
+		Condition: ltnkfire
+		Prerequisites: ltnkfire
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: bikeDamage
+	DamageMultiplier:
+		RequiresCondition: bikeHealth
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: bikeReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (bikeDamage + bikeHealth + bikeReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (bikeDamage + bikeHealth + bikeReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (bikeDamage + bikeHealth + bikeReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral	
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: ltnk
+		RequiresCondition: ltnkfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Vehicle
+
+	-Selectable:
+	RenderSprites:
+		Image: ltnk
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Light Tank
+	Buildable:
+		BuildDuration: 3300
+		BuildPaletteOrder: 30
+		Queue: Car8.Fact
+		Description: Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+	Targetable:
+		TargetTypes: Ground, Vehicle
+	Mobile:
+		TurnSpeed: 7
+		Speed: 110
+	Health:
+		HP: 250
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 7
+	Armament:
+		Weapon: 70mm
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		RequiresCondition: !ltnkfire
+	Armament@LazerSight:
+		Weapon: 70mmTargetLaser
+		Name: third
+		LocalOffset: 420,39,90
+		RequiresCondition: ltnkfire
+	Armament@FarRapid:
+		Weapon: 70mmRapid
+		Name: secondary
+		Recoil: 85
+		RecoilRecovery: 17
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		RequiresCondition: ltnkfire
+	AttackTurreted:
+		Armaments: primary, secondary, third
+	WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:
+	SpawnActorOnDeath:
+		Actor: LTNK.Husk 
+	RejectsOrders:
+
+MLRSNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@mlrsfire:
+		Condition: mlrsfire
+		Prerequisites: mlrsfire
+	GrantConditionOnPrerequisite@mlrsDamage:
+		Condition: mlrsDamage
+		Prerequisites: mlrsUpgradeDamage
+	GrantConditionOnPrerequisite@mlrsHealth:
+		Condition: mlrsHealth
+		Prerequisites: mlrsUpgradeHealth
+	GrantConditionOnPrerequisite@mlrsReload:
+		Condition: mlrsReload
+		Prerequisites: mlrsUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: mlrsDamage
+	DamageMultiplier:
+		RequiresCondition: mlrsHealth
+		Modifier: 85
+	RangeMultiplier:
+		RequiresCondition: mlrsReload
+		Modifier: 135
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (mlrsDamage + mlrsHealth + mlrsReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition:  (mlrsDamage + mlrsHealth + mlrsReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition:  (mlrsDamage + mlrsHealth + mlrsReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: blueball
+		RequiresCondition: mlrsfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	RenderSprites:
+		Image: mlrs
+	Inherits: ^Vehicle
+
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Mobile S.A.M.
+	Buildable:
+		BuildDuration: 3600
+		BuildPaletteOrder: 70
+		Queue: Car7.Fact
+		Description: Powerful anti-air unit.\nCannot attack Ground units.
+	Targetable:
+		TargetTypes: Ground, Vehicle, Light
+	Mobile:
+		Speed: 99
+		TurnSpeed: 7
+	Health:
+		HP: 120
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Turreted:
+		TurnSpeed: 8
+		Offset: -128,0,128
+		RealignDelay: 0
+	Armament@normal:
+		RequiresCondition: !mlrsfire
+	
+	
+		Weapon: Patriot
+		LocalOffset: 0,-171,0, 0,171,0
+	Armament@emp:
+		RequiresCondition: mlrsfire
+	
+		UpgradeMaxEnabledLevel: 1
+		Weapon: EMPSAMMissile
+		LocalOffset: 0,-171,0, 0,171,0
+	AmmoPool:
+		Ammo: 2
+		PipCount: 0
+		SelfReloads: true
+		ReloadCount: 1
+		SelfReloadDelay: 45
+	AttackTurreted:
+	WithReloadingSpriteTurret:
+		AmmoPoolName: primary
+	AutoTarget:
+		InitialStanceAI: Defend
+	RenderRangeCircle:
+	SpawnActorOnDeath:
+		Actor: MLRS.Husk
+	RejectsOrders:
+ARTYNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@artyDamage:
+		Condition: artyDamage
+		Prerequisites: artyUpgradeDamage
+	GrantConditionOnPrerequisite@artyHealth:
+		Condition: artyHealth
+		Prerequisites: artyUpgradeHealth
+	GrantConditionOnPrerequisite@artyReload:
+		Condition: artyReload
+		Prerequisites: artyUpgradeReload
+	GrantConditionOnPrerequisite@artyfire:
+		Condition: artyfire
+		Prerequisites: artyfire   
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: artyDamage
+	DamageMultiplier:
+		RequiresCondition: artyHealth
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: artyReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (artyDamage + artyHealth + artyReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition:  (artyDamage + artyHealth + artyReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition:  (artyDamage + artyHealth + artyReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: artyfive
+		RequiresCondition: artyfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Tank
+
+	RenderSprites:
+		Image: arty
+	-Selectable:
+	Valued:
+		Cost: 0
+	Targetable:
+		TargetTypes: Ground, Vehicle, Light
+	Tooltip:
+		Name: Artillery
+	Buildable:
+		BuildDuration: 6000
+		BuildPaletteOrder: 60
+		Queue: Car5.Fact
+		Description: Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
+	Mobile:
+		TurnSpeed: 2
+		Speed: 85
+	Health:
+		HP: 75
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 8c0
+	Armament:
+		Weapon: ArtilleryShell
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		RequiresCondition: !artyfire
+	Armament@artyfire:
+		Weapon: ArtilleryShellOFive
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		RequiresCondition: artyfire
+	AttackFrontal:
+	WithMuzzleOverlay:
+	AutoTarget:
+		InitialStanceAI: Defend
+	SpawnActorOnDeath:
+		Actor: ARTY.Husk
+	Explodes:
+		Weapon: ArtilleryShell
+		EmptyWeapon: UnitExplode
+		LoadedChance: 75
+	RejectsOrders:
+ 
+FTNKNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^AutoTargetInfantry
+	GrantConditionOnPrerequisite@ftnkDamage:
+		Condition: ftnkDamage
+		Prerequisites: ftnkUpgradeDamage
+	GrantConditionOnPrerequisite@ftnkHealth:
+		Condition: ftnkHealth
+		Prerequisites: ftnkUpgradeHealth
+	GrantConditionOnPrerequisite@ftnkReload:
+		Condition: ftnkReload
+		Prerequisites: ftnkUpgradeReload
+	GrantConditionOnPrerequisite@ftnkfire:
+		Condition: ftnkfire
+		Prerequisites: ftnknapalm
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: ftnkDamage
+	DamageMultiplier:
+		RequiresCondition: ftnkHealth
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: ftnkReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (ftnkDamage + ftnkHealth + ftnkReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (ftnkDamage + ftnkHealth + ftnkReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (ftnkDamage + ftnkHealth + ftnkReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: hazard
+		RequiresCondition: ftnkfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Tank
+
+	RenderSprites:
+		Image: ftnk
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Flame Tank
+	Buildable:
+		BuildDuration: 4250
+		BuildPaletteOrder: 120
+		Queue: Car6.Fact
+		Description: Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
+	Mobile:
+		TurnSpeed: 7
+		Speed: 99
+	Health:
+		HP: 270
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 5c0
+	Armament@fire:
+		Weapon: BigFlamer
+		LocalOffset: 512,128,42, 512,-128,42
+		MuzzleSequence: muzzle
+		RequiresCondition: !ftnkfire
+	
+	
+	Armament@chem:
+		Weapon: BigChemmer
+		LocalOffset: 512,128,42, 512,-128,42
+		MuzzleSequence: muzzlechem
+		RequiresCondition: ftnkfire
+	
+	
+	AttackFrontal:
+	AutoTarget:
+	WithMuzzleOverlay:
+	Explodes:
+		Weapon: FlametankExplode
+		EmptyWeapon: FlametankExplode
+	SpawnActorOnDeath:
+		Actor: FTNK.Husk
+	SelectionDecorations:
+		VisualBounds: 32,32
+	RejectsOrders:
+
+FATWR:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^EMPNoGuns
+	GrantConditionOnPrerequisite@fawrDamage:
+		Condition: fawrDamage
+		Prerequisites: fawrUpgradeDamage
+	GrantConditionOnPrerequisite@fawrHealth:
+		Condition: fawrHealth
+		Prerequisites: fawrUpgradeHealth
+	GrantConditionOnPrerequisite@fawrReload:
+		Condition: fawrReload
+		Prerequisites: fawrUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: fawrDamage
+	DamageMultiplier:
+		RequiresCondition: fawrHealth
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: fawrReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (fawrDamage + fawrHealth + fawrReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (fawrDamage + fawrHealth + fawrReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (fawrDamage + fawrHealth + fawrReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Helicopter
+
+	RenderSprites:
+		Image: fatwr
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Flying Advanced Guardtower
+	Health:
+		HP: 350
+	Buildable:
+		BuildDuration: 5500
+		BuildPaletteOrder: 60
+		Queue: Secret2.Fact
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 7c0
+		Type: CenterPosition
+	Armament@PRIMARY:
+		Weapon: TowerMissleFT
+		LocalOffset: 256,128,0
+		RequiresCondition: !empdisable
+	Armament@SECONDARY:
+		Weapon: TowerAAMissile
+		LocalOffset: 256,128,0
+		RequiresCondition: !empdisable
+	SpawnActorOnDeath:
+		Actor: FATWR.Husk
+	AutoTarget:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	SmokeTrailWhenDamaged:
+		Offset: -427,0,0
+	WithIdleOverlay@ROTORAIR:
+		Offset: 0,0,300
+		Sequence: rotor
+		RequiresCondition: airborne
+	
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 0,0,300
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	
+	Aircraft:
+		RearmBuildings: hpad
+		InitialFacing: 224
+		TurnSpeed: 4
+		Speed: 80
+		RepulsionSpeed: 500
+	AttackHeli:
+		FacingTolerance: 20
+	AmmoPool:
+		Ammo: 20
+		PipCount: 5
+		SelfReloads: true
+		ReloadCount: 20
+		SelfReloadDelay: 200
+	-Selectable:
+	RejectsOrders:
+
+TMPLANGEL:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^EMPNoGuns
+	GrantConditionOnPrerequisite@tmplsDamage:
+		Condition: tmplsDamage
+		Prerequisites: tmplsUpgradeDamage
+	GrantConditionOnPrerequisite@tmplsHealth:
+		Condition: tmplsHealth
+		Prerequisites: tmplsUpgradeHealth
+	GrantConditionOnPrerequisite@tmplsReload:
+		Condition: tmplsReload
+		Prerequisites: tmplsUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: tmplsDamage
+	DamageMultiplier:
+		RequiresCondition: tmplsHealth
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: tmplsReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (tmplsDamage + tmplsHealth + tmplsReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (tmplsDamage + tmplsHealth + tmplsReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (tmplsDamage + tmplsHealth + tmplsReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Helicopter
+
+	Buildable:
+		BuildDuration: 6000
+		BuildPaletteOrder: 60
+		Queue: Secret1.Fact
+	WithFacingSpriteBody@1:
+		Sequence: wings
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Temple Angel
+	Health:
+		HP: 425
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 7c0
+		Type: CenterPosition
+	Armament:
+		Weapon: QuickLaser
+		LocalOffset: 0,-300,800
+		RequiresCondition: !empdisable
+	AutoTarget:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	SmokeTrailWhenDamaged:
+		Offset: -427,0,0
+	Aircraft:
+		RearmBuildings: hpad
+		InitialFacing: 224
+		TurnSpeed: 4
+		Speed: 80
+		RepulsionSpeed: 400
+	AttackHeli:
+		FacingTolerance: 20
+	AmmoPool:
+		Ammo: 1
+		PipCount: 5
+		SelfReloads: true
+		ReloadCount: 1
+		SelfReloadDelay: 1
+	-Selectable:
+	SpawnActorOnDeath:
+		Actor: TMPLANGEL.Husk
+	RejectsOrders:
+
+GUNTANK:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@guntnkDamage:
+		Condition: guntnkDamage
+		Prerequisites: guntnkUpgradeDamage
+	GrantConditionOnPrerequisite@guntnkHealth:
+		Condition: guntnkHealth
+		Prerequisites: guntnkUpgradeHealth
+	GrantConditionOnPrerequisite@guntnkReload:
+		Condition: guntnkReload
+		Prerequisites: guntnkUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: guntnkDamage
+	RangeMultiplier:
+		RequiresCondition: guntnkHealth
+		Modifier: 115
+	ReloadDelayMultiplier:
+		RequiresCondition: guntnkReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (guntnkDamage + guntnkHealth + guntnkReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (guntnkDamage + guntnkHealth + guntnkReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (guntnkDamage + guntnkHealth + guntnkReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Vehicle
+
+	Tooltip:
+		Name: Nuclear Command Vehicle
+	Valued:
+		Cost: 0
+	Buildable:
+		BuildDuration: 8400
+		BuildPaletteOrder: 180
+		Queue: secret3.fact 
+	Mobile:
+		TurnSpeed: 4
+		Speed: 46
+	Health:
+		HP: 800
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 14c0
+	AttackTurreted:
+	AutoTarget:
+	WithMuzzleOverlay:
+	Turreted@1:
+		TurnSpeed: 8
+		Offset: 0,0,300
+		Turret: turrone
+	Armament@1:
+		Turret: turrone
+		Weapon: Atomicnew
+		LocalOffset: 0,0,50
+	WithSpriteTurret@1:
+		Turret: turrone
+		Sequence: spinneridle
+		AimSequence: spinner1
+	Turreted@2:
+		TurnSpeed: 8
+		Offset: -550,300,300
+		Turret: turr2
+	WithSpriteTurret@2:
+		Turret: turr2
+		Sequence: spinneridle
+		AimSequence: spinner1
+	Turreted@3:
+		TurnSpeed: 8
+		Offset: -550,-300,300
+		Turret: turr3
+	WithSpriteTurret@3:
+		Turret: turr3
+		Sequence: spinneridle
+		AimSequence: spinner1
+	-Selectable:
+	RejectsOrders:
+
+MOICO:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	GrantConditionOnPrerequisite@moicoDamage:
+		Condition: moicoDamage
+		Prerequisites: moicoUpgradeDamage
+	GrantConditionOnPrerequisite@moicoHealth:
+		Condition: moicoHealth
+		Prerequisites: moicoUpgradeHealth
+	GrantConditionOnPrerequisite@moicoReload:
+		Condition: moicoReload
+		Prerequisites: moicoUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: moicoDamage
+	RangeMultiplier:
+		RequiresCondition: moicoHealth
+		Modifier: 115
+	ReloadDelayMultiplier:
+		RequiresCondition: moicoReload
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (moicoDamage + moicoHealth + moicoReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (moicoDamage + moicoHealth + moicoReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (moicoDamage + moicoHealth + moicoReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	Inherits: ^Vehicle
+
+	Valued:
+		Cost: 0
+	Buildable:
+		BuildDuration: 8400
+		BuildPaletteOrder: 190
+		Queue: secret4.fact 
+	Tooltip:
+		Name: Mobile Ion Cannon
+	Mobile:
+		TurnSpeed: 5
+		Speed: 56
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	Armament:
+		Turret: turr1
+		Weapon: PortableIoncannon
+		LocalOffset: -40,0,100
+	RevealsShroud:
+		Range: 8c0
+	RenderSprites:
+		Image: moico
+	WithFacingSpriteBody@1:
+		Sequence: spinner
+	AttackTurreted:
+	AutoTarget:
+	Turreted@1:
+		TurnSpeed: 10
+		Offset: 10,0,700
+		Turret: turr1
+	WithSpriteTurret@1:
+		Sequence: turret
+		AimSequence: attack
+		Turret: turr1
+	-Selectable:
+	RejectsOrders:
+
+FGTWRH.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Apache Longbow
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 186
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	WithIdleOverlay:
+		Offset: 0,0,300
+	RenderSprites:
+		Image: fgtwr
+
+		
+FATWR.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Apache Longbow
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 186
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	WithIdleOverlay:
+		Offset: 0,0,400
+	RenderSprites:
+		Image: fatwr
+
+TMPLANGEL.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Apache Longbow
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 186
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	WithFacingSpriteBody@1:
+		Sequence: wings
+	RenderSprites:
+		Image: tmplangel
+
+A10STRIKER:
+	Inherits: ^Plane
+	HitShape:
+	Tooltip:
+		Name: A10 Bomber
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: A10
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 373
+		Repulsable: False
+	Health:
+		HP: 150
+	Armor:
+		Type: Heavy
+	AttackBomber:
+		Armaments: gun, bombs
+		Guns: gun
+		Bombs: bombs
+	Armament@GUNS:
+		Name: gun
+		Weapon: VulcanNoBuild
+		LocalOffset: 1024,0,-85
+	WithMuzzleOverlay:
+	Armament@BOMBS:
+		Name: bombs
+		Weapon: NapalmNoBuild
+		LocalOffset: 0,-256,-43, 0,256,-43
+	Contrail@1:
+		Offset: -640,171,0
+		TrailLength: 15
+	Contrail@2:
+		Offset: -640,-171,0
+		TrailLength: 15
+		
+C17:
+	HitShape:
+	Health:
+		HP: 25
+		
+C17BOMB:
+	Inherits: ^Plane
+	HitShape:
+	RenderSprites:
+		Image: C17
+	Tooltip:
+		Name: Supply Aircraft
+	Valued:
+		Cost: 2000
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 326
+		Repulsable: False
+		AirborneCondition: airborne
+		MaximumPitch: 36
+		RepulsionSpeed: 300
+	Health:
+		HP: 25
+	Armor:
+		Type: Heavy
+	AttackBomber:
+		Armaments: bombs
+		Bombs: bombs
+	Armament@BOMBS:
+		Name: bombs
+		Weapon: BombsNoBuild
+		LocalOffset: 0,-256,-43, 0,256,-43
+	DamageMultiplier@INVULNERABLE:
+		Modifier: 0
+	Contrail@1:
+		Offset: -261,-650,0
+		TrailLength: 15
+	Contrail@2:
+		Offset: -85,-384,0
+		TrailLength: 16
+	Contrail@3:
+		Offset: -85,384,0
+		TrailLength: 16
+	Contrail@4:
+		Offset: -261,650,0
+		TrailLength: 15
+
+TRANNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^Helicopter
+	Inherits: ^AutoTargetAll
+	Inherits: ^AutoTargetInfantry  
+	Inherits: ^EMPNoGuns
+	GrantConditionOnPrerequisite@mlrsDamage:
+		Condition: tranUpgradeDamage
+		Prerequisites: tranUpgradeDamage
+	GrantConditionOnPrerequisite@mlrsHealth:
+		Condition: tranUpgradeHealth
+		Prerequisites: tranUpgradeHealth
+	GrantConditionOnPrerequisite@mlrsReload:
+		Condition: tranUpgradeReload
+		Prerequisites: tranUpgradeReload
+	GrantConditionOnPrerequisite@tranfire:
+		Condition: tranfire
+		Prerequisites: tranfire
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: tranUpgradeDamage
+	DamageMultiplier:
+		RequiresCondition: tranUpgradeHealth
+		Modifier: 85
+	RangeMultiplier:
+		RequiresCondition: tranUpgradeReload
+		Modifier: 135
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (tranUpgradeDamage + tranUpgradeHealth + tranUpgradeReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (tranUpgradeDamage + tranUpgradeHealth + tranUpgradeReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (tranUpgradeDamage + tranUpgradeHealth + tranUpgradeReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+	
+	
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: tranplus
+		RequiresCondition: tranfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	RenderSprites:
+		Image: trannew
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Chinook Transport
+	Buildable:
+		BuildDuration: 2400
+		BuildPaletteOrder: 20
+		Queue: Fly0.Fact
+		Description: Fast minigunned armed Transport Helicopter.
+	Aircraft:
+		RearmBuildings: hpad
+		InitialFacing: 224
+		TurnSpeed: 5
+		Speed: 140
+		RepulsionSpeed: 1000
+	Health:
+		HP: 90
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	Armament@PRIMARY:
+		Weapon: M16tran
+		LocalOffset: 28,-413,-85, 28,413,-85
+		MuzzleSequence: muzzle
+		RequiresCondition: !empdisable
+		
+	AttackHeli:
+		FacingTolerance: 20
+		Armaments: primary, secondary, third, fourth
+		
+	WithSpriteTurret@first:
+		Turret: third
+		RequiresCondition: tranfire
+	Turreted@first:
+		TurnSpeed: 10
+		Offset: -256,456,50
+		Turret: third
+	Armament@first:
+		Weapon: TranTow
+		LocalOffset: 256,125,20, 256,-125,20
+		Turret: third
+		Name: third
+		RequiresCondition: tranfire
+	WithSpriteTurret@fourth:
+		Turret: fourth
+		RequiresCondition: tranfire
+	Turreted@fourth:
+		TurnSpeed: 10
+		Offset: -256,-456,50
+		Turret: fourth
+	Armament@fourth:
+		Weapon: TranTow
+		LocalOffset: 256,125,20, 256,-125,20
+		FireDelay: 5
+		Turret: fourth
+		Name: fourth
+		RequiresCondition: tranfire
+	WithIdleOverlay@ROTOR1AIR:
+		Offset: 597,0,85
+		Sequence: rotor
+		RequiresCondition: airborne
+	
+	WithIdleOverlay@ROTOR1GROUND:
+		Offset: 597,0,85
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	
+	WithIdleOverlay@ROTOR2AIR:
+		Offset: -597,0,171
+		Sequence: rotor2
+		RequiresCondition: airborne
+	
+	WithIdleOverlay@ROTOR2GROUND:
+		Offset: -597,0,171
+		Sequence: slow-rotor2
+		RequiresCondition: !airborne
+	
+	WithMuzzleOverlay:
+	SpawnActorOnDeath:
+		Actor: TRAN.Husk
+	AutoTarget:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	-Selectable:
+	RejectsOrders:
+	
+# --- sillyunits ---
+
+SILLYCA:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^Helicopter
+	Inherits: ^AutoTargetAll
+	Inherits: ^EMPNoGuns
+	-Selectable:
+	RejectsOrders:
+	RenderSprites:
+		Image: ca
+		PlayerPalette: raplayer
+	Buildable:
+		BuildDuration: 10000
+		BuildPaletteOrder: 20
+		Queue: Silly1.Fact
+	Aircraft:
+		RearmBuildings: sillyfact1
+		InitialFacing: 224
+		TurnSpeed: 3
+		Speed: 70
+		RepulsionSpeed: 100
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Cruiser
+	Health:
+		HP: 400
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+		Type: CenterPosition
+	Turreted@PRIMARY:
+		Turret: primary
+		Offset: -864,0,128
+		TurnSpeed: 3
+	Turreted@SECONDARY:
+		Turret: secondary
+		Offset: 768,0,128
+		TurnSpeed: 3
+	Armament@PRIMARY:
+		Turret: primary
+		Weapon: 8Inch
+		LocalOffset: 480,-100,40, 480,100,40
+		Recoil: 171
+		RecoilRecovery: 34
+		MuzzleSequence: muzzle
+		RequiresCondition: !empdisable
+	Armament@SECONDARY:
+		Name: secondary
+		Turret: secondary
+		Weapon: 8Inch
+		LocalOffset: 480,-100,40, 480,100,40
+		Recoil: 171
+		RecoilRecovery: 34
+		MuzzleSequence: muzzle
+		FireDelay: 25
+		RequiresCondition: !empdisable
+	AttackTurreted:
+	WithMuzzleOverlay:
+	SelectionDecorations:
+		VisualBounds: 44,44
+	WithSpriteTurret@PRIMARY:
+		Turret: primary
+	WithSpriteTurret@SECONDARY:
+		Turret: secondary
+	SpawnActorOnDeath:
+		Actor: SILLYCA.Husk
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+		
+SILLYCA.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Apache Longbow
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 186
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: ca
+		PlayerPalette: raplayer
+		
+HARVNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^Tank
+	Inherits: ^AutoTargetAll
+	Valued:
+		Cost: 0
+	RenderSprites:
+		Image: harv
+	Tooltip:
+		Name: Harvester
+		GenericName: Harvester
+	Buildable:
+		BuildDuration: 6000
+		BuildPaletteOrder: 20
+		Queue: Silly2.Fact
+	Selectable:
+		Priority: 7
+	Mobile:
+		Speed: 85
+	Health:
+		HP: 3025
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	SpawnActorOnDeath:
+		Actor: HARV.Husk
+	SelectionDecorations:
+		VisualBounds: 36,36
+	WithAttackAnimation:
+		AttackSequence: harvest
+	Armament@PRIMARY:
+		Weapon: HarvesterEat
+	AttackFrontal:	
+	AutoTarget:
+		ScanRadius: 5
+	-Selectable:
+	RejectsOrders:
+
+	
+SILLYBADR:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^Helicopter
+	Inherits: ^AutoTargetAll
+	Inherits: ^EMPNoGuns
+	-Selectable:
+	RejectsOrders:
+	RenderSprites:
+		Image: badr
+		PlayerPalette: raplayer
+	Buildable:
+		BuildDuration: 10000
+		BuildPaletteOrder: 20
+		Queue: Silly3.Fact
+	Aircraft:
+		RearmBuildings: sillyfact3
+		InitialFacing: 224
+		TurnSpeed: 6
+		Speed: 60
+		RepulsionSpeed: 200
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Rocket Bomber
+	Health:
+		HP: 1000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+		Type: CenterPosition
+	Turreted@PRIMARY:
+		Turret: primary
+		Offset: 0,556,40
+		TurnSpeed: 3
+	Turreted@SECONDARY:
+		Turret: secondary
+		Offset: -178,1240,40
+		TurnSpeed: 3
+	Turreted@third:
+		Turret: third
+		Offset: 0,-556,40
+		TurnSpeed: 3
+	Turreted@fourth:
+		Turret: fourth
+		Offset: -178,-1240,40
+		TurnSpeed: 3
+	Armament@Third:
+		Turret: third
+		Weapon: BadrBombs
+		LocalOffset: 480,-0,40
+		RequiresCondition: !empdisable
+	Armament@fourth:
+		Name: fourth
+		Turret: fourth
+		Weapon: BadrBombs
+		LocalOffset: 480,-0,40
+		RequiresCondition: !empdisable
+	Armament@PRIMARY:
+		Turret: primary
+		Weapon: BadrBombs
+		LocalOffset: 480,-0,40
+		RequiresCondition: !empdisable
+	Armament@SECONDARY:
+		Name: secondary
+		Turret: secondary
+		Weapon: BadrBombs
+		LocalOffset: 480,-0,40
+		RequiresCondition: !empdisable
+	AttackTurreted:
+		Armaments: primary, secondary, third, fourth
+	WithMuzzleOverlay:
+	SelectionDecorations:
+		VisualBounds: 44,44
+	WithSpriteTurret@PRIMARY:
+		Turret: primary
+	WithSpriteTurret@SECONDARY:
+		Turret: secondary
+	WithSpriteTurret@third:
+		Turret: third
+	WithSpriteTurret@fourth:
+		Turret: fourth
+	SpawnActorOnDeath:
+		Actor: SILLYBADR.Husk
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	SmokeTrailWhenDamaged@0:
+		Offset: -432,560,0
+		Interval: 2
+	SmokeTrailWhenDamaged@1:
+		Offset: -432,-560,0
+		Interval: 2
+	Contrail@1:
+		Offset: -432,560,0
+	Contrail@2:
+		Offset: -432,-560,0
+		
+SILLYBADR.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Apache Longbow
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 186
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: badr
+		PlayerPalette: raplayer
+		
+		
+FLAGPLAT:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^Tank
+	-Crushable:
+	RenderSprites:
+		Image: flagplat
+		PlayerPalette: raplayer
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Anti Air Platform
+	Buildable:
+		BuildDuration: 8500
+		BuildPaletteOrder: 60
+		Queue: Silly4.Fact
+		Description: Anti Air Platform
+	Mobile:
+		Speed: 45
+		TurnSpeed: 3
+		Crushes: wall, heavywall, crate, infantry, Tank, Car, Husk
+	Health:
+		HP: 1900
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 10c0
+	WithSpriteTurret@first:
+		Sequence: turret
+		Turret: first
+	WithSpriteTurret@second:
+		Sequence: turret
+		Turret: second
+	WithSpriteTurret@third:
+		Sequence: turret
+		Turret: third
+	Turreted@first:
+		Turret: first
+		Offset: 1580,0,40
+	Turreted@second:
+		Turret: second
+		Offset: 580,-480,40
+	Turreted@third:
+		Turret: third
+		Offset: 580,480,40
+	Armament@first:
+		Name: first
+		Weapon: ZSU-23
+		LocalOffset: 520,100,450, 520,-150,450
+		MuzzleSequence: muzzle
+		Turret: first
+	Armament@second:
+		Name: second
+		Weapon: ZSU-23
+		LocalOffset: 520,100,450, 520,-150,450
+		MuzzleSequence: muzzle
+		Turret: second
+	Armament@third:
+		Name: third
+		Weapon: ZSU-23
+		LocalOffset: 520,100,450, 520,-150,450
+		MuzzleSequence: muzzle
+		Turret: third
+	AttackTurreted:
+		Armaments: first, second, third
+	WithMuzzleOverlay:
+	AutoTarget:
+	SelectionDecorations:
+		VisualBounds: 34,34,0,-3
+	RejectsOrders:
+	WithSpriteTurret@tracks2:
+		Sequence: tracks
+		Turret: tracks2
+	Turreted@tracks2:
+		Turret: tracks2
+		Offset: -612,512,-40
+	WithSpriteTurret@tracks3:
+		Sequence: tracks
+		Turret: tracks3
+	Turreted@tracks3:
+		Turret: tracks3
+		Offset: -612,-512,-40
+	WithSpriteTurret@tracks5:
+		Sequence: tracks
+		Turret: tracks5
+	Turreted@tracks5:
+		Turret: tracks5
+		Offset: 612,512,-40
+	WithSpriteTurret@tracks6:
+		Sequence: tracks
+		Turret: tracks6
+	Turreted@tracks6:
+		Turret: tracks6
+		Offset: 612,-512,-40
+	SpawnActorOnDeath:
+		Actor: FLAGPLAT.Husk
+		
+		
+FLAGPLAT.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Anti Air Platform (Destroyed)
+	ThrowsParticle@turret1:
+		Anim: turret
+		Offset: 1580,0,40
+	ThrowsParticle@turret2:
+		Anim: turret
+		Offset: 580,-480,40
+	ThrowsParticle@turret3:
+		Anim: turret
+		Offset: 580,480,40
+	RenderSprites:
+		Image: flagplat.destroyed
+		PlayerPalette: raplayer
+	WithIdleOverlay@tracks2:
+		Sequence: tracks
+		Offset: -612,512,-40
+	WithIdleOverlay@tracks3:
+		Sequence: tracks
+		Offset: -612,-512,-40
+	WithIdleOverlay@tracks5:
+		Sequence: tracks
+		Offset: 612,512,-40
+	WithIdleOverlay@tracks6:
+		Sequence: tracks
+		Offset: 612,-512,-40
+		
+DISCTHROW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^Tank
+	RenderSprites:
+		Image: mgg
+		PlayerPalette: raplayer
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Disc Throwing Truck
+	Buildable:
+		BuildDuration: 4800
+		BuildPaletteOrder: 40
+		Queue: Silly5.Fact
+		Description: Disc Throwing Truck\n Attacks Air and Ground
+	Mobile:
+		Speed: 100
+	Health:
+		HP: 850
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	WithSpriteTurret@first:
+	Turreted@first:
+		TurnSpeed: 10
+		Offset: -1536,0,40
+	Armament@first:
+		Weapon: Discs
+		LocalOffset: 0,597,85, 0,-597,85
+	WithSpriteTurret@second:
+		Turret: secondary
+	Turreted@second:
+		TurnSpeed: 10
+		Offset: -785,0,40
+		Turret: secondary
+	Armament@second:
+		Weapon: Discs
+		Turret: secondary
+		Name: secondary
+		LocalOffset: 0,597,85, 0,-597,85
+	AttackTurreted:
+	AutoTarget:
+	SelectionDecorations:
+		VisualBounds: 32,32
+	RejectsOrders:
+	WithIdleOverlay@1:
+		Offset: -785,597,135
+		Sequence: rotor
+	WithIdleOverlay@2:
+		Offset: -785,-597,135
+		Sequence: rotor
+	WithIdleOverlay@3:
+		Offset: -1536,597,135
+		Sequence: rotor
+	WithIdleOverlay@4:
+		Offset: -1536,-597,135
+		Sequence: rotor
+	
+LSTNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^Helicopter
+	Inherits: ^AutoTargetAll
+	Inherits: ^EMPNoGuns
+	-Selectable:
+	RejectsOrders:
+	RenderSprites:
+		Image: flyinglst
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Landing Craft
+	Buildable:
+		BuildDuration: 8800
+		BuildPaletteOrder: 40
+		Queue: Silly6.Fact
+		Description: Landing Craft
+	Health:
+		HP: 1000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	WithFacingSpriteBody:
+	WithRoof:
+	Aircraft:
+		RearmBuildings: sillyfact6
+		InitialFacing: 224
+		TurnSpeed: 8
+		Speed: 100
+		RepulsionSpeed: 150
+		AirborneCondition: airborne
+	WithIdleOverlay@ROTORAIR1:
+		Offset: 512,512,-85
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTORAIR2:
+		Offset: -512,512,-85
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTORAIR3:
+		Offset: -512,-512,-85
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTORAIR4:
+		Offset: 512,-512,-85
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTORGROUND1:
+		Offset: 512,512,-85
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	WithIdleOverlay@ROTORGROUND2:
+		Offset: -512,512,-85
+		Sequence: slow-rotor
+	WithIdleOverlay@ROTORGROUND3:
+		Offset: -512,-512,-85
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	WithIdleOverlay@ROTORGROUND4:
+		Offset: 512,-512,-85
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	WithSpriteTurret:
+		Turret: primary
+		Sequence: turret
+	Turreted:
+		TurnSpeed: 10
+		Offset: 0,0,40
+		Turret: primary
+	Armament:
+		Name: primary
+		Turret: primary
+		Weapon: Minelauncher
+		LocalOffset: 0,265,512, 0,-265,512
+		RequiresCondition: !empdisable
+	AttackTurreted:
+	SpawnActorOnDeath:
+		Actor: LSTNEW.Husk
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	
+LSTNEW.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Landing Craft
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 140
+	RevealsShroud:
+		Range: 10c0
+		Type: GroundPosition
+	WithIdleOverlay@ROTORAIR1:
+		Offset: 512,512,-85
+		Sequence: rotor
+	WithIdleOverlay@ROTORAIR2:
+		Offset: -512,512,-85
+		Sequence: rotor
+	WithIdleOverlay@ROTORAIR3:
+		Offset: -512,-512,-85
+		Sequence: rotor
+	WithIdleOverlay@ROTORAIR4:
+		Offset: 512,-512,-85
+		Sequence: rotor
+	WithIdleOverlay@turret:
+		Offset: 0,0,40
+		Sequence: turret
+	RenderSprites:
+		Image: flyinglst
+		
+		
+LEVIATHAN:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^Tank
+	RenderSprites:
+		Image: leviathan
+	-Crushable:
+	-Selectable:
+	RejectsOrders:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Leviathan
+	Buildable:
+		BuildDuration: 10000
+		BuildPaletteOrder: 60
+		Queue: leviathan.Fact
+		Description: Leviathan
+		BuildLimit: 1
+	Mobile:
+		Speed: 25
+		TurnSpeed: 3
+		Crushes: wall, heavywall, crate, infantry, Tank, Car, Husk
+	Health:
+		HP: 900
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 10c0
+		
+		
+# -- Upgrades Health
+
+	DamageMultiplier@MainCannon:
+		RequiresCondition: MainRocket || MainCannon || MainA10
+		Modifier: 80
+	DamageMultiplier@Front:
+		RequiresCondition: FrontTow || FrontCommando || FrontMtnk
+		Modifier: 80
+	DamageMultiplier@Side:
+		RequiresCondition: SuppLtnk || SuppAtRock || SuppArty
+		Modifier: 80
+		
+# main Guns ---
+		
+	GrantConditionOnPrerequisite@MainRocket:
+		Condition: MainRocket
+		Prerequisites: MainRocket
+	GrantConditionOnPrerequisite@MainCannon:
+		Condition: MainCannon
+		Prerequisites: MainCannon
+	GrantConditionOnPrerequisite@MainA10:
+		Condition: MainA10
+		Prerequisites: MainA10
+		
+	WithSpriteTurret@MainRocket:
+		Sequence: msamturret
+		Turret: MainRocket
+		RequiresCondition: MainRocket
+	Turreted@MainRocket:
+		Turret: MainRocket
+		Offset: 0,0,150
+	Armament@MainRocket:
+		Name: MainRocket
+		Weapon: Sixteen227mm
+		LocalOffset: 213,128,0, 213,-128,0
+		Turret: MainRocket
+		RequiresCondition: MainRocket
+		
+	WithSpriteTurret@MainCannon:
+		Sequence: htnkturret
+		Turret: MainCannon
+		RequiresCondition: MainCannon
+	Turreted@MainCannon:
+		Turret: MainCannon
+		Offset: 0,0,20
+	Armament@MainGun1:
+		Name: MainCannon
+		Weapon: 120mmDualLevia
+		LocalOffset: 900,180,340, 900,-180,340
+		Recoil: 170
+		RecoilRecovery: 42
+		MuzzleSequence: muzzle
+		Turret: MainCannon
+		RequiresCondition: MainCannon
+		
+	WithSpriteTurret@MainA10:
+		Sequence: a10gun
+		Turret: MainA10
+		RequiresCondition: MainA10
+	Turreted@MainA10:
+		Turret: MainA10
+		Offset: 0,0,20
+	Armament@MainA10:
+		Name: MainA10
+		Weapon: Leviathan120mmSplash
+		MuzzleSequence: muzzle
+		Turret: MainA10
+		RequiresCondition: MainA10
+		
+# -- front guns
+
+	GrantConditionOnPrerequisite@FrontTow:
+		Condition: FrontTow
+		Prerequisites: FrontTow
+	GrantConditionOnPrerequisite@FrontCommando:
+		Condition: FrontCommando
+		Prerequisites: FrontCommando
+	GrantConditionOnPrerequisite@FrontMtnk:
+		Condition: FrontMtnk
+		Prerequisites: FrontMtnk
+		
+	WithSpriteTurret@FrontTow:
+		Sequence: antiairturret
+		Turret: FrontTow
+		RequiresCondition: FrontTow
+	Turreted@FrontTow:
+		Turret: FrontTow
+		Offset: 1524,-356,10
+	Armament@FrontTow:
+		Name: FrontTow
+		Weapon: TOWMissileLeviathan
+		LocalOffset: 0,-171,0, 0,171,0
+		Turret: FrontTow
+		RequiresCondition: FrontTow
+		
+	WithSpriteTurret@FrontTow2:
+		Sequence: antiairturret
+		Turret: FrontTow2
+		RequiresCondition: FrontTow
+	Turreted@FrontTow2:
+		Turret: FrontTow2
+		Offset: 1524,356,10
+	Armament@FrontTow2:
+		Name: FrontTow2
+		Weapon: TOWMissileLeviathan
+		LocalOffset: 0,-171,0, 0,171,0
+		Turret: FrontTow2
+		FireDelay: 10
+		RequiresCondition: FrontTow
+		
+	WithSpriteTurret@FrontCommando:
+		Sequence: guardtower
+		Turret: FrontCommando
+		RequiresCondition: FrontCommando
+	Turreted@FrontCommando:
+		Turret: FrontCommando
+		Offset: 1524,-356,10
+	Armament@FrontCommando:
+		Name: FrontCommando
+		Weapon: Sniperlevia
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+		Turret: FrontCommando
+		RequiresCondition: FrontCommando
+		
+	WithSpriteTurret@FrontCommando2:
+		Sequence: guardtower
+		Turret: FrontCommando2
+		RequiresCondition: FrontCommando
+	Turreted@FrontCommando2:
+		Turret: FrontCommando2
+		Offset: 1524,356,10
+	Armament@FrontCommando2:
+		Name: FrontCommando2
+		Weapon: Sniperlevia
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+		Turret: FrontCommando2
+		FireDelay: 10
+		RequiresCondition: FrontCommando
+		
+	WithSpriteTurret@FrontMtnk:
+		Sequence: normalturret
+		Turret: FrontMtnk
+		RequiresCondition: FrontMtnk
+	Turreted@FrontMtnk:
+		Turret: FrontMtnk
+		Offset: 1524,-356,10
+	Armament@FrontMtnk:
+		Name: FrontMtnk
+		Weapon: 120mmLevia
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+		Turret: FrontMtnk
+		RequiresCondition: FrontMtnk
+		
+	WithSpriteTurret@FrontMtnk2:
+		Sequence: normalturret
+		Turret: FrontMtnk2
+		RequiresCondition: FrontMtnk
+	Turreted@FrontMtnk2:
+		Turret: FrontMtnk2
+		Offset: 1524,356,10
+	Armament@FrontMtnk2:
+		Name: FrontMtnk2
+		Weapon: 120mmLevia
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+		Turret: FrontMtnk2
+		FireDelay: 10
+		RequiresCondition: FrontMtnk
+		
+# -- Side Pack
+
+	GrantConditionOnPrerequisite@SuppLtnk:
+		Condition: SuppLtnk
+		Prerequisites: SuppLtnk
+	GrantConditionOnPrerequisite@SuppAtRock:
+		Condition: SuppAtRock
+		Prerequisites: SuppAtRock
+	GrantConditionOnPrerequisite@SuppArty:
+		Condition: SuppArty
+		Prerequisites: SuppArty
+		
+	WithSpriteTurret@SuppLtnk:
+		Sequence: ltnkturret
+		Turret: SuppLtnk
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk:
+		Turret: SuppLtnk
+		Offset: 258,1024,10
+	Armament@SuppLtnk:
+		Name: SuppLtnk
+		Weapon: LeviAutoCannon
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		Turret: SuppLtnk
+		RequiresCondition: SuppLtnk
+		
+	WithSpriteTurret@SuppLtnk1:
+		Sequence: ltnkturret
+		Turret: SuppLtnk1
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk1:
+		Turret: SuppLtnk1
+		Offset: -158,1024,10
+	Armament@SuppLtnk1:
+		Name: SuppLtnk1
+		Weapon: LeviAutoCannon
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		FireDelay: 7
+		Turret: SuppLtnk1
+		RequiresCondition: SuppLtnk
+		
+	WithSpriteTurret@SuppLtnk2:
+		Sequence: ltnkturret
+		Turret: SuppLtnk2
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk2:
+		Turret: SuppLtnk2
+		Offset: 769,1024,10
+	Armament@SuppLtnk2:
+		Name: SuppLtnk2
+		Weapon: LeviAutoCannon
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		FireDelay: 14
+		Turret: SuppLtnk2
+		RequiresCondition: SuppLtnk
+		
+	WithSpriteTurret@SuppLtnk3:
+		Sequence: ltnkturret
+		Turret: SuppLtnk3
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk3:
+		Turret: SuppLtnk3
+		Offset: 258,-1024,10
+	Armament@SuppLtnk3:
+		Name: SuppLtnk3
+		Weapon: LeviAutoCannon
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		FireDelay: 21
+		Turret: SuppLtnk3
+		RequiresCondition: SuppLtnk
+		
+	WithSpriteTurret@SuppLtnk4:
+		Sequence: ltnkturret
+		Turret: SuppLtnk4
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk4:
+		Turret: SuppLtnk4
+		Offset: -158,-1024,10
+	Armament@SuppLtnk4:
+		Name: SuppLtnk4
+		Weapon: LeviAutoCannon
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		FireDelay: 28
+		Turret: SuppLtnk4
+		RequiresCondition: SuppLtnk
+		
+	WithSpriteTurret@SuppLtnk5:
+		Sequence: ltnkturret
+		Turret: SuppLtnk5
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk5:
+		Turret: SuppLtnk5
+		Offset: 769,-1024,10
+	Armament@SuppLtnk5:
+		Name: SuppLtnk5
+		Weapon: LeviAutoCannon
+		FireDelay: 35
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		Turret: SuppLtnk5
+		RequiresCondition: SuppLtnk
+		
+		
+		
+	WithSpriteTurret@SuppAtRock:
+		Sequence: msamturret
+		Turret: SuppAtRock
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock:
+		Turret: SuppAtRock
+		Offset: 258,1024,10
+	Armament@SuppAtRock:
+		Name: SuppAtRock
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		Turret: SuppAtRock
+		RequiresCondition: SuppAtRock
+		
+	WithSpriteTurret@SuppAtRock1:
+		Sequence: msamturret
+		Turret: SuppAtRock1
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock1:
+		Turret: SuppAtRock1
+		Offset: -158,1024,10
+	Armament@SuppAtRock1:
+		Name: SuppAtRock1
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		FireDelay: 5
+		Turret: SuppAtRock1
+		RequiresCondition: SuppAtRock
+		
+	WithSpriteTurret@SuppAtRock2:
+		Sequence: msamturret
+		Turret: SuppAtRock2
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock2:
+		Turret: SuppAtRock2
+		Offset: 769,1024,10
+	Armament@SuppAtRock2:
+		Name: SuppAtRock2
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		FireDelay: 10
+		Turret: SuppAtRock2
+		RequiresCondition: SuppAtRock
+		
+	WithSpriteTurret@SuppAtRock3:
+		Sequence: msamturret
+		Turret: SuppAtRock3
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock3:
+		Turret: SuppAtRock3
+		Offset: 258,-1024,10
+	Armament@SuppAtRock3:
+		Name: SuppAtRock3
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		FireDelay: 15
+		Turret: SuppAtRock3
+		RequiresCondition: SuppAtRock
+		
+	WithSpriteTurret@SuppAtRock4:
+		Sequence: msamturret
+		Turret: SuppAtRock4
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock4:
+		Turret: SuppAtRock4
+		Offset: -158,-1024,10
+	Armament@SuppAtRock4:
+		Name: SuppAtRock4
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		FireDelay: 20
+		Turret: SuppAtRock4
+		RequiresCondition: SuppAtRock
+		
+	WithSpriteTurret@SuppAtRock5:
+		Sequence: msamturret
+		Turret: SuppAtRock5
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock5:
+		Turret: SuppAtRock5
+		Offset: 769,-1024,10
+	Armament@SuppAtRock5:
+		Name: SuppAtRock5
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		FireDelay: 25
+		Turret: SuppAtRock5
+		RequiresCondition: SuppAtRock
+		
+		
+		
+	WithSpriteTurret@SuppArty:
+		Sequence: artillery
+		Turret: SuppArty
+		RequiresCondition: SuppArty
+	Turreted@SuppArty:
+		Turret: SuppArty
+		Offset: 258,1024,10
+	Armament@SuppArty:
+		Name: SuppArty
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		Turret: SuppArty
+		RequiresCondition: SuppArty
+		
+	WithSpriteTurret@SuppArty2:
+		Sequence: artillery
+		Turret: SuppArty2
+		RequiresCondition: SuppArty
+	Turreted@SuppArty2:
+		Turret: SuppArty2
+		Offset: -158,1024,10
+	Armament@SuppArty2:
+		Name: SuppArty2
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		FireDelay: 5
+		Turret: SuppArty2
+		RequiresCondition: SuppArty
+		
+	WithSpriteTurret@SuppArty3:
+		Sequence: artillery
+		Turret: SuppArty3
+		RequiresCondition: SuppArty
+	Turreted@SuppArty3:
+		Turret: SuppArty3
+		Offset: 769,1024,10
+	Armament@SuppArty3:
+		Name: SuppArty3
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		FireDelay: 10
+		Turret: SuppArty3
+		RequiresCondition: SuppArty
+		
+	WithSpriteTurret@SuppArty4:
+		Sequence: artillery
+		Turret: SuppArty4
+		RequiresCondition: SuppArty
+	Turreted@SuppArty4:
+		Turret: SuppArty4
+		Offset: 258,-1024,10
+	Armament@SuppArty4:
+		Name: SuppArty4
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		FireDelay: 15
+		Turret: SuppArty4
+		RequiresCondition: SuppArty
+		
+	WithSpriteTurret@SuppArty5:
+		Sequence: artillery
+		Turret: SuppArty5
+		RequiresCondition: SuppArty
+	Turreted@SuppArty5:
+		Turret: SuppArty5
+		Offset: -158,-1024,10
+	Armament@SuppArty5:
+		Name: SuppArty5
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		FireDelay: 20
+		Turret: SuppArty5
+		RequiresCondition: SuppArty
+		
+	WithSpriteTurret@SuppArty1:
+		Sequence: artillery
+		Turret: SuppArty1
+		RequiresCondition: SuppArty
+	Turreted@SuppArty1:
+		Turret: SuppArty1
+		Offset: 769,-1024,10
+	Armament@SuppArty1:
+		Name: SuppArty1
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		FireDelay: 25
+		Turret: SuppArty1
+		RequiresCondition: SuppArty
+		
+		
+# upgrades
+
+	GrantConditionOnPrerequisite@SuppRange1:
+		Condition: SuppRange1
+		Prerequisites: SuppRange1
+	GrantConditionOnPrerequisite@SuppHealth1:
+		Condition: SuppHealth1
+		Prerequisites: SuppHealth1
+	GrantConditionOnPrerequisite@SuppSpeed1:
+		Condition: SuppSpeed1
+		Prerequisites: SuppSpeed1
+		
+	SelfHealing@SuppHealth1:
+		Delay: 25
+		PercentageStep: 0
+		Step: 15
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: SuppHealth1 || SuppHealth2 && (!SuppHealth1 && !SuppHealth2)
+
+	WithIdleOverlay@SuppSpeed1:
+		Sequence: speedup
+		Offset: -1024,413,10
+		RequiresCondition: SuppSpeed1
+	SpeedMultiplier@SuppSpeed1:
+		Modifier: 200
+		RequiresCondition: SuppSpeed1
+	ReloadDelayMultiplier@SuppSpeed1:
+		Modifier: 80
+		RequiresCondition: SuppSpeed1
+		
+	WithIdleOverlay@SuppRange1:
+		Sequence: rangeup
+		Offset: -1024,413,10
+		RequiresCondition: SuppRange1
+	RangeMultiplier@SuppRange1:
+		Modifier: 133
+		RequiresCondition: SuppRange1	
+		
+	WithIdleOverlay@SuppHealth1:
+		Sequence: healthup
+		Offset: -1024,413,10
+		RequiresCondition: SuppHealth1
+	DamageMultiplier@SuppHealth1:
+		Modifier: 60
+		RequiresCondition: SuppHealth1	
+		
+	GrantConditionOnPrerequisite@SuppRange2:
+		Condition: SuppRange2
+		Prerequisites: SuppRange2
+	GrantConditionOnPrerequisite@SuppHealth2:
+		Condition: SuppHealth2
+		Prerequisites: SuppHealth2
+	GrantConditionOnPrerequisite@SuppSpeed2:
+		Condition: SuppSpeed2
+		Prerequisites: SuppSpeed2
+		
+	SelfHealing@SuppHealth1SuppHealth2:
+		Delay: 25
+		PercentageStep: 0
+		Step: 40
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: SuppHealth1 && SuppHealth2
+
+	WithIdleOverlay@SuppSpeed2:
+		Sequence: speedup
+		Offset: -1024,-413,10
+		RequiresCondition: SuppSpeed2
+	SpeedMultiplier@SuppSpeed2:
+		Modifier: 200
+		RequiresCondition: SuppSpeed2
+	ReloadDelayMultiplier@SuppSpeed2:
+		Modifier: 80
+		RequiresCondition: SuppSpeed2
+		
+	WithIdleOverlay@SuppRange2:
+		Sequence: rangeup
+		Offset: -1024,-413,10
+		RequiresCondition: SuppRange2
+	RangeMultiplier@SuppRange2:
+		Modifier: 133
+		RequiresCondition: SuppRange2	
+		
+	WithIdleOverlay@SuppHealth2:
+		Sequence: healthup
+		Offset: -1024,-413,10
+		RequiresCondition: SuppHealth2
+	DamageMultiplier@SuppHealth2:
+		Modifier: 60
+		RequiresCondition: SuppHealth2	
+		
+# rest code
+		
+	AttackTurreted:
+		Armaments: MainRocket, MainCannon, MainA10, MachineGun1, MachineGun2, FrontTow, FrontTow2, FrontCommando, FrontCommando2, FrontMtnk2, FrontMtnk, SuppLtnk, SuppLtnk1, SuppLtnk2, SuppLtnk3, SuppLtnk4, SuppLtnk5, SuppAtRock, SuppAtRock1, SuppAtRock2, SuppAtRock3, SuppAtRock4, SuppAtRock5, SuppArty, SuppArty1, SuppArty2, SuppArty3, SuppArty4, SuppArty5
+		
+		
+	WithSpriteTurret@BasicTurret1:
+		Sequence: ltnkturret
+		Turret: BasicTurret1
+	Turreted@BasicTurret1:
+		Turret: BasicTurret1
+		Offset: 1069,697,10
+	Armament@BasicTurret1:
+		Weapon: MachineGunLeviathan
+		Name: MachineGun1
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		Turret: BasicTurret1
+		
+	WithSpriteTurret@BasicTurret2:
+		Sequence: ltnkturret
+		Turret: BasicTurret2
+	Turreted@BasicTurret2:
+		Turret: BasicTurret2
+		Offset: 1069,-697,10
+	Armament@BasicTurret2:
+		Weapon: MachineGunLeviathan
+		Name: MachineGun2
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		Turret: BasicTurret2
+		
+	WithMuzzleOverlay:
+	AutoTarget:
+		ScanRadius: 12
+	SelectionDecorations:
+		VisualBounds: 72,72,0,-3
+
+	WithIdleOverlay@tracks2:
+		Sequence: tracks
+		Turret: tracks2
+		Offset: -966,555,-40
+	WithIdleOverlay@tracks3:
+		Sequence: tracks
+		Turret: tracks3
+		Offset: 400,1066,-40
+	WithIdleOverlay@tracks5:
+		Sequence: tracks
+		Turret: tracks5
+		Offset: 1412,512,-40
+	WithIdleOverlay@tracks6:
+		Sequence: tracks
+		Turret: tracks6
+		Offset: -966,-555,-40
+	WithIdleOverlay@tracks7:
+		Sequence: tracks
+		Turret: tracks7
+		Offset: 400,-1066,-40
+	WithIdleOverlay@tracks8:
+		Sequence: tracks
+		Turret: tracks8
+		Offset: 1412,-512,-40
+	SpawnActorOnDeath:
+		Actor: LEVIATHAN.Husk
+	ProvidesPrerequisite@buildingname:
+		
+LEVIATHAN.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Leviathan (Destroyed)
+	ThrowsParticle@turret1:
+		Anim: ltnkturret
+		Offset: 1069,697,10
+	ThrowsParticle@turret2:
+		Anim: ltnkturret
+		Offset: 1069,-697,10
+	RenderSprites:
+		Image: leviathan
+	WithIdleOverlay@tracks2:
+		Sequence: tracks
+		Offset: -966,555,-40
+	WithIdleOverlay@tracks3:
+		Sequence: tracks
+		Offset: 400,1066,-40
+	WithIdleOverlay@tracks5:
+		Sequence: tracks
+		Offset: 1412,512,-40
+	WithIdleOverlay@tracks6:
+		Sequence: tracks
+		Offset: -966,-555,-40
+	WithIdleOverlay@tracks7:
+		Sequence: tracks
+		Offset: 400,-1066,-40
+	WithIdleOverlay@tracks8:
+		Sequence: tracks
+		Offset: 1412,-512,-40
+		
+PLACEHOLDERLEVI:
+	Inherits: ^Vehicle
+	-Selectable:
+	RenderSprites:
+		Image: levifinish
+	Valued:
+		Cost: 6000
+	Tooltip:
+		Name: Construct Leviathan
+	Buildable:
+		BuildDuration: 250
+		Prerequisites: !leviathan, leviathanfact
+		BuildPaletteOrder: 10000
+		Queue: Building.Fact
+		Description: Finishes the leviathan now!.
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 1
+	AttackFrontal:  
+	
+PLACEHOLDSECONDLEV:
+	Inherits: ^Vehicle
+	-Selectable:
+	RenderSprites:
+		Image: leviextra
+	Valued:
+		Cost: 10000
+	Tooltip:
+		Name: Construct Leviathan
+	Buildable:
+		BuildDuration: 1000
+		Prerequisites: leviathan, leviathanfact
+		BuildPaletteOrder: 10000
+		Queue: Building.Fact
+		Description: Get a second leviathan right now!.
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 1
+	AttackFrontal:
+    
+Master10k:
+	AlwaysVisible:
+	Tooltip:
+		Name: Master Upgrade 10k
+	ProvidesPrerequisite@Master10k: 
+		Prerequisite: Master10k
+		
+Master50k:
+	AlwaysVisible:
+	Tooltip:
+		Name: Master Upgrade 50k
+	ProvidesPrerequisite@Master50k: 
+		Prerequisite: Master50k

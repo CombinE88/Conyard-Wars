@@ -1,0 +1,1646 @@
+		
+FACT2:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	-Sellable:
+	CashTrickler:
+		Period: 50
+		Amount: 60
+		ShowTicks: true
+	RenderSprites:
+		Image: fact
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: Nexus
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	Health:
+		HP: 10000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 18c0
+	WithBuildingBib:
+	BaseBuilding:
+	WithBuildingPlacedAnimation:
+	Power:
+		Amount: 1
+	ProvidesPrerequisite@buildingname:
+	Production:
+		Produces: Building.Fact, Defenses.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact
+	ProductionQueue@FactBuilding:
+		Type: Building.Fact
+		Factions: gdi, nod
+		Group: Building
+		BuildSpeed: 40
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@FactDefenses:
+		Type: Defenses.Fact
+		Factions: gdi, nod
+		Group: Defence
+		BuildSpeed: 40
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@FactInf:
+		Type: Infantry.Fact
+		Factions: gdi, nod
+		Group: Infantry
+		BuildSpeed: 40
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@FactVeh:
+		Type: Vehicle.Fact
+		Factions: gdi, nod
+		Group: Vehicle
+		BuildSpeed: 40
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	ProductionQueue@FactAir:
+		Type: Aircraft.Fact
+		Factions: gdi, nod
+		Group: Aircraft
+		BuildSpeed: 40
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	BaseBuilding:
+	ProductionBar@DefenseFact:
+		ProductionType: Defenses.Fact
+	ProductionBar@BuildingFact:
+		ProductionType: Building.Fact
+	BaseProvider:
+		Cooldown: 35
+		Range: 18c0   
+	ProvidesPrerequisite@nod:
+		Factions: nod
+		Prerequisite: buildings.nod
+	ProvidesPrerequisite@gdi:
+		Factions: gdi
+		Prerequisite: buildings.gdi
+	Exit@1:
+		SpawnOffset: 0,0,0
+		ExitCell: 0,0
+		ExitDelay: 0
+		
+E1FACTORY:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: e1fact
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Rifle Training Barracks
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 10
+		Queue: Building.Fact
+		Description: Trains rifle infantry.\n Basic Barracks for Rifle Infantry, mostly used to block artillery of shooting higher targets.
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 500
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Exit:
+		SpawnOffset: 512,1024,0
+		ExitCell: 1,2
+	Production:
+		Produces: E1Infantery
+	ProductionQueue:
+		Type: E1Infantery
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		QueuedAudio: Blank
+		ReadyAudio: Blank
+	
+	-Selectable:
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 24,24,0,12
+	
+E2FACTORY:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: e2fact
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Grenadier Training Barracks
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 20
+		Prerequisites: nukenew
+		Queue: Building.Fact
+		Description: Trains grenadier infantry.\n Strong vs large ammounts of Units.
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 650
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,2
+	Production:
+		Produces: E2Infantery
+	ProductionQueue:
+		Type: E2Infantery
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		QueuedAudio: Blank
+		ReadyAudio: Blank
+ 	
+	-Selectable:
+	ProvidesPrerequisite@buildingname: 
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3 
+
+E22FACTORY:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: e22fact
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Mortar Training Barracks
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 65
+		Queue: Building.Fact
+		Prerequisites: nuk2new
+		Description: Trains Mortar infantry.\n Strong vs large ammounts of Units.
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 700
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Exit@1:
+		SpawnOffset: 0,387,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: -215,344,0
+		ExitCell: 1,2
+	Production:
+		Produces: E22Infantery
+	ProductionQueue:
+		Type: E22Infantery
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		QueuedAudio: Blank
+		ReadyAudio: Blank
+ 	
+	-Selectable:
+	ProvidesPrerequisite@buildingname:	 
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3
+	
+E3FACTORY:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: e3fact
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Rocket Training Barracks
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 30
+		Queue: Building.Fact
+		Prerequisites: labnew
+		Description: Trains rocket infantry.\n Can also attack aircrafts, and will do so.
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 900
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Exit@1:
+		SpawnOffset: -86,688,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: -430,602,0
+		ExitCell: 1,2
+	Production:
+		Produces: E3Infantery
+	ProductionQueue:
+		Type: E3Infantery
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		QueuedAudio: Blank
+		ReadyAudio: Blank
+ 	
+	-Selectable:
+	ProvidesPrerequisite@buildingname: 
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3
+	
+E4FACTORY:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: e4fact
+	Valued:
+		Cost: 850
+	Tooltip:
+		Name: Flamer Training Barracks
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 60
+		Queue: Building.Fact
+		Prerequisites: labnew
+		Description: Trains flamethrower infantry. \n Cheap alternative to the commando unit.
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 670
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Exit@1:
+		SpawnOffset: -430,645,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: -774,559,0
+		ExitCell: 1,2
+	Production:
+		Produces: E4Infantery
+	ProductionQueue:
+		Type: E4Infantery
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		QueuedAudio: Blank
+		ReadyAudio: Blank
+ 	
+	-Selectable:
+	ProvidesPrerequisite@buildingname: 
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3
+E5FACTORY:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: e5fact
+	Valued:
+		Cost: 1650
+	Tooltip:
+		Name: Chemical Training Barracks
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 100
+		Queue: Building.Fact
+		Prerequisites: newhosp
+		Description: Trains chemical infantry. \n Instant kills nearly every other infantry, very tanky.
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Exit@1:
+		SpawnOffset: -430,645,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: -774,559,0
+		ExitCell: 1,2
+	Production:
+		Produces: E5Infantery
+	ProductionQueue:
+		Type: E5Infantery
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		QueuedAudio: Blank
+		ReadyAudio: Blank
+ 	
+	-Selectable:
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3
+		
+RMBOFACTORY:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: rmbofact
+	Valued:
+		Cost: 2200
+	Tooltip:
+		Name: Commando Training Barracks
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 90
+		Queue: Building.Fact
+		Prerequisites: radarnew, forb
+		Description: Trains Commando infantry.\n Elite sniper infantry unit.\n  Strong vs Infantry.
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 1500
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Exit@1:
+		SpawnOffset: -426,85,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: 298,298,0
+		ExitCell: 1,2
+	Production:
+		Produces: E6Infantery
+ 	
+	ProductionQueue:
+		Type: E6Infantery
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		QueuedAudio: Blank
+		ReadyAudio: Blank
+	-Selectable:
+	ProvidesPrerequisite@buildingname:  
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3
+	   
+CARFACTORY1:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: carfact1
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Humvee Factory
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 40
+		Queue: Building.Fact
+		Prerequisites: nukenew, ~buildings.gdi
+		Description: Produces Humvees.\n Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 900
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	Exit:
+		SpawnOffset: 1041,141,0
+		ExitCell: 0,2
+	Production:
+		Produces: Jeep.Fact
+	ProductionQueue:
+		Type: Jeep.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:	
+	ProvidesPrerequisite@jeepfireupgrade: 
+		Prerequisite: jeepfireupgrade
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-5
+	
+	
+CARFACTORYBG:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: carfact1b
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Buggy Factory
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 40
+		Queue: Building.Fact
+		Prerequisites: nukenew, ~buildings.nod
+		Description: Produces Buggy's.\n Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 900
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	Exit:
+		SpawnOffset: 1041,141,0
+		ExitCell: 0,2
+	Production:
+		Produces: Jeep2.Fact
+	ProductionQueue:
+		Type: Jeep2.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@jeepfireupgrade: 
+		Prerequisite: jeepfireupgrade
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-5
+	
+		
+CARFACTORY2:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	HitShape:
+		TargetableOffsets: 0,0,0, 0,1024,0, 0,-1024,0
+		Type: Rectangle
+			TopLeft: -1536, -1024
+			BottomRight: 1536, 512
+	RenderSprites:
+		Image: carfact2
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: Medium Tank Factory
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 80
+		Queue: Building.Fact
+		Prerequisites: hammo
+		Description: Produces Medium Tanks.\n General-Purpose Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
+	Building:
+		Footprint: xxx === ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 1300
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	Exit@1:
+		SpawnOffset: -341,-341,0
+		ExitCell: 0,2
+		ExitDelay: 3
+	Production:
+		Produces: Car2.Fact
+	ProductionQueue:
+		Type: Car2.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 72,48
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-16
+	-Selectable:
+
+CARFACTORY3:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: mlrsfact
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: MLRS Factory
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 70
+		Queue: Building.Fact
+		Prerequisites: fammo
+		Description: Produces Multi Launch Rocket Systems.\n Long range rocket artillery.\n  Strong vs all Ground units.
+	Building:
+		Footprint: _x_ xxx x=x ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	Exit@1:
+		SpawnOffset: 200,400,0
+		ExitCell: 2,2
+		ExitDelay: 3
+	Production:
+		Produces: Car4.Fact
+	ProductionQueue:
+		Type: Car4.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-5
+		
+CARFACTORY4:
+	Inherits: ^BaseBuilding2   
+	Inherits@shape: ^5x5Shape 
+	RenderSprites:
+		Image: carfact4
+		PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer	
+	Valued:
+		Cost: 3250
+	Tooltip:
+		Name: Mammoth Factory
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 170
+		Queue: Building.Fact
+		Prerequisites: fammo, forb
+		Description: Produces Mammoth Tanks.\n Heavily armored Tank.\nCan attack Aircraft.\n  Strong vs Everything
+	Building:
+		Footprint: _____ xxxxx xxxxx xxxxx xxxxx =====
+		Dimensions: 5,6
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 4000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	Exit@1:
+		SpawnOffset: 400,0,0
+		ExitCell: 1,5 
+		ExitDelay: 3
+	Production:
+		Produces: Car3.Fact
+	ProductionQueue:
+		Type: Car3.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 90,90,0,-5
+SECRETFACTORY1:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x3Shape
+	-Selectable:
+	RenderSprites:
+		Image: secret1
+	Valued:
+		Cost: 2800
+	Tooltip:
+		Name: Flying Obelisk Helipad
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 300
+		Queue: Building.Fact
+		Prerequisites: forb, fammo, ~tmplnew
+		Description: Produces Flying Obelisk's. \n Attacks ground only!
+	Building:
+		Footprint: xxx xxx xxx ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 1500
+	RevealsShroud:
+		Range: 5c0
+	Exit:
+		SpawnOffset: 0,-1024,0
+		ExitCell: 1,-1
+		ExitDelay: 10
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	Production:
+		Produces: Secret1.Fact
+	ProductionQueue:
+		Type: Secret1.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0 
+	SelectionDecorations:
+		VisualBounds:  72,72,0,-5
+	ProvidesPrerequisite@buildingname:
+SECRETFACTORY2:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x3Shape
+	-Selectable:
+	RenderSprites:
+		Image: secret2
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Flying Advanced Guardtower Helipad
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 310
+		Queue: Building.Fact
+		Prerequisites: forb, radarnew, ~missnew
+		Description: Produces Flying Advanced Guardtower's.\n Can Attack ground and air units.
+	Building:
+		Footprint: xxx xxx xxx ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 2000
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	RevealsShroud:
+		Range: 5c0
+	Exit:
+		SpawnOffset: 0,-1024,0
+		ExitCell: 1,-1
+		ExitDelay: 10
+	Production:
+		Produces: Secret2.Fact
+	ProductionQueue:
+		Type: Secret2.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0 
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 72,72,0,-5
+SECRETFACTORY3:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: secret3
+	Valued:
+		Cost: 4125
+	Tooltip:
+		Name: NCV Factory
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 300
+		Queue: Building.Fact
+		Prerequisites: fammo, radarnew, ~tmplnew
+		Description: Produces Nuclear Command Vehicle's.\n Kills everything, weak vs aircraft.
+	Building:
+		Footprint: ____ xxxx xxxx ====
+		Dimensions: 4,4
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 6000
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	Exit@1:
+		SpawnOffset: 0,0,0
+		ExitCell: 2,3
+		ExitDelay: 3
+	Production:
+		Produces: secret3.fact 
+	ProductionQueue:
+		Type: secret3.fact 
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 72,72,0,-5
+SECRETFACTORY4:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: secret4
+	Valued:
+		Cost: 3117
+	Tooltip:
+		Name: Mobile Ioncannon Factory
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 300
+		Queue: Building.Fact
+		Prerequisites: newhosp, nuk2new, ~missnew
+		Description: Produces Mobile Ioncannon's. The Ultimative Blob killer.
+	Building:
+		Footprint: ____ xxxx xxxx ====
+		Dimensions: 4,4
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 4500
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	Exit@1:
+		SpawnOffset: -640,0,0
+		ExitCell: 2,3
+		ExitDelay: 3
+	Production:
+		Produces: secret4.fact 
+	ProductionQueue:
+		Type: secret4.fact 
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 72,72,0,-5
+AIRFACT0:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	-Selectable:
+	RenderSprites:
+		Image: airfact0
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Transporthelicopter Helipad
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 135
+		Queue: Building.Fact
+		Prerequisites: lammo
+		Description: Produces Transporthelis's.\n Helicopter Gunship with Miniguns.\n  Strong vs Infantry
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 700
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	Production:
+		Produces: Fly0.Fact
+	Reservable:
+	RepairsUnits:
+	WithRepairAnimation:
+	ProductionQueue:
+		Type: Fly0.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 36,36,0,-5	 
+AIRFACT1:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	-Selectable:
+	RenderSprites:
+		Image: airfact2
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: Orca Helipad
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 140
+		Queue: Building.Fact
+		Prerequisites: newhosp, hammo
+		Description: Produces Orca's.\n Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Cannot target Infantry
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	Production:
+		Produces: Fly1.Fact
+	Reservable:
+	RepairsUnits:
+	WithRepairAnimation:
+	ProductionQueue:
+		Type: Fly1.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 36,36,0,-5
+	
+AIRFACT2:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	-Selectable:
+	RenderSprites:
+		Image: airfact1
+	Valued:
+		Cost: 1600
+	Tooltip:
+		Name: Apache Longbow Helipad
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 150
+		Queue: Building.Fact
+		Prerequisites: newhosp, nuk2new
+		Description: Produces Apache Longbow's.\n Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and Aircraft\n  Can't target Tanks
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	Production:
+		Produces: Fly2.Fact
+	Reservable:
+	RepairsUnits:
+	WithRepairAnimation:
+	ProductionQueue:
+		Type: Fly2.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0 
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 36,36,0,-5
+ 
+CARFACTORY5:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^4x3Shape
+	RenderSprites:
+		Image: carfact5
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: Artillery Supply
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 160
+		Queue: Building.Fact
+		Prerequisites: radarnew
+		Description: Produces Artillery.\n Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
+	Building:
+		Footprint: __xx xxxx xxxx ====
+		Dimensions: 4,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 1500
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+	Exit@1:
+		SpawnOffset: 424,-400,0
+		ExitCell: 3,3
+	WithProductionDoorOverlay: 
+		Sequence: build-top
+	ProductionQueue:
+		Type: Car5.Fact
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		ReadyAudio:
+ 	
+	Production:
+		Produces: Car5.Fact
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	-Selectable:   
+	SelectionDecorations:
+		VisualBounds: 64,72,0,-5
+	
+CARFACTORY6:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: carfact6
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: Flametank Supplydrop
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 70
+		Queue: Building.Fact
+		Prerequisites: forb
+		Description: Produces Flametanks.\n Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
+	Building:
+		Footprint: ___ xxx x=x ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 2000
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+	Exit@1:
+		SpawnOffset: -300,100,0
+		ExitCell: 2,3
+	ProductionAirdrop:
+		Produces: Car6.Fact
+	ProductionQueue:
+		Type: Car6.Fact
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		ReadyAudio:
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	-Selectable:
+	SelectionDecorations:
+		VisualBounds: 72,64,0,-5
+	
+CARFACTORY7:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^4x2Shape
+	RenderSprites:
+		Image: carfact7
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Anti Air Rocket Launcher Supplydrop
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 110
+		Queue: Building.Fact
+		Prerequisites: newhosp
+		Description: Produces Anti Air Rocket Launcher.\n Most powerful anti-air unit.\nCannot attack Ground units.
+	Building:
+		Footprint: xxxx xxxx ====
+		Dimensions: 4,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 1100
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+	Exit@1:
+		SpawnOffset: -1024,0,0
+		ExitCell: 3,1
+	ProductionAirdrop:
+		Produces: Car7.Fact
+	WithDeliveryAnimation:
+	ProductionQueue:
+		Type: Car7.Fact
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		ReadyAudio:
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	-Selectable:
+	SelectionDecorations:
+		VisualBounds: 48,72,0,-5
+
+CARFACTORY8:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^4x2Shape
+	RenderSprites:
+		Image: carfact8
+	Valued:
+		Cost: 1350
+	Tooltip:
+		Name: Light Tank Supplydrop
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 50
+		Queue: Building.Fact
+		Prerequisites: lammo
+		Description: Produces Recon Bikes.\n Fast, light tank.\n  Strong vs Vehicles, Tanks\n  Weak vs Infantry
+	Building:
+		Footprint: xxxx xxxx ====
+		Dimensions: 4,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 800
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+	Exit@1:
+		SpawnOffset: -1024,0,0
+		ExitCell: 3,1
+	ProductionAirdrop:
+		Produces: Car8.Fact
+	WithDeliveryAnimation:
+	ProductionQueue:
+		Type: Car8.Fact
+		Group: none
+		RequireOwner: false
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+		ReadyAudio:
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	-Selectable:
+	SelectionDecorations:
+		VisualBounds: 48,64,0,-5
+	
+CARFACTORY10:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: stankfact
+	Valued:
+		Cost: 1850
+	Tooltip:
+		Name: Stealthtank Factory
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 100
+		Queue: Building.Fact
+		Prerequisites: nuk2new, fammo
+		Description: Produces Stealth Tanks.\n Long-range missile tank that can cloak.\n Attacks only Buildings!
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+	Exit@1:
+		SpawnOffset: -0,-0,0
+		ExitCell: 0,2
+		ExitDelay: 3
+	WithDeliveryAnimation:
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	Production:
+		Produces: Car10.Fact
+	ProductionQueue:
+		Type: Car10.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	-Selectable:
+	SelectionDecorations:
+		VisualBounds: 48,64,0,-5
+		
+#---- silly factories ----
+
+SILLYFACT1:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: syrd
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 3500
+	Tooltip:
+		Name: Flying Cruiser Factory
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 400
+		Queue: Building.Fact
+		Prerequisites: sillyone
+		IconPalette: ra
+		Description: Produces Cruiser.\n Very slow long-range ship.\n  Strong vs Buildings, Ground units\n  Weak vs Naval units, Aircraft
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 1500
+	RevealsShroud:
+		Range: 7c0
+	WithBuildingBib:
+	Exit@1:
+		SpawnOffset: -0,-0,0
+		ExitCell: 1,2
+		ExitDelay: 3
+	Production:
+		Produces: Silly1.Fact
+	ProductionQueue:
+		Type: Silly1.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	-Selectable:
+	SelectionDecorations:
+		VisualBounds: 48,64,0,-5
+		
+SILLYFACT2:
+	Inherits: ^BaseBuilding2
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 853
+	HitShape@TOP:
+		Type: Rectangle
+			TopLeft: -512, -1450
+			BottomRight: 896, -512
+	Valued:
+		Cost: 2500
+	RenderSprites:
+		Image: proc
+	Tooltip:
+		Name: Harvester Factory
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 410
+		Queue: Building.Fact
+		Prerequisites: sillyone
+		Description: Produces Harvester.\n Very High HP \n Draws enemy Fire
+	Building:
+		Footprint: _x_ xxx === ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	Exit@1:
+		SpawnOffset: -512,-512,0
+		ExitCell: 1,2
+		ExitDelay: 3
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 6c0
+	WithBuildingBib:
+	Selectable:
+		Bounds: 72,56,0,12
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 73,72
+	-Selectable:
+	Production:
+		Produces: Silly2.Fact
+	ProductionQueue:
+		Type: Silly2.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+	
+		
+SILLYFACT3:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: afldn
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 3500
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Tooltip:
+		Name: Rocket Bomber Factory
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 420
+		Queue: Building.Fact
+		Prerequisites: sillytwo
+		IconPalette: ra
+		Description: Produces Rocket Bomber.\n Hoverig Rocket Bomber with 4 rocketlaunchers.
+	Building:
+		Footprint: xxx xxx 
+		Dimensions: 3,2
+	Health:
+		HP: 4000
+	RevealsShroud:
+		Range: 7c0
+	Exit@1:
+		SpawnOffset: -0,-0,0
+		ExitCell: 1,1
+		ExitDelay: 3
+	Production:
+		Produces: Silly3.Fact
+	ProductionQueue:
+		Type: Silly3.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	-Selectable:
+	SelectionDecorations:
+		VisualBounds: 48,64,0,-5
+		
+		
+SILLYFACT4:	   
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: weapra
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 3000
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Tooltip:
+		Name: Heavy Anti Air Platform Factory
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 420
+		Queue: Building.Fact
+		Prerequisites: sillytwo
+		IconPalette: ra
+		Description: Produces Heavy Anti Air Platform.\n Strongest Anti Air defence
+	Building:
+		Footprint: xxx xxx ===
+		Dimensions: 3,3
+		LocalCenterOffset: 0,-512,0
+	Health:
+		HP: 3500
+	RevealsShroud:
+		Range: 7c0
+	Exit@1:
+		SpawnOffset: -0,-0,0
+		ExitCell: 1,1
+		ExitDelay: 3
+	Production:
+		Produces: Silly4.Fact
+	ProductionQueue:
+		Type: Silly4.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+ 	
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname: 
+	-Selectable:
+	SelectionDecorations:
+		VisualBounds: 48,64,0,-5	  
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	
+	Exit@1:
+		SpawnOffset: 213,-128,0
+		ExitCell: 1,2
+	WithBuildingBib:
+	
+	
+SILLYFACT5:
+	Inherits: ^BaseBuilding2
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -683
+			BottomRight: 1536, 768
+	HitShape@TOPANDBOTTOM:
+		TargetableOffsets: 840,0,0, -1060,0,0
+		Type: Rectangle
+			TopLeft: -640, -980
+			BottomRight: 640, 1110
+	RenderSprites:
+		Image: fix
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Discthrower Truck Factory
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 430
+		Queue: Building.Fact
+		Prerequisites: sillythree
+		IconPalette: ra
+		Description: Produces Disc Throwing Trucks.\n Strong against everything
+	Building:
+		Footprint: _X_ xxx _X_
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 64,34,0,3
+	SelectionDecorations:
+		VisualBounds: 72,48
+	Health:
+		HP: 3000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	
+	Exit@1:
+		SpawnOffset: -0,-0,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: -0,-0,0
+		ExitCell: 2,2
+	Exit@3:
+		SpawnOffset: -0,-0,0
+		ExitCell: 0,0
+	Exit@4:
+		SpawnOffset: -0,-0,0
+		ExitCell: 2,0
+	ProductionAirdrop:
+		Produces: Silly5.Fact
+	ProductionQueue:
+		Type: Silly5.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+	-Selectable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	
+		
+SILLYFACT6:
+	Inherits: ^BaseBuilding2
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -683
+			BottomRight: 1536, 768
+	HitShape@TOPANDBOTTOM:
+		TargetableOffsets: 840,0,0, -1060,0,0
+		Type: Rectangle
+			TopLeft: -640, -980
+			BottomRight: 640, 1110
+	RenderSprites:
+		Image: fixra
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 3500
+	Tooltip:
+		Name: Landing Craft Factory
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 430
+		Queue: Building.Fact
+		Prerequisites: sillythree
+		Description: Produces Landing Craft.\n Strong against Aircrafts and Buildings
+	Building:
+		Footprint: _X_ xxx _X_
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 64,34,0,3
+	SelectionDecorations:
+		VisualBounds: 72,48
+	Health:
+		HP: 4000
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+		HasMinibib: Yes
+	
+	Exit@1:
+		SpawnOffset: -0,-0,0
+		ExitCell: 0,2
+	Exit@2:
+		SpawnOffset: -0,-0,0
+		ExitCell: 2,2
+	Exit@3:
+		SpawnOffset: -0,-0,0
+		ExitCell: 0,0
+	Exit@4:
+		SpawnOffset: -0,-0,0
+		ExitCell: 2,0
+	Production:
+		Produces: Silly6.Fact
+	ProductionQueue:
+		Type: Silly6.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+	-Selectable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	
+	
+LEVIATHANFACT:
+	Inherits: ^BaseBuilding2
+	Inherits: ^5x5Shape
+	RenderSprites:
+		Image: livafact
+	WithIdleOverlay@hole1:
+		Sequence: holes
+		StartSequence: holesmake
+		Offset: 1536,0,0
+	WithIdleOverlay@hole2:
+		Sequence: holes
+		StartSequence: holesmake
+		Offset: -1536,0,0
+	WithIdleOverlay@side1:
+		Sequence: side
+		StartSequence: sidemake
+		Offset: 1024,2260,0
+	WithIdleOverlay@side2:
+		Sequence: side
+		StartSequence: sidemake
+		Offset: 1024,-2260,0
+	WithIdleOverlay@side3:
+		Sequence: side
+		StartSequence: sidemake
+		Offset: -1024,2260,0
+	WithIdleOverlay@side4:
+		Sequence: side
+		StartSequence: sidemake
+		Offset: -1024,-2260,0
+	WithIdleOverlay@pin1:
+		Sequence: pin
+		Offset: -2260,-2260,0
+	WithIdleOverlay@pin3:
+		Sequence: pin
+		Offset: -2260,2260,0
+	WithIdleOverlay@pin4:
+		Sequence: pin
+		Offset: 2260,-2260,0
+	WithIdleOverlay@pin5:
+		Sequence: pin
+		Offset: 2260,2260,0
+	Valued:
+		Cost: 4000
+	Tooltip:
+		Name: Leviathan Assembly
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 9999
+		Queue: Building.Fact
+		Prerequisites: endgame
+		Description: Assembles your personal Leviathan.\nYou find the upgrades in the second tab of Defences!
+		BuildLimit: 1
+	Building:
+		Footprint: xxxxx x===x x===x x===x xx=xx
+		Dimensions: 5,5
+	Selectable:
+		Bounds: 96,96,0,3
+	SelectionDecorations:
+		VisualBounds: 96,96
+	Health:
+		HP: 4500
+	RevealsShroud:
+		Range: 5c0
+	
+	Exit@1:
+		SpawnOffset: -0,-0,0
+		ExitCell: 2,5
+	Production:
+		Produces: leviathan.Fact, Upgrade.Levi
+	ProductionQueue:
+		Type: leviathan.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+	-Selectable:
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	-WithDeathAnimation:
+	ProductionQueue@addon:
+		Type: Upgrade.Levi
+		Factions: gdi, nod
+		Group: Defence
+		BuildSpeed: 40
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+	-Sellable:

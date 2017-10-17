@@ -1,0 +1,207 @@
+^EMPupgrades:
+	#UpgradeOverlay@EMPDISABLE:
+	#	UpgradeTypes: empdisable
+	#	UpgradeMinEnabledLevel: 1
+	#	Palette: disabled
+	#DisableOnUpgrade@EMPDISABLE:
+	#	UpgradeTypes: empdisable
+	#	UpgradeMinEnabledLevel: 1
+	ExternalCondition@IDISABLE:
+		Condition: empdisable
+	WithColoredOverlay@IDISABLE:
+		RequiresCondition: empdisable
+		Palette: disabled
+	DisableOnCondition@IDISABLE:
+		RequiresCondition: empdisable
+^EMPNoGuns:
+	#UpgradeOverlay@EMPDISABLE:
+	#	UpgradeTypes: empdisable
+	#	UpgradeMinEnabledLevel: 1
+	#	Palette: disabled
+	#DisableOnUpgrade@EMPDISABLE:
+	#	UpgradeTypes: empdisable
+	#	UpgradeMinEnabledLevel: 1
+	ExternalCondition@IDISABLE:
+		Condition: empdisable
+	WithColoredOverlay@IDISABLE:
+		RequiresCondition: empdisable
+		Palette: disabled
+	SpeedMultiplier@IDISABLE:
+		RequiresCondition: empdisable
+		Modifier: 5
+		
+		
+^Master10k:
+	GrantConditionOnPrerequisite@Master10k:
+		Condition: Master10k
+		Prerequisites: Master10k
+	WithDecoration@Master10k:
+		Image: masterrank
+		Sequence: master10
+		RequiresCondition: Master10k
+		ReferencePoint: Bottom, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	FirepowerMultiplier@Master10k:
+		RequiresCondition: Master10k
+		Modifier: 150
+	DamageMultiplier@Master10k:
+		RequiresCondition: Master10k
+		Modifier: 75
+	RangeMultiplier@Master10k:
+		RequiresCondition: Master10k
+		Modifier: 110
+	
+	
+^Master50k:
+	GrantConditionOnPrerequisite@Master50k:
+		Condition: Master50k
+		Prerequisites: Master50k
+	WithDecoration@Master50k:
+		Image: masterrank
+		Sequence: master50
+		RequiresCondition: Master50k
+		ReferencePoint: Bottom, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	FirepowerMultiplier@Master50k:
+		RequiresCondition: Master50k
+		Modifier: 200
+	DamageMultiplier@Master50k:
+		RequiresCondition: Master50k
+		Modifier: 50
+	RangeMultiplier@Master50k:
+		RequiresCondition: Master50k
+		Modifier: 125
+		
+^Master100k:
+	GrantConditionOnPrerequisite@Master100k:
+		Condition: Master100k
+		Prerequisites: Master100k
+	WithDecoration@Master100k:
+		Image: masterrank
+		Sequence: master100
+		RequiresCondition: Master100k
+		ReferencePoint: Bottom, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	FirepowerMultiplier@Master100k:
+		RequiresCondition: Master100k
+		Modifier: 300
+	DamageMultiplier@Master100k:
+		RequiresCondition: Master100k
+		Modifier: 33
+	RangeMultiplier@Master100k:
+		RequiresCondition: Master100k
+		Modifier: 150
+		
+^BaseBuilding2:
+	Inherits: ^Building
+	Inherits: ^EMPupgrades
+	Building:
+		Adjacent: 6
+		RequiresBaseProvider: true
+		BuildSounds: constru2.aud, hvydoor1.aud
+		TerrainTypes: Clear
+	RepairableBuilding:
+		RepairPercent: 40
+		RepairStep: 14
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+	GivesBuildableArea:
+	EngineerRepairable:
+	Sellable:
+		SellSounds: cashturn.aud
+	Capturable:
+	WithMakeAnimation:
+
+PROC:
+	Valued:
+		Cost: 1000
+	-Buildable:
+	Power:
+		Amount: 0
+	-Selectable:
+	-Sellable:
+		
+HARV: 
+	-Selectable:
+	-Targetable:
+	
+^4x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -1024
+			BottomRight: 2048, 1024
+			
+^4x2Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -512
+			BottomRight: 2048, 512
+			
+^5x5Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2560, -2560
+			BottomRight: 2560, 2560
+			
+^3x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
+			
+^AutoTargetAll:
+	AutoTarget:
+		AttackAnythingCondition: stance-attackanything
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry, Vehicle, Creep, Water, Air, Structure, Defense
+		InvalidTargets: NoAutoTarget
+		Priority: 1
+		
+^AutoTargetInfantry:		
+	AutoTargetPriority@Infantry:
+		ValidTargets: Infantry, Creep, Water, Air, Structure, Defense
+		InvalidTargets: NoAutoTarget
+		Priority: 2
+		
+^AutoTargetVehicle:		
+	AutoTargetPriority@Infantry:
+		ValidTargets: Vehicle, Creep, Water, Structure, Defense
+		InvalidTargets: NoAutoTarget
+		Priority: 2
+		
+^AutoTargetVehicleAircrafts:		
+	AutoTargetPriority@Infantry:
+		ValidTargets: Vehicle, Water, Air, Structure, Defense
+		InvalidTargets: NoAutoTarget
+		Priority: 2
+		
+^Vehicle:
+	Crushable:
+		WarnProbability: 50
+		CrushSound: xplobig6.aud
+		CrushClasses: Car
+		
+^Tank:
+	Crushable:
+		WarnProbability: 50
+		CrushSound: xplobig6.aud
+		CrushClasses: Tank
+		
+^Husk:
+	Crushable:
+		WarnProbability: 0
+		CrushSound: xplobig6.aud
+		CrushClasses: Husk
+		
+		
