@@ -1,0 +1,755 @@
+		
+LEVIATHAN:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^Tank
+	RenderSprites:
+		Image: leviathan
+	-Crushable:
+	-Selectable:
+	RejectsOrders:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Leviathan
+	Buildable:
+		BuildDuration: 10000
+		BuildPaletteOrder: 60
+		Queue: leviathan.Fact
+		Description: Leviathan
+		BuildLimit: 1
+	Mobile:
+		Speed: 25
+		TurnSpeed: 3
+		Crushes: wall, heavywall, crate, infantry, Tank, Car, Husk
+	Health:
+		HP: 900
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 10c0
+		
+		
+# -- Upgrades Health
+
+	DamageMultiplier@MainCannon:
+		RequiresCondition: MainRocket || MainCannon || MainA10
+		Modifier: 80
+	DamageMultiplier@Front:
+		RequiresCondition: FrontTow || FrontCommando || FrontMtnk
+		Modifier: 80
+	DamageMultiplier@Side:
+		RequiresCondition: SuppLtnk || SuppAtRock || SuppArty
+		Modifier: 80
+		
+# main Guns ---
+		
+	GrantConditionOnPrerequisite@MainRocket:
+		Condition: MainRocket
+		Prerequisites: MainRocket
+	GrantConditionOnPrerequisite@MainCannon:
+		Condition: MainCannon
+		Prerequisites: MainCannon
+	GrantConditionOnPrerequisite@MainA10:
+		Condition: MainA10
+		Prerequisites: MainA10
+		
+	WithSpriteTurret@MainRocket:
+		Sequence: msamturret
+		Turret: MainRocket
+		RequiresCondition: MainRocket
+	Turreted@MainRocket:
+		Turret: MainRocket
+		Offset: 0,0,150
+	Armament@MainRocket:
+		Name: MainRocket
+		Weapon: Sixteen227mm
+		LocalOffset: 213,128,0, 213,-128,0
+		Turret: MainRocket
+		RequiresCondition: MainRocket
+		
+	WithSpriteTurret@MainCannon:
+		Sequence: htnkturret
+		Turret: MainCannon
+		RequiresCondition: MainCannon
+	Turreted@MainCannon:
+		Turret: MainCannon
+		Offset: 0,0,20
+	Armament@MainGun1:
+		Name: MainCannon
+		Weapon: 120mmDualLevia
+		LocalOffset: 900,180,340, 900,-180,340
+		Recoil: 170
+		RecoilRecovery: 42
+		MuzzleSequence: muzzle
+		Turret: MainCannon
+		RequiresCondition: MainCannon
+		
+	WithSpriteTurret@MainA10:
+		Sequence: a10gun
+		Turret: MainA10
+		RequiresCondition: MainA10
+	Turreted@MainA10:
+		Turret: MainA10
+		Offset: 0,0,20
+	Armament@MainA10:
+		Name: MainA10
+		Weapon: Leviathan120mmSplash
+		MuzzleSequence: muzzle
+		Turret: MainA10
+		RequiresCondition: MainA10
+		
+# -- front guns
+
+	GrantConditionOnPrerequisite@FrontTow:
+		Condition: FrontTow
+		Prerequisites: FrontTow
+	GrantConditionOnPrerequisite@FrontCommando:
+		Condition: FrontCommando
+		Prerequisites: FrontCommando
+	GrantConditionOnPrerequisite@FrontMtnk:
+		Condition: FrontMtnk
+		Prerequisites: FrontMtnk
+		
+	WithSpriteTurret@FrontTow:
+		Sequence: antiairturret
+		Turret: FrontTow
+		RequiresCondition: FrontTow
+	Turreted@FrontTow:
+		Turret: FrontTow
+		Offset: 1524,-356,10
+	Armament@FrontTow:
+		Name: FrontTow
+		Weapon: TOWMissileLeviathan
+		LocalOffset: 0,-171,0, 0,171,0
+		Turret: FrontTow
+		RequiresCondition: FrontTow
+		
+	WithSpriteTurret@FrontTow2:
+		Sequence: antiairturret
+		Turret: FrontTow2
+		RequiresCondition: FrontTow
+	Turreted@FrontTow2:
+		Turret: FrontTow2
+		Offset: 1524,356,10
+	Armament@FrontTow2:
+		Name: FrontTow2
+		Weapon: TOWMissileLeviathan
+		LocalOffset: 0,-171,0, 0,171,0
+		Turret: FrontTow2
+		FireDelay: 10
+		RequiresCondition: FrontTow
+		
+	WithSpriteTurret@FrontCommando:
+		Sequence: guardtower
+		Turret: FrontCommando
+		RequiresCondition: FrontCommando
+	Turreted@FrontCommando:
+		Turret: FrontCommando
+		Offset: 1524,-356,10
+	Armament@FrontCommando:
+		Name: FrontCommando
+		Weapon: Sniperlevia
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+		Turret: FrontCommando
+		RequiresCondition: FrontCommando
+		
+	WithSpriteTurret@FrontCommando2:
+		Sequence: guardtower
+		Turret: FrontCommando2
+		RequiresCondition: FrontCommando
+	Turreted@FrontCommando2:
+		Turret: FrontCommando2
+		Offset: 1524,356,10
+	Armament@FrontCommando2:
+		Name: FrontCommando2
+		Weapon: Sniperlevia
+		LocalOffset: 256,0,256
+		MuzzleSequence: muzzle
+		Turret: FrontCommando2
+		FireDelay: 10
+		RequiresCondition: FrontCommando
+		
+	WithSpriteTurret@FrontMtnk:
+		Sequence: normalturret
+		Turret: FrontMtnk
+		RequiresCondition: FrontMtnk
+	Turreted@FrontMtnk:
+		Turret: FrontMtnk
+		Offset: 1524,-356,10
+	Armament@FrontMtnk:
+		Name: FrontMtnk
+		Weapon: 120mmLevia
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+		Turret: FrontMtnk
+		RequiresCondition: FrontMtnk
+		
+	WithSpriteTurret@FrontMtnk2:
+		Sequence: normalturret
+		Turret: FrontMtnk2
+		RequiresCondition: FrontMtnk
+	Turreted@FrontMtnk2:
+		Turret: FrontMtnk2
+		Offset: 1524,356,10
+	Armament@FrontMtnk2:
+		Name: FrontMtnk2
+		Weapon: 120mmLevia
+		Recoil: 128
+		RecoilRecovery: 26
+		LocalOffset: 768,0,90
+		MuzzleSequence: muzzle
+		Turret: FrontMtnk2
+		FireDelay: 10
+		RequiresCondition: FrontMtnk
+		
+# -- Side Pack
+
+	GrantConditionOnPrerequisite@SuppLtnk:
+		Condition: SuppLtnk
+		Prerequisites: SuppLtnk
+	GrantConditionOnPrerequisite@SuppAtRock:
+		Condition: SuppAtRock
+		Prerequisites: SuppAtRock
+	GrantConditionOnPrerequisite@SuppArty:
+		Condition: SuppArty
+		Prerequisites: SuppArty
+		
+	WithSpriteTurret@SuppLtnk:
+		Sequence: ltnkturret
+		Turret: SuppLtnk
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk:
+		Turret: SuppLtnk
+		Offset: 258,1024,10
+	Armament@SuppLtnk:
+		Name: SuppLtnk
+		Weapon: LeviAutoCannon
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		Turret: SuppLtnk
+		RequiresCondition: SuppLtnk
+		
+	WithSpriteTurret@SuppLtnk1:
+		Sequence: ltnkturret
+		Turret: SuppLtnk1
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk1:
+		Turret: SuppLtnk1
+		Offset: -158,1024,10
+	Armament@SuppLtnk1:
+		Name: SuppLtnk1
+		Weapon: LeviAutoCannon
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		FireDelay: 7
+		Turret: SuppLtnk1
+		RequiresCondition: SuppLtnk
+		
+	WithSpriteTurret@SuppLtnk2:
+		Sequence: ltnkturret
+		Turret: SuppLtnk2
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk2:
+		Turret: SuppLtnk2
+		Offset: 769,1024,10
+	Armament@SuppLtnk2:
+		Name: SuppLtnk2
+		Weapon: LeviAutoCannon
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		FireDelay: 14
+		Turret: SuppLtnk2
+		RequiresCondition: SuppLtnk
+		
+	WithSpriteTurret@SuppLtnk3:
+		Sequence: ltnkturret
+		Turret: SuppLtnk3
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk3:
+		Turret: SuppLtnk3
+		Offset: 258,-1024,10
+	Armament@SuppLtnk3:
+		Name: SuppLtnk3
+		Weapon: LeviAutoCannon
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		FireDelay: 21
+		Turret: SuppLtnk3
+		RequiresCondition: SuppLtnk
+		
+	WithSpriteTurret@SuppLtnk4:
+		Sequence: ltnkturret
+		Turret: SuppLtnk4
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk4:
+		Turret: SuppLtnk4
+		Offset: -158,-1024,10
+	Armament@SuppLtnk4:
+		Name: SuppLtnk4
+		Weapon: LeviAutoCannon
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		FireDelay: 28
+		Turret: SuppLtnk4
+		RequiresCondition: SuppLtnk
+		
+	WithSpriteTurret@SuppLtnk5:
+		Sequence: ltnkturret
+		Turret: SuppLtnk5
+		RequiresCondition: SuppLtnk
+	Turreted@SuppLtnk5:
+		Turret: SuppLtnk5
+		Offset: 769,-1024,10
+	Armament@SuppLtnk5:
+		Name: SuppLtnk5
+		Weapon: LeviAutoCannon
+		FireDelay: 35
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		Turret: SuppLtnk5
+		RequiresCondition: SuppLtnk
+		
+		
+		
+	WithSpriteTurret@SuppAtRock:
+		Sequence: msamturret
+		Turret: SuppAtRock
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock:
+		Turret: SuppAtRock
+		Offset: 258,1024,10
+	Armament@SuppAtRock:
+		Name: SuppAtRock
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		Turret: SuppAtRock
+		RequiresCondition: SuppAtRock
+		
+	WithSpriteTurret@SuppAtRock1:
+		Sequence: msamturret
+		Turret: SuppAtRock1
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock1:
+		Turret: SuppAtRock1
+		Offset: -158,1024,10
+	Armament@SuppAtRock1:
+		Name: SuppAtRock1
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		FireDelay: 5
+		Turret: SuppAtRock1
+		RequiresCondition: SuppAtRock
+		
+	WithSpriteTurret@SuppAtRock2:
+		Sequence: msamturret
+		Turret: SuppAtRock2
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock2:
+		Turret: SuppAtRock2
+		Offset: 769,1024,10
+	Armament@SuppAtRock2:
+		Name: SuppAtRock2
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		FireDelay: 10
+		Turret: SuppAtRock2
+		RequiresCondition: SuppAtRock
+		
+	WithSpriteTurret@SuppAtRock3:
+		Sequence: msamturret
+		Turret: SuppAtRock3
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock3:
+		Turret: SuppAtRock3
+		Offset: 258,-1024,10
+	Armament@SuppAtRock3:
+		Name: SuppAtRock3
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		FireDelay: 15
+		Turret: SuppAtRock3
+		RequiresCondition: SuppAtRock
+		
+	WithSpriteTurret@SuppAtRock4:
+		Sequence: msamturret
+		Turret: SuppAtRock4
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock4:
+		Turret: SuppAtRock4
+		Offset: -158,-1024,10
+	Armament@SuppAtRock4:
+		Name: SuppAtRock4
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		FireDelay: 20
+		Turret: SuppAtRock4
+		RequiresCondition: SuppAtRock
+		
+	WithSpriteTurret@SuppAtRock5:
+		Sequence: msamturret
+		Turret: SuppAtRock5
+		RequiresCondition: SuppAtRock
+	Turreted@SuppAtRock5:
+		Turret: SuppAtRock5
+		Offset: 769,-1024,10
+	Armament@SuppAtRock5:
+		Name: SuppAtRock5
+		Weapon: LeviathanATmiss
+		LocalOffset: 213,128,0, 213,-128,0
+		FireDelay: 25
+		Turret: SuppAtRock5
+		RequiresCondition: SuppAtRock
+		
+		
+		
+	WithSpriteTurret@SuppArty:
+		Sequence: artillery
+		Turret: SuppArty
+		RequiresCondition: SuppArty
+	Turreted@SuppArty:
+		Turret: SuppArty
+		Offset: 258,1024,10
+	Armament@SuppArty:
+		Name: SuppArty
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		Turret: SuppArty
+		RequiresCondition: SuppArty
+		
+	WithSpriteTurret@SuppArty2:
+		Sequence: artillery
+		Turret: SuppArty2
+		RequiresCondition: SuppArty
+	Turreted@SuppArty2:
+		Turret: SuppArty2
+		Offset: -158,1024,10
+	Armament@SuppArty2:
+		Name: SuppArty2
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		FireDelay: 5
+		Turret: SuppArty2
+		RequiresCondition: SuppArty
+		
+	WithSpriteTurret@SuppArty3:
+		Sequence: artillery
+		Turret: SuppArty3
+		RequiresCondition: SuppArty
+	Turreted@SuppArty3:
+		Turret: SuppArty3
+		Offset: 769,1024,10
+	Armament@SuppArty3:
+		Name: SuppArty3
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		FireDelay: 10
+		Turret: SuppArty3
+		RequiresCondition: SuppArty
+		
+	WithSpriteTurret@SuppArty4:
+		Sequence: artillery
+		Turret: SuppArty4
+		RequiresCondition: SuppArty
+	Turreted@SuppArty4:
+		Turret: SuppArty4
+		Offset: 258,-1024,10
+	Armament@SuppArty4:
+		Name: SuppArty4
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		FireDelay: 15
+		Turret: SuppArty4
+		RequiresCondition: SuppArty
+		
+	WithSpriteTurret@SuppArty5:
+		Sequence: artillery
+		Turret: SuppArty5
+		RequiresCondition: SuppArty
+	Turreted@SuppArty5:
+		Turret: SuppArty5
+		Offset: -158,-1024,10
+	Armament@SuppArty5:
+		Name: SuppArty5
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		FireDelay: 20
+		Turret: SuppArty5
+		RequiresCondition: SuppArty
+		
+	WithSpriteTurret@SuppArty1:
+		Sequence: artillery
+		Turret: SuppArty1
+		RequiresCondition: SuppArty
+	Turreted@SuppArty1:
+		Turret: SuppArty1
+		Offset: 769,-1024,10
+	Armament@SuppArty1:
+		Name: SuppArty1
+		Weapon: ArtilleryShellLeviathan
+		LocalOffset: 624,0,208
+		MuzzleSequence: muzzle
+		FireDelay: 25
+		Turret: SuppArty1
+		RequiresCondition: SuppArty
+		
+		
+# upgrades
+
+	GrantConditionOnPrerequisite@SuppRange1:
+		Condition: SuppRange1
+		Prerequisites: SuppRange1
+	GrantConditionOnPrerequisite@SuppHealth1:
+		Condition: SuppHealth1
+		Prerequisites: SuppHealth1
+	GrantConditionOnPrerequisite@SuppSpeed1:
+		Condition: SuppSpeed1
+		Prerequisites: SuppSpeed1
+		
+	SelfHealing@SuppHealth1:
+		Delay: 25
+		PercentageStep: 0
+		Step: 15
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: SuppHealth1 || SuppHealth2 && (!SuppHealth1 && !SuppHealth2)
+
+	WithIdleOverlay@SuppSpeed1:
+		Sequence: speedup
+		Offset: -1024,413,10
+		RequiresCondition: SuppSpeed1
+	SpeedMultiplier@SuppSpeed1:
+		Modifier: 200
+		RequiresCondition: SuppSpeed1
+	ReloadDelayMultiplier@SuppSpeed1:
+		Modifier: 80
+		RequiresCondition: SuppSpeed1
+		
+	WithIdleOverlay@SuppRange1:
+		Sequence: rangeup
+		Offset: -1024,413,10
+		RequiresCondition: SuppRange1
+	RangeMultiplier@SuppRange1:
+		Modifier: 133
+		RequiresCondition: SuppRange1	
+		
+	WithIdleOverlay@SuppHealth1:
+		Sequence: healthup
+		Offset: -1024,413,10
+		RequiresCondition: SuppHealth1
+	DamageMultiplier@SuppHealth1:
+		Modifier: 60
+		RequiresCondition: SuppHealth1	
+		
+	GrantConditionOnPrerequisite@SuppRange2:
+		Condition: SuppRange2
+		Prerequisites: SuppRange2
+	GrantConditionOnPrerequisite@SuppHealth2:
+		Condition: SuppHealth2
+		Prerequisites: SuppHealth2
+	GrantConditionOnPrerequisite@SuppSpeed2:
+		Condition: SuppSpeed2
+		Prerequisites: SuppSpeed2
+		
+	SelfHealing@SuppHealth1SuppHealth2:
+		Delay: 25
+		PercentageStep: 0
+		Step: 40
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: SuppHealth1 && SuppHealth2
+
+	WithIdleOverlay@SuppSpeed2:
+		Sequence: speedup
+		Offset: -1024,-413,10
+		RequiresCondition: SuppSpeed2
+	SpeedMultiplier@SuppSpeed2:
+		Modifier: 200
+		RequiresCondition: SuppSpeed2
+	ReloadDelayMultiplier@SuppSpeed2:
+		Modifier: 80
+		RequiresCondition: SuppSpeed2
+		
+	WithIdleOverlay@SuppRange2:
+		Sequence: rangeup
+		Offset: -1024,-413,10
+		RequiresCondition: SuppRange2
+	RangeMultiplier@SuppRange2:
+		Modifier: 133
+		RequiresCondition: SuppRange2	
+		
+	WithIdleOverlay@SuppHealth2:
+		Sequence: healthup
+		Offset: -1024,-413,10
+		RequiresCondition: SuppHealth2
+	DamageMultiplier@SuppHealth2:
+		Modifier: 60
+		RequiresCondition: SuppHealth2	
+		
+# rest code
+		
+	AttackTurreted:
+		Armaments: MainRocket, MainCannon, MainA10, MachineGun1, MachineGun2, FrontTow, FrontTow2, FrontCommando, FrontCommando2, FrontMtnk2, FrontMtnk, SuppLtnk, SuppLtnk1, SuppLtnk2, SuppLtnk3, SuppLtnk4, SuppLtnk5, SuppAtRock, SuppAtRock1, SuppAtRock2, SuppAtRock3, SuppAtRock4, SuppAtRock5, SuppArty, SuppArty1, SuppArty2, SuppArty3, SuppArty4, SuppArty5
+		
+		
+	WithSpriteTurret@BasicTurret1:
+		Sequence: ltnkturret
+		Turret: BasicTurret1
+	Turreted@BasicTurret1:
+		Turret: BasicTurret1
+		Offset: 1069,697,10
+	Armament@BasicTurret1:
+		Weapon: MachineGunLeviathan
+		Name: MachineGun1
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		Turret: BasicTurret1
+		
+	WithSpriteTurret@BasicTurret2:
+		Sequence: ltnkturret
+		Turret: BasicTurret2
+	Turreted@BasicTurret2:
+		Turret: BasicTurret2
+		Offset: 1069,-697,10
+	Armament@BasicTurret2:
+		Weapon: MachineGunLeviathan
+		Name: MachineGun2
+		Recoil: 20
+		RecoilRecovery: 6
+		LocalOffset: 720,0,90
+		MuzzleSequence: muzzle
+		Turret: BasicTurret2
+		
+	WithMuzzleOverlay:
+	AutoTarget:
+		ScanRadius: 12
+	SelectionDecorations:
+		VisualBounds: 72,72,0,-3
+
+	WithIdleOverlay@tracks2:
+		Sequence: tracks
+		Turret: tracks2
+		Offset: -966,555,-40
+	WithIdleOverlay@tracks3:
+		Sequence: tracks
+		Turret: tracks3
+		Offset: 400,1066,-40
+	WithIdleOverlay@tracks5:
+		Sequence: tracks
+		Turret: tracks5
+		Offset: 1412,512,-40
+	WithIdleOverlay@tracks6:
+		Sequence: tracks
+		Turret: tracks6
+		Offset: -966,-555,-40
+	WithIdleOverlay@tracks7:
+		Sequence: tracks
+		Turret: tracks7
+		Offset: 400,-1066,-40
+	WithIdleOverlay@tracks8:
+		Sequence: tracks
+		Turret: tracks8
+		Offset: 1412,-512,-40
+	SpawnActorOnDeath:
+		Actor: LEVIATHAN.Husk
+	ProvidesPrerequisite@buildingname:
+		
+LEVIATHAN.Husk:
+	Inherits: ^Husk
+	Tooltip:
+		Name: Leviathan (Destroyed)
+	ThrowsParticle@turret1:
+		Anim: ltnkturret
+		Offset: 1069,697,10
+	ThrowsParticle@turret2:
+		Anim: ltnkturret
+		Offset: 1069,-697,10
+	RenderSprites:
+		Image: leviathan
+	WithIdleOverlay@tracks2:
+		Sequence: tracks
+		Offset: -966,555,-40
+	WithIdleOverlay@tracks3:
+		Sequence: tracks
+		Offset: 400,1066,-40
+	WithIdleOverlay@tracks5:
+		Sequence: tracks
+		Offset: 1412,512,-40
+	WithIdleOverlay@tracks6:
+		Sequence: tracks
+		Offset: -966,-555,-40
+	WithIdleOverlay@tracks7:
+		Sequence: tracks
+		Offset: 400,-1066,-40
+	WithIdleOverlay@tracks8:
+		Sequence: tracks
+		Offset: 1412,-512,-40
+        
+
+PLACEHOLDERLEVI:
+	Inherits: ^Vehicle
+	-Selectable:
+	RenderSprites:
+		Image: levifinish
+	Valued:
+		Cost: 6000
+	Tooltip:
+		Name: Construct Leviathan
+	Buildable:
+		BuildDuration: 250
+		Prerequisites: !leviathan, leviathanfact
+		BuildPaletteOrder: 10000
+		Queue: Building.Fact
+		Description: Finishes the leviathan now!.
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 1
+	AttackFrontal:  
+	
+PLACEHOLDSECONDLEV:
+	Inherits: ^Vehicle
+	-Selectable:
+	RenderSprites:
+		Image: leviextra
+	Valued:
+		Cost: 10000
+	Tooltip:
+		Name: Construct Leviathan
+	Buildable:
+		BuildDuration: 1000
+		Prerequisites: leviathan, leviathanfact
+		BuildPaletteOrder: 10000
+		Queue: Building.Fact
+		Description: Get a second leviathan right now!.
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 1
+	AttackFrontal:
+    
+		

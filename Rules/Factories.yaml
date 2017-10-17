@@ -36,7 +36,7 @@ FACT2:
 		Amount: 1
 	ProvidesPrerequisite@buildingname:
 	Production:
-		Produces: Building.Fact, Defenses.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact
+		Produces: Building.Fact, Defenses.Fact, Infantry.Fact
 	ProductionQueue@FactBuilding:
 		Type: Building.Fact
 		Factions: gdi, nod
@@ -61,27 +61,13 @@ FACT2:
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-	ProductionQueue@FactVeh:
-		Type: Vehicle.Fact
-		Factions: gdi, nod
-		Group: Vehicle
-		BuildSpeed: 40
-		LowPowerSlowdown: 2
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-	ProductionQueue@FactAir:
-		Type: Aircraft.Fact
-		Factions: gdi, nod
-		Group: Aircraft
-		BuildSpeed: 40
-		LowPowerSlowdown: 2
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
 	BaseBuilding:
 	ProductionBar@DefenseFact:
 		ProductionType: Defenses.Fact
 	ProductionBar@BuildingFact:
 		ProductionType: Building.Fact
+	ProductionBar@InfantryFact:
+		ProductionType: Infantry.Fact
 	BaseProvider:
 		Cooldown: 35
 		Range: 18c0   
@@ -1616,7 +1602,6 @@ LEVIATHANFACT:
 		HP: 4500
 	RevealsShroud:
 		Range: 5c0
-	
 	Exit@1:
 		SpawnOffset: -0,-0,0
 		ExitCell: 2,5
@@ -1638,7 +1623,7 @@ LEVIATHANFACT:
 	ProductionQueue@addon:
 		Type: Upgrade.Levi
 		Factions: gdi, nod
-		Group: Defence
+		Group: Aircraft
 		BuildSpeed: 40
 		LowPowerSlowdown: 2
 		QueuedAudio: Building

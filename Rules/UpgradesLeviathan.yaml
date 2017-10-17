@@ -1,0 +1,262 @@
+# ---- Leviathan Addons -----
+
+Leviathan.Main.Msam:
+	AlwaysVisible:
+	Tooltip:
+		Name: Rocketlauncher
+	Buildable:
+		BuildPaletteOrder: 10
+		Prerequisites: leviathanfact, !MainA10, !MainCannon
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: The MainCannon is a Strong Rocketlauncher
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: mlrsfact
+	ProvidesPrerequisite@MainRocket: 
+		Prerequisite: MainRocket
+		
+Leviathan.Main.Cannon:
+	AlwaysVisible:
+	Tooltip:
+		Name: MammothCannon
+	Buildable:
+		BuildPaletteOrder: 20
+		Prerequisites: leviathanfact, !MainA10, !MainRocket
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: The MainCannon is a Strong MammothCannon
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: carfact4
+	ProvidesPrerequisite@MainCannon: 
+		Prerequisite: MainCannon
+		
+Leviathan.Main.Flame:
+	AlwaysVisible:
+	Tooltip:
+		Name: Flamethrower
+	Buildable:
+		BuildPaletteOrder: 30
+		Prerequisites: leviathanfact, !MainCannon, !MainRocket
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: The MainCannon is a Strong Flamethrower
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: carfact6
+	ProvidesPrerequisite@MainA10: 
+		Prerequisite: MainA10
+		
+# --- Front guns ---
+
+Leviathan.Front.Tow:
+	AlwaysVisible:
+	Tooltip:
+		Name: TOW Rocket
+	Buildable:
+		BuildPaletteOrder: 40
+		Prerequisites: leviathanfact, !FrontMtnk, !FrontCommando
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Front to TOW Rocket wich shoot air.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: towupgrade
+	ProvidesPrerequisite@FrontTow: 
+		Prerequisite: FrontTow
+		
+Leviathan.Front.Commando:
+	AlwaysVisible:
+	Tooltip:
+		Name: Sniper Turrets
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: leviathanfact, !FrontMtnk, !FrontTow
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Front to sniper turrets.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: rmbofact
+	ProvidesPrerequisite@FrontCommando: 
+		Prerequisite: FrontCommando
+		
+Leviathan.Front.Mtnk:
+	AlwaysVisible:
+	Tooltip:
+		Name: Medium Tank Cannons
+	Buildable:
+		BuildPaletteOrder: 60
+		Prerequisites: leviathanfact, !FrontTow, !FrontCommando
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Front to tank cannons.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: carfact2
+	ProvidesPrerequisite@FrontMtnk: 
+		Prerequisite: FrontMtnk	
+		
+# --- Side guns ---
+
+Leviathan.Side.ltnk:
+	AlwaysVisible:
+	Tooltip:
+		Name: Auto Cannon
+	Buildable:
+		BuildPaletteOrder: 70
+		Prerequisites: leviathanfact, !SuppArty, !SuppAtRock
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Side to auto-cannons\n Can also shoot Aircrafts.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: ltnk
+	ProvidesPrerequisite@SuppLtnk: 
+		Prerequisite: SuppLtnk
+		
+Leviathan.Side.ATRockets:
+	AlwaysVisible:
+	Tooltip:
+		Name: Anti Tank Rockets
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: leviathanfact, !SuppArty, !SuppLtnk
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Side to anti tank rockets.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: stnk
+	ProvidesPrerequisite@SuppAtRock: 
+		Prerequisite: SuppAtRock
+		
+Leviathan.Side.arty:
+	AlwaysVisible:
+	Tooltip:
+		Name: Artillery Shells
+	Buildable:
+		BuildPaletteOrder: 90
+		Prerequisites: leviathanfact, !SuppLtnk, !SuppAtRock
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: Upgrade Side to artillery shells.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: arty
+	ProvidesPrerequisite@SuppArty: 
+		Prerequisite: SuppArty   
+
+# --- Support upgrades ---  
+		
+Leviathan.Support.Range.lv1:
+	AlwaysVisible:
+	Tooltip:
+		Name: Range Upgrade
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: leviathanfact, !SuppSpeed1, !SuppHealth1
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases range of all guns.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: bombupupgrade
+	ProvidesPrerequisite@SuppRange1: 
+		Prerequisite: SuppRange1
+		
+Leviathan.Support.Health.lv1:
+	AlwaysVisible:
+	Tooltip:
+		Name: Armor Upgrade
+	Buildable:
+		BuildPaletteOrder: 110
+		Prerequisites: leviathanfact, !SuppRange1, !SuppSpeed1
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases armor and health.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: brik
+	ProvidesPrerequisite@SuppHealth1: 
+		Prerequisite: SuppHealth1
+		
+Leviathan.Support.speed.lv1:
+	AlwaysVisible:
+	Tooltip:
+		Name: Speed Upgrade
+	Buildable:
+		BuildPaletteOrder: 120
+		Prerequisites: leviathanfact, !SuppRange1, !SuppHealth1
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases speed and reload time of the leviathan.
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: bike
+	ProvidesPrerequisite@SuppSpeed1: 
+		Prerequisite: SuppSpeed1 
+		
+Leviathan.Support.Range.lv2:
+	AlwaysVisible:
+	Tooltip:
+		Name: Range Upgrade
+	Buildable:
+		BuildPaletteOrder: 130
+		Prerequisites: leviathanfact, !SuppSpeed2, !SuppHealth2
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases range of all guns.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: bombupupgrade
+	ProvidesPrerequisite@SuppRange2: 
+		Prerequisite: SuppRange2
+		
+Leviathan.Support.Health.lv2:
+	AlwaysVisible:
+	Tooltip:
+		Name: Armor Upgrade
+	Buildable:
+		BuildPaletteOrder: 140
+		Prerequisites: leviathanfact, !SuppRange2, !SuppSpeed2
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases armor and health.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: brik
+	ProvidesPrerequisite@SuppHealth2: 
+		Prerequisite: SuppHealth2
+		
+Leviathan.Support.speed.lv2:
+	AlwaysVisible:
+	Tooltip:
+		Name: Speed Upgrade
+	Buildable:
+		BuildPaletteOrder: 150
+		Prerequisites: leviathanfact, !SuppRange2, !SuppHealth2
+		Queue: Upgrade.Levi
+		BuildLimit: 1
+		Description: significant increases speed and reload time of the leviathan.
+	Valued:
+		Cost: 4000
+	RenderSprites:
+		Image: bike
+	ProvidesPrerequisite@SuppSpeed2: 
+		Prerequisite: SuppSpeed2

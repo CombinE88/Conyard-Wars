@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: cnc
 
-Title: Conyard Wars 2.031 crash fix
+Title: Conyard Wars 2.1 
 
 Author: CombinE
 
@@ -965,7 +965,7 @@ Actors:
 		Owner: Neutral
 		Location: 107,62
 
-Rules: Rules/Settings.yaml, Rules/Defaults.yaml, Rules/AI.yaml, Rules/Defenses.yaml, Rules/Factories.yaml, Rules/Techbuildings.yaml, Rules/Units.yaml, Rules/Upgrades.yaml
+Rules: Rules/Settings.yaml, Rules/Defaults.yaml, Rules/AI.yaml, Rules/Defenses.yaml, Rules/Factories.yaml, Rules/Techbuildings.yaml, Rules/Units.yaml, Rules/UnitLeviathan.yaml, Rules/UpgradesSpecial.yaml, Rules/UpgradesRegular.yaml, Rules/UpgradesLeviathan.yaml
 
 Sequences: Rules/sequences.yaml
 

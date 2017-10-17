@@ -250,7 +250,7 @@ ARRAY:
 	ProductionQueue@FactBuilding:
 		Type: Upgrade.Array
 		Factions: gdi, nod
-		Group: Building
+		Group: Vehicle
 		BuildSpeed: 40
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
