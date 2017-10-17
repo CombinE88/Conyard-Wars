@@ -18,9 +18,9 @@ Player:
 			Mcv: mcv
 			Refinery:
 			Power: 
-			Barracks: 
-			VehiclesFactory: 
-			Production: 
+			Barracks: fact2
+			VehiclesFactory: fact2
+			Production: fact2
 			Silos:
 		BuildingQueues: Building.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact, Infantry1.Fact, Upgrade.Array, Defenses.Fact
 		DefenseQueues: 
@@ -83,6 +83,23 @@ Player:
 			sillyone: 20%
 			sillytwo: 20%
 			sillythree: 20%
+			
+			casht2: 80%
+			cash2t2: 90%
+			cash3t2: 90%
+			fixnewt2: 50%
+			radarnewt2: 50%
+			labnewt2: 70%
+			newhospt2: 20%
+			nukenewt2: 20%
+			nuk2newt2: 20%
+			lammot2: 20%
+			hammot2: 20%
+			fammot2: 20%
+			forbt2: 20%
+			sillyonet2: 20%
+			sillytwot2: 20%
+			sillythreet2: 20%
 			
 			casht3: 80%
 			cash2t3: 90%
@@ -503,9 +520,9 @@ Player:
 			Mcv: mcv
 			Refinery:
 			Power: 
-			Barracks: 
-			VehiclesFactory: 
-			Production: 
+			Barracks: fact2
+			VehiclesFactory: fact2
+			Production: fact2
 			Silos:
 		BuildingQueues: Building.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact, Infantry1.Fact, Upgrade.Array, Defenses.Fact
 		DefenseQueues:
@@ -568,6 +585,23 @@ Player:
 			sillyone: 20%
 			sillytwo: 20%
 			sillythree: 20%
+			
+			casht2: 80%
+			cash2t2: 90%
+			cash3t2: 90%
+			fixnewt2: 50%
+			radarnewt2: 50%
+			labnewt2: 70%
+			newhospt2: 20%
+			nukenewt2: 20%
+			nuk2newt2: 20%
+			lammot2: 20%
+			hammot2: 20%
+			fammot2: 20%
+			forbt2: 20%
+			sillyonet2: 20%
+			sillytwot2: 20%
+			sillythreet2: 20%
 			
 			casht3: 80%
 			cash2t3: 90%
@@ -988,9 +1022,9 @@ Player:
 			Mcv: mcv
 			Refinery:
 			Power: 
-			Barracks: 
-			VehiclesFactory: 
-			Production: 
+			Barracks: fact2
+			VehiclesFactory: fact2
+			Production: fact2
 			Silos:
 		BuildingQueues: Building.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact, Infantry1.Fact, Upgrade.Array, Defenses.Fact
 		DefenseQueues: 
@@ -1053,6 +1087,23 @@ Player:
 			sillyone: 20%
 			sillytwo: 20%
 			sillythree: 20%
+			
+			casht2: 80%
+			cash2t2: 90%
+			cash3t2: 90%
+			fixnewt2: 50%
+			radarnewt2: 50%
+			labnewt2: 70%
+			newhospt2: 20%
+			nukenewt2: 20%
+			nuk2newt2: 20%
+			lammot2: 20%
+			hammot2: 20%
+			fammot2: 20%
+			forbt2: 20%
+			sillyonet2: 20%
+			sillytwot2: 20%
+			sillythreet2: 20%
 			
 			casht3: 80%
 			cash2t3: 90%

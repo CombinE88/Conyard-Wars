@@ -32,7 +32,7 @@ ExtraCash = function()
 			end		
 			TeamLeft[i].Cash = TeamLeft[i].Cash + cashier
 			Media.FloatingText("+" .. tostring(cashier) .. "$", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, TeamLeft[i].Color)
-			Media.DisplayMessage("Player " .. TeamLeft[i].Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!", prefix = "Stockmarked: ", TeamLeft[i].Color)
+			Media.DisplayMessage("Player " .. TeamLeft[i].Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!","Stockmarked: ", TeamLeft[i].Color)
 		end
 	end
 	for i = 1,#TeamRight do
@@ -51,7 +51,7 @@ ExtraCash = function()
 			TeamRight[i].Cash = TeamRight[i].Cash + cashier
 			local stockmarked = TeamRight[i].GetActorsByType("cash2")
 			Media.FloatingText("+" .. tostring(cashier) .. "$", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, TeamRight[i].Color)
-			Media.DisplayMessage("Player " .. TeamLeft[i].Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!", prefix = "Stockmarked: ", Color, TeamRight[i].Color)
+			Media.DisplayMessage("Player " .. TeamLeft[i].Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!","Stockmarked: ", Color, TeamRight[i].Color)
 		end
 	end
 	for i=1,3 do
@@ -264,12 +264,12 @@ WorldLoaded = function()
 				end
 			end
 		end
-		Media.DisplayMessage("Welcome to Conyard Wars!", prefix = "Conyard Wars: ")
+		Media.DisplayMessage("Welcome to Conyard Wars!","Conyard Wars: ")
 		Trigger.AfterDelay(DateTime.Seconds(3), function()
-			Media.DisplayMessage("Keep in mind: the price of each tech-building will increase by '400' with each tech-building you already build!", prefix = "Conyard Wars: ")
+			Media.DisplayMessage("Keep in mind: the price of each tech-building will increase by '400' with each tech-building you have already be build!","Conyard Wars: ")
 		end)
 		Trigger.AfterDelay(DateTime.Seconds(10), function()
-			Media.DisplayMessage("Regular unit-upgrades are found in two tabs under the 'Heading'!", prefix = "Conyard Wars: ")
+			Media.DisplayMessage("Regular unit-upgrades are found in two tabs under the 'Heading'!","Conyard Wars: ")
 		end)
 	end)
 	
@@ -284,11 +284,11 @@ WorldLoaded = function()
 					print(People.Name .. " got 500")
 				end
 				if People.Name == "Medium AI" then
-					People.Cash = People.Cash + 1000
+					People.Cash = People.Cash + 1500
 					print(People.Name .. " got 1000")
 				end
 				if People.Name == "Hard AI" then
-					People.Cash = People.Cash + 2000
+					People.Cash = People.Cash + 3000
 					print(People.Name .. " got 2000")
 				end
 			end
