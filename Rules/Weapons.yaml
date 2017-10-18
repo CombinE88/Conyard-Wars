@@ -921,7 +921,7 @@ BossRockets:
 		ImpactSounds: xplos.aud
 		
 QuickLaser:
-	ReloadDelay: 95
+	ReloadDelay: 115
 	Range: 4c512
 	Report: obelray1.aud
 	ValidTargets: Ground
@@ -931,10 +931,10 @@ QuickLaser:
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 200
+		Damage: 300
 		ValidTargets: Ground
 		Versus:
-			Wood: 50
+			Wood: 25
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch

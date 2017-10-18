@@ -1,6 +1,6 @@
 Speech:
-    Notifications:
-        Blank:
+	Notifications:
+		Blank:
 		LowPower: none
 		SilosNeeded: none
 		BaseAttack: none
@@ -15,7 +15,7 @@ Speech:
 		Reinforce: none
 		UnitLost: none
 		CivilianKilled: none
-        
+		
 Sounds:
 	Notifications:
 		LevelUp: none

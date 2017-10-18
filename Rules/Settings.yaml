@@ -1,36 +1,36 @@
 World:
-    LuaScript:
-        Scripts: script.lua
-    CrateSpawner:
-        Enabled: False
-        Locked: True
-    MapOptions:
-        ShortGameEnabled: True
-    SpawnMPUnits:
-        StartingUnitsClass: none
-        Locked: true
-    MapBuildRadius:
-        AllyBuildRadiusEnabled: False
-    MPStartUnits:
-        Class: none
-        Factions: gdi, nod
-        BaseActor: mcv
-        ClassName: Special Nexus Start
+	LuaScript:
+		Scripts: script.lua
+	CrateSpawner:
+		Enabled: False
+		Locked: True
+	MapOptions:
+		ShortGameEnabled: True
+	SpawnMPUnits:
+		StartingUnitsClass: none
+		Locked: true
+	MapBuildRadius:
+		AllyBuildRadiusEnabled: False
+	MPStartUnits:
+		Class: none
+		Factions: gdi, nod
+		BaseActor: mcv
+		ClassName: Special Nexus Start
 
-    
+	
 ^Palettes:
-    PaletteFromFile@RA:
-        Name: ra
-        Filename: temperatRA.pal
-        ShadowIndex: 4
-    PaletteFromFile@RA_EFFECT:
-        Name: ra_effect
-        Filename: temperatRA.pal
-        ShadowIndex: 4
-    PlayerColorPalette@RA:
-        BasePalette: ra
-        BaseName: raplayer
-        RemapIndex: 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95
+	PaletteFromFile@RA:
+		Name: ra
+		Filename: temperatRA.pal
+		ShadowIndex: 4
+	PaletteFromFile@RA_EFFECT:
+		Name: ra_effect
+		Filename: temperatRA.pal
+		ShadowIndex: 4
+	PlayerColorPalette@RA:
+		BasePalette: ra
+		BaseName: raplayer
+		RemapIndex: 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95
 
 
 

@@ -1,4 +1,4 @@
-       
+	   
 GUN:
 	Inherits: ^Defense
 	Valued:
@@ -6,11 +6,11 @@ GUN:
 	Tooltip:
 		Name: Turret
 	Buildable:
-        BuildDuration: 3500
+		BuildDuration: 3500
 		BuildPaletteOrder: 150
 		Queue: Defenses.Fact
-        Prerequisites: lammo
-        BuildLimit: 1 
+		Prerequisites: lammo
+		BuildLimit: 1 
 		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
 	Building:
 	Health:
@@ -38,7 +38,7 @@ GUN:
 		Amount: 0
 	BodyOrientation:
 		UseClassicFacingFudge: True
-    -Sellable:
+	-Sellable:
 
 
 OBLI:
@@ -49,49 +49,49 @@ OBLI:
 	Tooltip:
 		Name: Obelisk of Light
 	Buildable:
-        BuildDuration: 6000
+		BuildDuration: 6000
 		BuildPaletteOrder: 180
 		Queue: Defenses.Fact
-        Prerequisites: forb
-        BuildLimit: 1
-    	Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
+		Prerequisites: forb
+		BuildLimit: 1
+		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
 	FreeActor@1:
 		Actor: brik
 		SpawnOffset: 2,1
 		Facing: 0
-    FreeActor@2:
+	FreeActor@2:
 		Actor: brik
 		SpawnOffset: 2,2
 		Facing: 0
-    FreeActor@3:
+	FreeActor@3:
 		Actor: brik
 		SpawnOffset: 1,2
 		Facing: 0
-    FreeActor@4:
+	FreeActor@4:
 		Actor: brik
 		SpawnOffset: 0,2
 		Facing: 0
-    FreeActor@5:
+	FreeActor@5:
 		Actor: brik
 		SpawnOffset: 0,1
 		Facing: 0
-    FreeActor@6:
+	FreeActor@6:
 		Actor: brik
 		SpawnOffset: 0,0
 		Facing: 0
-    FreeActor@7:
+	FreeActor@7:
 		Actor: brik
 		SpawnOffset: 1,0
 		Facing: 0
-    FreeActor@8:
+	FreeActor@8:
 		Actor: brik
 		SpawnOffset: 2,0
 		Facing: 0
-    Building:
+	Building:
 		Footprint: === =x= ===
 		Dimensions: 3,3
 	-Sellable:
-    Selectable:
+	Selectable:
 		Bounds: 24,24,0,12
 	SelectionDecorations: 
 		VisualBounds: 22,42
@@ -127,11 +127,11 @@ GTWR:
 	Tooltip:
 		Name: Guard Tower
 	Buildable:
-        BuildDuration: 3500
+		BuildDuration: 3500
 		BuildPaletteOrder: 130
 		Queue: Defenses.Fact
-        Prerequisites: nukenew
-        BuildLimit: 1
+		Prerequisites: nukenew
+		BuildLimit: 1
 		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
 	Building:
 	Health:
@@ -154,7 +154,7 @@ GTWR:
 		TurnSpeed: 255
 	Power:
 		Amount: 0
-    -Sellable:
+	-Sellable:
 
 ATWR:
 	Inherits@IDISABLE: ^DisabledOverlay
@@ -163,45 +163,45 @@ ATWR:
 	Tooltip:
 		Name: Advanced Guard Tower
 	Buildable:
-        BuildDuration: 6000
+		BuildDuration: 6000
 		BuildPaletteOrder: 170
-        Prerequisites: radarnew
+		Prerequisites: radarnew
 		Queue: Defenses.Fact
-        BuildLimit: 1
+		BuildLimit: 1
 		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
 	FreeActor@1:
 		Actor: brik
 		SpawnOffset: 2,1
 		Facing: 0
-    FreeActor@2:
+	FreeActor@2:
 		Actor: brik
 		SpawnOffset: 2,2
 		Facing: 0
-    FreeActor@3:
+	FreeActor@3:
 		Actor: brik
 		SpawnOffset: 1,2
 		Facing: 0
-    FreeActor@4:
+	FreeActor@4:
 		Actor: brik
 		SpawnOffset: 0,2
 		Facing: 0
-    FreeActor@5:
+	FreeActor@5:
 		Actor: brik
 		SpawnOffset: 0,1
 		Facing: 0
-    FreeActor@6:
+	FreeActor@6:
 		Actor: brik
 		SpawnOffset: 0,0
 		Facing: 0
-    FreeActor@7:
+	FreeActor@7:
 		Actor: brik
 		SpawnOffset: 1,0
 		Facing: 0
-    FreeActor@8:
+	FreeActor@8:
 		Actor: brik
 		SpawnOffset: 2,0
 		Facing: 0
-    Building:
+	Building:
 		Footprint: === =x= ===
 		Dimensions: 3,3
 	-Sellable:

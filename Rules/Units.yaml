@@ -2362,7 +2362,7 @@ GUNTANK:
 		TurnSpeed: 4
 		Speed: 46
 	Health:
-		HP: 800
+		HP: 450
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -2462,7 +2462,7 @@ MOICO:
 		TurnSpeed: 5
 		Speed: 56
 	Health:
-		HP: 600
+		HP: 350
 	Armor:
 		Type: Heavy
 	Armament:
