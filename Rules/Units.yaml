@@ -2169,7 +2169,7 @@ FATWR:
 		LocalOffset: 256,128,0
 		RequiresCondition: !empdisable
 	Armament@SECONDARY:
-		Weapon: TowerAAMissile
+		Weapon: TowerAAMissileFT
 		LocalOffset: 256,128,0
 		RequiresCondition: !empdisable
 	SpawnActorOnDeath:

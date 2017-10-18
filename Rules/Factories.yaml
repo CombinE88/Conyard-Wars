@@ -1193,7 +1193,6 @@ CARFACTORY10:
 		SpawnOffset: -0,-0,0
 		ExitCell: 0,2
 		ExitDelay: 3
-	WithDeliveryAnimation:
 	WithProductionDoorOverlay:
 		Sequence: build-top
 	Production:

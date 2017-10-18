@@ -87,6 +87,7 @@ Upgrade.jeepfire:
 		Prerequisite: jeepfire
 		
 jeepfireupgrade:
+	AlwaysVisible:
 	ProvidesPrerequisite@buildingname: 
 		Prerequisite: jeepfireupgrade
 	Tooltip:

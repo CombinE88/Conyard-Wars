@@ -647,7 +647,7 @@ HeliSnipe:
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 
 TowerMissleFT:
-	ReloadDelay: 20
+	ReloadDelay: 35
 	Range: 7c0
 	Report: rocket2.aud
 	ValidTargets: Ground
@@ -677,7 +677,33 @@ TowerMissleFT:
 	Warhead@3Eff: CreateEffect
 		Explosions: med_frag
 		ImpactSounds: xplos.aud
-		
+        
+        
+TowerAAMissileFT:
+	Inherits: ^MissileWeapon
+	ReloadDelay: 30
+	Range: 8c0
+	Report: rocket2.aud
+	ValidTargets: Air
+	Projectile: Missile
+		Image: MISSILE
+		HorizontalRateOfTurn: 20
+		Speed: 426
+		RangeLimit: 9c614
+		Inaccuracy: 0
+	Warhead@1Dam: SpreadDamage
+		Spread: 682
+		Damage: 35
+		ValidTargets: Air
+		Versus:
+			None: 100
+			Wood: 100
+			Light: 100
+			Heavy: 75
+	-Warhead@2Smu: LeaveSmudge
+	Warhead@3Eff: CreateEffect
+		Explosions: small_building
+		ImpactSounds: xplos.aud
 
 		
 StageBursts:
@@ -905,7 +931,7 @@ QuickLaser:
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 120
+		Damage: 200
 		ValidTargets: Ground
 		Versus:
 			Wood: 50
