@@ -954,6 +954,8 @@ MTNKNEW:
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll		  
 	Inherits: ^AutoTargetVehicle
+	Inherits: ^Tank
+    
 	GrantConditionOnPrerequisite@mtnknapalm:
 		Condition: mtnknapalm
 		Prerequisites: mtnknapalm
@@ -1007,7 +1009,6 @@ MTNKNEW:
 		Palette: effect
 		ZOffset: 256
 		ValidStances: ally, enemy, neutral
-	Inherits: ^Tank
 	RenderSprites:
 		Image: mtnk
 	-Selectable:
@@ -1053,6 +1054,123 @@ MTNKNEW:
 	SelectionDecorations:
 		VisualBounds: 32,32
 	RejectsOrders:
+    
+NEW3TNK:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll		  
+	Inherits: ^AutoTargetVehicle
+	Inherits: ^Tank
+    
+	GrantConditionOnPrerequisite@tnkfire3:
+		Condition: tnkfire3
+		Prerequisites: tnkfire3
+	GrantConditionOnPrerequisite@tnkUpgradeDamage3:
+		Condition: tnkUpgradeDamage3
+		Prerequisites: tnkUpgradeDamage3
+	GrantConditionOnPrerequisite@tnkUpgradeHealth3:
+		Condition: tnkUpgradeHealth3
+		Prerequisites: tnkUpgradeHealth3
+	GrantConditionOnPrerequisite@tnkUpgradeReload3:
+		Condition: tnkUpgradeReload3
+		Prerequisites: tnkUpgradeReload3
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: tnkUpgradeDamage3
+	DamageMultiplier:
+		RequiresCondition: tnkUpgradeHealth3
+		Modifier: 85
+	ReloadDelayMultiplier:
+		RequiresCondition: tnkUpgradeReload3
+		Modifier: 85
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (tnkUpgradeDamage3 + tnkUpgradeHealth3 + tnkUpgradeReload3) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (tnkUpgradeDamage3 + tnkUpgradeHealth3 + tnkUpgradeReload3) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (tnkUpgradeDamage3 + tnkUpgradeHealth3 + tnkUpgradeReload3) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: 3tnkplus
+		RequiresCondition: tnkfire3
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	RenderSprites:
+		Image: new3tnk
+		PlayerPalette: raplayer
+	-Selectable:
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Heavy Tank
+	Buildable:
+		BuildDuration: 5500
+		BuildPaletteOrder: 40
+		Queue: tank3.Fact
+		Description: General-Purpose GDI Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
+	Mobile:
+		Speed: 70
+	Health:
+		HP: 700
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	WithSpriteTurret@base:
+	WithSpriteTurret@upgrade:
+		Turret: secondary
+		RequiresCondition: tnkfire3
+	Turreted@base:
+		TurnSpeed: 5
+	Turreted@upgrade:
+		TurnSpeed: 5
+		Turret: secondary
+		Offset: 0,0,256
+	Armament@normal:
+		Weapon: 3TNK110MM
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 768,85,90, 768,-85,90
+		MuzzleSequence: muzzle
+	Armament@Dobule:
+		Weapon: 3TNK110MM
+		Name: secondary
+		Turret: secondary
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 768,85,90, 768,-85,90
+		MuzzleSequence: muzzle
+		RequiresCondition: tnkfire3
+		FireDelay: 20
+	AttackTurreted:
+	WithMuzzleOverlay:
+	AutoTarget:
+	SpawnActorOnDeath:
+		Actor: MTNK.Husk
+	SelectionDecorations:
+		VisualBounds: 32,32
+	RejectsOrders:
 
 HTNKNEW:
 	Inherits: ^Master10k
@@ -1061,7 +1179,7 @@ HTNKNEW:
 	Inherits: ^AutoTargetAll	   
 	Inherits: ^AutoTargetVehicle
 	Inherits: ^Tank
-    
+	
 	GrantConditionOnPrerequisite@htnkDamage:
 		Condition: htnkDamage
 		Prerequisites: htnkUpgradeDamage
@@ -1187,7 +1305,7 @@ MSAMNEW:
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
 	Inherits: ^Tank
-    
+	
 	GrantConditionOnPrerequisite@msamDamage:
 		Condition: msamDamage
 		Prerequisites: msamUpgradeDamage
@@ -1300,7 +1418,7 @@ HELINEW:
 	Inherits: ^EMPNoGuns
 	Inherits: ^AutoTargetInfantry	 
 	Inherits: ^Helicopter
-    
+	
 	GrantConditionOnPrerequisite@helifire:
 		Condition: helifire
 		Prerequisites: helifire
@@ -1433,7 +1551,7 @@ ORCANEW:
 	Inherits: ^EMPNoGuns  
 	Inherits: ^AutoTargetVehicleAircrafts
 	Inherits: ^Helicopter
-    
+	
 	GrantConditionOnPrerequisite@orcafire:
 		Condition: orcafire
 		Prerequisites: orcafire
@@ -1554,6 +1672,177 @@ ORCANEW:
 		MoveSequence: move
 	-Selectable:
 	RejectsOrders:
+	
+HINDNEW:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^EMPNoGuns  
+	Inherits: ^AutoTargetVehicleAircrafts
+	Inherits: ^Helicopter
+	
+	GrantConditionOnPrerequisite@hindfire:
+		Condition: hindfire
+		Prerequisites: hindfire
+	GrantConditionOnPrerequisite@hindUpgradeDamage:
+		Condition: hindUpgradeDamage
+		Prerequisites: hindUpgradeDamage
+	GrantConditionOnPrerequisite@hindUpgradeHealth:
+		Condition: hindUpgradeHealth
+		Prerequisites: hindUpgradeHealth
+	GrantConditionOnPrerequisite@hindUpgradeReload:
+		Condition: hindUpgradeReload
+		Prerequisites: hindUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: hindUpgradeDamage
+	DamageMultiplier:
+		RequiresCondition: hindUpgradeHealth
+		Modifier: 85
+	RangeMultiplier:
+		RequiresCondition: hindUpgradeReload
+		Modifier: 115
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (hindUpgradeDamage + hindUpgradeHealth + hindUpgradeReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (hindUpgradeDamage + hindUpgradeHealth + hindUpgradeReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (hindUpgradeDamage + hindUpgradeHealth + hindUpgradeReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: flamer
+		RequiresCondition: hindfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	RenderSprites:
+		Image: hind
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Hind
+	Buildable:
+		BuildDuration: 6200
+		BuildPaletteOrder: 20
+		Queue: Flyhind.Fact
+		Description: none
+	Aircraft:
+		CruiseAltitude: 1c754
+		RearmBuildings: hpad
+		InitialFacing: 224
+		TurnSpeed: 4
+		Speed: 116
+		RepulsionSpeed: 600
+	Health:
+		HP: 135
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	Armament@PRIMARY:
+		Weapon: HindChaingun
+		LocalOffset: 285,0,-45
+		MuzzleSequence: muzzle
+		RequiresCondition: !empdisable
+		AmmoPoolName: Chaingun
+	Armament@SECONDARY:
+		Name: secondary
+		Weapon: HindRocketLoad
+		LocalOffset: 85,213,-85
+		RequiresCondition: !empdisable && !hindfire
+		AmmoPoolName: Rockets
+	Armament@Third:
+		Name: third
+		Weapon: HindRocketLoad
+		LocalOffset: 85,-213,-85
+		RequiresCondition: !empdisable && !hindfire
+		AmmoPoolName: Rockets
+	Armament@fourth:
+		Name: fourth
+		Weapon: HindFireBombs
+		LocalOffset: 85,213,-85
+		RequiresCondition: !empdisable && hindfire
+		AmmoPoolName: Rockets
+	Armament@fifth:
+		Name: fifth
+		Weapon: HindFireBombs
+		LocalOffset: 85,-213,-85
+		RequiresCondition: !empdisable && hindfire
+		AmmoPoolName: Rockets
+	AttackHeli:
+		FacingTolerance: 20
+		Armaments: primary, secondary, third, fourth, fifth
+	AmmoPool@normal:
+		Name: Rockets
+		Ammo: 6
+		PipCount: 6
+		SelfReloads: true
+		ReloadCount: 2
+		SelfReloadDelay: 100
+	AmmoPool@chaingun:
+		Name: Chaingun
+		Ammo: 12
+		PipCount: 4
+		SelfReloads: true
+		ReloadCount: 1
+		PipType: Blue
+		SelfReloadDelay: 250
+	SpawnActorOnDeath:
+		Actor: HIND.Husk
+	AutoTarget:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	-Selectable:
+	RejectsOrders:
+	SelectionDecorations:
+		VisualBounds: 38,32
+	WithMuzzleOverlay:
+	SmokeTrailWhenDamaged:
+		Offset: -427,0,0
+	WithIdleOverlay@ROTORAIR:
+		Sequence: rotor
+		RequiresCondition: airborne
+	WithIdleOverlay@ROTORGROUND:
+		Sequence: slow-rotor
+		RequiresCondition: !airborne
+	
+HIND.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Hind
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 186
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	WithIdleOverlay:
+		Offset: 0,0,300
+	RenderSprites:
+		Image: hind
 
 STNKNEW:
 	Inherits: ^Vehicle
@@ -1561,7 +1850,7 @@ STNKNEW:
 	Inherits: ^Master50k
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
-    
+	
 	GrantConditionOnPrerequisite@stnkDamage:
 		Condition: stnkDamage
 		Prerequisites: stnkUpgradeDamage
@@ -1668,7 +1957,7 @@ BIKENEW:
 	Inherits: ^Master50k
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
-    
+	
 	GrantConditionOnPrerequisite@bikeDamage:
 		Condition: bikeDamage
 		Prerequisites: bikeUpgradeDamage
@@ -1782,7 +2071,7 @@ MLRSNEW:
 	Inherits: ^Master50k
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
-    
+	
 	GrantConditionOnPrerequisite@mlrsfire:
 		Condition: mlrsfire
 		Prerequisites: mlrsfire
@@ -1887,14 +2176,14 @@ MLRSNEW:
 	SpawnActorOnDeath:
 		Actor: MLRS.Husk
 	RejectsOrders:
-    
+	
 ARTYNEW:
 	Inherits: ^Tank
 	Inherits: ^Master10k
 	Inherits: ^Master50k
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
-    
+	
 	GrantConditionOnPrerequisite@artyDamage:
 		Condition: artyDamage
 		Prerequisites: artyUpgradeDamage
@@ -2000,7 +2289,7 @@ FTNKNEW:
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
 	Inherits: ^AutoTargetInfantry
-    
+	
 	GrantConditionOnPrerequisite@ftnkDamage:
 		Condition: ftnkDamage
 		Prerequisites: ftnkUpgradeDamage
@@ -2104,7 +2393,7 @@ FATWR:
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
-    
+	
 	GrantConditionOnPrerequisite@fawrDamage:
 		Condition: fawrDamage
 		Prerequisites: fawrUpgradeDamage
@@ -2212,7 +2501,7 @@ TMPLANGEL:
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
-    
+	
 	GrantConditionOnPrerequisite@tmplsDamage:
 		Condition: tmplsDamage
 		Prerequisites: tmplsUpgradeDamage
@@ -2307,7 +2596,7 @@ GUNTANK:
 	Inherits: ^Master50k
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
-    
+	
 	GrantConditionOnPrerequisite@guntnkDamage:
 		Condition: guntnkDamage
 		Prerequisites: guntnkUpgradeDamage
@@ -2407,7 +2696,7 @@ MOICO:
 	Inherits: ^Master50k
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
-    
+	
 	GrantConditionOnPrerequisite@moicoDamage:
 		Condition: moicoDamage
 		Prerequisites: moicoUpgradeDamage
@@ -2626,7 +2915,7 @@ TRANNEW:
 	Inherits: ^AutoTargetAll
 	Inherits: ^AutoTargetInfantry  
 	Inherits: ^EMPNoGuns
-    
+	
 	GrantConditionOnPrerequisite@mlrsDamage:
 		Condition: tranUpgradeDamage
 		Prerequisites: tranUpgradeDamage
@@ -2774,7 +3063,7 @@ SILLYCA:
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
-    
+	
 	-Selectable:
 	RejectsOrders:
 	RenderSprites:
@@ -2861,7 +3150,7 @@ HARVNEW:
 	Inherits: ^Master50k
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
-    
+	
 	Valued:
 		Cost: 0
 	RenderSprites:
@@ -2905,7 +3194,7 @@ SILLYBADR:
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
-    
+	
 	-Selectable:
 	RejectsOrders:
 	RenderSprites:
@@ -3020,7 +3309,7 @@ FLAGPLAT:
 	Inherits: ^Master50k
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
-    
+	
 	-Crushable:
 	RenderSprites:
 		Image: flagplat
@@ -3151,7 +3440,7 @@ DISCTHROW:
 	Inherits: ^Master50k
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
-    
+	
 	RenderSprites:
 		Image: mgg
 		PlayerPalette: raplayer

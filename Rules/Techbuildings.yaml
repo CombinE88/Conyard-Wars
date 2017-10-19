@@ -33,7 +33,7 @@ CASH:
 	Tooltip:
 		Name: Economic Center
 	Buildable:
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 110
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		IconPalette: ra
@@ -69,7 +69,7 @@ CASH2:
 	Tooltip:
 		Name: Stock Market
 	Buildable:
-		BuildPaletteOrder: 130
+		BuildPaletteOrder: 140
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		Prerequisites: cashtech2, cash, !cash2, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
@@ -103,7 +103,7 @@ CASH3:
 	Tooltip:
 		Name: Bounty Station
 	Buildable:
-		BuildPaletteOrder: 160
+		BuildPaletteOrder: 170
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		Prerequisites: cashtech3, cash2, !cash3, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
@@ -149,7 +149,7 @@ OILER:
 	Tooltip:
 		Name: Oil Pump
 	Buildable:
-		BuildPaletteOrder: 110
+		BuildPaletteOrder: 120
 		Queue: Defenses.Fact
 		BuildLimit: 1
 		IconPalette: ra
@@ -163,8 +163,6 @@ OILER:
 		HP: 200
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
-		HasMinibib: Yes
 	Reservable:
 	Power:
 		Amount: 0
@@ -185,7 +183,7 @@ OILER2:
 		Period: 60
 		Amount: 16
 		ShowTicks: true
-		RequiresCondition: cash
+		RequiresCondition: cash && givecash
 	GrantConditionOnPrerequisite@cash:
 		Condition: cash
 		Prerequisites: cash   
@@ -193,27 +191,24 @@ OILER2:
 		Cost: 1200
 	Tooltip:
 		Name: Large Oil Pump
-	Buildable:
-		BuildPaletteOrder: 140
-		Queue: Defenses.Fact
-		BuildLimit: 1
-		IconPalette: ra
-		Prerequisites: cash2, ~!oiler2, ~!oiler2t2
-		Description: Generates Money.\n Requires Economic Center Center to operate!
 	Building:
 		Footprint: __ xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	-Selectable:
+	-Targetable:
+	-Sellable:
 	Health:
 		HP: 400
 	RevealsShroud:
 		Range: 5c0
-	WithBuildingBib:
 	Reservable:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname: 
+	GrantConditionOnPrerequisite:
+		Condition: givecash
+		Prerequisites: oiler2build1
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer	  
 
@@ -230,11 +225,11 @@ ARRAY:
 	Tooltip:
 		Name: Secret upgrades monitoring station
 	Buildable:
-		BuildPaletteOrder: 400
+		BuildPaletteOrder: 180
 		Queue: Defenses.Fact
 		BuildLimit: 1
 		IconPalette: ra
-		Prerequisites: labnew, nukenew, lammo, !array, , ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, , ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Description: Grants unit specific special upgrades.
 	Building:
 		Footprint: __ xx ==
@@ -285,7 +280,7 @@ LABNEW:
 		BuildPaletteOrder: 30
 		Queue: Defenses.Fact
 		BuildLimit: 1 
-		Description: Provides Technology
+		Description: Grants:\n  Flamethrower Infantry
         Prerequisites: !labnew, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 	Building:
 		Footprint: xx xx ==
@@ -323,7 +318,7 @@ NEWHOSP:
 		Prerequisites: labnew, !newhosp, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
-		Description: Provides Technology
+		Description: Grants:\n  Chemical Infantry\n  Flametanks
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -363,7 +358,7 @@ FORB:
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		IconPalette: ra
-		Description: Provides Technology
+		Description: Grants:\n  Stealth Tanks
 	Building:
 		Footprint: ___ xxx xx= ===
 		Dimensions: 3,4
@@ -427,7 +422,7 @@ NUKENEW:
 		Queue: Defenses.Fact
         Prerequisites: !nukenew, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
-		Description: Provides Technology
+		Description: Grants:\n  Mortar Infantry\n  Grenadier Infantry
 	Building:
 		Footprint: _x xx ==
 		Dimensions: 2,3
@@ -496,7 +491,7 @@ NUK2NEW:
 		Queue: Defenses.Fact
 		Prerequisites: nukenew, !nuk2new, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
-		Description: Provides Technology and Radar
+		Description: Radar and Grants:\n  Mobile Rocketlauncher\n  Artillery\n  Mobile Anti-Air
 	Building:
 		Footprint: x_ xx ==
 		Dimensions: 2,3
@@ -536,7 +531,7 @@ RADARNEW:
 		Prerequisites: nuk2new, !radarnew, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
-		Description: Provides Technology
+		Description: Grants:\n  Commando Infantry
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -591,7 +586,7 @@ LAMMO:
 		Queue: Defenses.Fact
         Prerequisites: !lammo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
-		Description: Provides Technology
+		Description:  Grants:\n  Light Tanks\n  Bazooka Infantry
 	Building:
 		Footprint: __ xx ==
 		Dimensions: 2,3
@@ -630,7 +625,7 @@ HAMMO:
 		Prerequisites: lammo, !hammo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
-		Description: Provides Technology
+		Description:  Grants:\n  Medium Tanks
 	Building:
 		Footprint: ___ xxx xxx ===
 		Dimensions: 3,4
@@ -668,7 +663,7 @@ FAMMO:
 		Prerequisites: hammo, !fammo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
-		Description: Provides Technology, grants Airstrike
+		Description:  Grants:\n  Heavy Tank
 	AirstrikePower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: airstrike
@@ -715,6 +710,122 @@ FAMMO:
 	ProvidesPrerequisite@cashtech3: 
 		Prerequisite: cashtech3
    
+   
+FLYTOW:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: flytow
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Center for Aviation
+	Buildable:
+		BuildPaletteOrder: 100
+		Queue: Defenses.Fact
+		Prerequisites: !flytow, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
+		BuildLimit: 1 
+		Description:   Grants:\n  Transport Helicopter\n  Buggy/ Hum-Vee
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 500
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3	
+	ProvidesPrerequisite@self: 
+		Prerequisite: flytow	
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0  
+	ProvidesPrerequisite@cashtech1: 
+		Prerequisite: cashtech1
+        
+CFLARF:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: cflarf
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Radar Dome
+	Buildable:
+		BuildPaletteOrder: 130
+		Queue: Defenses.Fact
+		IconPalette: ra
+		Prerequisites: flytow, !cflarf, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
+		BuildLimit: 1 
+		Description:   Grants:\n  Apache Longbows\n  Orca Gunships
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 700
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3	
+	ProvidesPrerequisite@self: 
+		Prerequisite: cflarf	
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0  
+	ProvidesPrerequisite@cashtech2: 
+		Prerequisite: cashtech2
+        
+DOME:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^2x2Shape
+	RenderSprites:
+		Image: dome
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Tower
+	Buildable:
+		BuildPaletteOrder: 160
+		Queue: Defenses.Fact
+		IconPalette: ra
+		Prerequisites: flytow, cflarf, !dome, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
+		BuildLimit: 1 
+		Description:   Grants:\n  Helicopter Hind
+	Building:
+		Footprint: xx xx ==
+		Dimensions: 2,3
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 5c0
+	WithBuildingBib:
+	Reservable:
+	Power:
+		Amount: 0
+	ProvidesRadar:
+	SelectionDecorations:
+		VisualBounds: 48,60,0,-3	
+	ProvidesPrerequisite@self: 
+		Prerequisite: dome	
+	ProvidesPrerequisite@tech0: 
+		Prerequisite: tech0  
+	ProvidesPrerequisite@cashtech3: 
+		Prerequisite: cashtech3
 
 # -- neutral buildings capturable ---
    
@@ -824,7 +935,7 @@ SILLYONE:
 	Tooltip:
 		Name: Silly ChronoSphere
 	Buildable:
-		BuildPaletteOrder: 300
+		BuildPaletteOrder: 190
 		Prerequisites: forb, fammo, !sillyone, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
@@ -863,7 +974,7 @@ SILLYTWO:
 	Tooltip:
 		Name: Silly Research Center
 	Buildable:
-		BuildPaletteOrder: 310
+		BuildPaletteOrder: 200
 		Prerequisites: fammo, radarnew, !sillytwo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
@@ -905,7 +1016,7 @@ SILLYTHREE:
 	Tooltip:
 		Name: Silly Curtain
 	Buildable:
-		BuildPaletteOrder: 320
+		BuildPaletteOrder: 210
 		Prerequisites: forb, radarnew, !sillythree, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 

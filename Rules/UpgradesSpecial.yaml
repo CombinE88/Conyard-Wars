@@ -299,6 +299,7 @@ Upgrade.tranfire:
 		Image: tranfire
 	ProvidesPrerequisite@tranfire: 
 		Prerequisite: tranfire
+        
 Upgrade.orcafire:
 	AlwaysVisible:
 	Tooltip:
@@ -316,6 +317,22 @@ Upgrade.orcafire:
 	ProvidesPrerequisite@orcafire: 
 		Prerequisite: orcafire		
         
+Upgrade.hindfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Hind Firebombs
+	Buildable:
+		BuildPaletteOrder: 137
+		Prerequisites: airfacthind
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Replaces the Hind rockets with destructive firebombs!
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: hindfire
+	ProvidesPrerequisite@hindfire: 
+		Prerequisite: hindfire	
         		
 Upgrade.mlrsfire:
 	AlwaysVisible:
@@ -333,7 +350,23 @@ Upgrade.mlrsfire:
 		Image: mlrsupgrade
 	ProvidesPrerequisite@mlrsfire: 
 		Prerequisite: mlrsfire
-        
+        		
+Upgrade.3tnkfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Heavy Tank to Rapidfire
+	Buildable:
+		BuildPaletteOrder: 85
+		Prerequisites: 3tnkfactory
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Nonstop Bullet machiene!!
+	Valued:
+		Cost: 3000
+	RenderSprites:
+		Image: 3tnkfire
+	ProvidesPrerequisite@3tnkfire: 
+		Prerequisite: tnkfire3       
 # ---- K - Upgrades ----
 
 Master.Upgrade.10k:
@@ -342,7 +375,7 @@ Master.Upgrade.10k:
 		Name: Master Upgrade 10k
 	Buildable:
 		BuildDuration: 250
-		BuildPaletteOrder: 1000
+		BuildPaletteOrder: 260
 		Queue: Defenses.Fact
 		Prerequisites: endgame
 		BuildLimit: 1
@@ -360,7 +393,7 @@ Master.Upgrade.50k:
 		Name: Master Upgrade 50k
 	Buildable:
 		BuildDuration: 250
-		BuildPaletteOrder: 1010
+		BuildPaletteOrder: 270
 		Prerequisites: Master10k, forb, fammo, radarnew
 		Queue: Defenses.Fact
 		BuildLimit: 1
@@ -379,7 +412,7 @@ Master.Upgrade.100k:
 		Name: Master Upgrade 100k
 	Buildable:
 		BuildDuration: 250
-		BuildPaletteOrder: 1020
+		BuildPaletteOrder: 280
 		Prerequisites: Master50k, sillyone, sillytwo, sillythree
 		Queue: Defenses.Fact
 		BuildLimit: 1

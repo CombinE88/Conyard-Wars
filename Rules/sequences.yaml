@@ -106,8 +106,20 @@ upgradesymbs:
 		Start: 0 
 	tranplus: tranplus
 		Start: 0 
+	3tnkplus: 3tnkplus
+		Start: 0 
 ##-- special upgrades---
 
+3tnkfire:
+	idle: e1
+	icon: 3tnkfire.shp
+		AddExtension: False	
+        
+hindfire:
+	idle: e1
+	icon: hindfire.shp
+		AddExtension: False	
+        
 tripplefire:
 	idle: e1
 	icon: e2fireupgrade.shp
@@ -235,8 +247,39 @@ mtkchemupgrade:
 	idle: e1
 	icon: mtnkicnh2.shp
 		AddExtension: False
-		
- 
+
+upgradehindicon1:
+	idle: e1
+	icon: hindicons.shp
+		Start: 0
+		AddExtension: False
+upgradehindicon2:
+	idle: e1
+	icon: hindicons.shp
+		Start: 1
+		AddExtension: False
+upgradehindicon3:
+	idle: e1
+	icon: hindicons.shp
+		Start: 2
+		AddExtension: False	
+
+        
+3tnkupgradeicons1:
+	idle: e1
+	icon: 3tnkupgradeicons.shp
+		Start: 0
+		AddExtension: False
+3tnkupgradeicons3:
+	idle: e1
+	icon: 3tnkupgradeicons.shp
+		Start: 1
+		AddExtension: False
+3tnkupgradeicons2:
+	idle: e1
+	icon: 3tnkupgradeicons.shp
+		Start: 2
+		AddExtension: False	
 		
 upgradee22icon1:
 	idle: e1
@@ -1459,6 +1502,21 @@ airfact2:
 		Tick: 80
 	icon: orcaicnh.tem
 		AddExtension: False		
+        
+airfacthind:
+	idle: hpadnew
+		ZOffset: -1023 
+	damaged-idle: hpadnew
+		Start: 1
+		ZOffset: -1023
+	dead: hpadnew
+		Start: 1
+		Tick: 800
+	make: hpadnewmake
+		Length: *
+		Tick: 80
+	icon: hindicon
+		AddExtension: True	
 		
 newhosp:
 	idle: hosp2
@@ -1481,6 +1539,58 @@ newhosp:
 		UseTilesetExtension: true
 		Length: *   
 	icon: hospcameo.shp
+		AddExtension: False
+        
+flytow:
+	idle: flytow
+		Offset: 12,-12
+	damaged-idle: flytow
+		Start: 1
+		Offset: 12,-12
+	make: flytowmake
+		Length: *
+		Tick: 80
+		Offset: 12,-12
+	dead: flytow
+        Start: 1
+		Tick: 800
+		Offset: 12,-12
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *   
+	icon: flytowicnh.shp
+		AddExtension: False
+        
+cflarf:
+	idle: cflarf
+	damaged-idle: cflarf
+		Start: 1
+	make: cflarfmake
+		Length: *
+		Tick: 80
+	dead: cflarf
+        Start: 1
+		Tick: 800
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *   
+	icon: cflarficnh.shp
+		AddExtension: False
+        
+dome:
+	idle: dome
+	damaged-idle: dome
+		Start: 1
+	make: domemake
+		Length: *
+		Tick: 80
+	dead: dome
+        Start: 1
+		Tick: 800
+	bib: bib3
+		UseTilesetExtension: true
+		Length: *   
+	icon: domeicon.shp
 		AddExtension: False
 		
 stockm:
@@ -2271,3 +2381,52 @@ leviextra:
 	idle: e1
 	icon: 100kicnh
 		AddExtension: true
+        
+hind:
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	rotor: lrotorlg
+		Length: 4
+	slow-rotor: lrotorlg
+		Start: 4
+		Length: 8
+	muzzle: minigun
+		Length: 6
+		Facings: 8
+	icon: hindicon
+    
+3tnkfactory:
+	idle: havyweap
+	damaged-idle: havyweap
+		Start: 1
+	dead: havyweap
+		Start: 1
+		Tick: 800
+	build-top: havyweap2
+		Length: 4
+		ZOffset: -1024
+	damaged-build-top: havyweap2
+		Start: 4
+		Length: 4
+		ZOffset: -1024
+	make: havyweapmake
+		Length: *
+		Tick: 80
+	bib: bib1
+		UseTilesetExtension: true
+		Length: *
+	icon: 3tnkicon.shp
+		AddExtension: False
+        
+new3tnk:
+	idle: 3tnk
+		Facings: 32
+		UseClassicFacingFudge: True
+	turret: 3tnk
+		Start: 32
+		Facings: 32
+		UseClassicFacingFudge: True
+	muzzle: gunfire2
+		Length: 5
+	icon: 3tnkicon

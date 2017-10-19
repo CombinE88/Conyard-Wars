@@ -7,13 +7,15 @@ SecTechTop = {TMPL1, TMPL2, TMPL3}
 SecTechBot = {MISS1, MISS2, MISS3}
 SecTechMid = {FIXT1, FIXT2, FIXT3}
 
+Oils = {OilTopL, OilMidLT, OilL, OilMidLB, OilBotL, OilTopM, OilMidMT, OilM, OilMidMB, OilBotM, OilTopR, OilMidRT, OilR, OilMidRB, OilBotR}
 
-Factorys = {"e1factory","e2factory" ,"e3factory" ,"e4factory" ,"e5factory" ,"e22factory", "rmbofactory" ,"carfactory1", "carfactory2", "carfactory3", "carfactory4", "carfactory5", "carfactory6", "carfactory7" ,"carfactory8", "airfact1" ,"airfact2", "secretfactory1", "secretfactory2", "secretfactory3", "secretfactory4", "carfactorybg","carfactory10", "airfact0" , "sillyfact1", "sillyfact2", "sillyfact3", "sillyfact4", "sillyfact5", "sillyfact6", "leviathanfact"}
+
+Factorys = {"e1factory","e2factory" ,"e3factory" ,"e4factory" ,"e5factory" ,"e22factory", "rmbofactory" ,"carfactory1", "carfactory2", "carfactory3", "carfactory4", "carfactory5", "carfactory6", "carfactory7" ,"carfactory8", "airfact1" ,"airfact2", "secretfactory1", "secretfactory2", "secretfactory3", "secretfactory4", "carfactorybg","carfactory10", "airfact0" , "sillyfact1", "sillyfact2", "sillyfact3", "sillyfact4", "sillyfact5", "sillyfact6", "leviathanfact","airfacthind","3tnkfactory"}
 IndexedFactorys = {}
-FactorysExits = {CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(2,2),CVec.New(1,5),CVec.New(3,3),CVec.New(2,3),CVec.New(3,1),CVec.New(3,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,-1),CVec.New(1,-1),CVec.New(2,3),CVec.New(2,3),CVec.New(0,2),CVec.New(0,2),CVec.New(1,1),CVec.New(1,2),CVec.New(1,2),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(2,3)}
-QueueUnits = {"e1new", "e2new","e3new","e4new","e5new","e22new","rmbonew", "jeepnew","mtnknew","msamnew","htnknew", "artynew", "ftnknew","mlrsnew","bikenew","orcanew","helinew","tmplangel","fatwr","guntank","moico","bggynew","stnknew", "trannew", "sillyca", "harvnew", "sillybadr", "flagplat", "discthrow", "lstnew", "leviathan"}
+FactorysExits = {CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(2,2),CVec.New(1,5),CVec.New(3,3),CVec.New(2,3),CVec.New(3,1),CVec.New(3,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,-1),CVec.New(1,-1),CVec.New(2,3),CVec.New(2,3),CVec.New(0,2),CVec.New(0,2),CVec.New(1,1),CVec.New(1,2),CVec.New(1,2),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(2,3),CVec.New(1,1),CVec.New(1,3)}
+QueueUnits = {"e1new", "e2new","e3new","e4new","e5new","e22new","rmbonew", "jeepnew","mtnknew","msamnew","htnknew", "artynew", "ftnknew","mlrsnew","bikenew","orcanew","helinew","tmplangel","fatwr","guntank","moico","bggynew","stnknew", "trannew", "sillyca", "harvnew", "sillybadr", "flagplat", "discthrow", "lstnew", "leviathan","hindnew","new3tnk"}
 QueueUnitsIndex = {}
-Values = {10,14,20,18,25,25,100, 30,45,50,100, 40, 30,20,20,55,60,120,120,70,160,30,45,25,200,150,200,175,100,150,1000}
+Values = {10,14,20,18,25,25,100, 30,45,50,100, 40, 30,20,20,55,60,120,120,70,160,30,45,25,200,150,200,175,100,150,1000,125,140}
 CashValuesLeft = {0,0,0}
 CashValuesRight = {0,0,0}
 
@@ -141,6 +143,294 @@ Proxy1 = function()
 	end)	
 end
 
+OilProxyLeft = function()
+
+		local i = 1
+	
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(32,27)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilTopL
+		local mine = OilTopL.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(32,49)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilMidLT
+		local mine = OilMidLT.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(32,65)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilL
+		local mine = OilL.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(32,82)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilMidLB
+		local mine = OilMidLB.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(32,104)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilBotL
+		local mine = OilBotL.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+end
+
+OilProxyMid = function()
+
+		local i = 2
+
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(64,27)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilTopM
+		local mine = OilTopM.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(64,44)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilMidMT
+		local mine = OilMidMT.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(64,65)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilM
+		local mine = OilM.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(64,87)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilMidMB
+		local mine = OilMidMB.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(64,104)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilBotM
+		local mine = OilBotM.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+end
+
+OilProxyBot = function()
+
+		local i = 3
+
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(95,27)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilTopR
+		local mine = OilTopR.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(95,44)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilMidRT
+		local mine = OilMidRT.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(95,65)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilR
+		local mine = OilR.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i]~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i]~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(95,87)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilMidRB
+		local mine = OilMidRB.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i] ~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i] ~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(95,104)), WDist.FromCells(3), function(a, id)
+		
+		local object = OilBotR
+		local mine = OilBotR.Owner
+		local yours = a.Owner
+		
+		if yours ~= Player.GetPlayer("Neutral") and yours ~= Player.GetPlayer("Creeps") and Actor.CruiseAltitude(a.Type) == 0 then
+			if yours == TeamLeft[1] or yours == TeamLeft[2] or yours == TeamLeft[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamLeft[i] ~= mine then
+					object.Owner = TeamLeft[i]
+				end
+			elseif yours == TeamRight[1] or yours == TeamRight[2] or yours == TeamRight[3] then
+				if TeamLeft[i] ~= nil and TeamRight[i] ~= nil and TeamRight[i] ~= mine then
+					object.Owner = TeamRight[i]
+				end
+			end
+		end
+	end)
+end
+		
 function Set (list)
   local set = {}
   for _, l in ipairs(list) do set[l] = true end
@@ -149,7 +439,7 @@ end
 	
 -- Build Trigger Precheck, if buildingtypes Match
 BuildTrigger = function(Unit)	
-	local Facts = Set {"e1factory","e2factory" ,"e3factory" ,"e4factory" ,"e5factory" ,"e22factory", "rmbofactory" ,"carfactory1", "carfactory2", "carfactory3", "carfactory4", "carfactory5", "carfactory6", "carfactory7" ,"carfactory8", "airfact2" ,"airfact1", "secretfactory1", "secretfactory2", "secretfactory3", "secretfactory4", "carfactorybg","stnknew", "airfact0" }
+	local Facts = Set {"e1factory","e2factory" ,"e3factory" ,"e4factory" ,"e5factory" ,"e22factory", "rmbofactory" ,"carfactory1", "carfactory2", "carfactory3", "carfactory4", "carfactory5", "carfactory6", "carfactory7" ,"carfactory8", "airfact2" ,"airfact1", "secretfactory1", "secretfactory2", "secretfactory3", "secretfactory4", "carfactorybg","stnknew", "airfact0","airfacthind","3tnkfactory"}
 	if Facts[Unit.Type] then
 		StartBuilding(Unit)
 	end
@@ -196,7 +486,7 @@ RestartProduce = function(Unit)
 		Unit.Stop()
 		Unit.Destroy()
 		local Factorys = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-			return C.Type == "e1factory" or C.Type == "e2factory" or C.Type == "e3factory" or C.Type == "e4factory" or C.Type == "e5factory" or C.Type == "e22factory" or C.Type == "rmbofactory" or C.Type == "carfactory1" or C.Type == "carfactory2" or C.Type == "carfactory3" or C.Type == "carfactory4" or C.Type == "carfactory5" or C.Type == "carfactory6" or C.Type == "carfactory7" or C.Type == "carfactory8" or C.Type == "airfact2"or C.Type == "airfact1" or C.Type == "secretfactory1" or C.Type == "secretfactory2" or C.Type == "secretfactory3" or C.Type == "secretfactory4" or C.Type == "carfactorybg" or C.Type == "carfactory10" or C.Type == "airfact0"
+			return C.Type == "e1factory" or C.Type == "e2factory" or C.Type == "e3factory" or C.Type == "e4factory" or C.Type == "e5factory" or C.Type == "e22factory" or C.Type == "rmbofactory" or C.Type == "carfactory1" or C.Type == "carfactory2" or C.Type == "carfactory3" or C.Type == "carfactory4" or C.Type == "carfactory5" or C.Type == "carfactory6" or C.Type == "carfactory7" or C.Type == "carfactory8" or C.Type == "airfact2"or C.Type == "airfact1" or C.Type == "secretfactory1" or C.Type == "secretfactory2" or C.Type == "secretfactory3" or C.Type == "secretfactory4" or C.Type == "carfactorybg" or C.Type == "carfactory10" or C.Type == "airfact0" or C.Type == "airfacthind" or C.Type == "3tnkfactory"
 		end)	
 		for k,v in ipairs(Factorys) do
 			if v.Owner == Unit.Owner then
@@ -253,8 +543,8 @@ WorldLoaded = function()
 			FinishLeviathan(a)
 		end 
 	end)
-
 	
+
 	Trigger.OnEnteredProximityTrigger(Map.CenterOfCell(CPos.New(64,64)),WDist.FromCells(128), function(a, id)
 		for k,v in ipairs(Factorys) do
 			if a.Type == v then
@@ -270,6 +560,28 @@ WorldLoaded = function()
 			v.Deploy()
 		end
 	end)
+	
+	-- Oil Derrik Capturables
+	Trigger.AfterDelay(DateTime.Seconds(1), function()
+		OilProxyLeft()
+	end)
+	Trigger.AfterDelay(DateTime.Seconds(2), function()
+		OilProxyMid()
+	end)
+	Trigger.AfterDelay(DateTime.Seconds(3), function()
+		OilProxyBot()
+	end)
+	
+	--OilDerric Respawn
+	
+	Trigger.AfterDelay(DateTime.Seconds(4), function()
+		for i = 1, #Oils do
+			Trigger.OnKilled(Oils[i], function() 
+				Actor.Create(Oils[i].Type,true,{Owner = Player.GetPlayer("Neutral"),Location = Oils[i].Location, Facing = 0})
+			end)
+		end
+	end)
+			
 	
 	-- AI/ Bots cheats
 	Trigger.AfterDelay(DateTime.Seconds(10), function()
@@ -289,10 +601,7 @@ WorldLoaded = function()
 		end
 		Media.DisplayMessage("Welcome to Conyard Wars!","Conyard Wars")
 		Trigger.AfterDelay(DateTime.Seconds(3), function()
-			Media.DisplayMessage("Keep in mind: the price of each tech-building will increase by '400' with each tech-building you have already be build!","Conyard Wars")
-		end)
-		Trigger.AfterDelay(DateTime.Seconds(10), function()
-			Media.DisplayMessage("Regular unit-upgrades are found in two tabs under the heading 'Infantry'!","Conyard Wars")
+			Media.DisplayMessage("Keep in mind: the price of each tech-building will increase with each tech-building you have already be build!","Conyard Wars")
 		end)
 	end)
 	

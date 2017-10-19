@@ -23,7 +23,7 @@ Leviathan.Main.Cannon:
 		Name: MammothCannon
 	Buildable:
 		BuildPaletteOrder: 20
-		Prerequisites: ~leviathanfact, !MainA10, !MainRocket
+		Prerequisites: fammo, ~leviathanfact, !MainA10, !MainRocket
 		Queue: Upgrade.Levi
 		BuildLimit: 1
 		Description: The MainCannon is a Strong MammothCannon

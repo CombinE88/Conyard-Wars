@@ -496,13 +496,13 @@ Upgrade.mtnkUpgradeHealth:
 		Image: Upgrademtnkicon2
 	ProvidesPrerequisite@mtnkUpgradeHealth: 
 		Prerequisite: mtnkUpgradeHealth
-		
+        
 Upgrade.mtnkUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
 		Name: upgrade Medium Tank Reload
 	Buildable:
-		BuildPaletteOrder: 82
+		BuildPaletteOrder: 87
 		Prerequisites: carfactory2
 		Queue: Infantry1.Fact
 		BuildLimit: 1
@@ -513,6 +513,57 @@ Upgrade.mtnkUpgradeReload:
 		Image: Upgrademtnkicon3
 	ProvidesPrerequisite@mtnkUpgradeReload: 
 		Prerequisite: mtnkUpgradeReload
+   
+Upgrade.3tnkUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Heavy Tank Damage 
+	Buildable:
+		BuildPaletteOrder: 85
+		Prerequisites: 3tnkfactory
+		Queue: Infantry1.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 2400
+	RenderSprites:
+		Image: 3tnkupgradeicons1
+	ProvidesPrerequisite@3tnkUpgradeDamage: 
+		Prerequisite: tnkUpgradeDamage3
+		
+Upgrade.3tnkUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Heavy Tank Health
+	Buildable:
+		BuildPaletteOrder: 86
+		Prerequisites: 3tnkfactory
+		Queue: Infantry1.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2400
+	RenderSprites:
+		Image: 3tnkupgradeicons2
+	ProvidesPrerequisite@3tnkUpgradeHealth: 
+		Prerequisite: tnkUpgradeHealth3
+		
+Upgrade.3tnkUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Heavy Tank Reload
+	Buildable:
+		BuildPaletteOrder: 87
+		Prerequisites: 3tnkfactory
+		Queue: Infantry1.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2400
+	RenderSprites:
+		Image: 3tnkupgradeicons3
+	ProvidesPrerequisite@3tnkUpgradeReload: 
+		Prerequisite: tnkUpgradeReload3
 
 	
 Upgrade.htnkUpgradeDamage:
@@ -719,6 +770,57 @@ Upgrade.orcaUpgradeRange:
 		Image: Upgradeorcaicon3
 	ProvidesPrerequisite@orcaUpgradeReload: 
 		Prerequisite: orcaUpgradeReload  
+        
+Upgrade.hindUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Hind Damage 
+	Buildable:
+		BuildPaletteOrder: 145
+		Prerequisites: airfacthind
+		Queue: Infantry1.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 2100
+	RenderSprites:
+		Image: upgradehindicon1
+	ProvidesPrerequisite@hindUpgradeDamage: 
+		Prerequisite: hindUpgradeDamage
+		
+Upgrade.hindUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Hind Health
+	Buildable:
+		BuildPaletteOrder: 146
+		Prerequisites: airfacthind
+		Queue: Infantry1.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2100
+	RenderSprites:
+		Image: upgradehindicon2
+	ProvidesPrerequisite@hindUpgradeHealth: 
+		Prerequisite: hindUpgradeHealth
+		
+Upgrade.hindUpgradeReload:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Hind Range
+	Buildable:
+		BuildPaletteOrder: 147
+		Prerequisites: airfacthind
+		Queue: Infantry1.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2100
+	RenderSprites:
+		Image: upgradehindicon3
+	ProvidesPrerequisite@hindUpgradeReload: 
+		Prerequisite: hindUpgradeReload 
 
  
 Upgrade.stnkUpgradeDamage:

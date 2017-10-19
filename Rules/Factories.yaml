@@ -193,7 +193,7 @@ E22FACTORY:
 		BuildDuration: 300
 		BuildPaletteOrder: 65
 		Queue: Building.Fact
-		Prerequisites: nukenew, nuk2new
+		Prerequisites: nukenew
 		Description: Trains Mortar infantry.\n Strong vs large ammounts of Units.
 	Building:
 		Footprint: xx xx ==
@@ -239,7 +239,7 @@ E3FACTORY:
 		BuildDuration: 300
 		BuildPaletteOrder: 30
 		Queue: Building.Fact
-		Prerequisites: labnew
+		Prerequisites: lammo
 		Description: Trains rocket infantry.\n Can also attack aircrafts, and will do so.
 	Building:
 		Footprint: xx xx ==
@@ -376,7 +376,7 @@ RMBOFACTORY:
 		BuildDuration: 300
 		BuildPaletteOrder: 90
 		Queue: Building.Fact
-		Prerequisites: nukenew, nuk2new, radarnew, labnew, newhosp, forb
+		Prerequisites: nukenew, nuk2new, radarnew
 		Description: Trains Commando infantry.\n Elite sniper infantry unit.\n  Strong vs Infantry.
 	Building:
 		Footprint: xx xx ==
@@ -424,7 +424,7 @@ CARFACTORY1:
 		BuildDuration: 300
 		BuildPaletteOrder: 40
 		Queue: Building.Fact
-		Prerequisites: nukenew, ~buildings.gdi
+		Prerequisites: flytow, ~buildings.gdi
 		Description: Produces Humvees.\n Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
 	Building:
 		Footprint: xxx xxx ===
@@ -473,7 +473,7 @@ CARFACTORYBG:
 		BuildDuration: 300
 		BuildPaletteOrder: 40
 		Queue: Building.Fact
-		Prerequisites: nukenew, ~buildings.nod
+		Prerequisites: flytow, ~buildings.nod
 		Description: Produces Buggy's.\n Fast scout and anti-infantry vehicle.\n  Strong vs Infantry\n  Weak vs Tanks
 	Building:
 		Footprint: xxx xxx ===
@@ -562,7 +562,61 @@ CARFACTORY2:
 	SelectionDecorations:
 		VisualBounds: 72,64,0,-16
 	-Selectable:
-
+    
+3TNKFACTORY:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: 3tnkfactory
+		PlayerPalette: raplayer
+	WithDeathAnimation:
+		DeathSequencePalette: raplayer	
+	Valued:
+		Cost: 2400
+	Tooltip:
+		Name: Heavy Tank Factory
+	ProvidesPrerequisite:
+		Prerequisite: vehicleproduction
+	Buildable:
+		BuildDuration: 300
+		IconPalette: ra
+		BuildPaletteOrder: 85
+		Queue: Building.Fact
+		Prerequisites: lammo, hammo, fammo
+		Description: Produces Heavy Tanks.\n Superior Tank.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry
+	Building:
+		Footprint: ___ xxx xxx ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,-512,0
+	-Selectable:
+	Health:
+		HP: 1700
+	RevealsShroud:
+		Range: 4c0
+	WithBuildingBib:
+	WithProductionDoorOverlay:
+		Sequence: build-top
+	Exit@1:
+		SpawnOffset: -0,1024,0
+		ExitCell: 1,3
+		ExitDelay: 3
+	Production:
+		Produces: tank3.Fact
+	ProductionQueue:
+		Type: tank3.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	Selectable:
+		Bounds: 72,72
+	SelectionDecorations:
+		VisualBounds: 72,72,0,0
+	-Selectable:
+    
 CARFACTORY3:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x2Shape
@@ -578,7 +632,7 @@ CARFACTORY3:
 		BuildDuration: 300
 		BuildPaletteOrder: 70
 		Queue: Building.Fact
-		Prerequisites: lammo, hammo, fammo
+		Prerequisites: nukenew, nuk2new
 		Description: Produces Multi Launch Rocket Systems.\n Long range rocket artillery.\n  Strong vs all Ground units.
 	Building:
 		Footprint: _x_ xxx x=x ===
@@ -629,7 +683,7 @@ CARFACTORY4:
 		BuildDuration: 300
 		BuildPaletteOrder: 170
 		Queue: Building.Fact
-		Prerequisites: lammo, hammo, fammo, labnew, newhosp, forb
+		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew
 		Description: Produces Mammoth Tanks.\n Heavily armored Tank.\nCan attack Aircraft.\n  Strong vs Everything
 	Building:
 		Footprint: _____ xxxxx xxxxx xxxxx xxxxx =====
@@ -675,7 +729,7 @@ SECRETFACTORY1:
 		BuildDuration: 300
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, ~tmplnew
+		Prerequisites: flytow, cflarf, dome, ~tmplnew
 		Description: Produces Flying Obelisk's. \n Attacks ground only!
 	Building:
 		Footprint: xxx xxx xxx ===
@@ -719,7 +773,7 @@ SECRETFACTORY2:
 		BuildDuration: 300
 		BuildPaletteOrder: 310
 		Queue: Building.Fact
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, ~missnew
+		Prerequisites: flytow, cflarf, dome, ~missnew
 		Description: Produces Flying Advanced Guardtower's.\n Can Attack ground and air units.
 	Building:
 		Footprint: xxx xxx xxx ===
@@ -764,7 +818,7 @@ SECRETFACTORY3:
 		BuildDuration: 300
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, ~tmplnew
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, ~tmplnew
 		Description: Produces Nuclear Command Vehicle's.\n Kills everything, weak vs aircraft.
 	Building:
 		Footprint: ____ xxxx xxxx ====
@@ -811,7 +865,7 @@ SECRETFACTORY4:
 		BuildDuration: 300
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
-		Prerequisites: labnew, newhosp, nukenew, nuk2new, ~missnew
+		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, ~missnew
 		Description: Produces Mobile Ioncannon's. The Ultimative Blob killer.
 	Building:
 		Footprint: ____ xxxx xxxx ====
@@ -857,7 +911,7 @@ AIRFACT0:
 		BuildDuration: 300
 		BuildPaletteOrder: 135
 		Queue: Building.Fact
-		Prerequisites: lammo
+		Prerequisites: flytow
 		Description: Produces Transporthelis's.\n Helicopter Gunship with Miniguns.\n  Strong vs Infantry
 	Building:
 		Footprint: xx xx
@@ -899,7 +953,7 @@ AIRFACT1:
 		BuildDuration: 300
 		BuildPaletteOrder: 140
 		Queue: Building.Fact
-		Prerequisites: labnew, newhosp, lammo, hammo
+		Prerequisites: flytow, cflarf
 		Description: Produces Orca's.\n Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Cannot target Infantry
 	Building:
 		Footprint: xx xx
@@ -942,7 +996,7 @@ AIRFACT2:
 		BuildDuration: 300
 		BuildPaletteOrder: 150
 		Queue: Building.Fact
-		Prerequisites: labnew, newhosp, nukenew, nuk2new
+		Prerequisites: flytow, cflarf
 		Description: Produces Apache Longbow's.\n Helicopter Gunship with Chainguns.\n  Strong vs Infantry, Light Vehicles and Aircraft\n  Can't target Tanks
 	Building:
 		Footprint: xx xx
@@ -970,6 +1024,48 @@ AIRFACT2:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 36,36,0,-5
+        
+AIRFACTHIND:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x3Shape
+	-Selectable:
+	RenderSprites:
+		Image: airfacthind
+		PlayerPalette: raplayer
+	Valued:
+		Cost: 2100
+	Tooltip:
+		Name: Hind Helipad
+	Buildable:
+		BuildDuration: 300
+		IconPalette: ra
+		BuildPaletteOrder: 137
+		Queue: Building.Fact
+		Prerequisites: flytow, cflarf, dome
+		Description: Produces Hind's.\n Helicopter Gunship with Chainguns and Rockets.\n  Strong vs Everything
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	Production:
+		Produces: Flyhind.Fact
+	Reservable:
+	ProductionQueue:
+		Type: Flyhind.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 72,62,0,-5	
  
 CARFACTORY5:
 	Inherits: ^BaseBuilding2
@@ -986,7 +1082,7 @@ CARFACTORY5:
 		BuildDuration: 300
 		BuildPaletteOrder: 160
 		Queue: Building.Fact
-		Prerequisites: nukenew, nuk2new, radarnew
+		Prerequisites: nukenew, nuk2new
 		Description: Produces Artillery.\n Long-range artillery.\n  Strong vs Infantry, Vehicles and Buildings
 	Building:
 		Footprint: __xx xxxx xxxx ====
@@ -1034,7 +1130,7 @@ CARFACTORY6:
 		BuildDuration: 300
 		BuildPaletteOrder: 70
 		Queue: Building.Fact
-		Prerequisites: labnew, newhosp, forb
+		Prerequisites: labnew, newhosp
 		Description: Produces Flametanks.\n Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
 	Building:
 		Footprint: ___ xxx x=x ===
@@ -1080,7 +1176,7 @@ CARFACTORY7:
 		BuildDuration: 300
 		BuildPaletteOrder: 110
 		Queue: Building.Fact
-		Prerequisites: labnew, newhosp
+		Prerequisites: nukenew, nuk2new
 		Description: Produces Anti Air Rocket Launcher.\n Most powerful anti-air unit.\nCannot attack Ground units.
 	Building:
 		Footprint: xxxx xxxx ====
@@ -1178,7 +1274,7 @@ CARFACTORY10:
 		BuildDuration: 300
 		BuildPaletteOrder: 100
 		Queue: Building.Fact
-		Prerequisites: nukenew, nuk2new, lammo, hammo, fammo
+		Prerequisites: labnew, newhosp, forb
 		Description: Produces Stealth Tanks.\n Long-range missile tank that can cloak.\n Attacks only Buildings!
 	Building:
 		Footprint: xxx xxx ===
@@ -1600,7 +1696,7 @@ LEVIATHANFACT:
 		Description: Assembles your personal Leviathan.\nYou find the upgrades in the second tab of Defences!
 		BuildLimit: 1
 	Building:
-		Footprint: xxxxx x===x x===x x===x xx=xx
+		Footprint: x===x x===x x===x x===x x===x
 		Dimensions: 5,5
 	Selectable:
 		Bounds: 96,96,0,3

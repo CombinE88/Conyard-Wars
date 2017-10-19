@@ -234,6 +234,7 @@ BigChemmer:
 
 IonCannonNew:
 	ValidTargets: Ground, Air
+	TargetActorCenter: true
 	Warhead@1Dam_impact: SpreadDamage
 		Range: 0, 1c1, 2c1, 2c512
 		Damage: 100
@@ -261,6 +262,7 @@ IonCannonNew:
 	Burst: 4
 	BurstDelay: 5
 	ValidTargets: Structure
+	TargetActorCenter: true
 	Projectile: Missile
 		Arm: 0
 		Blockable: false
@@ -293,6 +295,7 @@ Atomicnew:
 	Range: 14c0
 	MinRange: 4c0
 	Report: nuke1.aud
+	TargetActorCenter: true
 	Projectile: LaserZap
 		Width: 0
 		HitAnim: laserfire
@@ -331,6 +334,7 @@ MegaArtillery:
 	Range: 16c0
 	MinRange: 6c0
 	Report: tnkfire2.aud
+	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 204
 		Blockable: false
@@ -352,6 +356,33 @@ MegaArtillery:
 	Warhead@3Eff: CreateEffect
 		Explosions: poof
 		ImpactSounds: xplosml2.aud
+        
+3TNK110MM:
+	ReloadDelay: 40
+	Range: 4c768
+	Report: tnkfire6.aud
+	Burst: 2
+	BurstDelay: 10
+	Projectile: Bullet
+		Image: 120MM
+		Speed: 682
+		Shadow: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 30
+		Versus:
+			None: 25
+			Wood: 100
+			Light: 100
+			Heavy: 100
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+	Warhead@3Eff: CreateEffect
+		Explosions: small_frag
+		ImpactSounds: xplos.aud
+		VictimScanRadius: 0
 
 
 TurretGunNerfed:
@@ -426,6 +457,93 @@ VulcanNoBuild:
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
+        
+HindChaingun:
+	ValidTargets: Infantry
+	ReloadDelay: 5
+	Range: 7c0
+	Report: cygun1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 426
+		Damage: 25
+		ValidTargets: Ground
+		Versus:
+			None: 100
+			Wood: 25
+			Light: 100
+			Heavy: 35
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs
+        
+HindRocketLoad:
+	ReloadDelay: 150
+	Range: 7c0
+	MinRange: 1c0
+	Burst: 2
+	BurstDelay: 8
+	Report: rocket2.aud
+	ValidTargets: Vehicle, Structure
+	Projectile: Bullet
+		Arm: 5
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 853
+		LaunchAngle: 62
+		Image: DRAGON
+		RateOfTurn: 2
+		ContrailLength: 20
+		Trail: smokey
+		Speed: 341
+	Warhead@1Dam: SpreadDamage
+		Spread: 683
+		Damage: 35
+		ValidTargets: Ground
+		Versus:
+			None: 35
+			Wood: 60
+			Light: 100
+			Heavy: 75
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+	Warhead@3Eff: CreateEffect
+		Explosions: med_frag
+		ImpactSounds: xplos.aud
+        
+HindFireBombs:
+	ReloadDelay: 150
+	Range: 7c0
+	MinRange: 1c0
+	Burst: 3
+	BurstDelay: 8
+	Report: bazook1.aud
+	ValidTargets: Ground
+	Projectile: Bullet
+		Arm: 5
+		Blockable: false
+		Inaccuracy: 1c512
+		LaunchAngle: 85
+		Image: BOMB
+		ContrailLength: 8
+		Speed: 290
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Damage: 65
+		ValidTargets: Ground
+		Versus:
+			None: 35
+			Wood: 60
+			Light: 100
+			Heavy: 75
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+	Warhead@3Eff: CreateEffect
+		Explosions: big_napalm
+		ImpactSounds: flamer2.aud
 
 NapalmNoBuild:
 	ValidTargets: Ground, Water
@@ -527,6 +645,7 @@ MortarShell:
 	Range: 9c512
 	MinRange: 4c896
 	Report: tnkfire2.aud
+	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 190
 		Blockable: false
@@ -585,7 +704,7 @@ OrcaAGMissilesNew:
 		ImpactSounds: xplos.aud
 
 HeliAGGunNew:
-	ReloadDelay: 45
+	ReloadDelay: 20
 	Burst: 2
 	BurstDelay: 0
 	Range: 4c0
@@ -636,7 +755,7 @@ HeliSnipe:
 	Report: ramgun2.aud
 	ValidTargets: Ground, Infantry
 	InvalidTargets: Vehicle, Water, Structure, Wall, Husk
-	ReloadDelay: 5
+	ReloadDelay: 35
 	Range: 4c512
 	Projectile: Bullet
 		Speed: 1c682
@@ -944,6 +1063,7 @@ PortableIoncannon:
 	ReloadDelay: 90
 	Range: 10c0
 	MinRange: 4c896
+	TargetActorCenter: true
 	Projectile: LaserZap
 		Width: 70
 		HitAnim: laserfire
@@ -1113,6 +1233,7 @@ TrippelRockets:
 	Inherits: ^Cannon
 	ReloadDelay: 85
 	Range: 12c0
+	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 204
 		Blockable: false
@@ -1187,6 +1308,7 @@ BadrBombs:
 	BurstDelay: 10
 	Report: rocket1.aud
 	ValidTargets: Ground
+	TargetActorCenter: true
 	Projectile: Missile
 		Arm: 0
 		Blockable: false
@@ -1216,6 +1338,7 @@ BadrBombs:
 	Range: 8c0
 	Report: aacanon3.aud
 	ValidTargets: Air, Structure
+	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 1c682
 		Blockable: false
@@ -1258,6 +1381,7 @@ Discs:
 	ReloadDelay: 30
 	Range: 10c0
 	Report: toss1.aud
+	TargetActorCenter: true
 	Burst: 2
 	BurstDelay: 0
 	Projectile: Missile
@@ -1285,6 +1409,7 @@ Minelauncher:
 	Burst: 10
 	BurstDelay: 3
 	Report: bazook1.aud
+	TargetActorCenter: true
 	ValidTargets: Structure
 	Projectile: Missile
 		Arm: 0
@@ -1406,6 +1531,7 @@ MammothMissilesLevia:
 	ReloadDelay: 45
 	Range: 6c0
 	Report: rocket1.aud
+	TargetActorCenter: true
 	Burst: 2
 	BurstDelay: 15
 	Projectile: Missile
@@ -1442,6 +1568,7 @@ Sixteen227mm:
 	Burst: 24
 	BurstDelay: 4
 	Report: rocket1.aud
+	TargetActorCenter: true
 	ValidTargets: Ground
 	Projectile: Bullet
 		Arm: 5
@@ -1475,12 +1602,14 @@ LeviAutoCannon:
 	Range: 6c0
 	Report: gun20.aud
 	ValidTargets: Ground, Air
+	TargetActorCenter: true
 	Projectile: Bullet
 		Image: 120MM
 		Speed: 853
 		Shadow: true
-		Inaccuracy: 0c512
+		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
+        ValidTargets: Ground, Air
 		Damage: 15
 		Spread: 265
 		Versus:
@@ -1502,6 +1631,7 @@ Leviathan120mmSplash:
 	ReloadDelay: 65
 	Range: 6c0
 	Report: gun20.aud
+	TargetActorCenter: true
 	ValidTargets: Ground
 	Burst: 4
 	BurstDelay: 1
@@ -1534,6 +1664,7 @@ LeviathanATmiss:
 	Range: 6c0
 	Report: rocket2.aud
 	ValidTargets:   Ground
+	TargetActorCenter: true
 	InvalidTargets: Infantry
 	Projectile: Missile
 		HorizontalRateOfTurn: 20
@@ -1665,6 +1796,7 @@ GrenadeBag:
 	Burst: 4
 	BurstDelay: 1
 	Report: toss1.aud
+	TargetActorCenter: true
 	Projectile: Bullet
 		Speed: 140
 		Blockable: false
@@ -1673,7 +1805,7 @@ GrenadeBag:
 		Image: BOMB
 	Warhead@1Dam: SpreadDamage
 		Spread: 541
-		Damage: 35
+		Damage: 50
 		Versus:
 			None: 100
 			Wood: 50
@@ -1687,7 +1819,7 @@ GrenadeBag:
 FlameGrenade:
 	Inherits: ^BallisticWeapon
 	ReloadDelay: 35
-	Range: 5c0
+	Range: 5c512
 	Report: bazook1.aud
 	Projectile: Bullet
 		Speed: 140
@@ -1770,6 +1902,7 @@ JevalinMissile:
 	Range: 10c512
 	MinRange: 3c0
 	Report: rocket2.aud
+	TargetActorCenter: true
 	ValidTargets: Ground
 	Projectile: Missile
 		Arm: 0

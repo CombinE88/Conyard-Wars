@@ -7,7 +7,7 @@ GUN:
 		Name: Turret
 	Buildable:
 		BuildDuration: 3500
-		BuildPaletteOrder: 150
+		BuildPaletteOrder: 240
 		Queue: Defenses.Fact
 		Prerequisites: lammo
 		BuildLimit: 1 
@@ -50,7 +50,7 @@ OBLI:
 		Name: Obelisk of Light
 	Buildable:
 		BuildDuration: 6000
-		BuildPaletteOrder: 180
+		BuildPaletteOrder: 190
 		Queue: Defenses.Fact
 		Prerequisites: forb
 		BuildLimit: 1
@@ -128,7 +128,7 @@ GTWR:
 		Name: Guard Tower
 	Buildable:
 		BuildDuration: 3500
-		BuildPaletteOrder: 130
+		BuildPaletteOrder: 230
 		Queue: Defenses.Fact
 		Prerequisites: nukenew
 		BuildLimit: 1
@@ -164,7 +164,7 @@ ATWR:
 		Name: Advanced Guard Tower
 	Buildable:
 		BuildDuration: 6000
-		BuildPaletteOrder: 170
+		BuildPaletteOrder: 250
 		Prerequisites: radarnew
 		Queue: Defenses.Fact
 		BuildLimit: 1

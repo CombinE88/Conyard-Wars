@@ -58,13 +58,13 @@ Player:
 			cash3: 90%
 			
 			oiler: 80%
-			oiler2: 90%
+			oiler2buildable: 90%
 			
 			oilert2: 80%
-			oiler2t2: 90%
+			oiler2buildable2: 90%
 			
 			oilert3: 80%
-			oiler2t3: 90%
+			oiler2buildable3: 90%
 			
 			gtwr: 5%
 			gun: 5%
@@ -491,13 +491,13 @@ Player:
 			cash3: 90%
 			
 			oiler: 80%
-			oiler2: 90%
+			oiler2buildable: 90%
 			
 			oilert2: 80%
-			oiler2t2: 90%
+			oiler2buildable2: 90%
 			
 			oilert3: 80%
-			oiler2t3: 90%
+			oiler2buildable3: 90%
 			
 			gtwr: 5%
 			gun: 5%
@@ -924,13 +924,13 @@ Player:
 			cash3: 90%
 			
 			oiler: 80%
-			oiler2: 90%
+			oiler2buildable: 90%
 			
 			oilert2: 80%
-			oiler2t2: 90%
+			oiler2buildable2: 90%
 			
 			oilert3: 80%
-			oiler2t3: 90%
+			oiler2buildable3: 90%
 			
 			gtwr: 5%
 			gun: 5%
