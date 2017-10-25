@@ -61,7 +61,7 @@ RMBONEW:
 	WithDecoration@4:
 		Image: upgradesymbs
 		Sequence: cross
-		RequiresCondition: rmboDamage
+		RequiresCondition: rmbofire
 		ReferencePoint: Top, Left
 		Palette: effect
 		ZOffset: 256
@@ -100,6 +100,9 @@ RMBONEW:
 	Armament:
 		Weapon: Sniper
 		RequiresCondition: !rmbofire
+	SpeedMultiplier@stpcmmdo:
+		RequiresCondition: (stpcmmdo + rmbofire) >= 2
+		Modifier: 5
 	Armament@second:
 		Weapon: DualSniper
 		RequiresCondition: rmbofire
@@ -112,7 +115,9 @@ RMBONEW:
 		IdleSequences: idle1,idle2,idle3
 	Voiced:
 		VoiceSet: CommandoVoice	
-		
+	ExternalCondition@stopsdetected: 
+		Condition: stpcmmdo
+		TotalCap: 1
 	RejectsOrders:
 E1New:
 	Inherits: ^Master10k
@@ -308,6 +313,21 @@ E2New:
 		LocalOffset: 0,0,427
 		FireDelay: 15
 		RequiresCondition: e2efire
+	Armament@bagbounce1:
+		Weapon: GrenadeBounceOnce
+		LocalOffset: 0,0,427
+		FireDelay: 15
+		RequiresCondition: e2efire
+	Armament@bagbounce2:
+		Weapon: GrenadeBounceTwice
+		LocalOffset: 0,0,427
+		FireDelay: 15
+		RequiresCondition: e2efire
+	Armament@bagbounce3:
+		Weapon: GrenadeBounceTrice
+		LocalOffset: 0,0,427
+		FireDelay: 15
+		RequiresCondition: e2efire
 	AttackFrontal:
 	WithInfantryBody:
 		DefaultAttackSequence: throw
@@ -407,7 +427,15 @@ E22New:
 		FireDelay: 10
 		RequiresCondition: e22fire
 		LocalYaw: 0,0,0
+	Armament@JevalinMissile@Air:
+		Weapon: JevalinMissileAir
+		Name: third
+		LocalOffset: 200,0,10
+		FireDelay: 10
+		RequiresCondition: e22fire
+		LocalYaw: 0,0,0
 	AttackFrontal:
+		Armaments: primary, secondary, third
 	WithInfantryBody:
 		DefaultAttackSequence: throw
 	Explodes:
@@ -498,12 +526,12 @@ E3New:
 		ScanRadius: 6
 	Armament:
 		Weapon: Rockets
-		LocalOffset: 256,43,341
+		LocalOffset: 128,43,341
 		FireDelay: 5
 		RequiresCondition: !e3fire
 	Armament@Tripple:
 		Weapon: TrippelRockets
-		LocalOffset: 256,43,341
+		LocalOffset: 128,143,341,128,43,341,128,-77,341
 		FireDelay: 5
 		RequiresCondition: e3fire
 	AttackFrontal:
@@ -671,27 +699,30 @@ E5New:
 	Tooltip:
 		Name: Chemical Warrior
 	Buildable:
-		BuildDuration: 2800
+		BuildDuration: 2700
 		BuildPaletteOrder: 10
 		Queue: E5Infantery
 		Description: Advanced general-purpose infantry.\n  Strong vs all Ground units
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 90
+		HP: 110
 	Armament:
 		Weapon: Chemspray
 		LocalOffset: 341,0,256
 		FireDelay: 3
 		MuzzleSequence: muzzle
+		RequiresCondition: !chemfire
+	Armament@ranged:
+		Weapon: RangeSpray
+		LocalOffset: 341,0,256
+		FireDelay: 3
+		RequiresCondition: chemfire        
 	AttackFrontal:
 	WithMuzzleOverlay:
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	RejectsOrders:
-	SpawnActorOnDeath:
-		Actor: VICE
-		RequiresCondition: chemfire
 	
 VICE:
 	-Selectable:
@@ -955,7 +986,7 @@ MTNKNEW:
 	Inherits: ^AutoTargetAll		  
 	Inherits: ^AutoTargetVehicle
 	Inherits: ^Tank
-    
+	
 	GrantConditionOnPrerequisite@mtnknapalm:
 		Condition: mtnknapalm
 		Prerequisites: mtnknapalm
@@ -1054,7 +1085,7 @@ MTNKNEW:
 	SelectionDecorations:
 		VisualBounds: 32,32
 	RejectsOrders:
-    
+	
 NEW3TNK:
 	Inherits: ^Master10k
 	Inherits: ^Master50k
@@ -1062,7 +1093,7 @@ NEW3TNK:
 	Inherits: ^AutoTargetAll		  
 	Inherits: ^AutoTargetVehicle
 	Inherits: ^Tank
-    
+	
 	GrantConditionOnPrerequisite@tnkfire3:
 		Condition: tnkfire3
 		Prerequisites: tnkfire3
@@ -1132,7 +1163,7 @@ NEW3TNK:
 	Mobile:
 		Speed: 70
 	Health:
-		HP: 700
+		HP: 600
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1141,28 +1172,25 @@ NEW3TNK:
 	WithSpriteTurret@upgrade:
 		Turret: secondary
 		RequiresCondition: tnkfire3
+		Sequence: samturr
 	Turreted@base:
 		TurnSpeed: 5
 	Turreted@upgrade:
 		TurnSpeed: 5
 		Turret: secondary
-		Offset: 0,0,256
+		Offset: -256,0,190
 	Armament@normal:
 		Weapon: 3TNK110MM
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 768,85,90, 768,-85,90
 		MuzzleSequence: muzzle
-	Armament@Dobule:
-		Weapon: 3TNK110MM
+	Armament@Minitusk:
+		Weapon: MiniTusks
 		Name: secondary
 		Turret: secondary
-		Recoil: 128
-		RecoilRecovery: 38
-		LocalOffset: 768,85,90, 768,-85,90
-		MuzzleSequence: muzzle
+		LocalOffset: 256,125,20, 256,-125,20
 		RequiresCondition: tnkfire3
-		FireDelay: 20
 	AttackTurreted:
 	WithMuzzleOverlay:
 	AutoTarget:
@@ -1250,7 +1278,7 @@ HTNKNEW:
 		Speed: 56
 		TurnSpeed: 3
 	Health:
-		HP: 1600
+		HP: 1400
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1386,19 +1414,21 @@ MSAMNEW:
 		Offset: -256,0,128
 	Armament@PRIMARY:
 		Weapon: Heavy227mm
-		LocalOffset: 213,128,0, 213,-128,0
+		LocalOffset: 213,180,0, 213,90,0, 213,-180,0, 213,-90,0
 		RequiresCondition: !msamfire
 	Armament@SECONDARY:
 		Weapon: Heavy227mm
-		LocalOffset: 213,-128,0, 213,128,0
+		LocalOffset:  213,180,100, 213,90,100, 213,-90,100, 213,-180,100
+		FireDelay: 20
 		RequiresCondition: !msamfire
 	Armament@NEWPRIMARY:
 		Weapon: Quad227mm
-		LocalOffset: 213,128,0, 213,-128,0
+		LocalOffset: 213,180,0, 213,90,0, 213,-180,0, 213,-90,0
 		RequiresCondition: msamfire
 	Armament@NEWSECONDARY:
 		Weapon: Quad227mm
-		LocalOffset: 213,-128,0, 213,128,0
+		LocalOffset: 213,180,100, 213,90,100, 213,-90,100, 213,-180,100
+		FireDelay: 20
 		RequiresCondition: msamfire
 	AttackFrontal:
 	WithSpriteTurret:
@@ -1520,11 +1550,11 @@ HELINEW:
 	AttackHeli:
 		FacingTolerance: 20
 	AmmoPool:
-		Ammo: 10
+		Ammo: 14
 		PipCount: 5
 		SelfReloads: true
-		ReloadCount: 10
-		SelfReloadDelay: 200
+		ReloadCount: 14
+		SelfReloadDelay: 250
 	WithIdleOverlay@ROTORAIR:
 		Offset: 0,0,85
 		Sequence: rotor
@@ -1635,7 +1665,7 @@ ORCANEW:
 		AmmoPoolName: Rockets
 		RequiresCondition: !empdisable
 	Armament@SECONDARY:
-		Weapon: OrcaAAMissiles
+		Weapon: OrcaAAMissilesNew
 		LocalOffset: 427,-171,-213, 427,171,-213
 		AmmoPoolName: Rockets
 		RequiresCondition: !empdisable
@@ -1648,8 +1678,8 @@ ORCANEW:
 		FacingTolerance: 20
 	AmmoPool@normal:
 		Name: Rockets
-		Ammo: 6
-		PipCount: 6
+		Ammo: 8
+		PipCount: 8
 		SelfReloads: true
 		ReloadCount: 2
 		SelfReloadDelay: 100
@@ -1755,15 +1785,15 @@ HINDNEW:
 		Speed: 116
 		RepulsionSpeed: 600
 	Health:
-		HP: 135
+		HP: 210
 	Armor:
-		Type: Light
+		Type: Wood
 	RevealsShroud:
 		Range: 10c0
 		Type: CenterPosition
 	Armament@PRIMARY:
 		Weapon: HindChaingun
-		LocalOffset: 285,0,-45
+		LocalOffset: 712,0,-145
 		MuzzleSequence: muzzle
 		RequiresCondition: !empdisable
 		AmmoPoolName: Chaingun
@@ -1796,19 +1826,19 @@ HINDNEW:
 		Armaments: primary, secondary, third, fourth, fifth
 	AmmoPool@normal:
 		Name: Rockets
-		Ammo: 6
+		Ammo: 12
 		PipCount: 6
 		SelfReloads: true
-		ReloadCount: 2
-		SelfReloadDelay: 100
+		ReloadCount: 12
+		SelfReloadDelay: 235
 	AmmoPool@chaingun:
 		Name: Chaingun
-		Ammo: 12
+		Ammo: 24
 		PipCount: 4
 		SelfReloads: true
-		ReloadCount: 1
+		ReloadCount: 24
 		PipType: Blue
-		SelfReloadDelay: 250
+		SelfReloadDelay: 160
 	SpawnActorOnDeath:
 		Actor: HIND.Husk
 	AutoTarget:
@@ -1840,6 +1870,7 @@ HIND.Husk:
 		Range: 10c0
 		Type: CenterPosition
 	WithIdleOverlay:
+		Sequence: slow-rotor
 		Offset: 0,0,300
 	RenderSprites:
 		Image: hind
@@ -1950,6 +1981,10 @@ STNKNEW:
 	-MustBeDestroyed:
 	-Selectable:
 	RejectsOrders:
+	ProximityExternalCondition@StopsDetectors:
+		Condition: stpdtct
+		Range: 6c0
+		ValidStance: Enemy, Neutral
 
 BIKENEW:
 	Inherits: ^Vehicle
@@ -2036,6 +2071,9 @@ BIKENEW:
 		Range: 6c0
 	Turreted:
 		TurnSpeed: 7
+	Turreted@Flak:
+		TurnSpeed: 20
+		Turret: flakturret
 	Armament:
 		Weapon: 70mm
 		Recoil: 85
@@ -2044,22 +2082,32 @@ BIKENEW:
 		MuzzleSequence: muzzle
 		RequiresCondition: !ltnkfire
 	Armament@LazerSight:
-		Weapon: 70mmTargetLaser
+		Weapon: LtnkFlakGun
 		Name: third
-		LocalOffset: 420,39,90
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: flakmuzzle
 		RequiresCondition: ltnkfire
+		Turret: flakturret
 	Armament@FarRapid:
-		Weapon: 70mmRapid
+		Weapon: LtnkFlakAA
 		Name: secondary
-		Recoil: 85
-		RecoilRecovery: 17
-		LocalOffset: 720,0,90
-		MuzzleSequence: muzzle
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: flakmuzzle
 		RequiresCondition: ltnkfire
+		Turret: flakturret
 	AttackTurreted:
 		Armaments: primary, secondary, third
 	WithMuzzleOverlay:
 	WithSpriteTurret:
+		RequiresCondition: !ltnkfire
+	WithSpriteTurret@flak:
+		Turret: flakturret
+		Sequence: flakturret
+		RequiresCondition: ltnkfire
 	AutoTarget:
 	SpawnActorOnDeath:
 		Actor: LTNK.Husk 
@@ -2089,7 +2137,7 @@ MLRSNEW:
 		RequiresCondition: mlrsDamage
 	DamageMultiplier:
 		RequiresCondition: mlrsHealth
-		Modifier: 85
+		Modifier: 60
 	RangeMultiplier:
 		RequiresCondition: mlrsReload
 		Modifier: 135
@@ -2142,12 +2190,19 @@ MLRSNEW:
 	Mobile:
 		Speed: 99
 		TurnSpeed: 7
+	SpeedMultiplier@stpdtct:
+		RequiresCondition: stpdtct
+		Modifier: 5
 	Health:
 		HP: 120
 	Armor:
 		Type: Light
 	RevealsShroud:
 		Range: 8c0
+	DetectCloaked:
+		Range: 6c0
+	ExternalCondition@stopsdetected:
+		Condition: stpdtct
 	Turreted:
 		TurnSpeed: 8
 		Offset: -128,0,128
@@ -3114,7 +3169,7 @@ SILLYCA:
 		Recoil: 171
 		RecoilRecovery: 34
 		MuzzleSequence: muzzle
-		FireDelay: 25
+		FireDelay: 20
 		RequiresCondition: !empdisable
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -3434,21 +3489,21 @@ FLAGPLAT.Husk:
 		Sequence: tracks
 		Offset: 612,-512,-40
 		
-DISCTHROW:
-	Inherits: ^Tank
+SUBWAY:
+	Inherits: ^Vehicle
 	Inherits: ^Master10k
 	Inherits: ^Master50k
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
 	
 	RenderSprites:
-		Image: mgg
+		Image: ss
 		PlayerPalette: raplayer
 	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
-		Name: Disc Throwing Truck
+		Name: Submarine
 	Buildable:
 		BuildDuration: 4800
 		BuildPaletteOrder: 40
@@ -3457,46 +3512,30 @@ DISCTHROW:
 	Mobile:
 		Speed: 100
 	Health:
-		HP: 850
+		HP: 450
 	Armor:
 		Type: Heavy
 	RevealsShroud:
 		Range: 8c0
-	WithSpriteTurret@first:
-	Turreted@first:
-		TurnSpeed: 10
-		Offset: -1536,0,40
-	Armament@first:
-		Weapon: Discs
-		LocalOffset: 0,597,85, 0,-597,85
-	WithSpriteTurret@second:
-		Turret: secondary
-	Turreted@second:
-		TurnSpeed: 10
-		Offset: -785,0,40
-		Turret: secondary
 	Armament@second:
-		Weapon: Discs
-		Turret: secondary
-		Name: secondary
-		LocalOffset: 0,597,85, 0,-597,85
-	AttackTurreted:
-	AutoTarget:
+		Weapon: Torpedo
+		LocalOffset: 0,-171,0, 0,171,0
+		FireDelay: 2
+	AttackFrontal:
 	SelectionDecorations:
-		VisualBounds: 32,32
+		VisualBounds: 38,38
+	Cloak:
+		InitialDelay: 0
+		CloakDelay: 20
+		CloakSound: subshow1.aud
+		UncloakSound: subshow1.aud
+		UncloakOn: Dock
+	AutoTarget:
 	RejectsOrders:
-	WithIdleOverlay@1:
-		Offset: -785,597,135
-		Sequence: rotor
-	WithIdleOverlay@2:
-		Offset: -785,-597,135
-		Sequence: rotor
-	WithIdleOverlay@3:
-		Offset: -1536,597,135
-		Sequence: rotor
-	WithIdleOverlay@4:
-		Offset: -1536,-597,135
-		Sequence: rotor
+	ProximityExternalCondition@StopsDetectors:
+		Condition: stpdtct
+		Range: 6c0
+		ValidStance: Enemy, Neutral
 	
 LSTNEW:
 	Inherits: ^Helicopter
@@ -3520,7 +3559,7 @@ LSTNEW:
 		Queue: Silly6.Fact
 		Description: Landing Craft
 	Health:
-		HP: 1000
+		HP: 1200
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -3573,13 +3612,13 @@ LSTNEW:
 		TurnSpeed: 10
 		Offset: 0,0,40
 		Turret: primary
-	Armament:
+	Armament@Ground:
 		Name: primary
 		Turret: primary
 		Weapon: Minelauncher
 		LocalOffset: 0,265,512, 0,-265,512
 		RequiresCondition: !empdisable
-	Armament:
+	Armament@AntiAir:
 		Name: secondary
 		Turret: primary
 		Weapon: MinelauncherAir

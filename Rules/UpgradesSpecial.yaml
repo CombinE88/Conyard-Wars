@@ -61,7 +61,7 @@ Upgrade.ftnknapalm:
 		Prerequisites: carfactory6
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Increase the weapon spread and damage dealt to heavy targets.
+		Description: Increase the weapon spread massive and damage dealt to heavy targets.
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -132,13 +132,13 @@ Upgrade.helifire:
 Upgrade.grenadefire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Grenadier bag
+		Name: upgrade Bouncing Grenade
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: e2factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: throws a pack of grenades.
+		Description: throws a grenade that bounces 3 times.
 	Valued:
 		Cost: 1100
 	RenderSprites:
@@ -155,7 +155,7 @@ Upgrade.flamerfire:
 		Prerequisites: e4factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: launches bullets of fire.
+		Description: launches a bullet of fire.
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -166,13 +166,13 @@ Upgrade.flamerfire:
 Upgrade.ltnkfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Laser Sights
+		Name: upgrade flak cannon
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: carfactory8
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Adds a laser sight to the lighttank optik.\n Lets him fire from far away
+		Description: Upgrades the main cannon to a light flak.\n fires rapid.
 	Valued:
 		Cost: 1900
 	RenderSprites:
@@ -223,9 +223,9 @@ Upgrade.rmbofire:
 		Prerequisites: rmbofactory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Commando can shoot tow times at once.
+		Description: Commando can shoot tow times at once and will extremly slow down at the enemy base.
 	Valued:
-		Cost: 3000
+		Cost: 3300
 	RenderSprites:
 		Image: rmbofire
 	ProvidesPrerequisite@rmbofire: 
@@ -259,7 +259,7 @@ Upgrade.e22fire:
 		BuildLimit: 1
 		Description: Ugrades the mortar to a mighty Javelin, deals massive damage in a large radius.
 	Valued:
-		Cost: 1800
+		Cost: 2200
 	RenderSprites:
 		Image: e22fire
 	ProvidesPrerequisite@e22fire: 
@@ -269,13 +269,13 @@ Upgrade.e22fire:
 Upgrade.chemfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: Carry Backpack with vesceroid
+		Name: upgrade to rocket
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: e5factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: chemical infantry spawn a friendly vesceroid on death.
+		Description: Upgrades the chemical infantry with a bazooka wich shoots ground.
 	Valued:
 		Cost: 2300
 	RenderSprites:
@@ -354,13 +354,13 @@ Upgrade.mlrsfire:
 Upgrade.3tnkfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Heavy Tank to Rapidfire
+		Name: upgrade Heavy Tank with a mini tusk missile
 	Buildable:
 		BuildPaletteOrder: 85
 		Prerequisites: 3tnkfactory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Nonstop Bullet machiene!!
+		Description: The heavy tank can now attack Air units.!!
 	Valued:
 		Cost: 3000
 	RenderSprites:

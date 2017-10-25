@@ -502,7 +502,7 @@ Upgrade.mtnkUpgradeReload:
 	Tooltip:
 		Name: upgrade Medium Tank Reload
 	Buildable:
-		BuildPaletteOrder: 87
+		BuildPaletteOrder: 82
 		Prerequisites: carfactory2
 		Queue: Infantry1.Fact
 		BuildLimit: 1
@@ -782,7 +782,7 @@ Upgrade.hindUpgradeDamage:
 		BuildLimit: 1
 		Description: Upgradevalue: 10%
 	Valued:
-		Cost: 2100
+		Cost: 2450
 	RenderSprites:
 		Image: upgradehindicon1
 	ProvidesPrerequisite@hindUpgradeDamage: 
@@ -799,7 +799,7 @@ Upgrade.hindUpgradeHealth:
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
-		Cost: 2100
+		Cost: 2450
 	RenderSprites:
 		Image: upgradehindicon2
 	ProvidesPrerequisite@hindUpgradeHealth: 
@@ -816,7 +816,7 @@ Upgrade.hindUpgradeReload:
 		BuildLimit: 1
 		Description: Upgradevalue: 15%
 	Valued:
-		Cost: 2100
+		Cost: 2450
 	RenderSprites:
 		Image: upgradehindicon3
 	ProvidesPrerequisite@hindUpgradeReload: 
@@ -951,9 +951,9 @@ Upgrade.mlrsUpgradeHealth:
 		Prerequisites: carfactory7
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Upgradevalue: 40%
 	Valued:
-		Cost: 1300
+		Cost: 2000
 	RenderSprites:
 		Image: Upgrademlrsicon2
 	ProvidesPrerequisite@mlrsUpgradeHealth: 

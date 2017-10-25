@@ -13,7 +13,7 @@ Oils = {OilTopL, OilMidLT, OilL, OilMidLB, OilBotL, OilTopM, OilMidMT, OilM, Oil
 Factorys = {"e1factory","e2factory" ,"e3factory" ,"e4factory" ,"e5factory" ,"e22factory", "rmbofactory" ,"carfactory1", "carfactory2", "carfactory3", "carfactory4", "carfactory5", "carfactory6", "carfactory7" ,"carfactory8", "airfact1" ,"airfact2", "secretfactory1", "secretfactory2", "secretfactory3", "secretfactory4", "carfactorybg","carfactory10", "airfact0" , "sillyfact1", "sillyfact2", "sillyfact3", "sillyfact4", "sillyfact5", "sillyfact6", "leviathanfact","airfacthind","3tnkfactory"}
 IndexedFactorys = {}
 FactorysExits = {CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(2,2),CVec.New(1,5),CVec.New(3,3),CVec.New(2,3),CVec.New(3,1),CVec.New(3,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,-1),CVec.New(1,-1),CVec.New(2,3),CVec.New(2,3),CVec.New(0,2),CVec.New(0,2),CVec.New(1,1),CVec.New(1,2),CVec.New(1,2),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(2,3),CVec.New(1,1),CVec.New(1,3)}
-QueueUnits = {"e1new", "e2new","e3new","e4new","e5new","e22new","rmbonew", "jeepnew","mtnknew","msamnew","htnknew", "artynew", "ftnknew","mlrsnew","bikenew","orcanew","helinew","tmplangel","fatwr","guntank","moico","bggynew","stnknew", "trannew", "sillyca", "harvnew", "sillybadr", "flagplat", "discthrow", "lstnew", "leviathan","hindnew","new3tnk"}
+QueueUnits = {"e1new", "e2new","e3new","e4new","e5new","e22new","rmbonew", "jeepnew","mtnknew","msamnew","htnknew", "artynew", "ftnknew","mlrsnew","bikenew","orcanew","helinew","tmplangel","fatwr","guntank","moico","bggynew","stnknew", "trannew", "sillyca", "harvnew", "sillybadr", "flagplat", "subway", "lstnew", "leviathan","hindnew","new3tnk"}
 QueueUnitsIndex = {}
 Values = {10,14,20,18,25,25,100, 30,45,50,100, 40, 30,20,20,55,60,120,120,70,160,30,45,25,200,150,200,175,100,150,1000,125,140}
 CashValuesLeft = {0,0,0}
@@ -560,17 +560,7 @@ WorldLoaded = function()
 			v.Deploy()
 		end
 	end)
-	
-	-- Oil Derrik Capturables
-	Trigger.AfterDelay(DateTime.Seconds(1), function()
-		OilProxyLeft()
-	end)
-	Trigger.AfterDelay(DateTime.Seconds(2), function()
-		OilProxyMid()
-	end)
-	Trigger.AfterDelay(DateTime.Seconds(3), function()
-		OilProxyBot()
-	end)
+
 	
 	--OilDerric Respawn
 	
@@ -630,7 +620,7 @@ WorldLoaded = function()
 	end
 
 	-- Determinate the player and there MCV's/ Extra cash when an ally dies.
-	Trigger.AfterDelay(DateTime.Seconds(5), function()
+	Trigger.AfterDelay(DateTime.Seconds(6), function()
 		BaseTopLeft = Map.ActorsInCircle(Map.CenterOfCell(CPos.New(28,12)),WDist.FromCells(7),function(a)
 			return a.Type == "fact2" end)
 		BaseBotLeft = Map.ActorsInCircle(Map.CenterOfCell(CPos.New(28,118)),WDist.FromCells(7),function(a)
@@ -792,6 +782,18 @@ WorldLoaded = function()
 		Trigger.AfterDelay(DateTime.Seconds(60),ExtraCash)
 		Start = true
 		--print(tostring(BaseTopLeft.Owner) .. tostring(BaseTopMid.Owner) ..  tostring(BaseTopRight.Owner)) 
+		
+			
+		-- Oil Derrik Capturables
+		Trigger.AfterDelay(DateTime.Seconds(1), function()
+			OilProxyLeft()
+		end)
+		Trigger.AfterDelay(DateTime.Seconds(2), function()
+			OilProxyMid()
+		end)
+		Trigger.AfterDelay(DateTime.Seconds(3), function()
+			OilProxyBot()
+		end)
 	end)
 
 end
@@ -858,7 +860,8 @@ KilledUnit = function(Unit,self,killer)
 	if OwnerKiller.HasPrerequisites({"cash3"}) and not OwnerKilled.IsAlliedWith(OwnerKiller) then		
 		local cashgrant = Values[QueueUnitsIndex[Unit.Type]]
 		Media.FloatingText("+" .. tostring(cashgrant) .. "$", self.CenterPosition + WVec.New(0,-100,0), 20, OwnerKiller.Color)
-		OwnerKiller.Cash = OwnerKiller.Cash + cashgrant
+		local Katsching = OwnerKiller.Cash + cashgrant
+		OwnerKiller.Cash = Katsching
 		local Bounty = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
 			return C.Owner == OwnerKiller and (C.Type == "cash3" or C.Type == "cash3t2" or C.Type == "cash3t3" or C.Type == "cash3t4" or C.Type == "cash3t5" or C.Type == "cash3t6" or C.Type == "cash3t7" or C.Type == "cash3t8" or C.Type == "cash3t9" or C.Type == "cash3t10" or C.Type == "cash3t11" or C.Type == "cash3t12" or C.Type == "cash3t13" or C.Type == "cash3t14" or C.Type == "cash3t15" or C.Type == "cash3t16")
 		end)

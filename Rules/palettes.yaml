@@ -10,3 +10,9 @@
 		BaseName: cloakRA
 		BasePalette: playerRA
 		Alpha: 0.55
+	PaletteFromRGBA@submerged:
+		Name: submerged
+		R: 0
+		G: 0
+		B: 0
+		A: 140

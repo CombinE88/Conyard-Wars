@@ -88,7 +88,8 @@ CASH2:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@self: 
-		Prerequisite: cash2	 
+		Prerequisite: cash2
+		RequiresPrerequisites: cash
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0 
  
@@ -126,6 +127,7 @@ CASH3:
 		DeathSequencePalette: raplayer	
 	ProvidesPrerequisite@self: 
 		Prerequisite: cash3  
+		RequiresPrerequisites: cash2
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0 
  
@@ -181,7 +183,7 @@ OILER2:
 		PlayerPalette: raplayer
 	CashTrickler:
 		Period: 60
-		Amount: 16
+		Amount: 6
 		ShowTicks: true
 		RequiresCondition: cash && givecash
 	GrantConditionOnPrerequisite@cash:
@@ -211,7 +213,12 @@ OILER2:
 		Prerequisites: oiler2build1
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer	  
-
+	WithIdleAnimation:
+		Sequences: active
+		Interval: 0
+		Condition: givecash
+	-ProximityExternalCondition@topCommando:
+        
 ARRAY:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x1Shape
@@ -229,7 +236,7 @@ ARRAY:
 		Queue: Defenses.Fact
 		BuildLimit: 1
 		IconPalette: ra
-		Prerequisites: labnew, nukenew, lammo, flytow, !array, , ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Description: Grants unit specific special upgrades.
 	Building:
 		Footprint: __ xx ==
@@ -334,6 +341,7 @@ NEWHOSP:
 		Amount: 0
 	ProvidesPrerequisite@self: 
 		Prerequisite: newhosp
+		RequiresPrerequisites: labnew
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0 
 	ProvidesPrerequisite@cashtech2: 
@@ -374,13 +382,13 @@ FORB:
 	AirstrikePower@AirstrikeBomB:
 		Prerequisites: ~techlevel.superweapons
 		Icon: c17bombs
-		ChargeTime: 750
-		SquadSize: 1
-		QuantizedFacings: 32
-		SquadOffset: 0,0,0
+		ChargeTime: 420
+		SquadSize: 4
+		QuantizedFacings: 2
+		SquadOffset: 0,1550,0
 		BeaconDistanceOffset: 12c0
 		Description: Air Strike
-		LongDesc: Deploy an linear bomblets strike.
+		LongDesc: Deploy an linear bomblets strike along a complete lane.
 		EndChargeSound: airredy1.aud
 		SelectTargetSound: select1.aud
 		InsufficientPowerSound: nopower1.aud
@@ -403,6 +411,7 @@ FORB:
 		Prerequisite: endgame
 	ProvidesPrerequisite@self: 
 		Prerequisite: forb
+		RequiresPrerequisites: newhosp
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0 
 	ProvidesPrerequisite@cashtech3: 
@@ -510,6 +519,7 @@ NUK2NEW:
 		VisualBounds: 48,60,0,-3	
 	ProvidesPrerequisite@self: 
 		Prerequisite: nuk2new	
+		RequiresPrerequisites: nukenew
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0  
 	ProvidesPrerequisite@cashtech2: 
@@ -549,7 +559,7 @@ RADARNEW:
 		Prerequisites: ~techlevel.superweapons
 		Icon: ioncannon
 		Cursor: ioncannon
-		ChargeTime: 600
+		ChargeTime: 360
 		Description: Ion Cannon
 		LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
 		BeginChargeSound: ionchrg1.aud
@@ -565,6 +575,7 @@ RADARNEW:
 		Prerequisite: endgame
 	ProvidesPrerequisite@self: 
 		Prerequisite: radarnew
+		RequiresPrerequisites: nuk2new
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0 
 	ProvidesPrerequisite@cashtech3: 
@@ -643,6 +654,7 @@ HAMMO:
 		VisualBounds: 72,64,0,-5
 	ProvidesPrerequisite@self: 
 		Prerequisite: hammo
+		RequiresPrerequisites: lammo
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0 
 	ProvidesPrerequisite@cashtech2: 
@@ -667,13 +679,13 @@ FAMMO:
 	AirstrikePower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: airstrike
-		ChargeTime: 1050
+		ChargeTime: 420
 		SquadSize: 5
 		QuantizedFacings: 2
 		SquadOffset: -1500,1936,0
 		BeaconDistanceOffset: 9c0
 		Description: Air Strike
-		LongDesc: Deploy an aerial napalm strike.\nBurns vehicles and infantry along a line.
+		LongDesc: Deploy an aerial napalm strike.\nBurns vehicles and infantry along a complete lane.
 		EndChargeSound: airredy1.aud
 		SelectTargetSound: select1.aud
 		InsufficientPowerSound: nopower1.aud
@@ -705,6 +717,7 @@ FAMMO:
 		Prerequisite: endgame
 	ProvidesPrerequisite@self: 
 		Prerequisite: fammo
+		RequiresPrerequisites: hammo
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0 
 	ProvidesPrerequisite@cashtech3: 
@@ -782,6 +795,7 @@ CFLARF:
 		VisualBounds: 48,60,0,-3	
 	ProvidesPrerequisite@self: 
 		Prerequisite: cflarf	
+		RequiresPrerequisites: flytow
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0  
 	ProvidesPrerequisite@cashtech2: 
@@ -801,7 +815,7 @@ DOME:
 		BuildPaletteOrder: 160
 		Queue: Defenses.Fact
 		IconPalette: ra
-		Prerequisites: flytow, cflarf, !dome, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
+		Prerequisites: cflarf, !dome, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
 		Description:   Grants:\n  Helicopter Hind
 	Building:
@@ -821,7 +835,8 @@ DOME:
 	SelectionDecorations:
 		VisualBounds: 48,60,0,-3	
 	ProvidesPrerequisite@self: 
-		Prerequisite: dome	
+		Prerequisite: dome
+		RequiresPrerequisites: cflarf
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0  
 	ProvidesPrerequisite@cashtech3: 
@@ -858,6 +873,7 @@ MISSNEW:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
+	-ProximityExternalCondition@topCommando:
 
 FIXTECH:
 	Inherits: ^BaseBuilding2
@@ -866,7 +882,7 @@ FIXTECH:
 		VisualBounds: 48,60,0,-3 
 	RenderSprites:
 		Image: fixtech
-	CashTrickler:
+	CashTrickler@empty:
 		Period: 40
 		Amount: 7
 		ShowTicks: true
@@ -891,6 +907,7 @@ FIXTECH:
 	ProvidesPrerequisite@buildingname:
 	DamageMultiplier:
 		Modifier: 0
+	-ProximityExternalCondition@topCommando:
 		
 TMPLNEW:
 	Inherits: ^BaseBuilding2
@@ -921,6 +938,7 @@ TMPLNEW:
 	ProvidesPrerequisite@buildingname:
 	DamageMultiplier:
 		Modifier: 0
+	-ProximityExternalCondition@topCommando:
 		
 SILLYONE:
 	Inherits: ^BaseBuilding2
@@ -958,6 +976,7 @@ SILLYONE:
 		DeathSequencePalette: raplayer
 	ProvidesPrerequisite@self: 
 		Prerequisite: sillyone
+		RequiresPrerequisites: forb, fammo
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0 
 	
@@ -997,6 +1016,7 @@ SILLYTWO:
 		DeathSequencePalette: raplayer  
 	ProvidesPrerequisite@self: 
 		Prerequisite: sillytwo
+		RequiresPrerequisites: fammo, radarnew
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0 
 		
@@ -1039,6 +1059,7 @@ SILLYTHREE:
 		DeathSequencePalette: raplayer  
 	ProvidesPrerequisite@self: 
 		Prerequisite: sillythree
+		RequiresPrerequisites: forb, radarnew
 	ProvidesPrerequisite@tech0: 
 		Prerequisite: tech0 
 

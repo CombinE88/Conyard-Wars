@@ -411,7 +411,7 @@ ARRAYT2:
 	Valued:
 		Cost: 800
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~!tech1
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~!tech1
 	ProvidesPrerequisite@tech1: 
 		Prerequisite: tech1 
         
@@ -420,7 +420,7 @@ ARRAYT3:
 	Valued:
 		Cost: 1000
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~!tech2
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~!tech2
 	ProvidesPrerequisite@tech2: 
 		Prerequisite: tech2
         
@@ -429,7 +429,7 @@ ARRAYT4:
 	Valued:
 		Cost: 1300
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~!tech3
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~!tech3
 	ProvidesPrerequisite@tech3: 
 		Prerequisite: tech3
         
@@ -438,7 +438,7 @@ ARRAYT5:
 	Valued:
 		Cost: 1600
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
 	ProvidesPrerequisite@tech4: 
 		Prerequisite: tech4  
         
@@ -447,7 +447,7 @@ ARRAYT6:
 	Valued:
 		Cost: 1900
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
 	ProvidesPrerequisite@tech5: 
 		Prerequisite: tech5 
         
@@ -456,7 +456,7 @@ ARRAYT7:
 	Valued:
 		Cost: 2200
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
 	ProvidesPrerequisite@tech6: 
 		Prerequisite: tech6
         
@@ -465,7 +465,7 @@ ARRAYT8:
 	Valued:
 		Cost: 2500
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
 	ProvidesPrerequisite@tech7: 
 		Prerequisite: tech7
         
@@ -474,7 +474,7 @@ ARRAYT9:
 	Valued:
 		Cost: 2800
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
 	ProvidesPrerequisite@tech8: 
 		Prerequisite: tech8
         
@@ -483,7 +483,7 @@ ARRAYT10:
 	Valued:
 		Cost: 3000
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
 	ProvidesPrerequisite@tech9: 
 		Prerequisite: tech9
         
@@ -492,7 +492,7 @@ ARRAYT11:
 	Valued:
 		Cost: 3200
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
 	ProvidesPrerequisite@tech10: 
 		Prerequisite: tech10
         
@@ -501,7 +501,7 @@ ARRAYT12:
 	Valued:
 		Cost: 3400
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
 	ProvidesPrerequisite@tech11: 
 		Prerequisite: tech11
         
@@ -510,7 +510,7 @@ ARRAYT13:
 	Valued:
 		Cost: 3600
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
 	ProvidesPrerequisite@tech12: 
 		Prerequisite: tech12
         
@@ -519,7 +519,7 @@ ARRAYT14:
 	Valued:
 		Cost: 3800
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
 	ProvidesPrerequisite@tech13: 
 		Prerequisite: tech13
         
@@ -528,7 +528,7 @@ ARRAYT15:
 	Valued:
 		Cost: 4000
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
 	ProvidesPrerequisite@tech14: 
 		Prerequisite: tech14
         
@@ -537,7 +537,7 @@ ARRAYT16:
 	Valued:
 		Cost: 4500
 	Buildable:
-		Prerequisites: labnew, nukenew, lammo, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+		Prerequisites: labnew, nukenew, lammo, flytow, !array, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
 
 # ---- LABNEW ----
 
@@ -1777,7 +1777,7 @@ FAMMOT2:
 	Valued:
 		Cost: 800
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~!tech1
+		Prerequisites: hammo, !fammo, ~tech0, ~!tech1
 	ProvidesPrerequisite@tech1: 
 		Prerequisite: tech1 
         
@@ -1786,7 +1786,7 @@ FAMMOT3:
 	Valued:
 		Cost: 1000
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~!tech2
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~!tech2
 	ProvidesPrerequisite@tech2: 
 		Prerequisite: tech2
         
@@ -1795,7 +1795,7 @@ FAMMOT4:
 	Valued:
 		Cost: 1300
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~!tech3
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~!tech3
 	ProvidesPrerequisite@tech3: 
 		Prerequisite: tech3
         
@@ -1804,7 +1804,7 @@ FAMMOT5:
 	Valued:
 		Cost: 1600
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
 	ProvidesPrerequisite@tech4: 
 		Prerequisite: tech4  
         
@@ -1813,7 +1813,7 @@ FAMMOT6:
 	Valued:
 		Cost: 1900
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
 	ProvidesPrerequisite@tech5: 
 		Prerequisite: tech5 
         
@@ -1822,7 +1822,7 @@ FAMMOT7:
 	Valued:
 		Cost: 2200
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
 	ProvidesPrerequisite@tech6: 
 		Prerequisite: tech6
         
@@ -1831,7 +1831,7 @@ FAMMOT8:
 	Valued:
 		Cost: 2500
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
 	ProvidesPrerequisite@tech7: 
 		Prerequisite: tech7
         
@@ -1840,7 +1840,7 @@ FAMMOT9:
 	Valued:
 		Cost: 2800
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
 	ProvidesPrerequisite@tech8: 
 		Prerequisite: tech8
         
@@ -1849,7 +1849,7 @@ FAMMOT10:
 	Valued:
 		Cost: 3000
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
 	ProvidesPrerequisite@tech9: 
 		Prerequisite: tech9
         
@@ -1858,7 +1858,7 @@ FAMMOT11:
 	Valued:
 		Cost: 3200
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
 	ProvidesPrerequisite@tech10: 
 		Prerequisite: tech10
         
@@ -1867,7 +1867,7 @@ FAMMOT12:
 	Valued:
 		Cost: 3400
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
 	ProvidesPrerequisite@tech11: 
 		Prerequisite: tech11
         
@@ -1876,7 +1876,7 @@ FAMMOT13:
 	Valued:
 		Cost: 3600
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
 	ProvidesPrerequisite@tech12: 
 		Prerequisite: tech12
         
@@ -1885,7 +1885,7 @@ FAMMOT14:
 	Valued:
 		Cost: 3800
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
 	ProvidesPrerequisite@tech13: 
 		Prerequisite: tech13
         
@@ -1894,16 +1894,16 @@ FAMMOT15:
 	Valued:
 		Cost: 4000
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
 	ProvidesPrerequisite@tech14: 
 		Prerequisite: tech14
         
 FAMMOT16:
-	Inherits: HAMMOT15
+	Inherits: FAMMOT15
 	Valued:
 		Cost: 4500
 	Buildable:
-		Prerequisites: lammo, hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+		Prerequisites: hammo, !fammo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
 
         
 # ---- SILLYONE ----
@@ -1914,7 +1914,7 @@ SILLYONET2:
 	Valued:
 		Cost: 800
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~!tech1
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~!tech1
 	ProvidesPrerequisite@tech1: 
 		Prerequisite: tech1 
         
@@ -1923,7 +1923,7 @@ SILLYONET3:
 	Valued:
 		Cost: 1000
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~!tech2
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~!tech2
 	ProvidesPrerequisite@tech2: 
 		Prerequisite: tech2
         
@@ -1932,7 +1932,7 @@ SILLYONET4:
 	Valued:
 		Cost: 1300
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~!tech3
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~!tech3
 	ProvidesPrerequisite@tech3: 
 		Prerequisite: tech3
         
@@ -1941,7 +1941,7 @@ SILLYONET5:
 	Valued:
 		Cost: 1600
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
 	ProvidesPrerequisite@tech4: 
 		Prerequisite: tech4  
         
@@ -1950,7 +1950,7 @@ SILLYONET6:
 	Valued:
 		Cost: 1900
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
 	ProvidesPrerequisite@tech5: 
 		Prerequisite: tech5 
         
@@ -1959,7 +1959,7 @@ SILLYONET7:
 	Valued:
 		Cost: 2200
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
 	ProvidesPrerequisite@tech6: 
 		Prerequisite: tech6
         
@@ -1968,7 +1968,7 @@ SILLYONET8:
 	Valued:
 		Cost: 2500
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
 	ProvidesPrerequisite@tech7: 
 		Prerequisite: tech7
         
@@ -1977,7 +1977,7 @@ SILLYONET9:
 	Valued:
 		Cost: 2800
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
 	ProvidesPrerequisite@tech8: 
 		Prerequisite: tech8
         
@@ -1986,7 +1986,7 @@ SILLYONET10:
 	Valued:
 		Cost: 3000
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
 	ProvidesPrerequisite@tech9: 
 		Prerequisite: tech9
         
@@ -1995,7 +1995,7 @@ SILLYONET11:
 	Valued:
 		Cost: 3200
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
 	ProvidesPrerequisite@tech10: 
 		Prerequisite: tech10
         
@@ -2004,7 +2004,7 @@ SILLYONET12:
 	Valued:
 		Cost: 3400
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
 	ProvidesPrerequisite@tech11: 
 		Prerequisite: tech11
         
@@ -2013,7 +2013,7 @@ SILLYONET13:
 	Valued:
 		Cost: 3600
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
 	ProvidesPrerequisite@tech12: 
 		Prerequisite: tech12
         
@@ -2022,7 +2022,7 @@ SILLYONET14:
 	Valued:
 		Cost: 3800
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
 	ProvidesPrerequisite@tech13: 
 		Prerequisite: tech13
         
@@ -2031,16 +2031,16 @@ SILLYONET15:
 	Valued:
 		Cost: 4000
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
 	ProvidesPrerequisite@tech14: 
 		Prerequisite: tech14
         
 SILLYONET16:
-	Inherits: HAMMOT15
+	Inherits: SILLYONET15
 	Valued:
 		Cost: 4500
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, lammo, hammo, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+		Prerequisites: forb, fammo, !sillyone, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
 
         
 # ---- SILLYTWO ----
@@ -2051,7 +2051,7 @@ SILLYTWOT2:
 	Valued:
 		Cost: 800
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~!tech1
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~!tech1
 	ProvidesPrerequisite@tech1: 
 		Prerequisite: tech1 
         
@@ -2060,7 +2060,7 @@ SILLYTWOT3:
 	Valued:
 		Cost: 1000
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~!tech2
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~!tech2
 	ProvidesPrerequisite@tech2: 
 		Prerequisite: tech2
         
@@ -2069,7 +2069,7 @@ SILLYTWOT4:
 	Valued:
 		Cost: 1300
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~!tech3
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~!tech3
 	ProvidesPrerequisite@tech3: 
 		Prerequisite: tech3
         
@@ -2078,7 +2078,7 @@ SILLYTWOT5:
 	Valued:
 		Cost: 1600
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
 	ProvidesPrerequisite@tech4: 
 		Prerequisite: tech4  
         
@@ -2087,7 +2087,7 @@ SILLYTWOT6:
 	Valued:
 		Cost: 1900
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
 	ProvidesPrerequisite@tech5: 
 		Prerequisite: tech5 
         
@@ -2096,7 +2096,7 @@ SILLYTWOT7:
 	Valued:
 		Cost: 2200
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
 	ProvidesPrerequisite@tech6: 
 		Prerequisite: tech6
         
@@ -2105,7 +2105,7 @@ SILLYTWOT8:
 	Valued:
 		Cost: 2500
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
 	ProvidesPrerequisite@tech7: 
 		Prerequisite: tech7
         
@@ -2114,7 +2114,7 @@ SILLYTWOT9:
 	Valued:
 		Cost: 2800
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
 	ProvidesPrerequisite@tech8: 
 		Prerequisite: tech8
         
@@ -2123,7 +2123,7 @@ SILLYTWOT10:
 	Valued:
 		Cost: 3000
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
 	ProvidesPrerequisite@tech9: 
 		Prerequisite: tech9
         
@@ -2132,7 +2132,7 @@ SILLYTWOT11:
 	Valued:
 		Cost: 3200
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
 	ProvidesPrerequisite@tech10: 
 		Prerequisite: tech10
         
@@ -2141,7 +2141,7 @@ SILLYTWOT12:
 	Valued:
 		Cost: 3400
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
 	ProvidesPrerequisite@tech11: 
 		Prerequisite: tech11
         
@@ -2150,7 +2150,7 @@ SILLYTWOT13:
 	Valued:
 		Cost: 3600
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
 	ProvidesPrerequisite@tech12: 
 		Prerequisite: tech12
         
@@ -2159,7 +2159,7 @@ SILLYTWOT14:
 	Valued:
 		Cost: 3800
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
 	ProvidesPrerequisite@tech13: 
 		Prerequisite: tech13
         
@@ -2168,16 +2168,16 @@ SILLYTWOT15:
 	Valued:
 		Cost: 4000
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
 	ProvidesPrerequisite@tech14: 
 		Prerequisite: tech14
         
 SILLYTWOT16:
-	Inherits: HAMMOT15
+	Inherits: SILLYTWOT15
 	Valued:
 		Cost: 4500
 	Buildable:
-		Prerequisites: lammo, hammo, fammo, nukenew, nuk2new, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+		Prerequisites: fammo, radarnew, !sillytwo, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
 
         
 # ---- SILLYTHREE ----
@@ -2188,7 +2188,7 @@ SILLYTHREET2:
 	Valued:
 		Cost: 800
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~!tech1
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~!tech1
 	ProvidesPrerequisite@tech1: 
 		Prerequisite: tech1 
         
@@ -2197,7 +2197,7 @@ SILLYTHREET3:
 	Valued:
 		Cost: 1000
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~!tech2
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~!tech2
 	ProvidesPrerequisite@tech2: 
 		Prerequisite: tech2
         
@@ -2206,7 +2206,7 @@ SILLYTHREET4:
 	Valued:
 		Cost: 1300
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~!tech3
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~!tech3
 	ProvidesPrerequisite@tech3: 
 		Prerequisite: tech3
         
@@ -2215,7 +2215,7 @@ SILLYTHREET5:
 	Valued:
 		Cost: 1600
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~!tech4
 	ProvidesPrerequisite@tech4: 
 		Prerequisite: tech4  
         
@@ -2224,7 +2224,7 @@ SILLYTHREET6:
 	Valued:
 		Cost: 1900
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~!tech5
 	ProvidesPrerequisite@tech5: 
 		Prerequisite: tech5 
         
@@ -2233,7 +2233,7 @@ SILLYTHREET7:
 	Valued:
 		Cost: 2200
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~!tech6
 	ProvidesPrerequisite@tech6: 
 		Prerequisite: tech6
         
@@ -2242,7 +2242,7 @@ SILLYTHREET8:
 	Valued:
 		Cost: 2500
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~!tech7
 	ProvidesPrerequisite@tech7: 
 		Prerequisite: tech7
         
@@ -2251,7 +2251,7 @@ SILLYTHREET9:
 	Valued:
 		Cost: 2800
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~!tech8
 	ProvidesPrerequisite@tech8: 
 		Prerequisite: tech8
         
@@ -2260,7 +2260,7 @@ SILLYTHREET10:
 	Valued:
 		Cost: 3000
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~!tech9
 	ProvidesPrerequisite@tech9: 
 		Prerequisite: tech9
         
@@ -2269,7 +2269,7 @@ SILLYTHREET11:
 	Valued:
 		Cost: 3200
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~!tech10
 	ProvidesPrerequisite@tech10: 
 		Prerequisite: tech10
         
@@ -2278,7 +2278,7 @@ SILLYTHREET12:
 	Valued:
 		Cost: 3400
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~!tech11
 	ProvidesPrerequisite@tech11: 
 		Prerequisite: tech11
         
@@ -2287,7 +2287,7 @@ SILLYTHREET13:
 	Valued:
 		Cost: 3600
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~!tech12
 	ProvidesPrerequisite@tech12: 
 		Prerequisite: tech12
         
@@ -2296,7 +2296,7 @@ SILLYTHREET14:
 	Valued:
 		Cost: 3800
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~!tech13
 	ProvidesPrerequisite@tech13: 
 		Prerequisite: tech13
         
@@ -2305,16 +2305,16 @@ SILLYTHREET15:
 	Valued:
 		Cost: 4000
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~!tech14
 	ProvidesPrerequisite@tech14: 
 		Prerequisite: tech14
         
 SILLYTHREET16:
-	Inherits: HAMMOT15
+	Inherits: SILLYTHREET15
 	Valued:
 		Cost: 4500
 	Buildable:
-		Prerequisites: labnew, newhosp, forb, nukenew, nuk2new, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
+		Prerequisites: forb, radarnew, !sillythree, ~tech0, ~tech1, ~tech2, ~tech3, ~tech4, ~tech5, ~tech6, ~tech7, ~tech8, ~tech9, ~tech10, ~tech11, ~tech12, ~tech13, ~tech14
         
 # ---- FLYTOW ----
 
@@ -2446,7 +2446,7 @@ FLYTOWT15:
 		Prerequisite: tech14
         
 FLYTOWT16:
-	Inherits: HAMMOT15
+	Inherits: FLYTOWT15
 	Valued:
 		Cost: 4500
 	Buildable:
@@ -2582,7 +2582,7 @@ CFLARFT15:
 		Prerequisite: tech14
         
 CFLARFT16:
-	Inherits: HAMMOT15
+	Inherits: CFLARFT15
 	Valued:
 		Cost: 4500
 	Buildable:
@@ -2718,7 +2718,7 @@ DOMET15:
 		Prerequisite: tech14
         
 DOMET16:
-	Inherits: HAMMOT15
+	Inherits: DOMET15
 	Valued:
 		Cost: 4500
 	Buildable:
@@ -2757,10 +2757,10 @@ OILER2T2:
 		Prerequisite: oiler2t2
 	GrantConditionOnPrerequisite:
 		Condition: givecash
-		Prerequisites: oiler2build2
+		Prerequisites: oiler2build1
 	CashTrickler:
 		Period: 60
-		Amount: 16
+		Amount: 8
 		ShowTicks: true
 		RequiresCondition: cash && givecash
         
@@ -2772,10 +2772,10 @@ OILER2T3:
 		Prerequisite: oiler2t2
 	GrantConditionOnPrerequisite:
 		Condition: givecash
-		Prerequisites: oiler2build3
+		Prerequisites: oiler2build1
 	CashTrickler:
 		Period: 60
-		Amount: 16
+		Amount: 10
 		ShowTicks: true
 		RequiresCondition: cash && givecash
 
@@ -2783,56 +2783,18 @@ OILER2T3:
 OILER2BUILDABLE:
 	AlwaysVisible:
 	Tooltip:
-		Name: Activate external Oil pumping
+		Name: Activate Lane Oil pumping
 	Buildable:
 		BuildPaletteOrder: 150
 		Queue: Defenses.Fact
 		BuildLimit: 1
-		Prerequisites: cash2, ~!oiler2build1
-		Description: Cash
+		Prerequisites: cash2, !oiler2build1
+		Description: Endables all oipumps along your main path. You can capture them by having ground units passing them parallel your path.
 		IconPalette: ra
 	Valued:
-		Cost: 1200
+		Cost: 2500
 	RenderSprites:
 		Image: oiler2
 		PlayerPalette: raplayer
 	ProvidesPrerequisite@oiler2build1: 
 		Prerequisite: oiler2build1
-        
-OILER2BUILDABLE2:
-	AlwaysVisible:
-	Tooltip:
-		Name: Activate far external Oil pumping
-	Buildable:
-		BuildPaletteOrder: 150
-		Queue: Defenses.Fact
-		BuildLimit: 1
-		Prerequisites: cash2, ~oiler2build1, ~!oiler2build2
-		Description: Cash
-		IconPalette: ra
-	Valued:
-		Cost: 1450
-	RenderSprites:
-		Image: oiler2
-		PlayerPalette: raplayer
-	ProvidesPrerequisite@oiler2build2: 
-		Prerequisite: oiler2build2
-        
-OILER2BUILDABLE3:
-	AlwaysVisible:
-	Tooltip:
-		Name: Activate distand external Oil pumping
-	Buildable:
-		BuildPaletteOrder: 150
-		Queue: Defenses.Fact
-		BuildLimit: 1
-		Prerequisites: cash2, ~oiler2build1, ~oiler2build2, !oiler2build3
-		Description: Cash
-		IconPalette: ra
-	Valued:
-		Cost: 1700
-	RenderSprites:
-		Image: oiler2
-		PlayerPalette: raplayer
-	ProvidesPrerequisite@oiler2build3: 
-		Prerequisite: oiler2build3

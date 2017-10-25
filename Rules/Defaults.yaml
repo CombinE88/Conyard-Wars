@@ -118,6 +118,10 @@
 		SellSounds: cashturn.aud
 	Capturable:
 	WithMakeAnimation:
+	ProximityExternalCondition@topCommando:
+		Condition: stpcmmdo
+		Range: 8c0
+		ValidStances: Enemy
 
 PROC:
 	Valued:
@@ -203,5 +207,9 @@ HARV:
 		WarnProbability: 0
 		CrushSound: xplobig6.aud
 		CrushClasses: Husk
+        
+^Infantry:
+	SelectionDecorations:
+		Bounds: 12,17,0,-6 
 		
 		

@@ -92,7 +92,7 @@ upgradesymbs:
 		Start: 0	 
 	flamer: flamerrplus
 		Start: 0 
-	ltnk: ltnkplus
+	ltnk: ltnkflakplu
 		Start: 0 
 	artyfive: artyplus
 		Start: 0 
@@ -142,7 +142,7 @@ flamerfire:
 		
 ltnkfire:
 	idle: e1
-	icon: ltnkfire.shp
+	icon: ltnkflak.shp
 		AddExtension: False	  
 		
 artyfire:
@@ -270,12 +270,12 @@ upgradehindicon3:
 	icon: 3tnkupgradeicons.shp
 		Start: 0
 		AddExtension: False
-3tnkupgradeicons3:
+3tnkupgradeicons2:
 	idle: e1
 	icon: 3tnkupgradeicons.shp
 		Start: 1
 		AddExtension: False
-3tnkupgradeicons2:
+3tnkupgradeicons3:
 	idle: e1
 	icon: 3tnkupgradeicons.shp
 		Start: 2
@@ -803,11 +803,18 @@ oiler:
 		AddExtension: False			
 oiler2:
 	idle: oiler2
-		Length: 10
 		Tick: 120
 		Offset: 0,14
 	damaged-idle: oiler2
-		Length:10
+		Start: 10
+		Tick: 120
+		Offset: 0,14
+	active: oiler2
+		Length: 10
+		Tick: 120
+		Offset: 0,14
+	damaged-active: oiler2
+		Length: 10
 		Start: 10
 		Tick: 120
 		Offset: 0,14
@@ -1683,6 +1690,22 @@ fixnew:
 		Length: *   
 	icon: amofcameo.shp
 		AddExtension: False
+        
+spen:
+	idle: spen
+	damaged-idle: spen
+		Start: 1
+	make: spenmake
+		Length: *
+		Tick: 40
+	dead: spen
+		Start: 1
+	bib: bib2
+		UseTilesetExtension: true
+		Length: *   
+	icon: ssicon.shp
+		AddExtension: False
+    
 		
 fixtech:
 	idle: silo
@@ -2185,19 +2208,17 @@ weapra:
 		Length: *
 		UseTilesetExtension: true
 	icon: agunicon
+    
+bubbles:
+	idle:
+		Length: *
+		Tick: 220
 	
 	
-mgg:
-	idle: mgg
-		Facings: 32
-	turret: tranra
-		Frames: 8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,0,1,2,3,4,5,6,7
-		Facings: 32
-		Tick: 30
-	rotor: lrotor
-		ZOffset: 512
-		Length: 4
-	icon: mggicon
+ss:
+	idle: ss
+		Facings: 16
+	icon: ssicon
 	
 discs:
 	idle: discthrow
@@ -2276,6 +2297,14 @@ fixra:
 minemissile:
 	idle: mine
 		Start: 2
+        
+ltnk:
+	flakturret: apctur
+		Facings: 32
+	flakmuzzle: apcmuz
+		Length: 3
+		Stride: 6
+		Facings: 8    
 		
 leviathan:
 	idle: leviathantd
@@ -2395,6 +2424,12 @@ hind:
 		Length: 6
 		Facings: 8
 	icon: hindicon
+	idle-overlay: lrotorlg
+		Start: 4
+		Length: 8
+	slow-rotor: lrotorlg
+		Start: 4
+		Length: 8
     
 3tnkfactory:
 	idle: havyweap
@@ -2413,7 +2448,7 @@ hind:
 	make: havyweapmake
 		Length: *
 		Tick: 80
-	bib: bib1
+	bib: bib2
 		UseTilesetExtension: true
 		Length: *
 	icon: 3tnkicon.shp
@@ -2427,6 +2462,8 @@ new3tnk:
 		Start: 32
 		Facings: 32
 		UseClassicFacingFudge: True
+	samturr: ssamra
+		Facings: 32
 	muzzle: gunfire2
 		Length: 5
 	icon: 3tnkicon
