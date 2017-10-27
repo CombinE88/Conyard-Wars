@@ -771,12 +771,63 @@ Upgrade.orcaUpgradeRange:
 	ProvidesPrerequisite@orcaUpgradeReload: 
 		Prerequisite: orcaUpgradeReload  
         
+Upgrade.hunterUpgradeDamage:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Orca Hunter Damage 
+	Buildable:
+		BuildPaletteOrder: 143
+		Prerequisites: airfacthunter
+		Queue: Infantry1.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 10%
+	Valued:
+		Cost: 2300
+	RenderSprites:
+		Image: upgradeorbmicon1
+	ProvidesPrerequisite@orbmUpgradeDamage: 
+		Prerequisite: orbmUpgradeDamage
+		
+Upgrade.hunterUpgradeHealth:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Orca Hunter Health
+	Buildable:
+		BuildPaletteOrder: 144
+		Prerequisites: airfacthunter
+		Queue: Infantry1.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2300
+	RenderSprites:
+		Image: upgradeorbmicon2
+	ProvidesPrerequisite@orbmUpgradeHealth: 
+		Prerequisite: orbmUpgradeHealth
+		
+Upgrade.hunterUpgradeRange:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Orca Hunter Range
+	Buildable:
+		BuildPaletteOrder: 145
+		Prerequisites: airfacthunter
+		Queue: Infantry1.Fact
+		BuildLimit: 1
+		Description: Upgradevalue: 15%
+	Valued:
+		Cost: 2300
+	RenderSprites:
+		Image: upgradeorbmicon3
+	ProvidesPrerequisite@orbmUpgradeReload: 
+		Prerequisite: orbmUpgradeReload  
+        
 Upgrade.hindUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
 		Name: upgrade Hind Damage 
 	Buildable:
-		BuildPaletteOrder: 145
+		BuildPaletteOrder: 146
 		Prerequisites: airfacthind
 		Queue: Infantry1.Fact
 		BuildLimit: 1
@@ -793,7 +844,7 @@ Upgrade.hindUpgradeHealth:
 	Tooltip:
 		Name: upgrade Hind Health
 	Buildable:
-		BuildPaletteOrder: 146
+		BuildPaletteOrder: 147
 		Prerequisites: airfacthind
 		Queue: Infantry1.Fact
 		BuildLimit: 1
@@ -810,7 +861,7 @@ Upgrade.hindUpgradeReload:
 	Tooltip:
 		Name: upgrade Hind Range
 	Buildable:
-		BuildPaletteOrder: 147
+		BuildPaletteOrder: 148
 		Prerequisites: airfacthind
 		Queue: Infantry1.Fact
 		BuildLimit: 1
@@ -1080,211 +1131,211 @@ Upgrade.ftnkUpgradeReload:
 		Prerequisite: ftnkUpgradeReload		
 
 
-Upgrade.fawrUpgradeDamage:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Flying Advanced Guardtower Damage 
-	Buildable:
-		BuildPaletteOrder: 300
-		Prerequisites: secretfactory2, ~missnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 10%
-	Valued:
-		Cost: 2500
-	RenderSprites:
-		Image: Upgradefatwricon1
-	ProvidesPrerequisite@fawrUpgradeDamage: 
-		Prerequisite: fawrUpgradeDamage
+#Upgrade.fawrUpgradeDamage:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Flying Advanced Guardtower Damage 
+#	Buildable:
+#		BuildPaletteOrder: 300
+#		Prerequisites: secretfactory2, ~missnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 10%
+#	Valued:
+#		Cost: 2500
+#	RenderSprites:
+#		Image: Upgradefatwricon1
+#	ProvidesPrerequisite@fawrUpgradeDamage: 
+#		Prerequisite: fawrUpgradeDamage
 		
-Upgrade.fawrUpgradeHealth:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Flying Advanced Guardtower Health
-	Buildable:
-		BuildPaletteOrder: 301
-		Prerequisites: secretfactory2, ~missnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 15%
-	Valued:
-		Cost: 2500
-	RenderSprites:
-		Image: Upgradefatwricon2
-	ProvidesPrerequisite@fawrUpgradeHealth: 
-		Prerequisite: fawrUpgradeHealth
+#Upgrade.fawrUpgradeHealth:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Flying Advanced Guardtower Health
+#	Buildable:
+#		BuildPaletteOrder: 301
+#		Prerequisites: secretfactory2, ~missnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 15%
+#	Valued:
+#		Cost: 2500
+#	RenderSprites:
+#		Image: Upgradefatwricon2
+#	ProvidesPrerequisite@fawrUpgradeHealth: 
+#		Prerequisite: fawrUpgradeHealth
 		
-Upgrade.fawrUpgradeReload:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Flying Advanced Guardtower Reload
-	Buildable:
-		BuildPaletteOrder: 302
-		Prerequisites: secretfactory2, ~missnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 15%
-	Valued:
-		Cost: 2500
-	RenderSprites:
-		Image: Upgradefatwricon3
-	ProvidesPrerequisite@fawrUpgradeReload: 
-		Prerequisite: fawrUpgradeReload
+#Upgrade.fawrUpgradeReload:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Flying Advanced Guardtower Reload
+#	Buildable:
+#		BuildPaletteOrder: 302
+#		Prerequisites: secretfactory2, ~missnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 15%
+#	Valued:
+#		Cost: 2500
+#	RenderSprites:
+#		Image: Upgradefatwricon3
+#	ProvidesPrerequisite@fawrUpgradeReload: 
+#		Prerequisite: fawrUpgradeReload
 
-Upgrade.tmplsUpgradeDamage:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Temple Angel Damage 
-	Buildable:
-		BuildPaletteOrder: 310
-		Prerequisites: secretfactory1, ~tmplnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 10%
-	Valued:
-		Cost: 2800
-	RenderSprites:
-		Image: Upgradeobliicon1
-	ProvidesPrerequisite@tmplsUpgradeDamage: 
-		Prerequisite: tmplsUpgradeDamage
+#Upgrade.tmplsUpgradeDamage:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Temple Angel Damage 
+#	Buildable:
+#		BuildPaletteOrder: 310
+#		Prerequisites: secretfactory1, ~tmplnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 10%
+#	Valued:
+#		Cost: 2800
+#	RenderSprites:
+#		Image: Upgradeobliicon1
+#	ProvidesPrerequisite@tmplsUpgradeDamage: 
+#		Prerequisite: tmplsUpgradeDamage
 		
-Upgrade.tmplsUpgradeHealth:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Temple Angel Health
-	Buildable:
-		BuildPaletteOrder: 311
-		Prerequisites: secretfactory1, ~tmplnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 15%
-	Valued:
-		Cost: 2800
-	RenderSprites:
-		Image: Upgradeobliicon2
-	ProvidesPrerequisite@tmplsUpgradeHealth: 
-		Prerequisite: tmplsUpgradeHealth
+#Upgrade.tmplsUpgradeHealth:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Temple Angel Health
+#	Buildable:
+#		BuildPaletteOrder: 311
+#		Prerequisites: secretfactory1, ~tmplnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 15%
+#	Valued:
+#		Cost: 2800
+#	RenderSprites:
+#		Image: Upgradeobliicon2
+#	ProvidesPrerequisite@tmplsUpgradeHealth: 
+#		Prerequisite: tmplsUpgradeHealth
 		
-Upgrade.tmplsUpgradeReload:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Temple Angel Reload
-	Buildable:
-		BuildPaletteOrder: 312
-		Prerequisites: secretfactory1, ~tmplnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 15%
-	Valued:
-		Cost: 2800
-	RenderSprites:
-		Image: Upgradeobliicon3
-	ProvidesPrerequisite@tmplsUpgradeReload: 
-		Prerequisite: tmplsUpgradeReload
-
-
-Upgrade.guntnkUpgradeDamage:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Nuclear Command Vehicle Damage 
-	Buildable:
-		BuildPaletteOrder: 330
-		Prerequisites: secretfactory3, ~tmplnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 10%
-	Valued:
-		Cost: 3000
-	RenderSprites:
-		Image: Upgradenukeicon1
-	ProvidesPrerequisite@guntnkUpgradeDamage: 
-		Prerequisite: guntnkUpgradeDamage
-		
-Upgrade.guntnkUpgradeHealth:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Nuclear Command Vehicle Range
-	Buildable:
-		BuildPaletteOrder: 331
-		Prerequisites: secretfactory3, ~tmplnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 15%
-	Valued:
-		Cost: 3000
-	RenderSprites:
-		Image: Upgradenukeicon2
-	ProvidesPrerequisite@guntnkUpgradeHealth: 
-		Prerequisite: guntnkUpgradeHealth
-		
-Upgrade.guntnkUpgradeReload:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Nuclear Command Vehicle Reload
-	Buildable:
-		BuildPaletteOrder: 332
-		Prerequisites: secretfactory3, ~tmplnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 15%
-	Valued:
-		Cost: 3000
-	RenderSprites:
-		Image: Upgradenukeicon3
-	ProvidesPrerequisite@guntnkUpgradeReload: 
-		Prerequisite: guntnkUpgradeReload
+#Upgrade.tmplsUpgradeReload:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Temple Angel Reload
+#	Buildable:
+#		BuildPaletteOrder: 312
+#		Prerequisites: secretfactory1, ~tmplnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 15%
+#	Valued:
+#		Cost: 2800
+#	RenderSprites:
+#		Image: Upgradeobliicon3
+#	ProvidesPrerequisite@tmplsUpgradeReload: 
+#		Prerequisite: tmplsUpgradeReload
 
 
-Upgrade.moicoUpgradeDamage:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Mobile Ion Cannon Damage 
-	Buildable:
-		BuildPaletteOrder: 320
-		Prerequisites: secretfactory4, ~missnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 10%
-	Valued:
-		Cost: 2500
-	RenderSprites:
-		Image: Upgradeioncicon1
-	ProvidesPrerequisite@moicoUpgradeDamage: 
-		Prerequisite: moicoUpgradeDamage
+#Upgrade.guntnkUpgradeDamage:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Nuclear Command Vehicle Damage 
+#	Buildable:
+#		BuildPaletteOrder: 330
+#		Prerequisites: secretfactory3, ~tmplnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 10%
+#	Valued:
+#		Cost: 3000
+#	RenderSprites:
+#		Image: Upgradenukeicon1
+#	ProvidesPrerequisite@guntnkUpgradeDamage: 
+#		Prerequisite: guntnkUpgradeDamage
+#		
+#Upgrade.guntnkUpgradeHealth:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Nuclear Command Vehicle Range
+#	Buildable:
+#		BuildPaletteOrder: 331
+#		Prerequisites: secretfactory3, ~tmplnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 15%
+#	Valued:
+#		Cost: 3000
+#	RenderSprites:
+#		Image: Upgradenukeicon2
+#	ProvidesPrerequisite@guntnkUpgradeHealth: 
+#		Prerequisite: guntnkUpgradeHealth
+#		
+#Upgrade.guntnkUpgradeReload:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Nuclear Command Vehicle Reload
+#	Buildable:
+#		BuildPaletteOrder: 332
+#		Prerequisites: secretfactory3, ~tmplnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 15%
+#	Valued:
+#		Cost: 3000
+#	RenderSprites:
+#		Image: Upgradenukeicon3
+#	ProvidesPrerequisite@guntnkUpgradeReload: 
+#		Prerequisite: guntnkUpgradeReload
+
+
+#Upgrade.moicoUpgradeDamage:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Mobile Ion Cannon Damage 
+#	Buildable:
+#		BuildPaletteOrder: 320
+#		Prerequisites: secretfactory4, ~missnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 10%
+#	Valued:
+#		Cost: 2500
+#	RenderSprites:
+#		Image: Upgradeioncicon1
+#	ProvidesPrerequisite@moicoUpgradeDamage: 
+#		Prerequisite: moicoUpgradeDamage
+#		
+#Upgrade.moicoUpgradeHealth:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Mobile Ion Cannon Range
+#	Buildable:
+#		BuildPaletteOrder: 321
+#		Prerequisites: secretfactory4, ~missnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 15%
+#	Valued:
+#		Cost: 2500
+#	RenderSprites:
+#		Image: Upgradeioncicon2
+#	ProvidesPrerequisite@moicoUpgradeHealth: 
+#		Prerequisite: moicoUpgradeHealth
 		
-Upgrade.moicoUpgradeHealth:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Mobile Ion Cannon Range
-	Buildable:
-		BuildPaletteOrder: 321
-		Prerequisites: secretfactory4, ~missnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 15%
-	Valued:
-		Cost: 2500
-	RenderSprites:
-		Image: Upgradeioncicon2
-	ProvidesPrerequisite@moicoUpgradeHealth: 
-		Prerequisite: moicoUpgradeHealth
-		
-Upgrade.moicoUpgradeReload:
-	AlwaysVisible:
-	Tooltip:
-		Name: upgrade Mobile Ion Cannon Reload
-	Buildable:
-		BuildPaletteOrder: 322
-		Prerequisites: secretfactory4, ~missnew
-		Queue: Infantry1.Fact
-		BuildLimit: 1
-		Description: Upgradevalue: 15%
-	Valued:
-		Cost: 2500
-	RenderSprites:
-		Image: Upgradeioncicon3
-	ProvidesPrerequisite@moicoUpgradeReload: 
-		Prerequisite: moicoUpgradeReload   
+#Upgrade.moicoUpgradeReload:
+#	AlwaysVisible:
+#	Tooltip:
+#		Name: upgrade Mobile Ion Cannon Reload
+#	Buildable:
+#		BuildPaletteOrder: 322
+#		Prerequisites: secretfactory4, ~missnew
+#		Queue: Infantry1.Fact
+#		BuildLimit: 1
+#		Description: Upgradevalue: 15%
+#	Valued:
+#		Cost: 2500
+#	RenderSprites:
+#		Image: Upgradeioncicon3
+#	ProvidesPrerequisite@moicoUpgradeReload: 
+#		Prerequisite: moicoUpgradeReload   
 
 Upgrade.tranUpgradeDamage:
 	AlwaysVisible:

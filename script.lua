@@ -10,12 +10,12 @@ SecTechMid = {FIXT1, FIXT2, FIXT3}
 Oils = {OilTopL, OilMidLT, OilL, OilMidLB, OilBotL, OilTopM, OilMidMT, OilM, OilMidMB, OilBotM, OilTopR, OilMidRT, OilR, OilMidRB, OilBotR}
 
 
-Factorys = {"e1factory","e2factory" ,"e3factory" ,"e4factory" ,"e5factory" ,"e22factory", "rmbofactory" ,"carfactory1", "carfactory2", "carfactory3", "carfactory4", "carfactory5", "carfactory6", "carfactory7" ,"carfactory8", "airfact1" ,"airfact2", "secretfactory1", "secretfactory2", "secretfactory3", "secretfactory4", "carfactorybg","carfactory10", "airfact0" , "sillyfact1", "sillyfact2", "sillyfact3", "sillyfact4", "sillyfact5", "sillyfact6", "leviathanfact","airfacthind","3tnkfactory"}
+Factorys = {"e1factory","e2factory" ,"e3factory" ,"e4factory" ,"e5factory" ,"e22factory", "rmbofactory" ,"carfactory1", "carfactory2", "carfactory3", "carfactory4", "carfactory5", "carfactory6", "carfactory7" ,"carfactory8", "airfact1" ,"airfact2", "secretfactory1", "secretfactory2", "secretfactory3", "secretfactory4", "carfactorybg","carfactory10", "airfact0" , "sillyfact1", "sillyfact2", "sillyfact3", "sillyfact4", "sillyfact5", "sillyfact6", "leviathanfact","airfacthind","3tnkfactory","airfacthunter"}
 IndexedFactorys = {}
-FactorysExits = {CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(2,2),CVec.New(1,5),CVec.New(3,3),CVec.New(2,3),CVec.New(3,1),CVec.New(3,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,-1),CVec.New(1,-1),CVec.New(2,3),CVec.New(2,3),CVec.New(0,2),CVec.New(0,2),CVec.New(1,1),CVec.New(1,2),CVec.New(1,2),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(2,3),CVec.New(1,1),CVec.New(1,3)}
-QueueUnits = {"e1new", "e2new","e3new","e4new","e5new","e22new","rmbonew", "jeepnew","mtnknew","msamnew","htnknew", "artynew", "ftnknew","mlrsnew","bikenew","orcanew","helinew","tmplangel","fatwr","guntank","moico","bggynew","stnknew", "trannew", "sillyca", "harvnew", "sillybadr", "flagplat", "subway", "lstnew", "leviathan","hindnew","new3tnk"}
+FactorysExits = {CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(0,2),CVec.New(2,2),CVec.New(1,5),CVec.New(3,3),CVec.New(2,3),CVec.New(3,1),CVec.New(3,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,-1),CVec.New(1,-1),CVec.New(2,3),CVec.New(2,3),CVec.New(0,2),CVec.New(0,2),CVec.New(1,1),CVec.New(1,2),CVec.New(1,2),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(1,1),CVec.New(2,3),CVec.New(1,1),CVec.New(1,3),CVec.New(1,1)}
+QueueUnits = {"e1new", "e2new","e3new","e4new","e5new","e22new","rmbonew", "jeepnew","mtnknew","msamnew","htnknew", "artynew", "ftnknew","mlrsnew","bikenew","orcanew","helinew","tmplangel","fatwr","guntank","moico","bggynew","stnknew", "trannew", "sillyca", "harvnew", "sillybadr", "flagplat", "subway", "lstnew", "leviathan","hindnew","new3tnk","orcahunter"}
 QueueUnitsIndex = {}
-Values = {10,14,20,18,25,25,100, 30,45,50,100, 40, 30,20,20,55,60,120,120,70,160,30,45,25,200,150,200,175,100,150,1000,125,140}
+Values = {10,14,20,18,25,25,100, 30,45,50,100, 40, 30,20,20,55,60,120,120,70,160,30,45,25,200,150,200,175,100,150,1000,125,140,55}
 CashValuesLeft = {0,0,0}
 CashValuesRight = {0,0,0}
 
@@ -439,7 +439,7 @@ end
 	
 -- Build Trigger Precheck, if buildingtypes Match
 BuildTrigger = function(Unit)	
-	local Facts = Set {"e1factory","e2factory" ,"e3factory" ,"e4factory" ,"e5factory" ,"e22factory", "rmbofactory" ,"carfactory1", "carfactory2", "carfactory3", "carfactory4", "carfactory5", "carfactory6", "carfactory7" ,"carfactory8", "airfact2" ,"airfact1", "secretfactory1", "secretfactory2", "secretfactory3", "secretfactory4", "carfactorybg","stnknew", "airfact0","airfacthind","3tnkfactory"}
+	local Facts = Set {"e1factory","e2factory" ,"e3factory" ,"e4factory" ,"e5factory" ,"e22factory", "rmbofactory" ,"carfactory1", "carfactory2", "carfactory3", "carfactory4", "carfactory5", "carfactory6", "carfactory7" ,"carfactory8", "airfact2" ,"airfact1", "secretfactory1", "secretfactory2", "secretfactory3", "secretfactory4", "carfactorybg","stnknew", "airfact0","airfacthind","3tnkfactory","airfacthunter"}
 	if Facts[Unit.Type] then
 		StartBuilding(Unit)
 	end
@@ -486,7 +486,7 @@ RestartProduce = function(Unit)
 		Unit.Stop()
 		Unit.Destroy()
 		local Factorys = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
-			return C.Type == "e1factory" or C.Type == "e2factory" or C.Type == "e3factory" or C.Type == "e4factory" or C.Type == "e5factory" or C.Type == "e22factory" or C.Type == "rmbofactory" or C.Type == "carfactory1" or C.Type == "carfactory2" or C.Type == "carfactory3" or C.Type == "carfactory4" or C.Type == "carfactory5" or C.Type == "carfactory6" or C.Type == "carfactory7" or C.Type == "carfactory8" or C.Type == "airfact2"or C.Type == "airfact1" or C.Type == "secretfactory1" or C.Type == "secretfactory2" or C.Type == "secretfactory3" or C.Type == "secretfactory4" or C.Type == "carfactorybg" or C.Type == "carfactory10" or C.Type == "airfact0" or C.Type == "airfacthind" or C.Type == "3tnkfactory"
+			return C.Type == "e1factory" or C.Type == "e2factory" or C.Type == "e3factory" or C.Type == "e4factory" or C.Type == "e5factory" or C.Type == "e22factory" or C.Type == "rmbofactory" or C.Type == "carfactory1" or C.Type == "carfactory2" or C.Type == "carfactory3" or C.Type == "carfactory4" or C.Type == "carfactory5" or C.Type == "carfactory6" or C.Type == "carfactory7" or C.Type == "carfactory8" or C.Type == "airfact2"or C.Type == "airfact1" or C.Type == "secretfactory1" or C.Type == "secretfactory2" or C.Type == "secretfactory3" or C.Type == "secretfactory4" or C.Type == "carfactorybg" or C.Type == "carfactory10" or C.Type == "airfact0" or C.Type == "airfacthind" or C.Type == "3tnkfactory" or C.Type == "airfacthunter"
 		end)	
 		for k,v in ipairs(Factorys) do
 			if v.Owner == Unit.Owner then

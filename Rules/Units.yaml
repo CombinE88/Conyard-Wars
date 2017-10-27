@@ -75,7 +75,7 @@ RMBONEW:
 	Tooltip:
 		Name: Commando
 	Buildable:
-		BuildDuration: 4800
+		BuildDuration: 5500
 		BuildPaletteOrder: 50
 		Queue: E6Infantery
 		Description: Elite sniper infantry unit.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles
@@ -1702,6 +1702,143 @@ ORCANEW:
 		MoveSequence: move
 	-Selectable:
 	RejectsOrders:
+    
+
+ORCAHUNTER:
+	Inherits: ^Master10k
+	Inherits: ^Master50k
+	Inherits: ^Master100k
+	Inherits: ^AutoTargetAll
+	Inherits: ^EMPNoGuns  
+	Inherits: ^AutoTargetVehicleAircrafts
+	Inherits: ^Helicopter
+	
+	GrantConditionOnPrerequisite@orbmfire:
+		Condition: orbmfire
+		Prerequisites: orbmfire
+	GrantConditionOnPrerequisite@orbmDamage:
+		Condition: orbmDamage
+		Prerequisites: orbmUpgradeDamage
+	GrantConditionOnPrerequisite@orbmHealth:
+		Condition: orbmHealth
+		Prerequisites: orbmUpgradeHealth
+	GrantConditionOnPrerequisite@orbmReload:
+		Condition: orbmReload
+		Prerequisites: orbmUpgradeReload
+	FirepowerMultiplier:
+		Modifier: 110
+		RequiresCondition: orbmDamage
+	DamageMultiplier:
+		RequiresCondition: orbmHealth
+		Modifier: 85
+	RangeMultiplier:
+		RequiresCondition: orbmReload
+		Modifier: 115
+	WithDecoration@1:
+		Image: ranks
+		Sequence: rank1
+		RequiresCondition: (orbmDamage + orbmHealth + orbmReload) == 1
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@2:
+		Image: ranks
+		Sequence: rank2
+		RequiresCondition: (orbmDamage + orbmHealth + orbmReload) == 2
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@3:
+		Image: ranks
+		Sequence: rank3
+		RequiresCondition: (orbmDamage + orbmHealth + orbmReload) == 3
+		ReferencePoint: Bottom, Right
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@4:
+		Image: upgradesymbs
+		Sequence: orbmpolus
+		RequiresCondition: orbmfire
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	RenderSprites:
+		Image: orbm
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: Orca Hunter
+	Buildable:
+		BuildDuration: 6500
+		BuildPaletteOrder: 20
+		Queue: Flyhunt.Fact
+		Description: Helicopter Gunship with AG Missiles.\n  Strong vs Buildings, Tanks\n  Weak vs Infantry
+	Aircraft:
+		RearmBuildings: hpad
+		InitialFacing: 224
+		TurnSpeed: 4
+		Speed: 186
+		RepulsionSpeed: 600
+	Health:
+		HP: 185
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	Armament@PRIMARY:
+		Weapon: HunterMissiles
+		LocalOffset: 280,-298,-85,280,298,-85
+		AmmoPoolName: Rockets
+		RequiresCondition: !orbmfire
+	Armament@UPGRADE:
+		Weapon: HunterTuskLaser
+		LocalOffset: 280,-298,-85,280,298,-85
+		AmmoPoolName: Tusk
+		RequiresCondition: orbmfire
+	AttackHeli:
+		FacingTolerance: 20
+	AmmoPool@normal:
+		Name: Rockets
+		Ammo: 12
+		PipCount: 6
+		SelfReloads: true
+		ReloadCount: 12
+		SelfReloadDelay: 250
+	AmmoPool@Laser:
+		Name: Tusk
+		Ammo: 8
+		PipCount: 8
+		SelfReloads: true
+		ReloadCount: 6
+		SelfReloadDelay: 195
+	SpawnActorOnDeath:
+		Actor: ORCAHUNTER.Husk
+	AutoTarget:
+	Explodes:
+		Weapon: HeliExplode
+		EmptyWeapon: HeliExplode
+	WithMoveAnimation:
+		MoveSequence: move
+	-Selectable:
+	RejectsOrders:
+    
+ORCAHUNTER.Husk:
+	Inherits: ^HelicopterHusk
+	Tooltip:
+		Name: Orca Hunter
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 186
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	RenderSprites:
+		Image: orbm
 	
 HINDNEW:
 	Inherits: ^Master10k
@@ -1873,6 +2010,7 @@ HIND.Husk:
 		Sequence: slow-rotor
 		Offset: 0,0,300
 	RenderSprites:
+		PlayerPalette: raplayer
 		Image: hind
 
 STNKNEW:
@@ -1981,11 +2119,6 @@ STNKNEW:
 	-MustBeDestroyed:
 	-Selectable:
 	RejectsOrders:
-	ProximityExternalCondition@StopsDetectors:
-		Condition: stpdtct
-		Range: 6c0
-		ValidStance: Enemy, Neutral
-
 BIKENEW:
 	Inherits: ^Vehicle
 	Inherits: ^Master10k
@@ -2062,9 +2195,9 @@ BIKENEW:
 		TargetTypes: Ground, Vehicle
 	Mobile:
 		TurnSpeed: 7
-		Speed: 110
+		Speed: 130
 	Health:
-		HP: 250
+		HP: 325
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2190,9 +2323,6 @@ MLRSNEW:
 	Mobile:
 		Speed: 99
 		TurnSpeed: 7
-	SpeedMultiplier@stpdtct:
-		RequiresCondition: stpdtct
-		Modifier: 5
 	Health:
 		HP: 120
 	Armor:
@@ -2201,8 +2331,6 @@ MLRSNEW:
 		Range: 8c0
 	DetectCloaked:
 		Range: 6c0
-	ExternalCondition@stopsdetected:
-		Condition: stpdtct
 	Turreted:
 		TurnSpeed: 8
 		Offset: -128,0,128
@@ -2406,7 +2534,7 @@ FTNKNEW:
 	Tooltip:
 		Name: Flame Tank
 	Buildable:
-		BuildDuration: 4250
+		BuildDuration: 4550
 		BuildPaletteOrder: 120
 		Queue: Car6.Fact
 		Description: Heavily armored flame-throwing vehicle.\n  Strong vs Infantry, Buildings and Vehicles\n  Weak vs Tanks
@@ -2414,7 +2542,7 @@ FTNKNEW:
 		TurnSpeed: 7
 		Speed: 99
 	Health:
-		HP: 270
+		HP: 200
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -2449,48 +2577,50 @@ FATWR:
 	Inherits: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 	
-	GrantConditionOnPrerequisite@fawrDamage:
-		Condition: fawrDamage
-		Prerequisites: fawrUpgradeDamage
-	GrantConditionOnPrerequisite@fawrHealth:
-		Condition: fawrHealth
-		Prerequisites: fawrUpgradeHealth
-	GrantConditionOnPrerequisite@fawrReload:
-		Condition: fawrReload
-		Prerequisites: fawrUpgradeReload
-	FirepowerMultiplier:
-		Modifier: 110
-		RequiresCondition: fawrDamage
-	DamageMultiplier:
-		RequiresCondition: fawrHealth
-		Modifier: 85
-	ReloadDelayMultiplier:
-		RequiresCondition: fawrReload
-		Modifier: 85
-	WithDecoration@1:
-		Image: ranks
-		Sequence: rank1
-		RequiresCondition: (fawrDamage + fawrHealth + fawrReload) == 1
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
-	WithDecoration@2:
-		Image: ranks
-		Sequence: rank2
-		RequiresCondition: (fawrDamage + fawrHealth + fawrReload) == 2
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
-	WithDecoration@3:
-		Image: ranks
-		Sequence: rank3
-		RequiresCondition: (fawrDamage + fawrHealth + fawrReload) == 3
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
+#	GrantConditionOnPrerequisite@fawrDamage:
+#		Condition: fawrDamage
+#		Prerequisites: fawrUpgradeDamage
+#	GrantConditionOnPrerequisite@fawrHealth:
+#		Condition: fawrHealth
+#		Prerequisites: fawrUpgradeHealth
+#	GrantConditionOnPrerequisite@fawrReload:
+#		Condition: fawrReload
+#		Prerequisites: fawrUpgradeReload
+#	FirepowerMultiplier:
+#		Modifier: 110
+#		RequiresCondition: fawrDamage
+#	DamageMultiplier:
+#		RequiresCondition: fawrHealth
+#		Modifier: 85
+#	ReloadDelayMultiplier:
+#		RequiresCondition: fawrReload
+#		Modifier: 85
+#	WithDecoration@1:
+#		Image: ranks
+#		Sequence: rank1
+#		RequiresCondition: (fawrDamage + fawrHealth + fawrReload) == 1
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
+#	WithDecoration@2:
+#		Image: ranks
+#		Sequence: rank2
+#		RequiresCondition: (fawrDamage + fawrHealth + fawrReload) == 2
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
+#	WithDecoration@3:
+#		Image: ranks
+#		Sequence: rank3
+#		RequiresCondition: (fawrDamage + fawrHealth + fawrReload) == 3
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
+	DetectCloaked:
+		Range: 6c0
 	RenderSprites:
 		Image: fatwr
 	Valued:
@@ -2498,7 +2628,7 @@ FATWR:
 	Tooltip:
 		Name: Flying Advanced Guardtower
 	Health:
-		HP: 350
+		HP: 290
 	Buildable:
 		BuildDuration: 5500
 		BuildPaletteOrder: 60
@@ -2557,48 +2687,48 @@ TMPLANGEL:
 	Inherits: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 	
-	GrantConditionOnPrerequisite@tmplsDamage:
-		Condition: tmplsDamage
-		Prerequisites: tmplsUpgradeDamage
-	GrantConditionOnPrerequisite@tmplsHealth:
-		Condition: tmplsHealth
-		Prerequisites: tmplsUpgradeHealth
-	GrantConditionOnPrerequisite@tmplsReload:
-		Condition: tmplsReload
-		Prerequisites: tmplsUpgradeReload
-	FirepowerMultiplier:
-		Modifier: 110
-		RequiresCondition: tmplsDamage
-	DamageMultiplier:
-		RequiresCondition: tmplsHealth
-		Modifier: 85
-	ReloadDelayMultiplier:
-		RequiresCondition: tmplsReload
-		Modifier: 85
-	WithDecoration@1:
-		Image: ranks
-		Sequence: rank1
-		RequiresCondition: (tmplsDamage + tmplsHealth + tmplsReload) == 1
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
-	WithDecoration@2:
-		Image: ranks
-		Sequence: rank2
-		RequiresCondition: (tmplsDamage + tmplsHealth + tmplsReload) == 2
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
-	WithDecoration@3:
-		Image: ranks
-		Sequence: rank3
-		RequiresCondition: (tmplsDamage + tmplsHealth + tmplsReload) == 3
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
+#	GrantConditionOnPrerequisite@tmplsDamage:
+#		Condition: tmplsDamage
+#		Prerequisites: tmplsUpgradeDamage
+#	GrantConditionOnPrerequisite@tmplsHealth:
+#		Condition: tmplsHealth
+#		Prerequisites: tmplsUpgradeHealth
+#	GrantConditionOnPrerequisite@tmplsReload:
+#		Condition: tmplsReload
+#		Prerequisites: tmplsUpgradeReload
+#	FirepowerMultiplier:
+#		Modifier: 110
+#		RequiresCondition: tmplsDamage
+#	DamageMultiplier:
+#		RequiresCondition: tmplsHealth
+#		Modifier: 85
+#	ReloadDelayMultiplier:
+#		RequiresCondition: tmplsReload
+#		Modifier: 85
+#	WithDecoration@1:
+#		Image: ranks
+#		Sequence: rank1
+#		RequiresCondition: (tmplsDamage + tmplsHealth + tmplsReload) == 1
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
+#	WithDecoration@2:
+#		Image: ranks
+#		Sequence: rank2
+#		RequiresCondition: (tmplsDamage + tmplsHealth + tmplsReload) == 2
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
+#	WithDecoration@3:
+#		Image: ranks
+#		Sequence: rank3
+#		RequiresCondition: (tmplsDamage + tmplsHealth + tmplsReload) == 3
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
 	Buildable:
 		BuildDuration: 6000
 		BuildPaletteOrder: 60
@@ -2610,7 +2740,7 @@ TMPLANGEL:
 	Tooltip:
 		Name: Temple Angel
 	Health:
-		HP: 425
+		HP: 365
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -2652,48 +2782,48 @@ GUNTANK:
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
 	
-	GrantConditionOnPrerequisite@guntnkDamage:
-		Condition: guntnkDamage
-		Prerequisites: guntnkUpgradeDamage
-	GrantConditionOnPrerequisite@guntnkHealth:
-		Condition: guntnkHealth
-		Prerequisites: guntnkUpgradeHealth
-	GrantConditionOnPrerequisite@guntnkReload:
-		Condition: guntnkReload
-		Prerequisites: guntnkUpgradeReload
-	FirepowerMultiplier:
-		Modifier: 110
-		RequiresCondition: guntnkDamage
-	RangeMultiplier:
-		RequiresCondition: guntnkHealth
-		Modifier: 115
-	ReloadDelayMultiplier:
-		RequiresCondition: guntnkReload
-		Modifier: 85
-	WithDecoration@1:
-		Image: ranks
-		Sequence: rank1
-		RequiresCondition: (guntnkDamage + guntnkHealth + guntnkReload) == 1
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
-	WithDecoration@2:
-		Image: ranks
-		Sequence: rank2
-		RequiresCondition: (guntnkDamage + guntnkHealth + guntnkReload) == 2
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
-	WithDecoration@3:
-		Image: ranks
-		Sequence: rank3
-		RequiresCondition: (guntnkDamage + guntnkHealth + guntnkReload) == 3
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
+#	GrantConditionOnPrerequisite@guntnkDamage:
+#		Condition: guntnkDamage
+#		Prerequisites: guntnkUpgradeDamage
+#	GrantConditionOnPrerequisite@guntnkHealth:
+#		Condition: guntnkHealth
+#		Prerequisites: guntnkUpgradeHealth
+#	GrantConditionOnPrerequisite@guntnkReload:
+#		Condition: guntnkReload
+#		Prerequisites: guntnkUpgradeReload
+#	FirepowerMultiplier:
+#		Modifier: 110
+#		RequiresCondition: guntnkDamage
+#	RangeMultiplier:
+#		RequiresCondition: guntnkHealth
+#		Modifier: 115
+#	ReloadDelayMultiplier:
+#		RequiresCondition: guntnkReload
+#		Modifier: 85
+#	WithDecoration@1:
+#		Image: ranks
+#		Sequence: rank1
+#		RequiresCondition: (guntnkDamage + guntnkHealth + guntnkReload) == 1
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
+#	WithDecoration@2:
+#		Image: ranks
+#		Sequence: rank2
+#		RequiresCondition: (guntnkDamage + guntnkHealth + guntnkReload) == 2
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
+#	WithDecoration@3:
+#		Image: ranks
+#		Sequence: rank3
+#		RequiresCondition: (guntnkDamage + guntnkHealth + guntnkReload) == 3
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
 	Tooltip:
 		Name: Nuclear Command Vehicle
 	Valued:
@@ -2752,48 +2882,48 @@ MOICO:
 	Inherits: ^Master100k
 	Inherits: ^AutoTargetAll
 	
-	GrantConditionOnPrerequisite@moicoDamage:
-		Condition: moicoDamage
-		Prerequisites: moicoUpgradeDamage
-	GrantConditionOnPrerequisite@moicoHealth:
-		Condition: moicoHealth
-		Prerequisites: moicoUpgradeHealth
-	GrantConditionOnPrerequisite@moicoReload:
-		Condition: moicoReload
-		Prerequisites: moicoUpgradeReload
-	FirepowerMultiplier:
-		Modifier: 110
-		RequiresCondition: moicoDamage
-	RangeMultiplier:
-		RequiresCondition: moicoHealth
-		Modifier: 115
-	ReloadDelayMultiplier:
-		RequiresCondition: moicoReload
-		Modifier: 85
-	WithDecoration@1:
-		Image: ranks
-		Sequence: rank1
-		RequiresCondition: (moicoDamage + moicoHealth + moicoReload) == 1
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
-	WithDecoration@2:
-		Image: ranks
-		Sequence: rank2
-		RequiresCondition: (moicoDamage + moicoHealth + moicoReload) == 2
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
-	WithDecoration@3:
-		Image: ranks
-		Sequence: rank3
-		RequiresCondition: (moicoDamage + moicoHealth + moicoReload) == 3
-		ReferencePoint: Bottom, Right
-		Palette: effect
-		ZOffset: 256
-		ValidStances: ally, enemy, neutral
+#	GrantConditionOnPrerequisite@moicoDamage:
+#		Condition: moicoDamage
+#		Prerequisites: moicoUpgradeDamage
+#	GrantConditionOnPrerequisite@moicoHealth:
+#		Condition: moicoHealth
+#		Prerequisites: moicoUpgradeHealth
+#	GrantConditionOnPrerequisite@moicoReload:
+#		Condition: moicoReload
+#		Prerequisites: moicoUpgradeReload
+#	FirepowerMultiplier:
+#		Modifier: 110
+#		RequiresCondition: moicoDamage
+#	RangeMultiplier:
+#		RequiresCondition: moicoHealth
+#		Modifier: 115
+#	ReloadDelayMultiplier:
+#		RequiresCondition: moicoReload
+#		Modifier: 85
+#	WithDecoration@1:
+#		Image: ranks
+#		Sequence: rank1
+#		RequiresCondition: (moicoDamage + moicoHealth + moicoReload) == 1
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
+#	WithDecoration@2:
+#		Image: ranks
+#		Sequence: rank2
+#		RequiresCondition: (moicoDamage + moicoHealth + moicoReload) == 2
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
+#	WithDecoration@3:
+#		Image: ranks
+#		Sequence: rank3
+#		RequiresCondition: (moicoDamage + moicoHealth + moicoReload) == 3
+#		ReferencePoint: Bottom, Right
+#		Palette: effect
+#		ZOffset: 256
+#		ValidStances: ally, enemy, neutral
 	Valued:
 		Cost: 0
 	Buildable:
@@ -3041,6 +3171,8 @@ TRANNEW:
 		TurnSpeed: 5
 		Speed: 140
 		RepulsionSpeed: 1000
+	DetectCloaked:
+		Range: 6c0
 	Health:
 		HP: 90
 	Armor:
@@ -3222,7 +3354,7 @@ HARVNEW:
 	Mobile:
 		Speed: 85
 	Health:
-		HP: 3025
+		HP: 2800
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -3270,7 +3402,7 @@ SILLYBADR:
 	Tooltip:
 		Name: Rocket Bomber
 	Health:
-		HP: 1000
+		HP: 600
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -3505,12 +3637,12 @@ SUBWAY:
 	Tooltip:
 		Name: Submarine
 	Buildable:
-		BuildDuration: 4800
+		BuildDuration: 6000
 		BuildPaletteOrder: 40
 		Queue: Silly5.Fact
 		Description: Disc Throwing Truck\n Attacks Air and Ground
 	Mobile:
-		Speed: 100
+		Speed: 80
 	Health:
 		HP: 450
 	Armor:
@@ -3532,10 +3664,6 @@ SUBWAY:
 		UncloakOn: Dock
 	AutoTarget:
 	RejectsOrders:
-	ProximityExternalCondition@StopsDetectors:
-		Condition: stpdtct
-		Range: 6c0
-		ValidStance: Enemy, Neutral
 	
 LSTNEW:
 	Inherits: ^Helicopter
@@ -3559,7 +3687,7 @@ LSTNEW:
 		Queue: Silly6.Fact
 		Description: Landing Craft
 	Health:
-		HP: 1200
+		HP: 750
 	Armor:
 		Type: Heavy
 	RevealsShroud:

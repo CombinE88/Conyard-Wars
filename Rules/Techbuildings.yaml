@@ -597,7 +597,7 @@ LAMMO:
 		Queue: Defenses.Fact
         Prerequisites: !lammo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
-		Description:  Grants:\n  Light Tanks\n  Bazooka Infantry
+		Description:  Grants:\n  Light Tanks
 	Building:
 		Footprint: __ xx ==
 		Dimensions: 2,3

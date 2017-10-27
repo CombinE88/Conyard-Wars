@@ -108,7 +108,15 @@ upgradesymbs:
 		Start: 0 
 	3tnkplus: 3tnkplus
 		Start: 0 
+	orbmpolus: ltnkplus
+		Start: 0 
 ##-- special upgrades---
+
+orbmfire:
+	idle: e1
+	icon: orbmfire.shp
+		AddExtension: False	
+
 
 3tnkfire:
 	idle: e1
@@ -247,6 +255,20 @@ mtkchemupgrade:
 	idle: e1
 	icon: mtnkicnh2.shp
 		AddExtension: False
+        
+upgradeorbmicon1:
+	idle: e1
+	icon: orbmup.shp
+		Start: 0
+		AddExtension: False
+upgradeorbmicon2:
+	idle: e1
+	icon: orbmup1.shp
+		AddExtension: False
+upgradeorbmicon3:
+	idle: e1
+	icon: orbmup2.shp
+		AddExtension: False	
 
 upgradehindicon1:
 	idle: e1
@@ -1524,6 +1546,21 @@ airfacthind:
 		Tick: 80
 	icon: hindicon
 		AddExtension: True	
+        
+airfacthunter:
+	idle: hpadnew2
+		ZOffset: -1023 
+	damaged-idle: hpadnew2
+		Start: 1
+		ZOffset: -1023
+	dead: hpadnew2
+		Start: 1
+		Tick: 800
+	make: hpadnew2make
+		Length: *
+		Tick: 80
+	icon: orbmicnh
+		AddExtension: True	
 		
 newhosp:
 	idle: hosp2
@@ -2467,3 +2504,12 @@ new3tnk:
 	muzzle: gunfire2
 		Length: 5
 	icon: 3tnkicon
+    
+orbm:
+	idle:
+		Facings: 32
+		UseClassicFacingFudge: True
+	move:
+		Start: 32
+		Facings: 32
+	icon: orbmicnh

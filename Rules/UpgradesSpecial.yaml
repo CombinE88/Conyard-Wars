@@ -206,13 +206,31 @@ Upgrade.mammofire:
 		Prerequisites: carfactory4
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Replaces the Tusk-rockets with the might Tusk-Laser.
+		Description: Replaces the Tusk-rockets with the mighty Tusk-Laser.
 	Valued:
 		Cost: 4000
 	RenderSprites:
 		Image: mammofire
 	ProvidesPrerequisite@mammofire: 
 		Prerequisite: mammofire
+        
+Upgrade.orbmfire:
+	AlwaysVisible:
+	Tooltip:
+		Name: upgrade Orca Hunter with Tusk Laser
+	Buildable:
+		BuildPaletteOrder: 144
+		Prerequisites: airfacthunter
+		Queue: Upgrade.Array
+		BuildLimit: 1
+		Description: Replaces the Hunter Missiles with the mighty Tusk-Laser.
+	Valued:
+		Cost: 3500
+	RenderSprites:
+		Image: orbmfire
+	ProvidesPrerequisite@orbmfire: 
+		Prerequisite: orbmfire
+		
 		
 Upgrade.rmbofire:
 	AlwaysVisible:

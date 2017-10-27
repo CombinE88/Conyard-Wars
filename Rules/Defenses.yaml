@@ -1,4 +1,53 @@
-	   
+	  
+SAM:
+	Inherits: ^Defense
+	Inherits@IDISABLE: ^DisabledOverlay
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Inherits@shape: ^2x1Shape
+	HitShape:
+		Type: Rectangle
+			TopLeft: -768,-512
+			BottomRight: 768,512
+	Valued:
+		Cost: 0
+	Tooltip:
+		Name: SAM Site
+	Buildable:
+		BuildDuration: 4000
+		BuildPaletteOrder: 240
+		Queue: Defenses.Fact
+		Prerequisites: flytow
+		BuildLimit: 1 
+		Description: Basic Anti-Air base defense.\n  Strong vs Air\n  Weak vs All ground units.
+	Building:
+		Footprint: xx
+		Dimensions: 2,1
+	RequiresPower:
+	Health:
+		HP: 2000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 0
+		RealignDelay: -1
+	-WithSpriteBody:
+	WithTurretedSpriteBody:
+	AutoSelectionSize:
+	Armament:
+		Weapon: Dragon
+		MuzzleSequence: muzzle
+	AttackPopupTurreted:
+	WithMuzzleOverlay:
+	-RenderDetectionCircle:
+	Power:
+		Amount: 0
+	BodyOrientation:
+		UseClassicFacingFudge: True
+	-Sellable:
+      
 GUN:
 	Inherits: ^Defense
 	Valued:

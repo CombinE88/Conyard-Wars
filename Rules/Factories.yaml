@@ -234,12 +234,12 @@ E3FACTORY:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Rocket Training Barracks
+		Name: Rocketeer Training Barracks
 	Buildable:
 		BuildDuration: 300
 		BuildPaletteOrder: 30
 		Queue: Building.Fact
-		Prerequisites: labnew
+		Prerequisites: lammo
 		Description:Type: Infantry\n\n Good against:\n  Vehicles, Structures, Air\n\n Bad against:\n  Infantry\n\nUpgradable Multi Rockets
 	Building:
 		Footprint: xx xx ==
@@ -585,8 +585,8 @@ CARFACTORY2:
 		Prerequisites: fammo
 		Description: Tank\n\n Good against:\n  Vehicles, Structures\n\n Bad against:\n  Infantry, Air\n\nUpgradable Quadcannon\n\n Upgraded Good against:\n  Vehicles, Structures\n\n Upgraded Bad against:\n  Infantry
 	Building:
-		Footprint: ___ xxx x=x ===
-		Dimensions: 3,4
+		Footprint: ___ ___ xxx xxx ===
+		Dimensions: 3,5
 		LocalCenterOffset: 0,-512,0
 	-Selectable:
 	Health:
@@ -729,7 +729,7 @@ SECRETFACTORY1:
 		BuildDuration: 300
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
-		Prerequisites: dome, ~tmplnew
+		Prerequisites: dome, newhosp, ~tmplnew
 		Description: Aircraft\n\n Good against:\n  Infantry, Vehicles, Structures\n\n Bad against:\n  Air\n\n
 	Building:
 		Footprint: xxx xxx xxx ===
@@ -773,8 +773,8 @@ SECRETFACTORY2:
 		BuildDuration: 300
 		BuildPaletteOrder: 310
 		Queue: Building.Fact
-		Prerequisites: dome, ~missnew
-		Description: Aircraft\n\n Good against:\n  Vehicles, Air\n\n Bad against:\n  Infantry, Structures
+		Prerequisites: dome, nuk2new, ~missnew
+		Description: Aircraft\n\n Good against:\n  Vehicles, Air\n\n Bad against:\n  Infantry, Structures\n\n     Always detects cloaked units.
 	Building:
 		Footprint: xxx xxx xxx ===
 		Dimensions: 3,4
@@ -818,7 +818,7 @@ SECRETFACTORY3:
 		BuildDuration: 300
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
-		Prerequisites: forb, radarnew, ~tmplnew
+		Prerequisites: forb, fammo, ~tmplnew
 		Description: Vehicle\n\n Good against:\n  All Ground units, Structures\n\n Bad against:\n  Close-quaters, Air
 	Building:
 		Footprint: ____ xxxx xxxx ====
@@ -912,7 +912,7 @@ AIRFACT0:
 		BuildPaletteOrder: 135
 		Queue: Building.Fact
 		Prerequisites: flytow
-		Description: Aircraft\n\n Good against:\n  Infantry\n\n Bad against:\n  Vehicles, Structures, Air\n\nUpgradable AG Rocketlaunchers\n\n Upgraded Good against:\n  Infantry, Structures, Air\n\n Upgraded Bad against:\n  Vehicles
+		Description: Aircraft\n\n Good against:\n  Infantry\n\n Bad against:\n  Vehicles, Structures, Air\n\nUpgradable AG Rocketlaunchers\n\n Upgraded Good against:\n  Infantry, Structures, Air\n\n Upgraded Bad against:\n  Vehicles.\n\n     Always detects cloaked units.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -953,7 +953,7 @@ AIRFACT1:
 		BuildDuration: 300
 		BuildPaletteOrder: 140
 		Queue: Building.Fact
-		Prerequisites: cflarf
+		Prerequisites: dome
 		Description: Aircraft\n\n Good against:\n  Vehicles, Structure\n\n Bad against:\n  Infantry\n\nUpgradable TV-Missile\n\n Upgraded Good against:\n  Vehicles, Structure, Air\n\n Upgraded Bad against:\n  Infantry
 	Building:
 		Footprint: xx xx
@@ -1041,7 +1041,7 @@ AIRFACTHIND:
 		IconPalette: ra
 		BuildPaletteOrder: 137
 		Queue: Building.Fact
-		Prerequisites: dome
+		Prerequisites: dome, nukenew
 		Description: Heavy Aircraft\n\n Good against:\n  All ground units, Structures\n\n Bad against:\n  Air\n\nUpgradable incendiary bombs \n\n Upgraded Superior against:\n  All ground units, Structures\n\n Upgraded Bad against:\n  Air
 	Building:
 		Footprint: xxx xxx xxx
@@ -1066,6 +1066,47 @@ AIRFACTHIND:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 72,62,0,-5	
+        
+AIRFACTHUNTER:
+	Inherits: ^BaseBuilding2
+	Inherits@shape: ^3x3Shape
+	-Selectable:
+	RenderSprites:
+		Image: airfacthunter
+	Valued:
+		Cost: 2300
+	Tooltip:
+		Name: Orca Hunter Helipad
+	Buildable:
+		BuildDuration: 300
+		BuildPaletteOrder: 137
+		Queue: Building.Fact
+		Prerequisites: dome, lammo
+		Description: Heavy Aircraft\n\n Good against:\n  Vehicles, Air, Structures\n\n Bad against:\n  Infantry\n\nUpgradable Tusk Lasers \n\n Upgraded Good against:\n  All \n\n Upgraded Bad against:\n  Ranged Units\n\n Upgradeded Short Ranged
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Health:
+		HP: 1100
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	Production:
+		Produces: Flyhunt.Fact
+	Reservable:
+	ProductionQueue:
+		Type: Flyhunt.Fact
+		RequireOwner: false
+		Group: none
+		BuildSpeed: 40
+		LowPowerSlowdown: 3
+	Power:
+		Amount: 0
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 72,62,0,-5
+        
  
 CARFACTORY5:
 	Inherits: ^BaseBuilding2
@@ -1121,7 +1162,7 @@ CARFACTORY6:
 	RenderSprites:
 		Image: carfact6
 	Valued:
-		Cost: 1700
+		Cost: 2100
 	Tooltip:
 		Name: Flametank Supplydrop
 	ProvidesPrerequisite:
@@ -1226,7 +1267,7 @@ CARFACTORY8:
 		BuildPaletteOrder: 50
 		Queue: Building.Fact
 		Prerequisites: lammo
-		Description: Tank\n\n Good against:\n  Vehicles, Structures\n\n Bad against:\n  Tanks, Air\n\nUpgradable Flak cannon\n\n Upgraded Good against:\n  Vehicles, Structures, Air\n\n Upgraded Bad against:\n  Infantry
+		Description: Tank\n\n Good against:\n  Vehicles, Structures\n\n Bad against:\n  Tanks, Air\n\nUpgradable Flak cannon\n\n Upgraded Good against:\n  Infantry, Light Vehicles, Air\n\n Upgraded Bad against:\n  Tanks, Structures
 	Building:
 		Footprint: xxxx xxxx ====
 		Dimensions: 4,3
@@ -1316,7 +1357,7 @@ SILLYFACT1:
 		Image: syrd
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 3500
+		Cost: 3000
 	Tooltip:
 		Name: Flying Cruiser Factory
 	ProvidesPrerequisite:
@@ -1368,7 +1409,7 @@ SILLYFACT2:
 			TopLeft: -512, -1450
 			BottomRight: 896, -512
 	Valued:
-		Cost: 2500
+		Cost: 3000
 	RenderSprites:
 		Image: proc
 	Tooltip:
@@ -1481,7 +1522,7 @@ SILLYFACT4:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 3500
+		HP: 2500
 	RevealsShroud:
 		Range: 7c0
 	Exit@1:
@@ -1528,7 +1569,7 @@ SILLYFACT5:
 		Queue: Building.Fact
 		Prerequisites: sillythree
 		IconPalette: ra
-		Description: Stealth Ship\n\n Good against:\n  Tanks, Structures\n\n Bad against:\n  Infantry, Msam's
+		Description: Stealth Ship\n\n Good against:\n  Tanks, Structures\n\n Bad against:\n  Infantry, Msam's, Transport-helicopter, Flying advanced guardtower
 	Building:
 		Footprint: xxx =x= ===
 		Dimensions: 3,3
@@ -1578,7 +1619,7 @@ SILLYFACT6:
 		Image: fixra
 		PlayerPalette: raplayer
 	Valued:
-		Cost: 3500
+		Cost: 2500
 	Tooltip:
 		Name: Landing Craft Factory
 	Buildable:

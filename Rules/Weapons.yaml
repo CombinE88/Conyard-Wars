@@ -224,7 +224,7 @@ MLaser:
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 6
+		Damage: 10
 		Versus:
 			Wood: 50
 			Heavy: 75
@@ -267,7 +267,7 @@ IonCannonNew:
 	TargetActorCenter: true
 	Warhead@1Dam_impact: SpreadDamage
 		Range: 0, 1c1, 2c1, 2c512
-		Damage: 1000
+		Damage: 300
 		Falloff: 1000, 1000, 250, 100
 		ValidTargets: Vehicle, Infantry, Air
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -597,7 +597,7 @@ NapalmNoBuild:
 
 Heavy227mm:
 	ReloadDelay: 75
-	Range: 12c0
+	Range: 15c0
 	MinRange: 5c0
 	Burst: 4
 	BurstDelays: 20
@@ -608,7 +608,7 @@ Heavy227mm:
 		Arm: 5
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 853
+		Inaccuracy: 653
 		Image: DRAGON
 		RateOfTurn: 2
 		ContrailLength: 10
@@ -636,7 +636,7 @@ Heavy227mm:
 		
 Quad227mm:
 	ReloadDelay: 75
-	Range: 12c0
+	Range: 15c0
 	MinRange: 5c0
 	Burst: 8
 	BurstDelays: 20
@@ -648,7 +648,7 @@ Quad227mm:
 		Arm: 5
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 1c256
+		Inaccuracy: 756
 		LaunchAngle: 62
 		Image: DRAGON
 		RateOfTurn: 2
@@ -703,7 +703,41 @@ MortarShell:
 		Explosions: small_poof
 		ImpactSounds: xplos.aud
 		
-		
+HunterMissiles:
+	ReloadDelay: 45
+	Range: 6c512
+	Burst: 4
+	BurstDelay: 8
+	MinRange: 1c256
+	Report: rocket1.aud
+	ValidTargets: Air, Vehicle, Structure
+	Projectile: Missile
+		Arm: 1
+		Blockable: false
+		Inaccuracy: 128
+		Image: DRAGON
+		HorizontalRateOfTurn: 20
+		TrailImage: smokey
+		ContrailLength: 8
+		Speed: 312
+		RangeLimit: 10c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 30
+		ValidTargets: Air, Vehicle, Structure
+		Versus:
+			None: 50
+			Wood: 100
+			Light: 100
+			Heavy: 75
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+	Warhead@3Eff: CreateEffect
+		Explosions: small_frag
+		ImpactSounds: xplos.aud
+        
+        
 OrcaAGMissilesNew:
 	ReloadDelay: 12
 	Burst: 2
@@ -737,6 +771,9 @@ OrcaAGMissilesNew:
 	Warhead@3Eff: CreateEffect
 		Explosions: small_frag
 		ImpactSounds: xplos.aud
+        
+        
+
 		
 OrcaAAMissilesNew:
 	Inherits: OrcaAGMissiles
@@ -1085,7 +1122,7 @@ BossRockets:
 		
 QuickLaser:
 	ReloadDelay: 115
-	Range: 4c512
+	Range: 5c512
 	Report: obelray1.aud
 	ValidTargets: Ground
 	Projectile: LaserZap
@@ -1161,6 +1198,12 @@ AngryEater:
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
 		
+        
+ArtilleryShell:
+	Range: 14c0
+	Projectile: Bullet
+		Inaccuracy: 756
+
 		
 C17Shell:
 	ReloadDelay: 55
@@ -1423,7 +1466,7 @@ ZSU-23:
 
 Torpedo:
 	ReloadDelay: 100
-	Range: 9c0
+	Range: 6c0
 	Report: torpedo1.aud
 	ValidTargets: Vehicle, Structure
 	Burst: 2
@@ -1440,7 +1483,7 @@ Torpedo:
 		CruiseAltitude: 0
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 100
+		Damage: 80
 		ValidTargets: Ground
 		Versus:
 			None: 30
@@ -1453,9 +1496,9 @@ Torpedo:
 		ImpactSounds: kaboom15.aud
 		
 Minelauncher:
-	ReloadDelay: 100
+	ReloadDelay: 125
 	Range: 8c0
-	Burst: 10
+	Burst: 4
 	BurstDelays: 3
 	Report: bazook1.aud
 	TargetActorCenter: true
@@ -1487,7 +1530,7 @@ Minelauncher:
 MinelauncherAir:
 	ReloadDelay: 50
 	Range: 8c0
-	Burst: 8
+	Burst: 6
 	BurstDelays: 3
 	Report: bazook1.aud
 	ValidTargets: Air
@@ -1772,8 +1815,8 @@ ArtilleryShellOFive:
 	Inherits: ^BallisticWeapon
 	ReloadDelay: 75
 	Burst: 5
-	BurstDelays: 7
-	Range: 11c0
+	BurstDelays: 2
+	Range: 14c0
 	MinRange: 3c0
 	Report: tnkfire2.aud
 	TargetActorCenter: true
@@ -1781,7 +1824,7 @@ ArtilleryShellOFive:
 		Speed: 204
 		Blockable: false
 		LaunchAngle: 56
-		Inaccuracy: 2c0
+		Inaccuracy: 1c0
 		ContrailLength: 30
 	Warhead@1Dam: SpreadDamage
 		Spread: 421
@@ -1969,6 +2012,28 @@ TuskLaser:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Scorch
 		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
+        
+HunterTuskLaser:
+	ReloadDelay: 16
+	Range: 3c512
+	Burst: 2
+	BurstDelay: 8
+	Report: obelray1.aud
+	ValidTargets: Ground, Air
+	Projectile: LaserZap
+		Width: 85
+		HitAnim: laserfire
+		ZOffset: 2047
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		ValidTargets: Ground, Air
+		Damage: 60
+		Versus:
+			Wood: 50
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Scorch
+		InvalidTargets: Vehicle, Structure, Wall, Husk, Trees, Creep
 				
 JevalinMissile:
 	ReloadDelay: 175
@@ -2063,10 +2128,10 @@ LtnkFlakGun:
 		Spread: 128
 		Damage: 15
 		Versus:
-			None: 25
-			Wood: 75
+			None: 50
+			Wood: 25
 			Light: 100
-			Heavy: 90
+			Heavy: 45
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_poof
@@ -2074,16 +2139,20 @@ LtnkFlakGun:
 
 LtnkFlakAA:
 	Inherits: APCGun
-	Range: 7c0
+	Range: 8c0
 	ValidTargets: Air
 	Projectile: Bullet
 		Speed: 2c0
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
-		Damage: 10
+		Spread: 128
+		Damage: 15
 		ValidTargets: Air
 		Versus:
+			None: 100
+			Wood: 100
 			Light: 100
+			Heavy: 100
 	Warhead@2Eff: CreateEffect
 		Explosions: small_frag
         
