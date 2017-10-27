@@ -2,13 +2,13 @@
 Upgrade.rmboUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Commando Range 
+		Name: Commando - Range
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: rmbofactory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 40%
+		Description: Increases range by 40%.
 	Valued:
 		Cost: 2200
 	RenderSprites:
@@ -19,13 +19,13 @@ Upgrade.rmboUpgradeDamage:
 Upgrade.rmboUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Commando Health
+		Name: Commando - Health
 	Buildable:
 		BuildPaletteOrder: 91
 		Prerequisites: rmbofactory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 2200
 	RenderSprites:
@@ -36,13 +36,13 @@ Upgrade.rmboUpgradeHealth:
 Upgrade.rmboUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Commando Reload
+		Name: Commando - Reload
 	Buildable:
 		BuildPaletteOrder: 92
 		Prerequisites: rmbofactory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 20%
+		Description: Decreases reload delay by 20%.
 	Valued:
 		Cost: 2200
 	RenderSprites:
@@ -54,13 +54,13 @@ Upgrade.rmboUpgradeReload:
 Upgrade.E1UpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rifle-infantry Damage 
+		Name: Minigunner - Damage
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: e1factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 25%
+		Description: Increases dealt damage by 25%.
 	Valued:
 		Cost: 500
 	RenderSprites:
@@ -71,13 +71,13 @@ Upgrade.E1UpgradeDamage:
 Upgrade.E1UpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rifle-infantry Health
+		Name: Minigunner - Health
 	Buildable:
 		BuildPaletteOrder: 11
 		Prerequisites: e1factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 500
 	RenderSprites:
@@ -88,13 +88,13 @@ Upgrade.E1UpgradeHealth:
 Upgrade.E1UpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rifle-infantry Reload
+		Name: Minigunner - Reload
 	Buildable:
 		BuildPaletteOrder: 12
 		Prerequisites: e1factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 20%
+		Description: Decreases reload delay by 20%.
 	Valued:
 		Cost: 500
 	RenderSprites:
@@ -106,13 +106,13 @@ Upgrade.E1UpgradeReload:
 Upgrade.e2UpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade grenadiers Damage 
+		Name: Grenadier - Damage 
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: e2factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 700
 	RenderSprites:
@@ -123,13 +123,13 @@ Upgrade.e2UpgradeDamage:
 Upgrade.e2UpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade grenadiers Health
+		Name: Grenadier - Health
 	Buildable:
 		BuildPaletteOrder: 21
 		Prerequisites: e2factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 700
 	RenderSprites:
@@ -140,13 +140,13 @@ Upgrade.e2UpgradeHealth:
 Upgrade.e2UpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade grenadiers Reload
+		Name: Grenadier - Reload
 	Buildable:
 		BuildPaletteOrder: 22
 		Prerequisites: e2factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 30%
+		Description: Decreases reload delay by 30%.
 	Valued:
 		Cost: 700
 	RenderSprites:
@@ -159,13 +159,13 @@ Upgrade.e2UpgradeReload:
 Upgrade.e22UpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Mortar Soldier Damage 
+		Name: Mortar Soldier - Damage 
 	Buildable:
 		BuildPaletteOrder: 65
 		Prerequisites: e22factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 30%
+		Description: Increases dealt damage by 30%.
 	Valued:
 		Cost: 900
 	RenderSprites:
@@ -176,13 +176,13 @@ Upgrade.e22UpgradeDamage:
 Upgrade.e22UpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Mortar Soldier Health
+		Name: Mortar Soldier - Health
 	Buildable:
 		BuildPaletteOrder: 67
 		Prerequisites: e22factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 900
 	RenderSprites:
@@ -193,13 +193,13 @@ Upgrade.e22UpgradeHealth:
 Upgrade.e22UpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Mortar Soldier Reload
+		Name: Mortar Soldier - Reload
 	Buildable:
 		BuildPaletteOrder: 68
 		Prerequisites: e22factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 900
 	RenderSprites:
@@ -210,13 +210,13 @@ Upgrade.e22UpgradeReload:
 Upgrade.e3UpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rocket Soldier Damage 
+		Name: Rocket Soldier - Damage
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: e3factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -227,13 +227,13 @@ Upgrade.e3UpgradeDamage:
 Upgrade.e3UpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rocket Soldier Health
+		Name: Rocket Soldier - Health
 	Buildable:
 		BuildPaletteOrder: 31
 		Prerequisites: e3factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -244,13 +244,13 @@ Upgrade.e3UpgradeHealth:
 Upgrade.e3UpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rocket Soldier Reload
+		Name: Rocket Soldier - Reload
 	Buildable:
 		BuildPaletteOrder: 32
 		Prerequisites: e3factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 40%
+		Description: Decreases reload delay by 40%.
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -261,13 +261,13 @@ Upgrade.e3UpgradeReload:
 Upgrade.e4UpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Flamethrower Damage 
+		Name: Flamethrower - Damage 
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: e4factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 30%
+		Description: Increases dealt damage by 30%.
 	Valued:
 		Cost: 850
 	RenderSprites:
@@ -278,13 +278,13 @@ Upgrade.e4UpgradeDamage:
 Upgrade.e4UpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Flamethrower Health
+		Name: Flamethrower - Health
 	Buildable:
 		BuildPaletteOrder: 61
 		Prerequisites: e4factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 25%
+		Description: Decreases taken damage by 25%.
 	Valued:
 		Cost: 850
 	RenderSprites:
@@ -295,13 +295,13 @@ Upgrade.e4UpgradeHealth:
 Upgrade.e4UpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Flamethrower Reload
+		Name: Flamethrower - Reload
 	Buildable:
 		BuildPaletteOrder: 62
 		Prerequisites: e4factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 850
 	RenderSprites:
@@ -312,13 +312,13 @@ Upgrade.e4UpgradeReload:
 Upgrade.e5UpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Chemical Warrior Damage 
+		Name: Chemical Warrior - Damage
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: e5factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1650
 	RenderSprites:
@@ -329,13 +329,13 @@ Upgrade.e5UpgradeDamage:
 Upgrade.e5UpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Chemical Warrior Health
+		Name: Chemical Warrior - Health
 	Buildable:
 		BuildPaletteOrder: 101
 		Prerequisites: e5factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 50%
+		Description: Decreases taken damage by 50%.
 	Valued:
 		Cost: 1650
 	RenderSprites:
@@ -346,13 +346,13 @@ Upgrade.e5UpgradeHealth:
 Upgrade.e5UpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Chemical Warrior Reload
+		Name: Chemical Warrior - Reload
 	Buildable:
 		BuildPaletteOrder: 102
 		Prerequisites: e5factory
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 1650
 	RenderSprites:
@@ -363,13 +363,13 @@ Upgrade.e5UpgradeReload:
 Upgrade.jeepUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Hum-Vee Damage 
+		Name: Hum-Vee - Damage
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: carfactory1, ~buildings.gdi
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1100
 	RenderSprites:
@@ -380,13 +380,13 @@ Upgrade.jeepUpgradeDamage:
 Upgrade.jeepUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Hum-Vee Health
+		Name: Hum-Vee - Health
 	Buildable:
 		BuildPaletteOrder: 41
 		Prerequisites: carfactory1, ~buildings.gdi
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 35%
+		Description: Decreases taken damage by 35%.
 	Valued:
 		Cost: 1100
 	RenderSprites:
@@ -397,13 +397,13 @@ Upgrade.jeepUpgradeHealth:
 Upgrade.jeepUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Hum-Vee Reload
+		Name: Hum-Vee - Reload
 	Buildable:
 		BuildPaletteOrder: 42
 		Prerequisites: carfactory1, ~buildings.gdi
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 50%
+		Description: Decreases reload delay by 50%.
 	Valued:
 		Cost: 1100
 	RenderSprites:
@@ -415,13 +415,13 @@ Upgrade.jeepUpgradeReload:
 Upgrade.buggyUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Buggy Damage 
+		Name: Buggy - Damage 
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: carfactorybg, ~buildings.nod
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1100
 	RenderSprites:
@@ -432,13 +432,13 @@ Upgrade.buggyUpgradeDamage:
 Upgrade.buggyUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Buggy Health
+		Name: Buggy - Health
 	Buildable:
 		BuildPaletteOrder: 41
 		Prerequisites: carfactorybg, ~buildings.nod
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 35%
+		Description: Decreases taken damage by 35%.
 	Valued:
 		Cost: 1100
 	RenderSprites:
@@ -449,13 +449,13 @@ Upgrade.buggyUpgradeHealth:
 Upgrade.buggyUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Buggy Reload
+		Name: Buggy - Reload
 	Buildable:
 		BuildPaletteOrder: 42
 		Prerequisites: carfactorybg, ~buildings.nod
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 50%
+		Description: Decreases reload delay by 50%.
 	Valued:
 		Cost: 1100
 	RenderSprites:
@@ -466,13 +466,13 @@ Upgrade.buggyUpgradeReload:
 Upgrade.mtnkUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Medium Tank Damage 
+		Name: Medium Tank - Damage
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: carfactory2
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1750
 	RenderSprites:
@@ -483,13 +483,13 @@ Upgrade.mtnkUpgradeDamage:
 Upgrade.mtnkUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Medium Tank Health
+		Name: Medium Tank - Health
 	Buildable:
 		BuildPaletteOrder: 81
 		Prerequisites: carfactory2
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 1750
 	RenderSprites:
@@ -500,13 +500,13 @@ Upgrade.mtnkUpgradeHealth:
 Upgrade.mtnkUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Medium Tank Reload
+		Name: Medium Tank - Reload
 	Buildable:
 		BuildPaletteOrder: 82
 		Prerequisites: carfactory2
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 1750
 	RenderSprites:
@@ -517,13 +517,13 @@ Upgrade.mtnkUpgradeReload:
 Upgrade.3tnkUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Heavy Tank Damage 
+		Name: Heavy Tank - Damage
 	Buildable:
 		BuildPaletteOrder: 85
 		Prerequisites: 3tnkfactory
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 2400
 	RenderSprites:
@@ -534,13 +534,13 @@ Upgrade.3tnkUpgradeDamage:
 Upgrade.3tnkUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Heavy Tank Health
+		Name: Heavy Tank - Health
 	Buildable:
 		BuildPaletteOrder: 86
 		Prerequisites: 3tnkfactory
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 2400
 	RenderSprites:
@@ -551,13 +551,13 @@ Upgrade.3tnkUpgradeHealth:
 Upgrade.3tnkUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Heavy Tank Reload
+		Name: Heavy Tank - Reload
 	Buildable:
 		BuildPaletteOrder: 87
 		Prerequisites: 3tnkfactory
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 2400
 	RenderSprites:
@@ -569,13 +569,13 @@ Upgrade.3tnkUpgradeReload:
 Upgrade.htnkUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Mammoth Tank Damage 
+		Name: Mammoth Tank - Damage
 	Buildable:
 		BuildPaletteOrder: 170
 		Prerequisites: carfactory4
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 3250
 	RenderSprites:
@@ -586,13 +586,13 @@ Upgrade.htnkUpgradeDamage:
 Upgrade.htnkUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Mammoth Tank Health
+		Name: Mammoth Tank - Health
 	Buildable:
 		BuildPaletteOrder: 171
 		Prerequisites: carfactory4
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 3250
 	RenderSprites:
@@ -603,13 +603,13 @@ Upgrade.htnkUpgradeHealth:
 Upgrade.htnkUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Mammoth Tank Reload
+		Name: Mammoth Tank - Reload
 	Buildable:
 		BuildPaletteOrder: 172
 		Prerequisites: carfactory4
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 3250
 	RenderSprites:
@@ -620,13 +620,13 @@ Upgrade.htnkUpgradeReload:
 Upgrade.msamUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rocket Launcher Damage 
+		Name: Rocket Launcher - Damage
 	Buildable:
 		BuildPaletteOrder: 75
 		Prerequisites: carfactory3
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1750
 	RenderSprites:
@@ -637,13 +637,13 @@ Upgrade.msamUpgradeDamage:
 Upgrade.msamUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rocket Launcher Health
+		Name: Rocket Launcher - Health
 	Buildable:
 		BuildPaletteOrder: 76
 		Prerequisites: carfactory3
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 1750
 	RenderSprites:
@@ -654,13 +654,13 @@ Upgrade.msamUpgradeHealth:
 Upgrade.msamUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rocket Launcher Reload
+		Name: Rocket Launcher - Reload
 	Buildable:
 		BuildPaletteOrder: 77
 		Prerequisites: carfactory3
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 1750
 	RenderSprites:
@@ -671,13 +671,13 @@ Upgrade.msamUpgradeReload:
 Upgrade.heliUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Apache Longbow Damage 
+		Name: Apache Longbow - Damage
 	Buildable:
 		BuildPaletteOrder: 150
 		Prerequisites: airfact2
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1600
 	RenderSprites:
@@ -688,13 +688,13 @@ Upgrade.heliUpgradeDamage:
 Upgrade.heliUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Apache Longbow Health
+		Name: Apache Longbow - Health
 	Buildable:
 		BuildPaletteOrder: 151
 		Prerequisites: airfact2
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 1600
 	RenderSprites:
@@ -705,13 +705,13 @@ Upgrade.heliUpgradeHealth:
 Upgrade.heliUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Apache Longbow Range
+		Name: Apache Longbow - Range
 	Buildable:
 		BuildPaletteOrder: 152
 		Prerequisites: airfact2
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Increases range by 15%.
 	Valued:
 		Cost: 1600
 	RenderSprites:
@@ -723,13 +723,13 @@ Upgrade.heliUpgradeReload:
 Upgrade.orcaUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Orca Damage 
+		Name: Orca - Damage
 	Buildable:
 		BuildPaletteOrder: 140
 		Prerequisites: airfact1
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1700
 	RenderSprites:
@@ -740,13 +740,13 @@ Upgrade.orcaUpgradeDamage:
 Upgrade.orcaUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Orca Health
+		Name: Orca - Health
 	Buildable:
 		BuildPaletteOrder: 141
 		Prerequisites: airfact1
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 1700
 	RenderSprites:
@@ -757,13 +757,13 @@ Upgrade.orcaUpgradeHealth:
 Upgrade.orcaUpgradeRange:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Orca Range
+		Name: Orca - Range
 	Buildable:
 		BuildPaletteOrder: 142
 		Prerequisites: airfact1
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Increases range by 15%.
 	Valued:
 		Cost: 1700
 	RenderSprites:
@@ -774,13 +774,13 @@ Upgrade.orcaUpgradeRange:
 Upgrade.hunterUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Orca Hunter Damage 
+		Name: Orca Hunter - Damage
 	Buildable:
 		BuildPaletteOrder: 143
 		Prerequisites: airfacthunter
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 2300
 	RenderSprites:
@@ -791,13 +791,13 @@ Upgrade.hunterUpgradeDamage:
 Upgrade.hunterUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Orca Hunter Health
+		Name: Orca Hunter - Health
 	Buildable:
 		BuildPaletteOrder: 144
 		Prerequisites: airfacthunter
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 2300
 	RenderSprites:
@@ -808,13 +808,13 @@ Upgrade.hunterUpgradeHealth:
 Upgrade.hunterUpgradeRange:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Orca Hunter Range
+		Name: Orca Hunter - Range
 	Buildable:
 		BuildPaletteOrder: 145
 		Prerequisites: airfacthunter
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Increases range by 15%.
 	Valued:
 		Cost: 2300
 	RenderSprites:
@@ -825,13 +825,13 @@ Upgrade.hunterUpgradeRange:
 Upgrade.hindUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Hind Damage 
+		Name: Hind - Damage 
 	Buildable:
 		BuildPaletteOrder: 146
 		Prerequisites: airfacthind
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 2450
 	RenderSprites:
@@ -842,13 +842,13 @@ Upgrade.hindUpgradeDamage:
 Upgrade.hindUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Hind Health
+		Name: Hind - Health
 	Buildable:
 		BuildPaletteOrder: 147
 		Prerequisites: airfacthind
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 2450
 	RenderSprites:
@@ -859,13 +859,13 @@ Upgrade.hindUpgradeHealth:
 Upgrade.hindUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Hind Range
+		Name: Hind - Range
 	Buildable:
 		BuildPaletteOrder: 148
 		Prerequisites: airfacthind
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Increases range by 15%.
 	Valued:
 		Cost: 2450
 	RenderSprites:
@@ -877,13 +877,13 @@ Upgrade.hindUpgradeReload:
 Upgrade.stnkUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Stealth Tank Damage 
+		Name: Stealth Tank - Damage
 	Buildable:
 		BuildPaletteOrder: 105
 		Prerequisites: carfactory10
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1850
 	RenderSprites:
@@ -894,13 +894,13 @@ Upgrade.stnkUpgradeDamage:
 Upgrade.stnkUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Stealth Tank Health
+		Name: Stealth Tank - Health
 	Buildable:
 		BuildPaletteOrder: 106
 		Prerequisites: carfactory10
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 1850
 	RenderSprites:
@@ -911,13 +911,13 @@ Upgrade.stnkUpgradeHealth:
 Upgrade.stnkUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Stealth Tank Reload
+		Name: Stealth Tank - Reload
 	Buildable:
 		BuildPaletteOrder: 107
 		Prerequisites: carfactory10
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 1850
 	RenderSprites:
@@ -928,13 +928,13 @@ Upgrade.stnkUpgradeReload:
 Upgrade.bikeUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Light Tank Damage 
+		Name: Light Tank - Damage
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: carfactory8
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1350
 	RenderSprites:
@@ -945,13 +945,13 @@ Upgrade.bikeUpgradeDamage:
 Upgrade.bikeUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Light Tank Health
+		Name: Light Tank - Health
 	Buildable:
 		BuildPaletteOrder: 51
 		Prerequisites: carfactory8
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 1350
 	RenderSprites:
@@ -962,13 +962,13 @@ Upgrade.bikeUpgradeHealth:
 Upgrade.bikeUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Light Tank Reload
+		Name: Light Tank - Reload
 	Buildable:
 		BuildPaletteOrder: 52
 		Prerequisites: carfactory8
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 1350
 	RenderSprites:
@@ -979,13 +979,13 @@ Upgrade.bikeUpgradeReload:
 Upgrade.mlrsUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Mobile S.A.M. Damage 
+		Name: Mobile S.A.M. - Damage
 	Buildable:
 		BuildPaletteOrder: 110
 		Prerequisites: carfactory7
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1300
 	RenderSprites:
@@ -996,13 +996,13 @@ Upgrade.mlrsUpgradeDamage:
 Upgrade.mlrsUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Mobile S.A.M. Health
+		Name: Mobile S.A.M. - Health
 	Buildable:
 		BuildPaletteOrder: 111
 		Prerequisites: carfactory7
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 40%
+		Description: Decreases taken damage by 40%.
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -1013,13 +1013,13 @@ Upgrade.mlrsUpgradeHealth:
 Upgrade.mlrsUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Mobile S.A.M. Range
+		Name: Mobile S.A.M. - Range
 	Buildable:
 		BuildPaletteOrder: 112
 		Prerequisites: carfactory7
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 35%
+		Description: Increases range by 35%.
 	Valued:
 		Cost: 1300
 	RenderSprites:
@@ -1031,13 +1031,13 @@ Upgrade.mlrsUpgradeReload:
 Upgrade.artyUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Artillery Damage 
+		Name: Artillery - Damage
 	Buildable:
 		BuildPaletteOrder: 160
 		Prerequisites: carfactory5
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1750
 	RenderSprites:
@@ -1048,13 +1048,13 @@ Upgrade.artyUpgradeDamage:
 Upgrade.artyUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Artillery Health
+		Name: Artillery - Health
 	Buildable:
 		BuildPaletteOrder: 161
 		Prerequisites: carfactory5
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 1750
 	RenderSprites:
@@ -1065,13 +1065,13 @@ Upgrade.artyUpgradeHealth:
 Upgrade.artyUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Artillery Reload
+		Name: Artillery - Reload
 	Buildable:
 		BuildPaletteOrder: 162
 		Prerequisites: carfactory5
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 1750
 	RenderSprites:
@@ -1082,13 +1082,13 @@ Upgrade.artyUpgradeReload:
 Upgrade.ftnkUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Flame Tank Damage 
+		Name: Flame Tank - Damage
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: carfactory6
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1700
 	RenderSprites:
@@ -1099,13 +1099,13 @@ Upgrade.ftnkUpgradeDamage:
 Upgrade.ftnkUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Flame Tank Health
+		Name: Flame Tank - Health
 	Buildable:
 		BuildPaletteOrder: 71
 		Prerequisites: carfactory6
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 1700
 	RenderSprites:
@@ -1116,13 +1116,13 @@ Upgrade.ftnkUpgradeHealth:
 Upgrade.ftnkUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Flame Tank Reload
+		Name: Flame Tank - Reload
 	Buildable:
 		BuildPaletteOrder: 72
 		Prerequisites: carfactory6
 		Queue: Infantry.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases reload delay by 15%.
 	Valued:
 		Cost: 1700
 	RenderSprites:
@@ -1134,13 +1134,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.fawrUpgradeDamage:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Flying Advanced Guardtower Damage 
+#		Name: Flying Advanced Guard Tower - Damage 
 #	Buildable:
 #		BuildPaletteOrder: 300
 #		Prerequisites: secretfactory2, ~missnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 10%
+#		Description: Increases dealt damage by 10%.
 #	Valued:
 #		Cost: 2500
 #	RenderSprites:
@@ -1151,13 +1151,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.fawrUpgradeHealth:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Flying Advanced Guardtower Health
+#		Name: Flying Advanced Guard Tower - Health
 #	Buildable:
 #		BuildPaletteOrder: 301
 #		Prerequisites: secretfactory2, ~missnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 15%
+#		Description: Decreases taken damage by 15%.
 #	Valued:
 #		Cost: 2500
 #	RenderSprites:
@@ -1168,13 +1168,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.fawrUpgradeReload:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Flying Advanced Guardtower Reload
+#		Name: Flying Advanced Guard Tower - Reload
 #	Buildable:
 #		BuildPaletteOrder: 302
 #		Prerequisites: secretfactory2, ~missnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 15%
+#		Description: Decreases reload delay by 15%.
 #	Valued:
 #		Cost: 2500
 #	RenderSprites:
@@ -1185,13 +1185,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.tmplsUpgradeDamage:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Temple Angel Damage 
+#		Name: Temple Angel - Damage
 #	Buildable:
 #		BuildPaletteOrder: 310
 #		Prerequisites: secretfactory1, ~tmplnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 10%
+#		Description: Increases dealt damage by 10%.
 #	Valued:
 #		Cost: 2800
 #	RenderSprites:
@@ -1202,13 +1202,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.tmplsUpgradeHealth:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Temple Angel Health
+#		Name: Temple Angel - Health
 #	Buildable:
 #		BuildPaletteOrder: 311
 #		Prerequisites: secretfactory1, ~tmplnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 15%
+#		Description: Decreases taken damage by 15%.
 #	Valued:
 #		Cost: 2800
 #	RenderSprites:
@@ -1219,13 +1219,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.tmplsUpgradeReload:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Temple Angel Reload
+#		Name: Temple Angel - Reload
 #	Buildable:
 #		BuildPaletteOrder: 312
 #		Prerequisites: secretfactory1, ~tmplnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 15%
+#		Description: Decreases reload delay by 15%.
 #	Valued:
 #		Cost: 2800
 #	RenderSprites:
@@ -1237,13 +1237,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.guntnkUpgradeDamage:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Nuclear Command Vehicle Damage 
+#		Name: Nuclear Command Vehicle - Damage
 #	Buildable:
 #		BuildPaletteOrder: 330
 #		Prerequisites: secretfactory3, ~tmplnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 10%
+#		Description: Increases dealt damage by 10%.
 #	Valued:
 #		Cost: 3000
 #	RenderSprites:
@@ -1254,13 +1254,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.guntnkUpgradeHealth:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Nuclear Command Vehicle Range
+#		Name: Nuclear Command Vehicle - Range
 #	Buildable:
 #		BuildPaletteOrder: 331
 #		Prerequisites: secretfactory3, ~tmplnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 15%
+#		Description: Increases range by 15%.
 #	Valued:
 #		Cost: 3000
 #	RenderSprites:
@@ -1271,13 +1271,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.guntnkUpgradeReload:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Nuclear Command Vehicle Reload
+#		Name: Nuclear Command Vehicle - Reload
 #	Buildable:
 #		BuildPaletteOrder: 332
 #		Prerequisites: secretfactory3, ~tmplnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 15%
+#		Description: Decreases reload delay by 15%.
 #	Valued:
 #		Cost: 3000
 #	RenderSprites:
@@ -1289,13 +1289,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.moicoUpgradeDamage:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Mobile Ion Cannon Damage 
+#		Name: Mobile Ion Cannon - Damage
 #	Buildable:
 #		BuildPaletteOrder: 320
 #		Prerequisites: secretfactory4, ~missnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 10%
+#		Description: Increases dealt damage by 10%.
 #	Valued:
 #		Cost: 2500
 #	RenderSprites:
@@ -1306,13 +1306,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.moicoUpgradeHealth:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Mobile Ion Cannon Range
+#		Name: Mobile Ion Cannon - Range
 #	Buildable:
 #		BuildPaletteOrder: 321
 #		Prerequisites: secretfactory4, ~missnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 15%
+#		Description: Increases range by 15%.
 #	Valued:
 #		Cost: 2500
 #	RenderSprites:
@@ -1323,13 +1323,13 @@ Upgrade.ftnkUpgradeReload:
 #Upgrade.moicoUpgradeReload:
 #	AlwaysVisible:
 #	Tooltip:
-#		Name: upgrade Mobile Ion Cannon Reload
+#		Name: Mobile Ion Cannon - Reload
 #	Buildable:
 #		BuildPaletteOrder: 322
 #		Prerequisites: secretfactory4, ~missnew
 #		Queue: Infantry1.Fact
 #		BuildLimit: 1
-#		Description: Upgradevalue: 15%
+#		Description: Decreases reload delay by 15%.
 #	Valued:
 #		Cost: 2500
 #	RenderSprites:
@@ -1340,13 +1340,13 @@ Upgrade.ftnkUpgradeReload:
 Upgrade.tranUpgradeDamage:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Chinook Cannon Damage 
+		Name: Chinook Transport - Damage
 	Buildable:
 		BuildPaletteOrder: 135
 		Prerequisites: airfact0
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 10%
+		Description: Increases dealt damage by 10%.
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -1357,13 +1357,13 @@ Upgrade.tranUpgradeDamage:
 Upgrade.tranUpgradeHealth:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgradeChinook Cannon Range
+		Name: Chinook Transport - Health
 	Buildable:
 		BuildPaletteOrder: 136
 		Prerequisites: airfact0
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Decreases taken damage by 15%.
 	Valued:
 		Cost: 1000
 	RenderSprites:
@@ -1374,13 +1374,13 @@ Upgrade.tranUpgradeHealth:
 Upgrade.tranUpgradeReload:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Chinook Cannon Reload
+		Name: Chinook Transport - Range
 	Buildable:
 		BuildPaletteOrder: 137
 		Prerequisites: airfact0
 		Queue: Infantry1.Fact
 		BuildLimit: 1
-		Description: Upgradevalue: 15%
+		Description: Increases range by 35%.
 	Valued:
 		Cost: 1000
 	RenderSprites:

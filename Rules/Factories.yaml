@@ -105,7 +105,7 @@ E1FACTORY:
 		BuildDuration: 300
 		BuildPaletteOrder: 10
 		Queue: Building.Fact
-		Description: Type: Infantry\n Good against:\n  Infantry\n\n Bad against:\n  Vehicles, Structures, Air\n\nUpgradable with Lasers\n\n Upgraded Good against:\n  All\n\n Upgraded Bad against:\n  Air
+		Description: Type: Infantry\n\nGood Against:\n  Infantry\n\nBad Against:\n  Vehicles, Structures, Air\n\nUpgrade: Laser Gun\n\nUpgraded Good Against:\n  Ground\n\n Upgraded Bad Against:\n  Air
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -148,7 +148,7 @@ E2FACTORY:
 		BuildPaletteOrder: 20
 		Prerequisites: nukenew
 		Queue: Building.Fact
-		Description: Type: Infantry\n Good against:\n  Infantry, Vehicles\n\n Bad against:\n  Structures, Air\n\nUpgradable cluster Grenades
+		Description: Type: Infantry\n\nGood Against:\n  Infantry, Vehicles\n\nBad Against:\n  Structures, Air\n\nUpgrade: Bouncing Grenades
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -194,7 +194,7 @@ E22FACTORY:
 		BuildPaletteOrder: 65
 		Queue: Building.Fact
 		Prerequisites: nukenew
-		Description: Type: Infantry\n\n Good against:\n  Infantry, Vehicles, Structures\n\n Bad against:\n  Close-quaters, Air\n\nUpgradable Jevalins\n\n Upgraded Good against:\n  All\n\n Upgraded Bad against:\n  Close-quaters
+		Description: Type: Infantry\n\nGood Against:\n  Infantry, Vehicles, Structures\n\nBad Against:\n  Close Range, Air\n\nUpgrade: Jevalin\n\nUpgraded Good Against:\n  All\n\n Upgraded Bad Against:\n  Short Range
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -240,7 +240,7 @@ E3FACTORY:
 		BuildPaletteOrder: 30
 		Queue: Building.Fact
 		Prerequisites: lammo
-		Description:Type: Infantry\n\n Good against:\n  Vehicles, Structures, Air\n\n Bad against:\n  Infantry\n\nUpgradable Multi Rockets
+		Description: Type: Infantry\n\nGood Against:\n  Vehicles, Structures, Air\n\nBad Against:\n  Infantry\n\nUpgrade: Triple Rockets
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -286,7 +286,7 @@ E4FACTORY:
 		BuildPaletteOrder: 60
 		Queue: Building.Fact
 		Prerequisites: labnew
-		Description: Infantry\n\n Good against:\n  Infantry, Light Vehicles, Structures\n\n Bad against:\n  Tanks, Air\n\nUpgradable Grenade Launcher
+		Description: Type: Infantry\n\nGood Against:\n  Infantry, Light Vehicles, Structures\n\n Bad Against:\n  Tanks, Air\n\nUpgrade: Grenade Launcher
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -331,7 +331,7 @@ E5FACTORY:
 		BuildPaletteOrder: 100
 		Queue: Building.Fact
 		Prerequisites: newhosp
-		Description: Infantry\n\n Good against:\n  Infantry, Vehicles, Structures\n\n Bad against:\n  Air\n\nUpgradable ?
+		Description: Type: Infantry\n\nGood Against:\n  Infantry, Vehicles, Structures\n\nBad Against:\n  Air\n\nUpgrade: Rocket Launcher
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -377,7 +377,7 @@ RMBOFACTORY:
 		BuildPaletteOrder: 90
 		Queue: Building.Fact
 		Prerequisites: radarnew
-		Description: Infantry\n\n Superior against:\n  Infantry\n\n Bad against:\n  Vehicles, Structures, Air\n\nUpgradable with Dual Sniper cannon
+		Description: Type: Infantry\n\nSuperior Against:\n  Infantry\n\n Bad Against:\n  Vehicles, Structures, Air\n\nUpgrade: Dual Shot
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -417,7 +417,7 @@ CARFACTORY1:
 	Valued:
 		Cost: 1100
 	Tooltip:
-		Name: Humvee Factory
+		Name: Hum-Vee Factory
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
@@ -425,7 +425,7 @@ CARFACTORY1:
 		BuildPaletteOrder: 40
 		Queue: Building.Fact
 		Prerequisites: flytow, ~buildings.gdi
-		Description: Vehicle\n\n Good against:\n  Infantry, Artillery\n\n Bad against:\n  Tanks, Air\n\nUpgradable TOW Missile\n\n Upgraded Good against:\n  Infantry, Artillery, Air\n\n Upgraded Bad against:\n  Tanks, Structures
+		Description: Type: Vehicle\n\nGood Against:\n  Infantry, Light Vehicles, Artillery\n\n Bad Against:\n  Tanks, Structures, Air\n\nUpgrade: TOW Missile\n\nUpgraded Good Against:\n  Infantry, Light Vehicles, Artillery, Air\n\nUpgraded Bad Against:\n  Tanks, Structures
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -474,7 +474,7 @@ CARFACTORYBG:
 		BuildPaletteOrder: 40
 		Queue: Building.Fact
 		Prerequisites: flytow, ~buildings.nod
-		Description: Vehicle\n\n Good against:\n  Infantry, Artillery, Light Vehicles\n\n Bad against:\n  Tanks, Air\n\nUpgradable TOW Missile\n\n Upgraded Good against:\n  Infantry, Artillery, Air\n\n Upgraded Bad against:\n  Tanks, Structures
+		Description: Type: Vehicle\n\nGood Against:\n  Infantry, Light Vehicles, Artillery\n\nBad Against:\n  Tanks, Structures, Air\n\nUpgrade: TOW Missile\n\nUpgraded Good Against:\n  Infantry, Light Vehicles, Artillery, Air\n\n Upgraded Bad Against:\n  Tanks, Structures
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -528,7 +528,7 @@ CARFACTORY2:
 		BuildPaletteOrder: 80
 		Queue: Building.Fact
 		Prerequisites: hammo
-		Description: Tank\n\n Good against:\n  Vehicles, Structures\n\n Bad against:\n  Infantry, Air\n\nUpgradable Chemical bombs\n\n Upgraded Good against:\n  Infantry, Vehicles, Structures\n\n Upgraded Bad against:\n  Air
+		Description: Type: Tank\n\nGood Against:\n  Vehicles, Structures\n\nBad Against:\n  Infantry, Air\n\nUpgrade: Chemical Shells\n\nUpgraded Good Against:\n  Infantry, Vehicles, Structures\n\nUpgraded Bad Against:\n  Air
 	Building:
 		Footprint: xxx === ===
 		Dimensions: 3,3
@@ -583,7 +583,7 @@ CARFACTORY2:
 		BuildPaletteOrder: 85
 		Queue: Building.Fact
 		Prerequisites: fammo
-		Description: Tank\n\n Good against:\n  Vehicles, Structures\n\n Bad against:\n  Infantry, Air\n\nUpgradable Quadcannon\n\n Upgraded Good against:\n  Vehicles, Structures\n\n Upgraded Bad against:\n  Infantry
+		Description: Type: Tank\n\nGood Against:\n  Vehicles, Structures\n\nBad Against:\n  Infantry, Air\n\nUpgrade: Missile Pod\n\nUpgraded Good Against:\n  Vehicles, Structures\n\nUpgraded Bad Against:\n  Infantry
 	Building:
 		Footprint: ___ ___ xxx xxx ===
 		Dimensions: 3,5
@@ -625,7 +625,7 @@ CARFACTORY3:
 	Valued:
 		Cost: 1750
 	Tooltip:
-		Name: MLRS Factory
+		Name: Rocket Launcher Factory
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
@@ -633,7 +633,7 @@ CARFACTORY3:
 		BuildPaletteOrder: 70
 		Queue: Building.Fact
 		Prerequisites: nuk2new
-		Description: Vehicle\n\n Good against:\n  Vehicles, Structures\n\n Bad against:\n  Close-quaters, Air\n\nUpgradable Pack-Size\n\n\n    uses homing rockets
+		Description: Type: Vehicle\n\nGood Against:\n  Vehicles, Structures\n\nBad Against:\n  Close Range, Air\n\nUpgrade: Double Pack-Size\n\n\nUses homing missiles.
 	Building:
 		Footprint: _x_ xxx x=x ===
 		Dimensions: 3,4
@@ -684,7 +684,7 @@ CARFACTORY4:
 		BuildPaletteOrder: 170
 		Queue: Building.Fact
 		Prerequisites: fammo, forb
-		Description: Heavy Tank\n\n Good against:\n  All\n\n Bad against:\n  Infantry, Artillery\n\nUpgradable Tusk Lasers\n\n Upgraded Good against:\n All\n\n Upgraded Bad against:\n  Artillery
+		Description: Type: Tank\n\nGood against:\n  Vehicles, Structures, Air\n\nBad Against:\n  Infantry, Artillery\n\nUpgrade: Tusk Lasers\n\nUpgraded Good Against:\n  Infantry, Vehicles, Structures, Air\n\nUpgraded Bad Against:\n  Artillery
 	Building:
 		Footprint: _____ xxxxx xxxxx x===x x===x =====
 		Dimensions: 5,6
@@ -730,7 +730,7 @@ SECRETFACTORY1:
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
 		Prerequisites: dome, newhosp, ~tmplnew
-		Description: Aircraft\n\n Good against:\n  Infantry, Vehicles, Structures\n\n Bad against:\n  Air\n\n
+		Description: Type: Aircraft\n\nGood Against:\n  Infantry, Vehicles, Structures\n\nBad Against:\n  Air
 	Building:
 		Footprint: xxx xxx xxx ===
 		Dimensions: 3,4
@@ -768,13 +768,13 @@ SECRETFACTORY2:
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: Flying Advanced Guardtower Helipad
+		Name: Flying Advanced Guard Tower Helipad
 	Buildable:
 		BuildDuration: 300
 		BuildPaletteOrder: 310
 		Queue: Building.Fact
 		Prerequisites: dome, nuk2new, ~missnew
-		Description: Aircraft\n\n Good against:\n  Vehicles, Air\n\n Bad against:\n  Infantry, Structures\n\n     Always detects cloaked units.
+		Description: Type: Aircraft\n\nGood Against:\n  Vehicles, Air\n\nBad Against:\n  Infantry, Structures\n\n\nCan detect cloaked units.
 	Building:
 		Footprint: xxx xxx xxx ===
 		Dimensions: 3,4
@@ -819,7 +819,7 @@ SECRETFACTORY3:
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
 		Prerequisites: forb, fammo, ~tmplnew
-		Description: Vehicle\n\n Good against:\n  All Ground units, Structures\n\n Bad against:\n  Close-quaters, Air
+		Description: Type: Vehicle\n\nGood Against:\n  Ground\n\nBad Against:\n  Close Range, Air
 	Building:
 		Footprint: ____ xxxx xxxx ====
 		Dimensions: 4,4
@@ -858,7 +858,7 @@ SECRETFACTORY4:
 	Valued:
 		Cost: 3117
 	Tooltip:
-		Name: Mobile Ioncannon Factory
+		Name: Mobile Ion Cannon Factory
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
@@ -866,7 +866,7 @@ SECRETFACTORY4:
 		BuildPaletteOrder: 300
 		Queue: Building.Fact
 		Prerequisites: forb, radarnew, ~missnew
-		Description: Vehicle\n\n Good against:\n  All ground units, Structures\n\n Bad against:\n  Close-quaters, Air
+		Description: Type: Vehicle\n\nGood Against:\n  Ground\n\nBad Against:\n  Close Range, Air
 	Building:
 		Footprint: ____ xxxx xxxx ====
 		Dimensions: 4,4
@@ -906,13 +906,13 @@ AIRFACT0:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Transporthelicopter Helipad
+		Name: Chinook Transport Helipad
 	Buildable:
 		BuildDuration: 300
 		BuildPaletteOrder: 135
 		Queue: Building.Fact
 		Prerequisites: flytow
-		Description: Aircraft\n\n Good against:\n  Infantry\n\n Bad against:\n  Vehicles, Structures, Air\n\nUpgradable AG Rocketlaunchers\n\n Upgraded Good against:\n  Infantry, Structures, Air\n\n Upgraded Bad against:\n  Vehicles.\n\n     Always detects cloaked units.
+		Description: Type: Aircraft\n\nGood Against:\n  Infantry\n\nBad against:\n  Vehicles, Structures, Air\n\nUpgrade: Twin Rocket Launchers\n\nUpgraded Good Against:\n  Infantry, Structures, Air\n\nUpgraded Bad Against:\n  Vehicles\n\n\nCan detect cloaked units.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -954,7 +954,7 @@ AIRFACT1:
 		BuildPaletteOrder: 140
 		Queue: Building.Fact
 		Prerequisites: dome
-		Description: Aircraft\n\n Good against:\n  Vehicles, Structure\n\n Bad against:\n  Infantry\n\nUpgradable TV-Missile\n\n Upgraded Good against:\n  Vehicles, Structure, Air\n\n Upgraded Bad against:\n  Infantry
+		Description: Type: Aircraft\n\nGood Against:\n  Vehicles, Structure\n\nBad Against:\n  Infantry\n\nUpgrade: TV Missile\n\nUpgraded Good Against:\n  Vehicles, Structure, Air\n\nUpgraded Bad Against:\n  Infantry
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -997,7 +997,7 @@ AIRFACT2:
 		BuildPaletteOrder: 150
 		Queue: Building.Fact
 		Prerequisites: cflarf
-		Description: Aircraft\n\n Good against:\n  Infantry, Artillery\n\n Bad against:\n  Tanks\n\nUpgradable Sniper\n\n Upgraded Superior against:\n  Infantry
+		Description: Type: Aircraft\n\nGood Against:\n  Infantry, Artillery\n\nBad Against:\n  Tanks\n\nUpgrade: Sniper\n\nUpgraded Superior Against:\n  Infantry
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1042,7 +1042,7 @@ AIRFACTHIND:
 		BuildPaletteOrder: 137
 		Queue: Building.Fact
 		Prerequisites: dome, nukenew
-		Description: Heavy Aircraft\n\n Good against:\n  All ground units, Structures\n\n Bad against:\n  Air\n\nUpgradable incendiary bombs \n\n Upgraded Superior against:\n  All ground units, Structures\n\n Upgraded Bad against:\n  Air
+		Description: Type: Aircraft\n\nGood Against:\n  Ground\n\nBad Against:\n  Air\n\nUpgrade: Flame Bombs\n\nUpgraded Superior Against:\n  Ground\n\nUpgraded Bad Against:\n  Air
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1082,7 +1082,7 @@ AIRFACTHUNTER:
 		BuildPaletteOrder: 137
 		Queue: Building.Fact
 		Prerequisites: dome, lammo
-		Description: Heavy Aircraft\n\n Good against:\n  Vehicles, Air, Structures\n\n Bad against:\n  Infantry\n\nUpgradable Tusk Lasers \n\n Upgraded Good against:\n  All \n\n Upgraded Bad against:\n  Ranged Units\n\n Upgradeded Short Ranged
+		Description: Type: Aircraft\n\nGood Against:\n  Vehicles, Structures, Air\n\nBad Against:\n  Infantry\n\nUpgrade: Tusk Lasers\n\nUpgraded Good Against:\n  All\n\nUpgraded Bad against:\n  Long Range\n\n\nUpgraded weapon has less range than normal.
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1124,7 +1124,7 @@ CARFACTORY5:
 		BuildPaletteOrder: 160
 		Queue: Building.Fact
 		Prerequisites: nuk2new
-		Description: Vehicle\n\n Good against:\n  Infantry, Artillery\n\n Bad against:\n  Close-quaters, Air\n\nUpgradable Five-Shot
+		Description: Type: Vehicle\n\nGood Against:\n  Infantry, Artillery\n\nBad Against:\n  Close Range, Air\n\nUpgrade: Quintuple Shot
 	Building:
 		Footprint: __xx xxxx xxxx ====
 		Dimensions: 4,4
@@ -1164,7 +1164,7 @@ CARFACTORY6:
 	Valued:
 		Cost: 2100
 	Tooltip:
-		Name: Flametank Supplydrop
+		Name: Flame Tank Supply Drop
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
@@ -1172,7 +1172,7 @@ CARFACTORY6:
 		BuildPaletteOrder: 70
 		Queue: Building.Fact
 		Prerequisites: newhosp
-		Description: Tank\n\n Good against:\n  Infantry, Structures\n\n Bad against:\n  Tanks, Air\n\nUpgradable Chemical Fire\n\n Upgraded Good against:\n  all ground units, Structures\n\n Upgraded Bad against:\n  Tanks, Air
+		Description: Type: Tank\n\nGood Against:\n  Infantry, Structures\n\nBad Against:\n  Tanks, Air\n\nUpgrade: Chemical Fire\n\nUpgraded Good Against:\n  Ground\n\nUpgraded Bad Against:\n  Tanks, Air
 	Building:
 		Footprint: ___ xxx x=x ===
 		Dimensions: 3,4
@@ -1210,7 +1210,7 @@ CARFACTORY7:
 	Valued:
 		Cost: 1300
 	Tooltip:
-		Name: Anti Air Rocket Launcher Supplydrop
+		Name: Mobile S.A.M. Supply Drop
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
@@ -1218,7 +1218,7 @@ CARFACTORY7:
 		BuildPaletteOrder: 110
 		Queue: Building.Fact
 		Prerequisites: forb
-		Description: Vehicle\n\n Good against:\n  Air\n\n Bad against:\n  All ground units\n\nUpgradable EMP Missiles\n\n Upgraded Good against:\n  Structures, Air\n\n Upgraded Bad against:\n  All ground units.\n\n     Always detects cloaked units.
+		Description: Type: Vehicle\n\nGood Against:\n  Air\n\n Bad Against:\n  Ground\n\nUpgrade: EMP Missiles\n\nUpgraded Good Against:\n  Structures, Air\n\nUpgraded Bad Against:\n  Infantry, Vehicles\n\n\nCan detect cloaked units.
 	Building:
 		Footprint: xxxx xxxx ====
 		Dimensions: 4,3
@@ -1259,7 +1259,7 @@ CARFACTORY8:
 	Valued:
 		Cost: 1350
 	Tooltip:
-		Name: Light Tank Supplydrop
+		Name: Light Tank Supply Drop
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
@@ -1267,7 +1267,7 @@ CARFACTORY8:
 		BuildPaletteOrder: 50
 		Queue: Building.Fact
 		Prerequisites: lammo
-		Description: Tank\n\n Good against:\n  Vehicles, Structures\n\n Bad against:\n  Tanks, Air\n\nUpgradable Flak cannon\n\n Upgraded Good against:\n  Infantry, Light Vehicles, Air\n\n Upgraded Bad against:\n  Tanks, Structures
+		Description: Type: Tank\n\nGood Against:\n  Vehicles, Structures\n\nBad Against:\n  Tanks, Air\n\nUpgrade: Flak Cannon\n\nUpgraded Good Against:\n  Infantry, Light Vehicles, Air\n\nUpgraded Bad Against:\n  Tanks, Structures
 	Building:
 		Footprint: xxxx xxxx ====
 		Dimensions: 4,3
@@ -1308,7 +1308,7 @@ CARFACTORY10:
 	Valued:
 		Cost: 1850
 	Tooltip:
-		Name: Stealthtank Factory
+		Name: Stealth Tank Factory
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
@@ -1316,7 +1316,7 @@ CARFACTORY10:
 		BuildPaletteOrder: 100
 		Queue: Building.Fact
 		Prerequisites: forb
-		Description: Tank\n\n Good against:\n  Structures\n\n Bad against:\n  All ground Units\n\nUpgradable better stealth generator
+		Description: Type: Tank\n\nGood Against:\n  Structures\n\nBad Against:\n  Infantry, Vehicles\n\nUpgrade: Quick Re-Cloak
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -1368,7 +1368,7 @@ SILLYFACT1:
 		Queue: Building.Fact
 		Prerequisites: sillyone
 		IconPalette: ra
-		Description: Heavy Aircraft\n\n Good against:\n  All ground units, Structures\n\n Bad against:\n  Air
+		Description: Type: Aircraft\n\nGood Against:\n  Ground\n\nBad Against:\n  Air
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -1419,7 +1419,7 @@ SILLYFACT2:
 		BuildPaletteOrder: 410
 		Queue: Building.Fact
 		Prerequisites: sillyone
-		Description: Tank\n\n Good against:\n  infantry\n\n Bad against:\n  Air
+		Description: Type: Tank\n\n Good Against:\n  Infantry\n\nBad Against:\n  Air
 	Building:
 		Footprint: _x_ xxx === ===
 		Dimensions: 3,4
@@ -1469,7 +1469,7 @@ SILLYFACT3:
 		Queue: Building.Fact
 		Prerequisites: sillytwo
 		IconPalette: ra
-		Description: Heavy Aircraft\n\n Good against:\n  All ground units, Structures\n\n Bad against:\n  Air
+		Description: Type: Aircraft\n\nGood Against:\n  Ground\n\nBad Against:\n  Air
 	Building:
 		Footprint: xxx xxx 
 		Dimensions: 3,2
@@ -1509,14 +1509,14 @@ SILLYFACT4:
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Tooltip:
-		Name: Heavy Anti Air Platform Factory
+		Name: Heavy Anti-Air Platform Factory
 	Buildable:
 		BuildDuration: 300
 		BuildPaletteOrder: 420
 		Queue: Building.Fact
 		Prerequisites: sillytwo
 		IconPalette: ra
-		Description: Heavy Tank\n\n Good against:\n  Structures, Air\n\n Bad against:\n  All ground Units.
+		Description: Type: Tank\n\nGood Against:\n  Structures, Air\n\nBad Against:\n  Infantry, Vehicles
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -1569,7 +1569,7 @@ SILLYFACT5:
 		Queue: Building.Fact
 		Prerequisites: sillythree
 		IconPalette: ra
-		Description: Stealth Ship\n\n Good against:\n  Tanks, Structures\n\n Bad against:\n  Infantry, Msam's, Transport-helicopter, Flying advanced guardtower
+		Description: Type: Vehicle\n\nGood Against:\n  Tanks, Structures\n\nBad Against:\n  Infantry, Mobile S.A.M.s, Transport Helicopters, Flying Advanced Guard Towers
 	Building:
 		Footprint: xxx =x= ===
 		Dimensions: 3,3
@@ -1627,7 +1627,7 @@ SILLYFACT6:
 		BuildPaletteOrder: 430
 		Queue: Building.Fact
 		Prerequisites: sillythree
-		Description: Super Heavy Aircraft\n\n Good against:\n  Structures, Air\n\n Bad against:\n  All ground Units.
+		Description: Type: Aircraft\n\nGood Against:\n  Structures, Air\n\nBad Against:\n  Infantry, Vehicle
 	Building:
 		Footprint: _X_ xxx _X_
 		Dimensions: 3,3
@@ -1719,7 +1719,7 @@ LEVIATHANFACT:
 		BuildPaletteOrder: 9999
 		Queue: Building.Fact
 		Prerequisites: endgame
-		Description: Super Heavy Tank\n\n Good against:\n  Fully customizable\n\n Bad against:\n  Fully customizable
+		Description: Type: Tank\n\nGood Against:\n  Fully Customizable\n\nBad Against:\n  Fully Customizable
 		BuildLimit: 1
 	Building:
 		Footprint: x===x x===x x===x x===x x===x

@@ -3,13 +3,13 @@
 Upgrade.e1fire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rifle-infantry Weapon
+		Name: Minigunner - Laser Gun
 	Buildable:
 		BuildPaletteOrder: 10
 		Prerequisites: e1factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Rifle-infantry gets a Lasergun
+		Description: Replaces minigunner weapon with a laser gun.
 	Valued:
 		Cost: 1600
 	RenderSprites:
@@ -21,13 +21,13 @@ Upgrade.e1fire:
 Upgrade.mtnknapalm:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Medium Tank Chembomb
+		Name: Medium Tank - Chemical Shells
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: carfactory2
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Increase massive the weapon spread and damage to infantry.
+		Description: Gives medium tanks chemical shells, increasing their\ndamage versus infantry.
 	Valued:
 		Cost: 2500
 	RenderSprites:
@@ -38,13 +38,13 @@ Upgrade.mtnknapalm:
 Upgrade.msamfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: double MRLS Packsize
+		Name: Rocket Launcher - Double Pack-Size
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: carfactory3
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: The MRLS fires now double that much missiles but is more innacurate
+		Description: Doubles the amount of missiles fired by rocket launchers.
 	Valued:
 		Cost: 3000
 	RenderSprites:
@@ -55,13 +55,13 @@ Upgrade.msamfire:
 Upgrade.ftnknapalm:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Flame Tank napalm type
+		Name: Flame Tank - Chemical Fire
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: carfactory6
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Increase the weapon spread massive and damage dealt to heavy targets.
+		Description: Replaces regular flames with chemicals.
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -72,13 +72,13 @@ Upgrade.ftnknapalm:
 Upgrade.jeepfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Hum-Vee/ Buggy with TOW missile
+		Name: Buggy/Hum-Vee
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: jeepfireupgrade
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: a missile that deals massive damage to aircrafts and Vehicles\nHas a long reload time.
+		Description: Arms buggies and hum-vees with TOW Missile launchers, giving/nthem anti-air capacity.
 	Valued:
 		Cost: 1600
 	RenderSprites:
@@ -91,19 +91,19 @@ jeepfireupgrade:
 	ProvidesPrerequisite@buildingname: 
 		Prerequisite: jeepfireupgrade
 	Tooltip:
-		Name: Hum-Vee/ Buggy Factory
+		Name: Buggy/Hum-Vee Factory
 	
 
 Upgrade.e3fire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Rocketsoldier with a tripple missile.
+		Name: Rocket Soldier - Triple Rockets
 	Buildable:
 		BuildPaletteOrder: 30
 		Prerequisites: e3factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: a tripple rocketlauncher.
+		Description: Rocket soldiers fire 3 rocket at once.
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -115,13 +115,13 @@ Upgrade.e3fire:
 Upgrade.helifire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Apache with sniper
+		Name: Apache Longbow - Sniper
 	Buildable:
 		BuildPaletteOrder: 150
 		Prerequisites: airfact2
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Snipe every infantry away.
+		Description: Gives apache longbows a sniper.
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -132,13 +132,13 @@ Upgrade.helifire:
 Upgrade.grenadefire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Bouncing Grenade
+		Name: Grenadier - Bouncing Grenades
 	Buildable:
 		BuildPaletteOrder: 20
 		Prerequisites: e2factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: throws a grenade that bounces 3 times.
+		Description: Grenadiers now throw a grenade that bounces 3 times.
 	Valued:
 		Cost: 1100
 	RenderSprites:
@@ -149,13 +149,13 @@ Upgrade.grenadefire:
 Upgrade.flamerfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade ranged Flamethrower
+		Name: Flamethrower - Grenade Launcher
 	Buildable:
 		BuildPaletteOrder: 60
 		Prerequisites: e4factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: launches a bullet of fire.
+		Description: Flamethrowers launches flame grenades, allowing them to deal damage/nfrom greater ranges.
 	Valued:
 		Cost: 1500
 	RenderSprites:
@@ -166,13 +166,13 @@ Upgrade.flamerfire:
 Upgrade.ltnkfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade flak cannon
+		Name: Light Tank - Flak Cannon
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: carfactory8
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Upgrades the main cannon to a light flak.\n fires rapid.
+		Description: Upgrades the main cannon of light tank to a flak\nwhich fires rapidly.
 	Valued:
 		Cost: 1900
 	RenderSprites:
@@ -183,13 +183,13 @@ Upgrade.ltnkfire:
 Upgrade.artyfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Five Shot
+		Name: Artillery - Quintuple Shot
 	Buildable:
 		BuildPaletteOrder: 160
 		Prerequisites: carfactory5
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Adds a Magazin to the Artillery wich fires 5 times in a short delay.
+		Description: Artillery fires 5 shells at once.
 	Valued:
 		Cost: 2600
 	RenderSprites:
@@ -200,13 +200,13 @@ Upgrade.artyfire:
 Upgrade.mammofire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Tusk Laser
+		Name: Mammoth Tank - Tusk Laser
 	Buildable:
 		BuildPaletteOrder: 170
 		Prerequisites: carfactory4
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Replaces the Tusk-rockets with the mighty Tusk-Laser.
+		Description: Replaces the Tusk-Rockets with Tusk-Lasers.
 	Valued:
 		Cost: 4000
 	RenderSprites:
@@ -217,13 +217,13 @@ Upgrade.mammofire:
 Upgrade.orbmfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Orca Hunter with Tusk Laser
+		Name: Orca Hunter - Tusk Laser
 	Buildable:
 		BuildPaletteOrder: 144
 		Prerequisites: airfacthunter
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Replaces the Hunter Missiles with the mighty Tusk-Laser.
+		Description: Replaces the Hunter Missiles with Tusk-Lasers.
 	Valued:
 		Cost: 3500
 	RenderSprites:
@@ -235,13 +235,13 @@ Upgrade.orbmfire:
 Upgrade.rmbofire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade twin barrel
+		Name: Commando - Dual Shot
 	Buildable:
 		BuildPaletteOrder: 90
 		Prerequisites: rmbofactory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Commando can shoot tow times at once and will extremly slow down at the enemy base.
+		Description: Commando can shoot two times at once.
 	Valued:
 		Cost: 3300
 	RenderSprites:
@@ -252,13 +252,13 @@ Upgrade.rmbofire:
 Upgrade.stnkfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade stealthsystem
+		Name: Stealth Tank - Quick Re-Cloak
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: carfactory10
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Stealthtank will faster go in stealth mode after detection.
+		Description: Stealth tanks cloak back quicker once decloaked.
 	Valued:
 		Cost: 2500
 	RenderSprites:
@@ -269,31 +269,30 @@ Upgrade.stnkfire:
 Upgrade.e22fire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade to Javelin
+		Name: Mortar - Javelin
 	Buildable:
 		BuildPaletteOrder: 65
 		Prerequisites: e22factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Ugrades the mortar to a mighty Javelin, deals massive damage in a large radius.
+		Description: Upgrades mortar to javelin missiles.
 	Valued:
 		Cost: 2200
 	RenderSprites:
 		Image: e22fire
 	ProvidesPrerequisite@e22fire: 
 		Prerequisite: e22fire
-		
-		
+
 Upgrade.chemfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade to rocket
+		Name: Chemical Warrior - Rocket Launcher
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: e5factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Upgrades the chemical infantry with a bazooka wich shoots ground.
+		Description: Chemical warriors launches chemical rockets, allowing them to deal damage/nfrom greater ranges.
 	Valued:
 		Cost: 2300
 	RenderSprites:
@@ -304,7 +303,7 @@ Upgrade.chemfire:
 Upgrade.tranfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: Twin Anti Air Rockets
+		Name: Chinook Transport - Twin Rocket Launchers
 	Buildable:
 		BuildPaletteOrder: 135
 		Prerequisites: airfact0
@@ -321,13 +320,13 @@ Upgrade.tranfire:
 Upgrade.orcafire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Orca with TV missiles
+		Name: Orca - TV Missiles
 	Buildable:
 		BuildPaletteOrder: 140
 		Prerequisites: airfact1
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Very destructive oneshot missile!
+		Description: Gives orcas high damage, high RoF TV missiles.
 	Valued:
 		Cost: 2000
 	RenderSprites:
@@ -338,13 +337,13 @@ Upgrade.orcafire:
 Upgrade.hindfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Hind Firebombs
+		Name: Hind - Flame Bombs
 	Buildable:
 		BuildPaletteOrder: 137
 		Prerequisites: airfacthind
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Replaces the Hind rockets with destructive firebombs!
+		Description: Replaces the hind rockets with flame bombs!
 	Valued:
 		Cost: 3000
 	RenderSprites:
@@ -355,13 +354,13 @@ Upgrade.hindfire:
 Upgrade.mlrsfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Mobile S.A.M. weapon to EMP
+		Name: Mobile S.A.M. - EMP Missiles
 	Buildable:
 		BuildPaletteOrder: 110
 		Prerequisites: carfactory7
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: Can disable aircrafts and buildings!
+		Description: Gives S.A.M.s EMP, allowing them to disable aircraft and structures.
 	Valued:
 		Cost: 1900
 	RenderSprites:
@@ -372,13 +371,13 @@ Upgrade.mlrsfire:
 Upgrade.3tnkfire:
 	AlwaysVisible:
 	Tooltip:
-		Name: upgrade Heavy Tank with a mini tusk missile
+		Name: Heavy Tank - Rocket Pod
 	Buildable:
 		BuildPaletteOrder: 85
 		Prerequisites: 3tnkfactory
 		Queue: Upgrade.Array
 		BuildLimit: 1
-		Description: The heavy tank can now attack Air units.!!
+		Description: Puts a rocket launcher on heavy tanks, allowing them\nto attack air.
 	Valued:
 		Cost: 3000
 	RenderSprites:
@@ -390,14 +389,14 @@ Upgrade.3tnkfire:
 Master.Upgrade.10k:
 	AlwaysVisible:
 	Tooltip:
-		Name: Master Upgrade 10k
+		Name: Master Upgrade - 10K
 	Buildable:
 		BuildDuration: 250
 		BuildPaletteOrder: 260
 		Queue: Defenses.Fact
 		Prerequisites: endgame
 		BuildLimit: 1
-		Description: Increase the Power and Health of al Units by 50% and Range by 10%.
+		Description: Increases the Firepower and Health of all units by 50% and Range by 10%.
 	Valued:
 		Cost: 10000
 	RenderSprites:
@@ -408,14 +407,14 @@ Master.Upgrade.10k:
 Master.Upgrade.50k:
 	AlwaysVisible:
 	Tooltip:
-		Name: Master Upgrade 50k
+		Name: Master Upgrade - 50K
 	Buildable:
 		BuildDuration: 250
 		BuildPaletteOrder: 270
 		Prerequisites: Master10k, forb, fammo, radarnew
 		Queue: Defenses.Fact
 		BuildLimit: 1
-		Description: Increase the Power and Health of al Units by 100% and Range by 25%.
+		Description: Increases the Firepower and Health of all units by 100% and Range by 25%.
 	Valued:
 		Cost: 50000
 	RenderSprites:
@@ -427,14 +426,14 @@ Master.Upgrade.50k:
 Master.Upgrade.100k:
 	AlwaysVisible:
 	Tooltip:
-		Name: Master Upgrade 100k
+		Name: Master Upgrade - 100K
 	Buildable:
 		BuildDuration: 250
 		BuildPaletteOrder: 280
 		Prerequisites: Master50k, sillyone, sillytwo, sillythree
 		Queue: Defenses.Fact
 		BuildLimit: 1
-		Description: Increase the Power and Health of al Units by 200% and Range by 50%..
+		Description: Increases the Firepower and Health of all units by 200% and Range by 50%.
 	Valued:
 		Cost: 100000
 	RenderSprites:
@@ -447,13 +446,13 @@ Master.Upgrade.100k:
 Master10k:
 	AlwaysVisible:
 	Tooltip:
-		Name: Master Upgrade 10k
+		Name: Master Upgrade - 10K
 	ProvidesPrerequisite@Master10k: 
 		Prerequisite: Master10k
 		
 Master50k:
 	AlwaysVisible:
 	Tooltip:
-		Name: Master Upgrade 50k
+		Name: Master Upgrade - 50K
 	ProvidesPrerequisite@Master50k: 
 		Prerequisite: Master50k

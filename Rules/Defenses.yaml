@@ -14,11 +14,11 @@ SAM:
 		Name: SAM Site
 	Buildable:
 		BuildDuration: 4000
-		BuildPaletteOrder: 240
+		BuildPaletteOrder: 230
 		Queue: Defenses.Fact
 		Prerequisites: flytow
 		BuildLimit: 1 
-		Description: Basic Anti-Air base defense.\n  Strong vs Air\n  Weak vs All ground units.
+		Description: Basic Anti-Air base defense.\n  Strong vs Air\n  Weak vs Ground
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
@@ -56,11 +56,11 @@ GUN:
 		Name: Turret
 	Buildable:
 		BuildDuration: 3500
-		BuildPaletteOrder: 240
+		BuildPaletteOrder: 220
 		Queue: Defenses.Fact
 		Prerequisites: lammo
 		BuildLimit: 1 
-		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, vehicles\n  Weak vs Infantry
+		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Air
 	Building:
 	Health:
 		HP: 1500
@@ -99,11 +99,11 @@ OBLI:
 		Name: Obelisk of Light
 	Buildable:
 		BuildDuration: 6000
-		BuildPaletteOrder: 190
+		BuildPaletteOrder: 240
 		Queue: Defenses.Fact
 		Prerequisites: forb
 		BuildLimit: 1
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs all Ground units\n  Cannot target Aircraft
+		Description: Advanced base defense.\n  Strong vs Ground\n  Weak vs Air
 	FreeActor@1:
 		Actor: brik
 		SpawnOffset: 2,1
@@ -177,11 +177,11 @@ GTWR:
 		Name: Guard Tower
 	Buildable:
 		BuildDuration: 3500
-		BuildPaletteOrder: 230
+		BuildPaletteOrder: 210
 		Queue: Defenses.Fact
 		Prerequisites: nukenew
 		BuildLimit: 1
-		Description: Basic defensive structure.\n  Strong vs Infantry\n  Weak vs Tanks
+		Description: Basic base defense.\n  Strong vs Infantry\n  Weak vs Tanks
 	Building:
 	Health:
 		HP: 1500
@@ -217,7 +217,7 @@ ATWR:
 		Prerequisites: radarnew
 		Queue: Defenses.Fact
 		BuildLimit: 1
-		Description: All-purpose defensive structure.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
+		Description: All-purpose base defense.\n  Strong vs Aircraft, Tanks\n  Weak vs Infantry
 	FreeActor@1:
 		Actor: brik
 		SpawnOffset: 2,1

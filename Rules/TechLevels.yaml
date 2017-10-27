@@ -2783,13 +2783,13 @@ OILER2T3:
 OILER2BUILDABLE:
 	AlwaysVisible:
 	Tooltip:
-		Name: Activate Lane Oil pumping
+		Name: Activate Lane Oil Pumping
 	Buildable:
 		BuildPaletteOrder: 150
 		Queue: Defenses.Fact
 		BuildLimit: 1
 		Prerequisites: cash2, !oiler2build1
-		Description: Endables all oipumps along your main path. You can capture them by having ground units passing them parallel your path.
+		Description: Endables all oil pumps along your main path.\n\nYou can capture them by having ground units passing them parallel on your path.
 		IconPalette: ra
 	Valued:
 		Cost: 2500
