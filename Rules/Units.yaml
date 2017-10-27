@@ -974,7 +974,7 @@ BGGYNEW:
 	WithSpriteTurret:
 	AutoTarget:
 	SpawnActorOnDeath:
-		Actor: JEEP.Husk
+		Actor: BGGY.Husk
 	SelectionDecorations:
 		VisualBounds: 32,32
 	RejectsOrders:
