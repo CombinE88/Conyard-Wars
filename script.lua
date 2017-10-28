@@ -42,7 +42,7 @@ ExtraCash = function()
 			end)
 			
 			if stockmarked ~= nil then
-				Media.FloatingText("+" .. tostring(cashier) .. "$", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, _player.Color)
+				Media.FloatingText("+$" .. tostring(cashier) .. "", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, _player.Color)
 				
 				Media.DisplayMessage("Player " .. _player.Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!","Stockmarked", _player.Color)
 			end
@@ -69,7 +69,7 @@ ExtraCash = function()
 			end)
 			
 			if stockmarked ~= nil then
-				Media.FloatingText("+" .. tostring(cashier) .. "$", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, _player.Color)
+				Media.FloatingText("+$" .. tostring(cashier) .. "", stockmarked[1].CenterPosition + WVec.New(0,-100,0), 30, _player.Color)
 				
 				Media.DisplayMessage("Player " .. _player.Name .. " earned: " .. tostring(cashier) .. " in stock exchanges!","Stockmarked", _player.Color)
 			end
@@ -859,13 +859,13 @@ KilledUnit = function(Unit,self,killer)
 	OwnerKiller = killer.Owner
 	if OwnerKiller.HasPrerequisites({"cash3"}) and not OwnerKilled.IsAlliedWith(OwnerKiller) then		
 		local cashgrant = Values[QueueUnitsIndex[Unit.Type]]
-		Media.FloatingText("+" .. tostring(cashgrant) .. "$", self.CenterPosition + WVec.New(0,-100,0), 20, OwnerKiller.Color)
+		Media.FloatingText("+$" .. tostring(cashgrant) .. "", self.CenterPosition + WVec.New(0,-100,0), 20, OwnerKiller.Color)
 		local Katsching = OwnerKiller.Cash + cashgrant
 		OwnerKiller.Cash = Katsching
 		local Bounty = Map.ActorsInBox(Map.TopLeft, Map.BottomRight, function(C)
 			return C.Owner == OwnerKiller and (C.Type == "cash3" or C.Type == "cash3t2" or C.Type == "cash3t3" or C.Type == "cash3t4" or C.Type == "cash3t5" or C.Type == "cash3t6" or C.Type == "cash3t7" or C.Type == "cash3t8" or C.Type == "cash3t9" or C.Type == "cash3t10" or C.Type == "cash3t11" or C.Type == "cash3t12" or C.Type == "cash3t13" or C.Type == "cash3t14" or C.Type == "cash3t15" or C.Type == "cash3t16")
 		end)
-		Media.FloatingText("+" .. tostring(cashgrant) .. "$", Bounty[1].CenterPosition + WVec.New(0,-100,0), 20, OwnerKilled.Color)
+		Media.FloatingText("+$" .. tostring(cashgrant) .. "", Bounty[1].CenterPosition + WVec.New(0,-100,0), 20, OwnerKilled.Color)
 
 	end
 end
