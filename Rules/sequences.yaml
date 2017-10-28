@@ -1615,7 +1615,7 @@ cflarf:
 	dead: cflarf
         Start: 1
 		Tick: 800
-	bib: bib3
+	bib: bib2
 		UseTilesetExtension: true
 		Length: *   
 	icon: cflarficnh.shp
@@ -2067,6 +2067,17 @@ explosion:
 	chemlarge: chemlarge
 		Length: 13
 	disc: discthrow
+	xlexplosion: xlexplos
+		Length: *
+	lexplosion: lexplos
+		Length: *
+        
+constantexplode:
+	idle: veh-hit1
+		Length: *
+		ZOffset: 1023
+
+    
 	
 50cal:
 	idle:

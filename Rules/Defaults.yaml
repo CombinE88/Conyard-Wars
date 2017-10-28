@@ -1,3 +1,32 @@
+^PlaneHusk:
+	Inherits@1: ^SpriteActor
+	Health:
+		HP: 280
+	Armor:
+		Type: Heavy
+	HiddenUnderFog:
+		Type: CenterPosition
+	ScriptTriggers:
+	WithFacingSpriteBody:
+	HitShape:
+	WithShadow:
+		Offset: 43, 128, 0
+		ZOffset: -129
+	Tooltip:
+		GenericName: Destroyed Plane
+	Aircraft:
+	FallsToEarth:
+		Spins: False
+		Moves: True
+		Velocity: 86
+		Explosion: HeliCrash
+	EditorTilesetFilter:
+		Categories: Husk
+	RevealOnDeath:
+		Duration: 60
+		Radius: 4c0
+
+
 ^EMPupgrades:
 	#UpgradeOverlay@EMPDISABLE:
 	#	UpgradeTypes: empdisable

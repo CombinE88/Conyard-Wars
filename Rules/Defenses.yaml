@@ -24,7 +24,7 @@ SAM:
 		Dimensions: 2,1
 	RequiresPower:
 	Health:
-		HP: 2000
+		HP: 1300
 	Armor:
 		Type: Heavy
 	RevealsShroud:

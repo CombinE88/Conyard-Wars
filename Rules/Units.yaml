@@ -2012,6 +2012,8 @@ HIND.Husk:
 	RenderSprites:
 		PlayerPalette: raplayer
 		Image: hind
+	FallsToEarth:
+		Explosion: LargeHeliCrash
 
 STNKNEW:
 	Inherits: ^Vehicle
@@ -2970,12 +2972,14 @@ FGTWRH.Husk:
 		TurnSpeed: 4
 		Speed: 186
 	RevealsShroud:
-		Range: 10c0
+		Range: 6c0
 		Type: CenterPosition
 	WithIdleOverlay:
 		Offset: 0,0,300
 	RenderSprites:
 		Image: fgtwr
+	FallsToEarth:
+		Explosion: LargeHeliCrash
 
 		
 FATWR.Husk:
@@ -2986,12 +2990,14 @@ FATWR.Husk:
 		TurnSpeed: 4
 		Speed: 186
 	RevealsShroud:
-		Range: 10c0
+		Range: 6c0
 		Type: CenterPosition
 	WithIdleOverlay:
 		Offset: 0,0,400
 	RenderSprites:
 		Image: fatwr
+	FallsToEarth:
+		Explosion: LargeHeliCrash
 
 TMPLANGEL.Husk:
 	Inherits: ^HelicopterHusk
@@ -3318,18 +3324,49 @@ SILLYCA:
 		EmptyWeapon: HeliExplode
 		
 SILLYCA.Husk:
-	Inherits: ^HelicopterHusk
+	Inherits: ^PlaneHusk
 	Tooltip:
 		Name: Cruiser
+	Contrail:
+		Offset: -853,0,0
 	Aircraft:
-		TurnSpeed: 4
-		Speed: 186
+		TurnSpeed: 5
+		Speed: 45
+	SmokeTrailWhenDamaged:
+		Offset: -1024,0,0
+		Interval: 2
+		MinDamage: Undamaged
+	SmokeTrailWhenDamaged@ExplodesConstant:
+		Offset: -964,-30,0
+		Interval: 19
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@ExplodesConstant2:
+		Offset: -868,20,0
+		Interval: 21
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@ExplodesConstant3:
+		Offset: 0,56,143
+		Interval: 17
+		MinDamage: Undamaged
+		Sprite: constantexplode
 	RevealsShroud:
-		Range: 10c0
-		Type: CenterPosition
+		Range: 6c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
 	RenderSprites:
 		Image: ca
 		PlayerPalette: raplayer
+	FallsToEarth:
+		Explosion: GiantHeliCrash
+		Velocity: 5
+	WithIdleOverlay@Turret1:
+		Offset: -864,0,128
+		Sequence: turret
+	WithIdleOverlay@Turret2:
+		Offset: 768,0,128
+		Sequence: turret
 		
 HARVNEW:
 	Inherits: ^Tank
@@ -3476,18 +3513,64 @@ SILLYBADR:
 		Offset: -432,-560,0
 		
 SILLYBADR.Husk:
-	Inherits: ^HelicopterHusk
+	Inherits: ^PlaneHusk
 	Tooltip:
 		Name: Rocket Bomber
+	SmokeTrailWhenDamaged@0:
+		Offset: -432,560,0
+		Interval: 2
+	SmokeTrailWhenDamaged@1:
+		Offset: -432,-560,0
+		Interval: 2
+	Contrail@1:
+		Offset: -432,560,0
+	Contrail@2:
+		Offset: -432,-560,0
 	Aircraft:
-		TurnSpeed: 4
-		Speed: 186
+		TurnSpeed: 5
+		Speed: 45
+	SmokeTrailWhenDamaged@ExplodesConstant:
+		Offset: 0,556,40
+		Interval: 15
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@ExplodesConstant2:
+		Offset: -178,1240,40
+		Interval: 20
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@ExplodesConstant3:
+		Offset: 0,-556,40
+		Interval: 25
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@ExplodesConstant:
+		Offset: -178,-1240,40
+		Interval: 15
+		MinDamage: Undamaged
+		Sprite: constantexplode
 	RevealsShroud:
-		Range: 10c0
-		Type: CenterPosition
+		Range: 6c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
 	RenderSprites:
 		Image: badr
 		PlayerPalette: raplayer
+	FallsToEarth:
+		Explosion: GiantHeliCrash
+		Velocity: 5
+	WithIdleOverlay@Turret1:
+		Offset: 0,556,40
+		Sequence: turret
+	WithIdleOverlay@Turret2:
+		Offset: -178,1240,40
+		Sequence: turret
+	WithIdleOverlay@Turret3:
+		Offset: 0,-556,40
+		Sequence: turret
+	WithIdleOverlay@Turret4:
+		Offset: -178,-1240,40
+		Sequence: turret
 		
 		
 FLAGPLAT:
@@ -3761,6 +3844,8 @@ LSTNEW:
 	
 LSTNEW.Husk:
 	Inherits: ^HelicopterHusk
+	FallsToEarth:
+		Explosion: LargeHeliCrash
 	Tooltip:
 		Name: Landing Craft
 	Aircraft:

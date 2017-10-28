@@ -1,3 +1,23 @@
+LargeHeliCrash:
+	Inherits: ^DamagingExplosion
+	Warhead@1Dam: SpreadDamage
+		Damage: 175
+		Spread: 1024
+	Warhead@2Eff: CreateEffect
+		Explosions: lexplosion
+		ImpactSounds: xplobig4.aud
+		VictimScanRadius: 0
+        
+GiantHeliCrash:
+	Inherits: ^DamagingExplosion
+	Warhead@1Dam: SpreadDamage
+		Damage: 250
+		Spread: 1536
+	Warhead@2Eff: CreateEffect
+		Explosions: xlexplosion
+		ImpactSounds: xplobig6.aud
+		VictimScanRadius: 0
+
 M16tran:
 	ReloadDelay: 40
 	Range: 4c0
