@@ -216,12 +216,12 @@ PLACEHOLDER:
 	Valued:
 		Cost: 0
 	Tooltip:
-		Name: Reset yor Factorys
+		Name: Reset your Factories
 	Buildable:
 		BuildDuration: 50
 		BuildPaletteOrder: 10000
 		Queue: Defenses.Fact
-		Description: Resets all your factorys, they start producing at the same time.\n Good to generate waves.
+		Description: Resets all your factories, they start producing at the same time.\nGood to generate waves.
 	Mobile:
 		Speed: 56
 	Health:
@@ -2626,7 +2626,7 @@ FATWR:
 	Valued:
 		Cost: 0
 	Tooltip:
-		Name: Flying Advanced Guardtower
+		Name: Flying Advanced Guard Tower
 	Health:
 		HP: 290
 	Buildable:
@@ -2965,7 +2965,7 @@ MOICO:
 FGTWRH.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Apache Longbow
+		Name: Flying Advanced Guard Tower
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 186
@@ -2981,7 +2981,7 @@ FGTWRH.Husk:
 FATWR.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Apache Longbow
+		Name: Flying Advanced Guard Tower
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 186
@@ -2996,7 +2996,7 @@ FATWR.Husk:
 TMPLANGEL.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Apache Longbow
+		Name: Temple Angel
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 186
@@ -3320,7 +3320,7 @@ SILLYCA:
 SILLYCA.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Apache Longbow
+		Name: Cruiser
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 186
@@ -3478,7 +3478,7 @@ SILLYBADR:
 SILLYBADR.Husk:
 	Inherits: ^HelicopterHusk
 	Tooltip:
-		Name: Apache Longbow
+		Name: Rocket Bomber
 	Aircraft:
 		TurnSpeed: 4
 		Speed: 186
@@ -3505,7 +3505,7 @@ FLAGPLAT:
 	Valued:
 		Cost: 0
 	Tooltip:
-		Name: Anti Air Platform
+		Name: Anti-Air Platform
 	Buildable:
 		BuildDuration: 8500
 		BuildPaletteOrder: 60
