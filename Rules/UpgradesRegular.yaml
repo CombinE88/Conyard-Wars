@@ -367,7 +367,7 @@ Upgrade.jeepUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: carfactory1, ~buildings.gdi
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -384,7 +384,7 @@ Upgrade.jeepUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 41
 		Prerequisites: carfactory1, ~buildings.gdi
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 35%.
 	Valued:
@@ -401,7 +401,7 @@ Upgrade.jeepUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 42
 		Prerequisites: carfactory1, ~buildings.gdi
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases reload delay by 50%.
 	Valued:
@@ -419,7 +419,7 @@ Upgrade.buggyUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 40
 		Prerequisites: carfactorybg, ~buildings.nod
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -436,7 +436,7 @@ Upgrade.buggyUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 41
 		Prerequisites: carfactorybg, ~buildings.nod
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 35%.
 	Valued:
@@ -453,7 +453,7 @@ Upgrade.buggyUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 42
 		Prerequisites: carfactorybg, ~buildings.nod
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases reload delay by 50%.
 	Valued:
@@ -470,7 +470,7 @@ Upgrade.mtnkUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: carfactory2
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -487,7 +487,7 @@ Upgrade.mtnkUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 81
 		Prerequisites: carfactory2
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -504,7 +504,7 @@ Upgrade.mtnkUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 82
 		Prerequisites: carfactory2
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases reload delay by 15%.
 	Valued:
@@ -521,7 +521,7 @@ Upgrade.3tnkUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 85
 		Prerequisites: 3tnkfactory
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -538,7 +538,7 @@ Upgrade.3tnkUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 86
 		Prerequisites: 3tnkfactory
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -555,7 +555,7 @@ Upgrade.3tnkUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 87
 		Prerequisites: 3tnkfactory
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases reload delay by 15%.
 	Valued:
@@ -573,7 +573,7 @@ Upgrade.htnkUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 170
 		Prerequisites: carfactory4
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -590,7 +590,7 @@ Upgrade.htnkUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 171
 		Prerequisites: carfactory4
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -607,7 +607,7 @@ Upgrade.htnkUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 172
 		Prerequisites: carfactory4
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases reload delay by 15%.
 	Valued:
@@ -624,7 +624,7 @@ Upgrade.msamUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 75
 		Prerequisites: carfactory3
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -641,7 +641,7 @@ Upgrade.msamUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 76
 		Prerequisites: carfactory3
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -658,7 +658,7 @@ Upgrade.msamUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 77
 		Prerequisites: carfactory3
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases reload delay by 15%.
 	Valued:
@@ -673,9 +673,9 @@ Upgrade.heliUpgradeDamage:
 	Tooltip:
 		Name: Apache Longbow - Damage
 	Buildable:
-		BuildPaletteOrder: 150
+		BuildPaletteOrder: 20
 		Prerequisites: airfact2
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -690,9 +690,9 @@ Upgrade.heliUpgradeHealth:
 	Tooltip:
 		Name: Apache Longbow - Health
 	Buildable:
-		BuildPaletteOrder: 151
+		BuildPaletteOrder: 21
 		Prerequisites: airfact2
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -707,9 +707,9 @@ Upgrade.heliUpgradeReload:
 	Tooltip:
 		Name: Apache Longbow - Range
 	Buildable:
-		BuildPaletteOrder: 152
+		BuildPaletteOrder: 22
 		Prerequisites: airfact2
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Increases range by 15%.
 	Valued:
@@ -725,9 +725,9 @@ Upgrade.orcaUpgradeDamage:
 	Tooltip:
 		Name: Orca - Damage
 	Buildable:
-		BuildPaletteOrder: 140
+		BuildPaletteOrder: 30
 		Prerequisites: airfact1
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -742,9 +742,9 @@ Upgrade.orcaUpgradeHealth:
 	Tooltip:
 		Name: Orca - Health
 	Buildable:
-		BuildPaletteOrder: 141
+		BuildPaletteOrder: 31
 		Prerequisites: airfact1
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -759,9 +759,9 @@ Upgrade.orcaUpgradeRange:
 	Tooltip:
 		Name: Orca - Range
 	Buildable:
-		BuildPaletteOrder: 142
+		BuildPaletteOrder: 32
 		Prerequisites: airfact1
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Increases range by 15%.
 	Valued:
@@ -776,9 +776,9 @@ Upgrade.hunterUpgradeDamage:
 	Tooltip:
 		Name: Orca Hunter - Damage
 	Buildable:
-		BuildPaletteOrder: 143
+		BuildPaletteOrder: 50
 		Prerequisites: airfacthunter
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -793,9 +793,9 @@ Upgrade.hunterUpgradeHealth:
 	Tooltip:
 		Name: Orca Hunter - Health
 	Buildable:
-		BuildPaletteOrder: 144
+		BuildPaletteOrder: 51
 		Prerequisites: airfacthunter
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -810,9 +810,9 @@ Upgrade.hunterUpgradeRange:
 	Tooltip:
 		Name: Orca Hunter - Range
 	Buildable:
-		BuildPaletteOrder: 145
+		BuildPaletteOrder: 52
 		Prerequisites: airfacthunter
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Increases range by 15%.
 	Valued:
@@ -827,9 +827,9 @@ Upgrade.hindUpgradeDamage:
 	Tooltip:
 		Name: Hind - Damage 
 	Buildable:
-		BuildPaletteOrder: 146
+		BuildPaletteOrder: 40
 		Prerequisites: airfacthind
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -844,9 +844,9 @@ Upgrade.hindUpgradeHealth:
 	Tooltip:
 		Name: Hind - Health
 	Buildable:
-		BuildPaletteOrder: 147
+		BuildPaletteOrder: 41
 		Prerequisites: airfacthind
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -861,9 +861,9 @@ Upgrade.hindUpgradeReload:
 	Tooltip:
 		Name: Hind - Range
 	Buildable:
-		BuildPaletteOrder: 148
+		BuildPaletteOrder: 42
 		Prerequisites: airfacthind
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Increases range by 15%.
 	Valued:
@@ -881,7 +881,7 @@ Upgrade.stnkUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 105
 		Prerequisites: carfactory10
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -898,7 +898,7 @@ Upgrade.stnkUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 106
 		Prerequisites: carfactory10
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -915,7 +915,7 @@ Upgrade.stnkUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 107
 		Prerequisites: carfactory10
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases reload delay by 15%.
 	Valued:
@@ -932,7 +932,7 @@ Upgrade.bikeUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: carfactory8
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -949,7 +949,7 @@ Upgrade.bikeUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 51
 		Prerequisites: carfactory8
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -966,7 +966,7 @@ Upgrade.bikeUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 52
 		Prerequisites: carfactory8
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases reload delay by 15%.
 	Valued:
@@ -983,7 +983,7 @@ Upgrade.mlrsUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 110
 		Prerequisites: carfactory7
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -1000,7 +1000,7 @@ Upgrade.mlrsUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 111
 		Prerequisites: carfactory7
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 40%.
 	Valued:
@@ -1017,7 +1017,7 @@ Upgrade.mlrsUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 112
 		Prerequisites: carfactory7
-		Queue: Infantry1.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases range by 35%.
 	Valued:
@@ -1035,7 +1035,7 @@ Upgrade.artyUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 160
 		Prerequisites: carfactory5
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -1052,7 +1052,7 @@ Upgrade.artyUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 161
 		Prerequisites: carfactory5
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -1069,7 +1069,7 @@ Upgrade.artyUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 162
 		Prerequisites: carfactory5
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases reload delay by 15%.
 	Valued:
@@ -1086,7 +1086,7 @@ Upgrade.ftnkUpgradeDamage:
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: carfactory6
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -1103,7 +1103,7 @@ Upgrade.ftnkUpgradeHealth:
 	Buildable:
 		BuildPaletteOrder: 71
 		Prerequisites: carfactory6
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -1120,7 +1120,7 @@ Upgrade.ftnkUpgradeReload:
 	Buildable:
 		BuildPaletteOrder: 72
 		Prerequisites: carfactory6
-		Queue: Infantry.Fact
+		Queue: Vehicle.Fact
 		BuildLimit: 1
 		Description: Decreases reload delay by 15%.
 	Valued:
@@ -1138,7 +1138,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 300
 #		Prerequisites: secretfactory2, ~missnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Increases dealt damage by 10%.
 #	Valued:
@@ -1155,7 +1155,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 301
 #		Prerequisites: secretfactory2, ~missnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Decreases taken damage by 15%.
 #	Valued:
@@ -1172,7 +1172,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 302
 #		Prerequisites: secretfactory2, ~missnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Decreases reload delay by 15%.
 #	Valued:
@@ -1189,7 +1189,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 310
 #		Prerequisites: secretfactory1, ~tmplnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Increases dealt damage by 10%.
 #	Valued:
@@ -1206,7 +1206,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 311
 #		Prerequisites: secretfactory1, ~tmplnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Decreases taken damage by 15%.
 #	Valued:
@@ -1223,7 +1223,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 312
 #		Prerequisites: secretfactory1, ~tmplnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Decreases reload delay by 15%.
 #	Valued:
@@ -1241,7 +1241,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 330
 #		Prerequisites: secretfactory3, ~tmplnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Increases dealt damage by 10%.
 #	Valued:
@@ -1258,7 +1258,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 331
 #		Prerequisites: secretfactory3, ~tmplnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Increases range by 15%.
 #	Valued:
@@ -1275,7 +1275,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 332
 #		Prerequisites: secretfactory3, ~tmplnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Decreases reload delay by 15%.
 #	Valued:
@@ -1293,7 +1293,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 320
 #		Prerequisites: secretfactory4, ~missnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Increases dealt damage by 10%.
 #	Valued:
@@ -1310,7 +1310,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 321
 #		Prerequisites: secretfactory4, ~missnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Increases range by 15%.
 #	Valued:
@@ -1327,7 +1327,7 @@ Upgrade.ftnkUpgradeReload:
 #	Buildable:
 #		BuildPaletteOrder: 322
 #		Prerequisites: secretfactory4, ~missnew
-#		Queue: Infantry1.Fact
+#		Queue: Infantry.Fact
 #		BuildLimit: 1
 #		Description: Decreases reload delay by 15%.
 #	Valued:
@@ -1342,9 +1342,9 @@ Upgrade.tranUpgradeDamage:
 	Tooltip:
 		Name: Chinook Transport - Damage
 	Buildable:
-		BuildPaletteOrder: 135
+		BuildPaletteOrder: 10
 		Prerequisites: airfact0
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Increases dealt damage by 10%.
 	Valued:
@@ -1359,9 +1359,9 @@ Upgrade.tranUpgradeHealth:
 	Tooltip:
 		Name: Chinook Transport - Health
 	Buildable:
-		BuildPaletteOrder: 136
+		BuildPaletteOrder: 11
 		Prerequisites: airfact0
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Decreases taken damage by 15%.
 	Valued:
@@ -1376,9 +1376,9 @@ Upgrade.tranUpgradeReload:
 	Tooltip:
 		Name: Chinook Transport - Range
 	Buildable:
-		BuildPaletteOrder: 137
+		BuildPaletteOrder: 12
 		Prerequisites: airfact0
-		Queue: Infantry1.Fact
+		Queue: Aircraft.Fact
 		BuildLimit: 1
 		Description: Increases range by 35%.
 	Valued:

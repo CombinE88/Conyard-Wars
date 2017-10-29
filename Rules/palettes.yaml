@@ -16,3 +16,9 @@
 		G: 0
 		B: 0
 		A: 140
+	PaletteFromRGBA@lightdisabled:
+		Name: lightdisabled
+		R: 0
+		G: 0
+		B: 0
+		A: 90

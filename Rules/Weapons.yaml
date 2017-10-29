@@ -724,10 +724,10 @@ MortarShell:
 		ImpactSounds: xplos.aud
 		
 HunterMissiles:
-	ReloadDelay: 45
+	ReloadDelay: 50
 	Range: 6c512
 	Burst: 4
-	BurstDelay: 8
+	BurstDelay: 2
 	MinRange: 1c256
 	Report: rocket1.aud
 	ValidTargets: Air, Vehicle, Structure

@@ -619,7 +619,7 @@ LEVIATHAN:
 		Turret: BasicTurret1
 	Turreted@BasicTurret1:
 		Turret: BasicTurret1
-		Offset: 1069,697,-50
+		Offset: 1069,697,-150
 	Armament@BasicTurret1:
 		Weapon: MachineGunLeviathan
 		Name: MachineGun1
@@ -634,7 +634,7 @@ LEVIATHAN:
 		Turret: BasicTurret2
 	Turreted@BasicTurret2:
 		Turret: BasicTurret2
-		Offset: 1069,-697,-50
+		Offset: 1069,-697,-150
 	Armament@BasicTurret2:
 		Weapon: MachineGunLeviathan
 		Name: MachineGun2
@@ -665,6 +665,38 @@ LEVIATHAN.Husk:
 		Offset: 1069,-697,10
 	RenderSprites:
 		Image: leviathan
+	Health:
+		HP: 400
+	SmokeTrailWhenDamaged@Explode1:
+		Offset: -512,1230,0
+		Interval: 19
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@Explode3:
+		Offset: 351,-213,0
+		Interval: 53
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@Explode4:
+		Offset: -851,-412,0
+		Interval: 23
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@Explode5:
+		Offset: 412,142,0
+		Interval: 17
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@Explode6:
+		Offset: 606,-213,0
+		Interval: 74
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@Explode7:
+		Offset: 79,-30,0
+		Interval: 35
+		MinDamage: Undamaged
+		Sprite: constantexplode
         
 
 PLACEHOLDERLEVI:
@@ -679,7 +711,7 @@ PLACEHOLDERLEVI:
 	Buildable:
 		BuildDuration: 250
 		Prerequisites: !leviathan, leviathanfact
-		BuildPaletteOrder: 10000
+		BuildPaletteOrder: 310
 		Queue: Building.Fact
 		Description: Finishes the leviathan now!.
 	Mobile:
@@ -700,7 +732,7 @@ PLACEHOLDSECONDLEV:
 	Buildable:
 		BuildDuration: 1000
 		Prerequisites: leviathan, leviathanfact
-		BuildPaletteOrder: 10000
+		BuildPaletteOrder: 340
 		Queue: Building.Fact
 		Description: Get a second leviathan right now!.
 	Mobile:

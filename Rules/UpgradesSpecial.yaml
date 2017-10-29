@@ -23,7 +23,7 @@ Upgrade.mtnknapalm:
 	Tooltip:
 		Name: Medium Tank - Chemical Shells
 	Buildable:
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 110
 		Prerequisites: carfactory2
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -40,7 +40,7 @@ Upgrade.msamfire:
 	Tooltip:
 		Name: Rocket Launcher - Double Pack-Size
 	Buildable:
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 170
 		Prerequisites: carfactory3
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -57,7 +57,7 @@ Upgrade.ftnknapalm:
 	Tooltip:
 		Name: Flame Tank - Chemical Fire
 	Buildable:
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 80
 		Prerequisites: carfactory6
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -74,7 +74,7 @@ Upgrade.jeepfire:
 	Tooltip:
 		Name: Buggy/Hum-Vee
 	Buildable:
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 20
 		Prerequisites: jeepfireupgrade
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -99,7 +99,7 @@ Upgrade.e3fire:
 	Tooltip:
 		Name: Rocket Soldier - Triple Rockets
 	Buildable:
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 40
 		Prerequisites: e3factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -117,7 +117,7 @@ Upgrade.helifire:
 	Tooltip:
 		Name: Apache Longbow - Sniper
 	Buildable:
-		BuildPaletteOrder: 150
+		BuildPaletteOrder: 60
 		Prerequisites: airfact2
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -134,7 +134,7 @@ Upgrade.grenadefire:
 	Tooltip:
 		Name: Grenadier - Bouncing Grenades
 	Buildable:
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 70
 		Prerequisites: e2factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -151,7 +151,7 @@ Upgrade.flamerfire:
 	Tooltip:
 		Name: Flamethrower - Grenade Launcher
 	Buildable:
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 100
 		Prerequisites: e4factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -185,7 +185,7 @@ Upgrade.artyfire:
 	Tooltip:
 		Name: Artillery - Quintuple Shot
 	Buildable:
-		BuildPaletteOrder: 160
+		BuildPaletteOrder: 200
 		Prerequisites: carfactory5
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -202,7 +202,7 @@ Upgrade.mammofire:
 	Tooltip:
 		Name: Mammoth Tank - Tusk Laser
 	Buildable:
-		BuildPaletteOrder: 170
+		BuildPaletteOrder: 220
 		Prerequisites: carfactory4
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -219,7 +219,7 @@ Upgrade.orbmfire:
 	Tooltip:
 		Name: Orca Hunter - Tusk Laser
 	Buildable:
-		BuildPaletteOrder: 144
+		BuildPaletteOrder: 150
 		Prerequisites: airfacthunter
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -237,7 +237,7 @@ Upgrade.rmbofire:
 	Tooltip:
 		Name: Commando - Dual Shot
 	Buildable:
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 190
 		Prerequisites: rmbofactory
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -254,7 +254,7 @@ Upgrade.stnkfire:
 	Tooltip:
 		Name: Stealth Tank - Quick Re-Cloak
 	Buildable:
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 210
 		Prerequisites: carfactory10
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -271,7 +271,7 @@ Upgrade.e22fire:
 	Tooltip:
 		Name: Mortar - Javelin
 	Buildable:
-		BuildPaletteOrder: 65
+		BuildPaletteOrder: 130
 		Prerequisites: e22factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -288,7 +288,7 @@ Upgrade.chemfire:
 	Tooltip:
 		Name: Chemical Warrior - Rocket Launcher
 	Buildable:
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 160
 		Prerequisites: e5factory
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -305,7 +305,7 @@ Upgrade.tranfire:
 	Tooltip:
 		Name: Chinook Transport - Twin Rocket Launchers
 	Buildable:
-		BuildPaletteOrder: 135
+		BuildPaletteOrder: 30
 		Prerequisites: airfact0
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -322,7 +322,7 @@ Upgrade.orcafire:
 	Tooltip:
 		Name: Orca - TV Missiles
 	Buildable:
-		BuildPaletteOrder: 140
+		BuildPaletteOrder: 90
 		Prerequisites: airfact1
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -339,7 +339,7 @@ Upgrade.hindfire:
 	Tooltip:
 		Name: Hind - Flame Bombs
 	Buildable:
-		BuildPaletteOrder: 137
+		BuildPaletteOrder: 120
 		Prerequisites: airfacthind
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -356,7 +356,7 @@ Upgrade.mlrsfire:
 	Tooltip:
 		Name: Mobile S.A.M. - EMP Missiles
 	Buildable:
-		BuildPaletteOrder: 110
+		BuildPaletteOrder: 180
 		Prerequisites: carfactory7
 		Queue: Upgrade.Array
 		BuildLimit: 1
@@ -373,7 +373,7 @@ Upgrade.3tnkfire:
 	Tooltip:
 		Name: Heavy Tank - Rocket Pod
 	Buildable:
-		BuildPaletteOrder: 85
+		BuildPaletteOrder: 140
 		Prerequisites: 3tnkfactory
 		Queue: Upgrade.Array
 		BuildLimit: 1

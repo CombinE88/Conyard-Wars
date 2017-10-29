@@ -1784,7 +1784,7 @@ ORCAHUNTER:
 		Speed: 186
 		RepulsionSpeed: 600
 	Health:
-		HP: 185
+		HP: 215
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1792,12 +1792,12 @@ ORCAHUNTER:
 		Type: CenterPosition
 	Armament@PRIMARY:
 		Weapon: HunterMissiles
-		LocalOffset: 280,-298,-85,280,298,-85
+		LocalOffset: 384,-384,-85,384,384,-85
 		AmmoPoolName: Rockets
 		RequiresCondition: !orbmfire
 	Armament@UPGRADE:
 		Weapon: HunterTuskLaser
-		LocalOffset: 280,-298,-85,280,298,-85
+		LocalOffset: 384,-384,-85,384,384,-85
 		AmmoPoolName: Tusk
 		RequiresCondition: orbmfire
 	AttackHeli:
@@ -1828,18 +1828,42 @@ ORCAHUNTER:
 	RejectsOrders:
     
 ORCAHUNTER.Husk:
-	Inherits: ^HelicopterHusk
+	Inherits: ^PlaneHusk
 	Tooltip:
 		Name: Orca Hunter
 	Aircraft:
-		TurnSpeed: 4
-		Speed: 186
-	RevealsShroud:
-		Range: 10c0
-		Type: CenterPosition
+		TurnSpeed: 1
+		Speed: 100
 	RenderSprites:
 		Image: orbm
-	
+	FallsToEarth:
+		Explosion: LargeHeliCrash
+		Velocity: 30
+	Tooltip:
+		Name: Cruiser
+	Contrail:
+		Offset: -853,0,0
+	SmokeTrailWhenDamaged:
+		Offset: -1024,0,0
+		Interval: 2
+		MinDamage: Undamaged
+	SmokeTrailWhenDamaged@ExplodesConstant:
+		Offset: -412,-30,0
+		Interval: 10
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	SmokeTrailWhenDamaged@ExplodesConstant3:
+		Offset: 160,56,143
+		Interval: 6
+		MinDamage: Undamaged
+		Sprite: constantexplode
+	RevealsShroud:
+		Range: 6c0
+		Type: GroundPosition
+		RevealGeneratedShroud: False
+	WithColoredOverlay@dieing:
+		Palette: shadow
+        
 HINDNEW:
 	Inherits: ^Master10k
 	Inherits: ^Master50k
@@ -3360,13 +3384,25 @@ SILLYCA.Husk:
 		PlayerPalette: raplayer
 	FallsToEarth:
 		Explosion: GiantHeliCrash
-		Velocity: 5
+		Velocity: 8
 	WithIdleOverlay@Turret1:
 		Offset: -864,0,128
 		Sequence: turret
 	WithIdleOverlay@Turret2:
 		Offset: 768,0,128
 		Sequence: turret
+	WithColoredOverlay@dieing:
+		Palette: shadow
+	SmokeTrailWhenDamaged@Burns1:
+		Offset: 1200,56,143
+		Interval: 54
+		MinDamage: Undamaged
+	SmokeTrailWhenDamaged@Burns2:
+		Offset: -700,-156,-46
+		Interval: 34
+		MinDamage: Undamaged
+        
+        
 		
 HARVNEW:
 	Inherits: ^Tank
@@ -3558,7 +3594,7 @@ SILLYBADR.Husk:
 		PlayerPalette: raplayer
 	FallsToEarth:
 		Explosion: GiantHeliCrash
-		Velocity: 5
+		Velocity: 8
 	WithIdleOverlay@Turret1:
 		Offset: 0,556,40
 		Sequence: turret
@@ -3571,6 +3607,8 @@ SILLYBADR.Husk:
 	WithIdleOverlay@Turret4:
 		Offset: -178,-1240,40
 		Sequence: turret
+	WithColoredOverlay@dieing:
+		Palette: shadow
 		
 		
 FLAGPLAT:

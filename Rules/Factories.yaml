@@ -36,7 +36,7 @@ FACT2:
 		Amount: 1
 	ProvidesPrerequisite@buildingname:
 	Production:
-		Produces: Building.Fact, Defenses.Fact, Infantry.Fact, Infantry1.Fact
+		Produces: Building.Fact, Defenses.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact
 	ProductionQueue@FactBuilding:
 		Type: Building.Fact
 		Factions: gdi, nod
@@ -62,7 +62,15 @@ FACT2:
 		QueuedAudio: Building
 		ReadyAudio: 
 	ProductionQueue@FactInfUpgrade2:
-		Type: Infantry1.Fact
+		Type: Vehicle.Fact
+		Factions: gdi, nod
+		Group: Infantry
+		BuildSpeed: 40
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: 
+	ProductionQueue@FactInfUpgrade3:
+		Type: Aircraft.Fact
 		Factions: gdi, nod
 		Group: Infantry
 		BuildSpeed: 40
@@ -76,8 +84,12 @@ FACT2:
 		ProductionType: Building.Fact
 	ProductionBar@InfantryFact:
 		ProductionType: Infantry.Fact
-	ProductionBar@Infantry1Fact:
-		ProductionType: Infantry1.Fact
+	ProductionBar@InfantryFact:
+		ProductionType: Infantry.Fact
+	ProductionBar@AircraftFact:
+		ProductionType: Aircraft.Fact
+	ProductionBar@VehicleFact:
+		ProductionType: Vehicle.Fact
 	BaseProvider:
 		Cooldown: 35
 		Range: 18c0   
@@ -145,7 +157,7 @@ E2FACTORY:
 		Name: Grenadier Training Barracks
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 70
 		Prerequisites: nukenew
 		Queue: Building.Fact
 		Description: Type: Infantry\n\nGood Against:\n  Infantry, Vehicles\n\nBad Against:\n  Structures, Air\n\nUpgrade: Bouncing Grenades
@@ -191,7 +203,7 @@ E22FACTORY:
 		Name: Mortar Training Barracks
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 65
+		BuildPaletteOrder: 130
 		Queue: Building.Fact
 		Prerequisites: nukenew
 		Description: Type: Infantry\n\nGood Against:\n  Infantry, Vehicles, Structures\n\nBad Against:\n  Close Range, Air\n\nUpgrade: Jevalin\n\nUpgraded Good Against:\n  All\n\n Upgraded Bad Against:\n  Short Range
@@ -237,7 +249,7 @@ E3FACTORY:
 		Name: Rocketeer Training Barracks
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 30
+		BuildPaletteOrder: 40
 		Queue: Building.Fact
 		Prerequisites: lammo
 		Description: Type: Infantry\n\nGood Against:\n  Vehicles, Structures, Air\n\nBad Against:\n  Infantry\n\nUpgrade: Triple Rockets
@@ -283,7 +295,7 @@ E4FACTORY:
 		Name: Flamer Training Barracks
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 100
 		Queue: Building.Fact
 		Prerequisites: labnew
 		Description: Type: Infantry\n\nGood Against:\n  Infantry, Light Vehicles, Structures\n\n Bad Against:\n  Tanks, Air\n\nUpgrade: Grenade Launcher
@@ -328,7 +340,7 @@ E5FACTORY:
 		Name: Chemical Training Barracks
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 160
 		Queue: Building.Fact
 		Prerequisites: newhosp
 		Description: Type: Infantry\n\nGood Against:\n  Infantry, Vehicles, Structures\n\nBad Against:\n  Air\n\nUpgrade: Rocket Launcher
@@ -374,7 +386,7 @@ RMBOFACTORY:
 		Name: Commando Training Barracks
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 190
 		Queue: Building.Fact
 		Prerequisites: radarnew
 		Description: Type: Infantry\n\nSuperior Against:\n  Infantry\n\n Bad Against:\n  Vehicles, Structures, Air\n\nUpgrade: Dual Shot
@@ -422,7 +434,7 @@ CARFACTORY1:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 20
 		Queue: Building.Fact
 		Prerequisites: flytow, ~buildings.gdi
 		Description: Type: Vehicle\n\nGood Against:\n  Infantry, Light Vehicles, Artillery\n\n Bad Against:\n  Tanks, Structures, Air\n\nUpgrade: TOW Missile\n\nUpgraded Good Against:\n  Infantry, Light Vehicles, Artillery, Air\n\nUpgraded Bad Against:\n  Tanks, Structures
@@ -471,7 +483,7 @@ CARFACTORYBG:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 40
+		BuildPaletteOrder: 20
 		Queue: Building.Fact
 		Prerequisites: flytow, ~buildings.nod
 		Description: Type: Vehicle\n\nGood Against:\n  Infantry, Light Vehicles, Artillery\n\nBad Against:\n  Tanks, Structures, Air\n\nUpgrade: TOW Missile\n\nUpgraded Good Against:\n  Infantry, Light Vehicles, Artillery, Air\n\n Upgraded Bad Against:\n  Tanks, Structures
@@ -525,7 +537,7 @@ CARFACTORY2:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 110
 		Queue: Building.Fact
 		Prerequisites: hammo
 		Description: Type: Tank\n\nGood Against:\n  Vehicles, Structures\n\nBad Against:\n  Infantry, Air\n\nUpgrade: Chemical Shells\n\nUpgraded Good Against:\n  Infantry, Vehicles, Structures\n\nUpgraded Bad Against:\n  Air
@@ -580,7 +592,7 @@ CARFACTORY2:
 	Buildable:
 		BuildDuration: 300
 		IconPalette: ra
-		BuildPaletteOrder: 85
+		BuildPaletteOrder: 140
 		Queue: Building.Fact
 		Prerequisites: fammo
 		Description: Type: Tank\n\nGood Against:\n  Vehicles, Structures\n\nBad Against:\n  Infantry, Air\n\nUpgrade: Missile Pod\n\nUpgraded Good Against:\n  Vehicles, Structures\n\nUpgraded Bad Against:\n  Infantry
@@ -630,7 +642,7 @@ CARFACTORY3:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 170
 		Queue: Building.Fact
 		Prerequisites: nuk2new
 		Description: Type: Vehicle\n\nGood Against:\n  Vehicles, Structures\n\nBad Against:\n  Close Range, Air\n\nUpgrade: Double Pack-Size\n\n\nUses homing missiles.
@@ -681,7 +693,7 @@ CARFACTORY4:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 170
+		BuildPaletteOrder: 220
 		Queue: Building.Fact
 		Prerequisites: fammo, forb
 		Description: Type: Tank\n\nGood against:\n  Vehicles, Structures, Air\n\nBad Against:\n  Infantry, Artillery\n\nUpgrade: Tusk Lasers\n\nUpgraded Good Against:\n  Infantry, Vehicles, Structures, Air\n\nUpgraded Bad Against:\n  Artillery
@@ -724,10 +736,10 @@ SECRETFACTORY1:
 	Valued:
 		Cost: 2800
 	Tooltip:
-		Name: Flying Obelisk Helipad
+		Name: Temple Angel Helipad
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 300
+		BuildPaletteOrder: 330
 		Queue: Building.Fact
 		Prerequisites: dome, newhosp, ~tmplnew
 		Description: Type: Aircraft\n\nGood Against:\n  Infantry, Vehicles, Structures\n\nBad Against:\n  Air
@@ -771,7 +783,7 @@ SECRETFACTORY2:
 		Name: Flying Advanced Guard Tower Helipad
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 310
+		BuildPaletteOrder: 300
 		Queue: Building.Fact
 		Prerequisites: dome, nuk2new, ~missnew
 		Description: Type: Aircraft\n\nGood Against:\n  Vehicles, Air\n\nBad Against:\n  Infantry, Structures\n\n\nCan detect cloaked units.
@@ -816,7 +828,7 @@ SECRETFACTORY3:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 300
+		BuildPaletteOrder: 350
 		Queue: Building.Fact
 		Prerequisites: forb, fammo, ~tmplnew
 		Description: Type: Vehicle\n\nGood Against:\n  Ground\n\nBad Against:\n  Close Range, Air
@@ -863,7 +875,7 @@ SECRETFACTORY4:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 300
+		BuildPaletteOrder: 320
 		Queue: Building.Fact
 		Prerequisites: forb, radarnew, ~missnew
 		Description: Type: Vehicle\n\nGood Against:\n  Ground\n\nBad Against:\n  Close Range, Air
@@ -909,7 +921,7 @@ AIRFACT0:
 		Name: Chinook Transport Helipad
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 135
+		BuildPaletteOrder: 30
 		Queue: Building.Fact
 		Prerequisites: flytow
 		Description: Type: Aircraft\n\nGood Against:\n  Infantry\n\nBad against:\n  Vehicles, Structures, Air\n\nUpgrade: Twin Rocket Launchers\n\nUpgraded Good Against:\n  Infantry, Structures, Air\n\nUpgraded Bad Against:\n  Vehicles\n\n\nCan detect cloaked units.
@@ -951,7 +963,7 @@ AIRFACT1:
 		Name: Orca Helipad
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 140
+		BuildPaletteOrder: 90
 		Queue: Building.Fact
 		Prerequisites: dome
 		Description: Type: Aircraft\n\nGood Against:\n  Vehicles, Structure\n\nBad Against:\n  Infantry\n\nUpgrade: TV Missile\n\nUpgraded Good Against:\n  Vehicles, Structure, Air\n\nUpgraded Bad Against:\n  Infantry
@@ -994,7 +1006,7 @@ AIRFACT2:
 		Name: Apache Longbow Helipad
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 150
+		BuildPaletteOrder: 60
 		Queue: Building.Fact
 		Prerequisites: cflarf
 		Description: Type: Aircraft\n\nGood Against:\n  Infantry, Artillery\n\nBad Against:\n  Tanks\n\nUpgrade: Sniper\n\nUpgraded Superior Against:\n  Infantry
@@ -1039,7 +1051,7 @@ AIRFACTHIND:
 	Buildable:
 		BuildDuration: 300
 		IconPalette: ra
-		BuildPaletteOrder: 137
+		BuildPaletteOrder: 120
 		Queue: Building.Fact
 		Prerequisites: dome, nukenew
 		Description: Type: Aircraft\n\nGood Against:\n  Ground\n\nBad Against:\n  Air\n\nUpgrade: Flame Bombs\n\nUpgraded Superior Against:\n  Ground\n\nUpgraded Bad Against:\n  Air
@@ -1079,7 +1091,7 @@ AIRFACTHUNTER:
 		Name: Orca Hunter Helipad
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 137
+		BuildPaletteOrder: 150
 		Queue: Building.Fact
 		Prerequisites: dome, lammo
 		Description: Type: Aircraft\n\nGood Against:\n  Vehicles, Structures, Air\n\nBad Against:\n  Infantry\n\nUpgrade: Tusk Lasers\n\nUpgraded Good Against:\n  All\n\nUpgraded Bad against:\n  Long Range\n\n\nUpgraded weapon has less range than normal.
@@ -1116,12 +1128,12 @@ CARFACTORY5:
 	Valued:
 		Cost: 1750
 	Tooltip:
-		Name: Artillery Supply
+		Name: Artillery Supply Depot
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 160
+		BuildPaletteOrder: 200
 		Queue: Building.Fact
 		Prerequisites: nuk2new
 		Description: Type: Vehicle\n\nGood Against:\n  Infantry, Artillery\n\nBad Against:\n  Close Range, Air\n\nUpgrade: Quintuple Shot
@@ -1169,7 +1181,7 @@ CARFACTORY6:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 80
 		Queue: Building.Fact
 		Prerequisites: newhosp
 		Description: Type: Tank\n\nGood Against:\n  Infantry, Structures\n\nBad Against:\n  Tanks, Air\n\nUpgrade: Chemical Fire\n\nUpgraded Good Against:\n  Ground\n\nUpgraded Bad Against:\n  Tanks, Air
@@ -1215,7 +1227,7 @@ CARFACTORY7:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 110
+		BuildPaletteOrder: 180
 		Queue: Building.Fact
 		Prerequisites: forb
 		Description: Type: Vehicle\n\nGood Against:\n  Air\n\n Bad Against:\n  Ground\n\nUpgrade: EMP Missiles\n\nUpgraded Good Against:\n  Structures, Air\n\nUpgraded Bad Against:\n  Infantry, Vehicles\n\n\nCan detect cloaked units.
@@ -1313,7 +1325,7 @@ CARFACTORY10:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 100
+		BuildPaletteOrder: 210
 		Queue: Building.Fact
 		Prerequisites: forb
 		Description: Type: Tank\n\nGood Against:\n  Structures\n\nBad Against:\n  Infantry, Vehicles\n\nUpgrade: Quick Re-Cloak
@@ -1364,7 +1376,7 @@ SILLYFACT1:
 		Prerequisite: vehicleproduction
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 400
+		BuildPaletteOrder: 240
 		Queue: Building.Fact
 		Prerequisites: sillyone
 		IconPalette: ra
@@ -1416,7 +1428,7 @@ SILLYFACT2:
 		Name: Harvester Factory
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 410
+		BuildPaletteOrder: 230
 		Queue: Building.Fact
 		Prerequisites: sillyone
 		Description: Type: Tank\n\n Good Against:\n  Infantry\n\nBad Against:\n  Air
@@ -1465,7 +1477,7 @@ SILLYFACT3:
 		Name: Rocket Bomber Factory
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 420
+		BuildPaletteOrder: 270
 		Queue: Building.Fact
 		Prerequisites: sillytwo
 		IconPalette: ra
@@ -1512,7 +1524,7 @@ SILLYFACT4:
 		Name: Heavy Anti-Air Platform Factory
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 420
+		BuildPaletteOrder: 260
 		Queue: Building.Fact
 		Prerequisites: sillytwo
 		IconPalette: ra
@@ -1565,7 +1577,7 @@ SILLYFACT5:
 		Name: Submarine Factory
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 430
+		BuildPaletteOrder: 250
 		Queue: Building.Fact
 		Prerequisites: sillythree
 		IconPalette: ra
@@ -1624,7 +1636,7 @@ SILLYFACT6:
 		Name: Landing Craft Factory
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 430
+		BuildPaletteOrder: 290
 		Queue: Building.Fact
 		Prerequisites: sillythree
 		Description: Type: Aircraft\n\nGood Against:\n  Structures, Air\n\nBad Against:\n  Infantry, Vehicle
@@ -1716,7 +1728,7 @@ LEVIATHANFACT:
 		Name: Leviathan Assembly
 	Buildable:
 		BuildDuration: 300
-		BuildPaletteOrder: 9999
+		BuildPaletteOrder: 280
 		Queue: Building.Fact
 		Prerequisites: endgame
 		Description: Type: Tank\n\nGood Against:\n  Fully Customizable\n\nBad Against:\n  Fully Customizable
