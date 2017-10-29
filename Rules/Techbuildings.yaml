@@ -957,7 +957,7 @@ SILLYONE:
 		Prerequisites: forb, fammo, !sillyone, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
-		Description: Enables Silly Technology!
+		Description: Enables:\n  Flying Cruiser\n  Harvester
 		IconPalette: ra
 	Building:
 		Footprint: xx xx ==
@@ -998,7 +998,7 @@ SILLYTWO:
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		IconPalette: ra
-		Description: Attention! Level gets more Dangerous!
+		Description: Enables:\n  Rocket Bomber\n  Anti-Air Platform
 	Building:
 		Footprint: ___ xxx xx= ===
 		Dimensions: 3,4
@@ -1041,7 +1041,7 @@ SILLYTHREE:
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		IconPalette: ra
-		Description: Attention! Level gets more Dangerous!
+		Description: Enables:\n  Submarine\n  Landing Craft
 	Building:
 		Footprint: xx ==
 		Dimensions: 2,2
