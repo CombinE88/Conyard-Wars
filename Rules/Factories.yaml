@@ -1509,7 +1509,7 @@ SILLYFACT4:
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	Tooltip:
-		Name: Heavy Anti-Air Platform Factory
+		Name: Anti-Air Platform Factory
 	Buildable:
 		BuildDuration: 300
 		BuildPaletteOrder: 420
