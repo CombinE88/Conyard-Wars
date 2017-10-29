@@ -287,7 +287,7 @@ LABNEW:
 		BuildPaletteOrder: 30
 		Queue: Defenses.Fact
 		BuildLimit: 1
-		Description: Enables:\n  Rocket Soldier\n  Flamethrower
+		Description: Enables:\n  Flamethrower
 		Prerequisites: !labnew, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 	Building:
 		Footprint: xx xx ==
@@ -366,7 +366,7 @@ FORB:
 		Queue: Defenses.Fact
 		BuildLimit: 1 
 		IconPalette: ra
-		Description: Enables:\n  Stealth Tank
+		Description: Enables:\n  Stealth Tank\n  Mobile S.A.M.\n\n  Obelisk of Light
 	Building:
 		Footprint: ___ xxx xx= ===
 		Dimensions: 3,4
@@ -431,7 +431,7 @@ NUKENEW:
 		Queue: Defenses.Fact
 		Prerequisites: !nukenew, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
-		Description: Enables:\n  Grenadier\n  Mortar Soldier
+		Description: Enables:\n  Grenadier\n  Mortar Soldier\n\n  Guard Tower
 	Building:
 		Footprint: _x xx ==
 		Dimensions: 2,3
@@ -541,7 +541,7 @@ RADARNEW:
 		Prerequisites: nuk2new, !radarnew, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		Queue: Defenses.Fact
 		BuildLimit: 1 
-		Description: Enables:\n  Commando
+		Description: Enables:\n  Commando\n\n  Advanced Guard Tower
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -595,9 +595,9 @@ LAMMO:
 	Buildable:
 		BuildPaletteOrder: 20
 		Queue: Defenses.Fact
-        Prerequisites: !lammo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
+		Prerequisites: !lammo, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
-		Description:  Enables:\n  Light Tank
+		Description:  Enables:\n  Light Tank\n  Rocket Soldier\n\n  Turret
 	Building:
 		Footprint: __ xx ==
 		Dimensions: 2,3
@@ -738,7 +738,7 @@ FLYTOW:
 		Queue: Defenses.Fact
 		Prerequisites: !flytow, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
-		Description: Enables:\n  Transport Helicopter\n  Buggy/Hum-Vee
+		Description: Enables:\n  Transport Helicopter\n  Buggy/Hum-Vee\n\n  SAM Site
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
@@ -777,7 +777,7 @@ CFLARF:
 		IconPalette: ra
 		Prerequisites: flytow, !cflarf, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
-		Description: Enables:\n  Apache Longbow\n  Orca
+		Description: Enables:\n  Apache Longbow
 	Building:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
@@ -817,7 +817,7 @@ DOME:
 		IconPalette: ra
 		Prerequisites: cflarf, !dome, ~!tech0, ~!tech1, ~!tech2, ~!tech3, ~!tech4, ~!tech5, ~!tech6, ~!tech7, ~!tech8, ~!tech9, ~!tech10, ~!tech11, ~!tech12, ~!tech13, ~!tech14, ~!tech15
 		BuildLimit: 1 
-		Description: Enables:\n  Hind
+		Description: Enables:\n  Orca
 	Building:
 		Footprint: xx xx ==
 		Dimensions: 2,3
