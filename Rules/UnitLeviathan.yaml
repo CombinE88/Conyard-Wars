@@ -619,13 +619,13 @@ LEVIATHAN:
 		Turret: BasicTurret1
 	Turreted@BasicTurret1:
 		Turret: BasicTurret1
-		Offset: 1069,697,-150
+		Offset: 1069,697,10
 	Armament@BasicTurret1:
 		Weapon: MachineGunLeviathan
 		Name: MachineGun1
 		Recoil: 20
 		RecoilRecovery: 6
-		LocalOffset: 720,0,90
+		LocalOffset: 720,0,10
 		MuzzleSequence: muzzle
 		Turret: BasicTurret1
 		
@@ -634,13 +634,13 @@ LEVIATHAN:
 		Turret: BasicTurret2
 	Turreted@BasicTurret2:
 		Turret: BasicTurret2
-		Offset: 1069,-697,-150
+		Offset: 1069,-697,10
 	Armament@BasicTurret2:
 		Weapon: MachineGunLeviathan
 		Name: MachineGun2
 		Recoil: 20
 		RecoilRecovery: 6
-		LocalOffset: 720,0,90
+		LocalOffset: 720,0,10
 		MuzzleSequence: muzzle
 		Turret: BasicTurret2
 		
@@ -666,7 +666,7 @@ LEVIATHAN.Husk:
 	RenderSprites:
 		Image: leviathan
 	Health:
-		HP: 400
+		HP: 650
 	SmokeTrailWhenDamaged@Explode1:
 		Offset: -512,1230,0
 		Interval: 19
