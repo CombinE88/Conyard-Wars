@@ -1,10 +1,11 @@
 		
 LEVIATHAN:
-	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
-	Inherits: ^Tank
+	Inherits@1: ^Master10k
+	Inherits@2: ^Master50k
+	Inherits@3: ^Master100k
+	Inherits@4: ^AutoTargetAll
+	Inherits@5: ^Tank
+	Inherits@Hitshape: ^2x2Shape
 	RenderSprites:
 		Image: leviathan
 	-Crushable:
@@ -25,11 +26,9 @@ LEVIATHAN:
 		TurnSpeed: 3
 		Crushes: wall, heavywall, crate, infantry, Tank, Car, Husk
 	Health:
-		HP: 900
+		HP: 1750
 	Armor:
 		Type: Heavy
-	RevealsShroud:
-		Range: 10c0
 		
 		
 # -- Upgrades Health
@@ -221,7 +220,7 @@ LEVIATHAN:
 		Prerequisites: SuppArty
 		
 	WithSpriteTurret@SuppLtnk:
-		Sequence: ltnkturret
+		Sequence: flakturret
 		Turret: SuppLtnk
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk:
@@ -230,15 +229,15 @@ LEVIATHAN:
 	Armament@SuppLtnk:
 		Name: SuppLtnk
 		Weapon: LeviAutoCannon
-		Recoil: 20
-		RecoilRecovery: 6
-		LocalOffset: 720,0,90
-		MuzzleSequence: muzzle
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: flakmuzzle
 		Turret: SuppLtnk
 		RequiresCondition: SuppLtnk
 		
 	WithSpriteTurret@SuppLtnk1:
-		Sequence: ltnkturret
+		Sequence: flakturret
 		Turret: SuppLtnk1
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk1:
@@ -247,16 +246,16 @@ LEVIATHAN:
 	Armament@SuppLtnk1:
 		Name: SuppLtnk1
 		Weapon: LeviAutoCannon
-		Recoil: 20
-		RecoilRecovery: 6
-		LocalOffset: 720,0,90
-		MuzzleSequence: muzzle
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: flakmuzzle
 		FireDelay: 7
 		Turret: SuppLtnk1
 		RequiresCondition: SuppLtnk
 		
 	WithSpriteTurret@SuppLtnk2:
-		Sequence: ltnkturret
+		Sequence: flakturret
 		Turret: SuppLtnk2
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk2:
@@ -265,16 +264,16 @@ LEVIATHAN:
 	Armament@SuppLtnk2:
 		Name: SuppLtnk2
 		Weapon: LeviAutoCannon
-		Recoil: 20
-		RecoilRecovery: 6
-		LocalOffset: 720,0,90
-		MuzzleSequence: muzzle
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: flakmuzzle
 		FireDelay: 14
 		Turret: SuppLtnk2
 		RequiresCondition: SuppLtnk
 		
 	WithSpriteTurret@SuppLtnk3:
-		Sequence: ltnkturret
+		Sequence: flakturret
 		Turret: SuppLtnk3
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk3:
@@ -283,16 +282,16 @@ LEVIATHAN:
 	Armament@SuppLtnk3:
 		Name: SuppLtnk3
 		Weapon: LeviAutoCannon
-		Recoil: 20
-		RecoilRecovery: 6
-		LocalOffset: 720,0,90
-		MuzzleSequence: muzzle
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: flakmuzzle
 		FireDelay: 21
 		Turret: SuppLtnk3
 		RequiresCondition: SuppLtnk
 		
 	WithSpriteTurret@SuppLtnk4:
-		Sequence: ltnkturret
+		Sequence: flakturret
 		Turret: SuppLtnk4
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk4:
@@ -301,16 +300,16 @@ LEVIATHAN:
 	Armament@SuppLtnk4:
 		Name: SuppLtnk4
 		Weapon: LeviAutoCannon
-		Recoil: 20
-		RecoilRecovery: 6
-		LocalOffset: 720,0,90
-		MuzzleSequence: muzzle
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: flakmuzzle
 		FireDelay: 28
 		Turret: SuppLtnk4
 		RequiresCondition: SuppLtnk
 		
 	WithSpriteTurret@SuppLtnk5:
-		Sequence: ltnkturret
+		Sequence: flakturret
 		Turret: SuppLtnk5
 		RequiresCondition: SuppLtnk
 	Turreted@SuppLtnk5:
@@ -319,11 +318,11 @@ LEVIATHAN:
 	Armament@SuppLtnk5:
 		Name: SuppLtnk5
 		Weapon: LeviAutoCannon
+		Recoil: 96
+		RecoilRecovery: 18
+		LocalOffset: 85,85,299, 85,-85,299
+		MuzzleSequence: flakmuzzle
 		FireDelay: 35
-		Recoil: 20
-		RecoilRecovery: 6
-		LocalOffset: 720,0,90
-		MuzzleSequence: muzzle
 		Turret: SuppLtnk5
 		RequiresCondition: SuppLtnk
 		
@@ -527,42 +526,6 @@ LEVIATHAN:
 	GrantConditionOnPrerequisite@SuppSpeed1:
 		Condition: SuppSpeed1
 		Prerequisites: SuppSpeed1
-		
-	SelfHealing@SuppHealth1:
-		Delay: 75
-		PercentageStep: 0
-		Step: 10
-		HealIfBelow: 100
-		DamageCooldown: 0
-		RequiresCondition: (SuppHealth1 && SuppHealth2) == 1
-
-	WithIdleOverlay@SuppSpeed1:
-		Sequence: speedup
-		Offset: -1024,413,10
-		RequiresCondition: SuppSpeed1
-	SpeedMultiplier@SuppSpeed1:
-		Modifier: 200
-		RequiresCondition: SuppSpeed1
-	ReloadDelayMultiplier@SuppSpeed1:
-		Modifier: 80
-		RequiresCondition: SuppSpeed1
-		
-	WithIdleOverlay@SuppRange1:
-		Sequence: rangeup
-		Offset: -1024,413,10
-		RequiresCondition: SuppRange1
-	RangeMultiplier@SuppRange1:
-		Modifier: 133
-		RequiresCondition: SuppRange1	
-		
-	WithIdleOverlay@SuppHealth1:
-		Sequence: healthup
-		Offset: -1024,413,10
-		RequiresCondition: SuppHealth1
-	DamageMultiplier@SuppHealth1:
-		Modifier: 60
-		RequiresCondition: (SuppHealth1 && SuppHealth2) == 1	
-		
 	GrantConditionOnPrerequisite@SuppRange2:
 		Condition: SuppRange2
 		Prerequisites: SuppRange2
@@ -572,41 +535,279 @@ LEVIATHAN:
 	GrantConditionOnPrerequisite@SuppSpeed2:
 		Condition: SuppSpeed2
 		Prerequisites: SuppSpeed2
+	GrantConditionOnPrerequisite@SuppRange3:
+		Condition: SuppRange3
+		Prerequisites: SuppRange3
+	GrantConditionOnPrerequisite@SuppHealth3:
+		Condition: SuppHealth3
+		Prerequisites: SuppHealth3
+	GrantConditionOnPrerequisite@SuppSpeed3:
+		Condition: SuppSpeed3
+		Prerequisites: SuppSpeed3
+	GrantConditionOnPrerequisite@SuppRange4:
+		Condition: SuppRange4
+		Prerequisites: SuppRange4
+	GrantConditionOnPrerequisite@SuppHealth4:
+		Condition: SuppHealth4
+		Prerequisites: SuppHealth4
+	GrantConditionOnPrerequisite@SuppSpeed4:
+		Condition: SuppSpeed4
+		Prerequisites: SuppSpeed4
+	GrantConditionOnPrerequisite@SuppRange5:
+		Condition: SuppRange5
+		Prerequisites: SuppRange5
+	GrantConditionOnPrerequisite@SuppHealth5:
+		Condition: SuppHealth5
+		Prerequisites: SuppHealth5
+	GrantConditionOnPrerequisite@SuppSpeed5:
+		Condition: SuppSpeed5
+		Prerequisites: SuppSpeed5
+	GrantConditionOnPrerequisite@SuppRange6:
+		Condition: SuppRange6
+		Prerequisites: SuppRange6
+	GrantConditionOnPrerequisite@SuppHealth6:
+		Condition: SuppHealth6
+		Prerequisites: SuppHealth6
+	GrantConditionOnPrerequisite@SuppSpeed6:
+		Condition: SuppSpeed6
+		Prerequisites: SuppSpeed6
+	GrantConditionOnPrerequisite@SuppRange7:
+		Condition: SuppRange7
+		Prerequisites: SuppRange7
+	GrantConditionOnPrerequisite@SuppHealth7:
+		Condition: SuppHealth7
+		Prerequisites: SuppHealth7
+	GrantConditionOnPrerequisite@SuppSpeed7:
+		Condition: SuppSpeed7
+		Prerequisites: SuppSpeed7
+	GrantConditionOnPrerequisite@SuppRange8:
+		Condition: SuppRange8
+		Prerequisites: SuppRange8
+	GrantConditionOnPrerequisite@SuppHealth8:
+		Condition: SuppHealth8
+		Prerequisites: SuppHealth8
+	GrantConditionOnPrerequisite@SuppSpeed8:
+		Condition: SuppSpeed8
+		Prerequisites: SuppSpeed8
+	GrantConditionOnPrerequisite@SuppRange9:
+		Condition: SuppRange9
+		Prerequisites: SuppRange9
+	GrantConditionOnPrerequisite@SuppHealth9:
+		Condition: SuppHealth9
+		Prerequisites: SuppHealth9
+	GrantConditionOnPrerequisite@SuppSpeed9:
+		Condition: SuppSpeed9
+		Prerequisites: SuppSpeed9
+	GrantConditionOnPrerequisite@SuppRange10:
+		Condition: SuppRange10
+		Prerequisites: SuppRange10
+	GrantConditionOnPrerequisite@SuppHealth10:
+		Condition: SuppHealth10
+		Prerequisites: SuppHealth10
+	GrantConditionOnPrerequisite@SuppSpeed10:
+		Condition: SuppSpeed10
+		Prerequisites: SuppSpeed10
 		
 	SelfHealing@SuppHealth1:
-		Delay: 50
+		Delay: 8
 		PercentageStep: 0
-		Step: 10
+		Step: 1
 		HealIfBelow: 100
 		DamageCooldown: 0
-		RequiresCondition: (SuppHealth1 && SuppHealth2) == 2
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 1
+	SelfHealing@SuppHealth2:
+		Delay: 7
+		PercentageStep: 0
+		Step: 1
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 2
+	SelfHealing@SuppHealth3:
+		Delay: 6
+		PercentageStep: 0
+		Step: 1
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 3
+	SelfHealing@SuppHealth4:
+		Delay: 5
+		PercentageStep: 0
+		Step: 1
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 4
+	SelfHealing@SuppHealth5:
+		Delay: 4
+		PercentageStep: 0
+		Step: 1
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 5
+	SelfHealing@SuppHealth6:
+		Delay: 3
+		PercentageStep: 0
+		Step: 1
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 6
+	SelfHealing@SuppHealth7:
+		Delay: 2
+		PercentageStep: 0
+		Step: 1
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 7
+	SelfHealing@SuppHealth8:
+		Delay: 1
+		PercentageStep: 0
+		Step: 1
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 8
+	SelfHealing@SuppHealth9:
+		Delay: 1
+		PercentageStep: 0
+		Step: 2
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 9
+	SelfHealing@SuppHealth10:
+		Delay: 1
+		PercentageStep: 0
+		Step: 3
+		HealIfBelow: 100
+		DamageCooldown: 0
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 10
 
-	WithIdleOverlay@SuppSpeed2:
-		Sequence: speedup
-		Offset: -1024,-413,10
-		RequiresCondition: SuppSpeed2
+	SpeedMultiplier@SuppSpeed1:
+		Modifier: 150
+		RequiresCondition: (SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 1
 	SpeedMultiplier@SuppSpeed2:
 		Modifier: 200
-		RequiresCondition: SuppSpeed2
-	ReloadDelayMultiplier@SuppSpeed2:
+		RequiresCondition: (SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 2
+	SpeedMultiplier@SuppSpeed3:
+		Modifier: 225
+		RequiresCondition: (SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 3
+	SpeedMultiplier@SuppSpeed4:
+		Modifier: 250
+		RequiresCondition: (SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 4
+	SpeedMultiplier@SuppSpeed5:
+		Modifier: 275
+		RequiresCondition: (SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 5
+	SpeedMultiplier@SuppSpeed6:
+		Modifier: 300
+		RequiresCondition: (SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 6
+	SpeedMultiplier@SuppSpeed7:
+		Modifier: 325
+		RequiresCondition: (SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 7
+	SpeedMultiplier@SuppSpeed8:
+		Modifier: 350
+		RequiresCondition: (SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 8
+	SpeedMultiplier@SuppSpeed9:
+		Modifier: 375
+		RequiresCondition: (SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 9
+	SpeedMultiplier@SuppSpeed10:
+		Modifier: 400
+		RequiresCondition: (SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 10
+
+        
+	ReloadDelayMultiplier@SuppRange1:
+		Modifier: 95
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 1
+	ReloadDelayMultiplier@SuppRange2:
+		Modifier: 90
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 2
+	ReloadDelayMultiplier@SuppRange3:
+		Modifier: 85
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 3
+	ReloadDelayMultiplier@SuppRange4:
 		Modifier: 80
-		RequiresCondition: SuppSpeed2
-		
-	WithIdleOverlay@SuppRange2:
-		Sequence: rangeup
-		Offset: -1024,-413,10
-		RequiresCondition: SuppRange2
-	RangeMultiplier@SuppRange2:
-		Modifier: 133
-		RequiresCondition: SuppRange2	
-		
-	WithIdleOverlay@SuppHealth2:
-		Sequence: healthup
-		Offset: -1024,-413,10
-		RequiresCondition: SuppHealth2
-	DamageMultiplier@SuppHealth2:
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 4
+	ReloadDelayMultiplier@SuppRange5:
+		Modifier: 75
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 5
+	ReloadDelayMultiplier@SuppRange6:
+		Modifier: 70
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 6
+	ReloadDelayMultiplier@SuppRange7:
+		Modifier: 65
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 7
+	ReloadDelayMultiplier@SuppRange8:
+		Modifier: 60
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 8
+	ReloadDelayMultiplier@SuppRange9:
+		Modifier: 50
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 9
+	ReloadDelayMultiplier@SuppRange10:
 		Modifier: 40
-		RequiresCondition: (SuppHealth1 && SuppHealth2) == 2	
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 10
+        
+
+	RevealsShroud@SuppRange0:
+		Range: 6c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 0
+	RevealsShroud@SuppRange1:
+		Range: 7c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 1
+	RevealsShroud@SuppRange2:
+		Range: 8c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 2
+	RevealsShroud@SuppRange3:
+		Range: 9c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 3
+	RevealsShroud@SuppRange4:
+		Range: 10c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 4
+	RevealsShroud@SuppRange5:
+		Range: 11c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 5
+	RevealsShroud@SuppRange6:
+		Range: 12c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 6
+	RevealsShroud@SuppRange7:
+		Range: 13c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 7
+	RevealsShroud@SuppRange8:
+		Range: 14c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 8
+	RevealsShroud@SuppRange9:
+		Range: 15c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 9
+	RevealsShroud@SuppRange10:
+		Range: 16c0
+		RequiresCondition: (SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10) == 10
+		
+	DamageMultiplier@SuppHealth1:
+		Modifier: 95
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 1
+	DamageMultiplier@SuppHealth2:
+		Modifier: 89
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 2
+	DamageMultiplier@SuppHealth3:
+		Modifier: 83
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 3
+	DamageMultiplier@SuppHealth4:
+		Modifier: 77
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 4
+	DamageMultiplier@SuppHealth5:
+		Modifier: 70
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 5
+	DamageMultiplier@SuppHealth6:
+		Modifier: 62
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 6
+	DamageMultiplier@SuppHealth7:
+		Modifier: 53
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 7
+	DamageMultiplier@SuppHealth8:
+		Modifier: 45
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 8
+	DamageMultiplier@SuppHealth9:
+		Modifier: 36
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 9
+	DamageMultiplier@SuppHealth10:
+		Modifier: 25
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 10
+	
 		
 # rest code
 		
@@ -666,7 +867,7 @@ LEVIATHAN.Husk:
 	RenderSprites:
 		Image: leviathan
 	Health:
-		HP: 650
+		HP: 450
 	SmokeTrailWhenDamaged@Explode1:
 		Offset: -512,1230,0
 		Interval: 19

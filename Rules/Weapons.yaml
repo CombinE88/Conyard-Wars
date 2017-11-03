@@ -287,7 +287,7 @@ IonCannonNew:
 	TargetActorCenter: true
 	Warhead@1Dam_impact: SpreadDamage
 		Range: 0, 1c1, 2c1, 2c512
-		Damage: 300
+		Damage: 100
 		Falloff: 1000, 1000, 250, 100
 		ValidTargets: Vehicle, Infantry, Air
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -1612,7 +1612,7 @@ Sniperlevia:
 	Report: ramgun2.aud
 	ValidTargets: Ground, Infantry
 	InvalidTargets: Vehicle, Water, Structure, Wall, Husk
-	ReloadDelay: 25
+	ReloadDelay: 35
 	Range: 6c0
 	Projectile: Bullet
 		Speed: 5c682
@@ -1630,7 +1630,7 @@ Sniperlevia:
 	
 120mmLevia:
 	Inherits: ^BallisticWeapon
-	ReloadDelay: 35
+	ReloadDelay: 45
 	Range: 6c0
 	Report: tnkfire6.aud
 	Projectile: Bullet
@@ -1640,7 +1640,7 @@ Sniperlevia:
 	
 MammothMissilesLevia:
 	Inherits: ^MissileWeapon
-	ReloadDelay: 45
+	ReloadDelay: 55
 	Range: 6c0
 	Report: rocket1.aud
 	TargetActorCenter: true
@@ -1658,7 +1658,7 @@ MammothMissilesLevia:
 		LaunchAngle: 100
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
-		Damage: 35
+		Damage: 25
 		Versus:
 			None: 50
 			Wood: 75
@@ -1675,7 +1675,7 @@ MammothMissilesLevia:
 		ValidTargets: Air
 		
 Sixteen227mm:
-	ReloadDelay: 100
+	ReloadDelay: 150
 	Range: 12c0
 	Burst: 24
 	BurstDelays: 4
@@ -1695,7 +1695,7 @@ Sixteen227mm:
 		Speed: 341
 	Warhead@1Dam: SpreadDamage
 		Spread: 683
-		Damage: 25
+		Damage: 20
 		ValidTargets: Ground
 		Versus:
 			None: 35
@@ -1710,7 +1710,7 @@ Sixteen227mm:
 		ImpactSounds: xplos.aud
 		
 LeviAutoCannon:
-	ReloadDelay: 40
+	ReloadDelay: 60
 	Range: 6c0
 	Report: gun20.aud
 	ValidTargets: Ground, Air
@@ -1740,7 +1740,7 @@ LeviAutoCannon:
 			
 		
 Leviathan120mmSplash:
-	ReloadDelay: 65
+	ReloadDelay: 85
 	Range: 6c0
 	Report: gun20.aud
 	TargetActorCenter: true
@@ -1761,7 +1761,7 @@ Leviathan120mmSplash:
 		ImpactSounds: flamer2.aud
 	Warhead@Burst: SpreadDamage
 		Spread: 0c528
-		Damage: 40
+		Damage: 30
 		Versus:
 			None: 110
 			Wood: 100
@@ -1772,7 +1772,7 @@ Leviathan120mmSplash:
 		
 		
 LeviathanATmiss:
-	ReloadDelay: 60
+	ReloadDelay: 80
 	Range: 6c0
 	Report: rocket2.aud
 	ValidTargets:   Ground
@@ -1791,7 +1791,7 @@ LeviathanATmiss:
 		LaunchAngle: 100
 	Warhead@1Dam: SpreadDamage
 		Spread: 683
-		Damage: 25
+		Damage: 20
 		ValidTargets: Ground
 		Versus:
 			None: 50
@@ -1808,7 +1808,7 @@ LeviathanATmiss:
 
 ArtilleryShellLeviathan:
 	Inherits: ^BallisticWeapon
-	ReloadDelay: 65
+	ReloadDelay: 85
 	Range: 11c0
 	Report: tnkfire2.aud
 	TargetActorCenter: true
@@ -1820,7 +1820,7 @@ ArtilleryShellLeviathan:
 		ContrailLength: 30
 	Warhead@1Dam: SpreadDamage
 		Spread: 641
-		Damage: 150
+		Damage: 85
 		Versus:
 			None: 100
 			Wood: 80
@@ -1833,7 +1833,7 @@ ArtilleryShellLeviathan:
 		
 ArtilleryShellOFive:
 	Inherits: ^BallisticWeapon
-	ReloadDelay: 75
+	ReloadDelay: 105
 	Burst: 5
 	BurstDelays: 2
 	Range: 14c0
@@ -1872,7 +1872,7 @@ MachineGunLeviathan::
 		Explosions: piffs
 		
 TOWMissileLeviathan:
-	ReloadDelay: 100
+	ReloadDelay: 140
 	Range: 8c0
 	Burst: 2
 	BurstDelays: 2

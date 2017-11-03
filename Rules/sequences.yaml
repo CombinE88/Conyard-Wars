@@ -2352,7 +2352,9 @@ ltnk:
 	flakmuzzle: apcmuz
 		Length: 3
 		Stride: 6
-		Facings: 8    
+		Facings: 8   
+
+## --- leviathan ---        
 		
 leviathan:
 	idle: leviathantd
@@ -2373,6 +2375,10 @@ leviathan:
 	a10gun: ftnk
 		Facings: 32
 		ZOffset: 265
+	flakturret: apctur
+		Facings: 32
+		ZOffset: 265
+		Offset: 0, 6
 	normalturret: mtnk
 		Facings: 32
 		Start: 32
@@ -2389,6 +2395,7 @@ leviathan:
 		Facings: 32
 		Start: 32
 		ZOffset: 265
+		Offset: 0, 6
 	muzzle: minigun
 		Length: 6
 		Facings: 8
@@ -2410,6 +2417,10 @@ leviathan:
 		Tick: 60
 		ZOffset: 265
 		Scale: 50
+	flakmuzzle: apcmuz
+		Length: 3
+		Stride: 6
+		Facings: 8    
 		
 livafact:
 	pin: atomicup
@@ -2430,6 +2441,65 @@ livafact:
 		Offset: 0,4
 	icon: leviicnh
 		AddExtension: true
+        
+##-- leviathan upgrades---
+
+levifronticon1:
+	idle: e1
+	icon: levifronticon1.shp
+		AddExtension: False	
+levifronticon2:
+	idle: e1
+	icon: levifronticon2.shp
+		AddExtension: False	
+levifronticon3:
+	idle: e1
+	icon: levifronticon3.shp
+		AddExtension: False	
+
+
+levisideicon1:
+	idle: e1
+	icon: levisideicon1.shp
+		AddExtension: False	
+levisideicon2:
+	idle: e1
+	icon: levisideicon2.shp
+		AddExtension: False	
+levisideicon3:
+	idle: e1
+	icon: levisideicon3.shp
+		AddExtension: False	
+
+
+levibodyicon1:
+	idle: e1
+	icon: levibodyicon1.shp
+		AddExtension: False	
+levibodyicon2:
+	idle: e1
+	icon: levibodyicon2.shp
+		AddExtension: False	
+levibodyicon3:
+	idle: e1
+	icon: levibodyicon3.shp
+		AddExtension: False	
+
+levitopicon1:
+	idle: e1
+	icon: levitopicon1.shp
+		AddExtension: False	
+levitopicon2:
+	idle: e1
+	icon: levitopicon2.shp
+		AddExtension: False	
+levitopicon3:
+	idle: e1
+	icon: levitopicon3.shp
+		AddExtension: False	        
+
+        
+## -- end leviathan ---
 		
 bombupupgrade:
 	idle: e1

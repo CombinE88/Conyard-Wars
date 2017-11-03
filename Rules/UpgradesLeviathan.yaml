@@ -13,7 +13,7 @@ Leviathan.Main.Msam:
 	Valued:
 		Cost: 2000
 	RenderSprites:
-		Image: mlrsfact
+		Image: levitopicon3
 	ProvidesPrerequisite@MainRocket: 
 		Prerequisite: MainRocket
 		
@@ -30,7 +30,7 @@ Leviathan.Main.Cannon:
 	Valued:
 		Cost: 2000
 	RenderSprites:
-		Image: carfact4
+		Image: levitopicon1
 	ProvidesPrerequisite@MainCannon: 
 		Prerequisite: MainCannon
 		
@@ -47,7 +47,7 @@ Leviathan.Main.Flame:
 	Valued:
 		Cost: 2000
 	RenderSprites:
-		Image: carfact6
+		Image: levitopicon2
 	ProvidesPrerequisite@MainA10: 
 		Prerequisite: MainA10
 		
@@ -66,7 +66,7 @@ Leviathan.Front.Tow:
 	Valued:
 		Cost: 3000
 	RenderSprites:
-		Image: towupgrade
+		Image: levifronticon2
 	ProvidesPrerequisite@FrontTow: 
 		Prerequisite: FrontTow
 		
@@ -83,7 +83,7 @@ Leviathan.Front.Commando:
 	Valued:
 		Cost: 3000
 	RenderSprites:
-		Image: rmbofact
+		Image: levifronticon1
 	ProvidesPrerequisite@FrontCommando: 
 		Prerequisite: FrontCommando
 		
@@ -100,7 +100,7 @@ Leviathan.Front.Mtnk:
 	Valued:
 		Cost: 3000
 	RenderSprites:
-		Image: carfact2
+		Image: levifronticon3
 	ProvidesPrerequisite@FrontMtnk: 
 		Prerequisite: FrontMtnk	
 		
@@ -109,17 +109,17 @@ Leviathan.Front.Mtnk:
 Leviathan.Side.ltnk:
 	AlwaysVisible:
 	Tooltip:
-		Name: Auto Cannon
+		Name: Flak Cannon
 	Buildable:
 		BuildPaletteOrder: 70
 		Prerequisites: radarnew, ~leviathanfact, !SuppArty, !SuppAtRock
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Puts auto cannons as side turrets, which can attack air.
+		Description: Puts flak cannons as side turrets, which can attack air.
 	Valued:
 		Cost: 4000
 	RenderSprites:
-		Image: ltnk
+		Image: levisideicon1
 	ProvidesPrerequisite@SuppLtnk: 
 		Prerequisite: SuppLtnk
 		
@@ -136,7 +136,7 @@ Leviathan.Side.ATRockets:
 	Valued:
 		Cost: 4000
 	RenderSprites:
-		Image: stnk
+		Image: levisideicon2
 	ProvidesPrerequisite@SuppAtRock: 
 		Prerequisite: SuppAtRock
 		
@@ -153,7 +153,7 @@ Leviathan.Side.arty:
 	Valued:
 		Cost: 4000
 	RenderSprites:
-		Image: arty
+		Image: levisideicon3
 	ProvidesPrerequisite@SuppArty: 
 		Prerequisite: SuppArty   
 
@@ -163,18 +163,104 @@ Leviathan.Support.Range.lv1:
 	AlwaysVisible:
 	Tooltip:
 		Name: Range Upgrade
+	Valued:
+		Cost: 1000
+	RenderSprites:
+		Image: levibodyicon2
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: radarnew, ~leviathanfact, !SuppSpeed1, !SuppHealth1
+		Prerequisites: ~leviathanfact, ~!SuppTech1
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Increases range of all guns significantly.
-	Valued:
-		Cost: 3000
-	RenderSprites:
-		Image: bombupupgrade
-	ProvidesPrerequisite@SuppRange1: 
+		Description: Increases range of all guns and vision.
+	ProvidesPrerequisite@SuppRange: 
 		Prerequisite: SuppRange1
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech1
+        
+        
+Leviathan.Support.Range.lv2:
+	Inherits: Leviathan.Support.Range.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech1, ~!SuppTech2
+	ProvidesPrerequisite@SuppRange: 
+		Prerequisite: SuppRange2
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech2
+Leviathan.Support.Range.lv3:
+	Inherits: Leviathan.Support.Range.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech2, ~!SuppTech3
+	ProvidesPrerequisite@SuppRange: 
+		Prerequisite: SuppRange3
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech3
+Leviathan.Support.Range.lv4:
+	Inherits: Leviathan.Support.Range.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech3, ~!SuppTech4
+	ProvidesPrerequisite@SuppRange: 
+		Prerequisite: SuppRange4
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech4
+Leviathan.Support.Range.lv5:
+	Inherits: Leviathan.Support.Range.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech4, ~!SuppTech5
+	ProvidesPrerequisite@SuppRange: 
+		Prerequisite: SuppRange5
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech5
+Leviathan.Support.Range.lv6:
+	Inherits: Leviathan.Support.Range.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech5, ~!SuppTech6
+	ProvidesPrerequisite@SuppRange: 
+		Prerequisite: SuppRange6
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech6
+Leviathan.Support.Range.lv7:
+	Inherits: Leviathan.Support.Range.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech6, ~!SuppTech7
+	ProvidesPrerequisite@SuppRange: 
+		Prerequisite: SuppRange7
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech7
+Leviathan.Support.Range.lv8:
+	Inherits: Leviathan.Support.Range.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech7, ~!SuppTech8
+	ProvidesPrerequisite@SuppRange: 
+		Prerequisite: SuppRange8
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech8
+Leviathan.Support.Range.lv9:
+	Inherits: Leviathan.Support.Range.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech8, ~!SuppTech9
+	ProvidesPrerequisite@SuppRange: 
+		Prerequisite: SuppRange9
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech9
+Leviathan.Support.Range.lv10:
+	Inherits: Leviathan.Support.Range.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech9, !SuppTech10
+	ProvidesPrerequisite@SuppRange: 
+		Prerequisite: SuppRange10
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech10
+        
 		
 Leviathan.Support.Health.lv1:
 	AlwaysVisible:
@@ -182,16 +268,101 @@ Leviathan.Support.Health.lv1:
 		Name: Armor Upgrade
 	Buildable:
 		BuildPaletteOrder: 110
-		Prerequisites: fammo, ~leviathanfact, !SuppRange1, !SuppSpeed1
+		Prerequisites: ~leviathanfact, ~!SuppTech1
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Decreases taken damage significantly.
+		Description: Decreases taken damage and increase ability to heal self.
 	Valued:
-		Cost: 3000
+		Cost: 1000
 	RenderSprites:
-		Image: brik
-	ProvidesPrerequisite@SuppHealth1: 
+		Image: levibodyicon1
+	ProvidesPrerequisite@SuppHealth: 
 		Prerequisite: SuppHealth1
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech1
+        
+Leviathan.Support.Health.lv2:
+	Inherits: Leviathan.Support.Health.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech1, ~!SuppTech2
+	ProvidesPrerequisite@SuppHealth: 
+		Prerequisite: SuppHealth2
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech2
+Leviathan.Support.Health.lv3:
+	Inherits: Leviathan.Support.Health.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech2, ~!SuppTech3
+	ProvidesPrerequisite@SuppHealth: 
+		Prerequisite: SuppHealth3
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech3
+Leviathan.Support.Health.lv4:
+	Inherits: Leviathan.Support.Health.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech3, ~!SuppTech4
+	ProvidesPrerequisite@SuppHealth: 
+		Prerequisite: SuppHealth4
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech4
+Leviathan.Support.Health.lv5:
+	Inherits: Leviathan.Support.Health.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech4, ~!SuppTech5
+	ProvidesPrerequisite@SuppHealth: 
+		Prerequisite: SuppHealth5
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech5
+Leviathan.Support.Health.lv6:
+	Inherits: Leviathan.Support.Health.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech5, ~!SuppTech6
+	ProvidesPrerequisite@SuppHealth: 
+		Prerequisite: SuppHealth6
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech6
+Leviathan.Support.Health.lv7:
+	Inherits: Leviathan.Support.Health.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech6, ~!SuppTech7
+	ProvidesPrerequisite@SuppHealth: 
+		Prerequisite: SuppHealth7
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech7
+Leviathan.Support.Health.lv8:
+	Inherits: Leviathan.Support.Health.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech7, ~!SuppTech8
+	ProvidesPrerequisite@SuppHealth: 
+		Prerequisite: SuppHealth8
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech8
+Leviathan.Support.Health.lv9:
+	Inherits: Leviathan.Support.Health.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech8, ~!SuppTech9
+	ProvidesPrerequisite@SuppHealth: 
+		Prerequisite: SuppHealth9
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech9
+Leviathan.Support.Health.lv10:
+	Inherits: Leviathan.Support.Health.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech9, !SuppTech10
+	ProvidesPrerequisite@SuppHealth: 
+		Prerequisite: SuppHealth10
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech10
+        
 		
 Leviathan.Support.speed.lv1:
 	AlwaysVisible:
@@ -199,64 +370,97 @@ Leviathan.Support.speed.lv1:
 		Name: Speed Upgrade
 	Buildable:
 		BuildPaletteOrder: 120
-		Prerequisites: forb, ~leviathanfact, !SuppRange1, !SuppHealth1
+		Prerequisites: ~leviathanfact, ~!SuppTech1
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Increases movement speed and decreases reload delay significantly.
+		Description: Increases movement speed and decreases reload delay.
 	Valued:
-		Cost: 3000
+		Cost: 1000
 	RenderSprites:
-		Image: bike
-	ProvidesPrerequisite@SuppSpeed1: 
+		Image: levibodyicon3
+	ProvidesPrerequisite@SuppSpeed: 
 		Prerequisite: SuppSpeed1 
-		
-Leviathan.Support.Range.lv2:
-	AlwaysVisible:
-	Tooltip:
-		Name: Range Upgrade
-	Buildable:
-		BuildPaletteOrder: 130
-		Prerequisites: radarnew, ~leviathanfact, !SuppSpeed2, !SuppHealth2
-		Queue: Upgrade.Levi
-		BuildLimit: 1
-		Description: Increases range of all guns significantly.
-	Valued:
-		Cost: 4000
-	RenderSprites:
-		Image: bombupupgrade
-	ProvidesPrerequisite@SuppRange2: 
-		Prerequisite: SuppRange2
-		
-Leviathan.Support.Health.lv2:
-	AlwaysVisible:
-	Tooltip:
-		Name: Armor Upgrade
-	Buildable:
-		BuildPaletteOrder: 140
-		Prerequisites: fammo, ~leviathanfact, !SuppRange2, !SuppSpeed2
-		Queue: Upgrade.Levi
-		BuildLimit: 1
-		Description: Decreases taken damage significantly.
-	Valued:
-		Cost: 4000
-	RenderSprites:
-		Image: brik
-	ProvidesPrerequisite@SuppHealth2: 
-		Prerequisite: SuppHealth2
-		
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech1
+        
 Leviathan.Support.speed.lv2:
-	AlwaysVisible:
-	Tooltip:
-		Name: Speed Upgrade
+	Inherits: Leviathan.Support.speed.lv1
 	Buildable:
-		BuildPaletteOrder: 150
-		Prerequisites: forb, ~leviathanfact, !SuppRange2, !SuppHealth2
-		Queue: Upgrade.Levi
-		BuildLimit: 1
-		Description: Increases movement speed and decreases reload delay significantly.
-	Valued:
-		Cost: 4000
-	RenderSprites:
-		Image: bike
-	ProvidesPrerequisite@SuppSpeed2: 
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech1, ~!SuppTech2
+	ProvidesPrerequisite@SuppSpeed: 
 		Prerequisite: SuppSpeed2
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech2
+Leviathan.Support.speed.lv3:
+	Inherits: Leviathan.Support.speed.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech2, ~!SuppTech3
+	ProvidesPrerequisite@SuppSpeed: 
+		Prerequisite: SuppSpeed3
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech3
+Leviathan.Support.speed.lv4:
+	Inherits: Leviathan.Support.speed.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech3, ~!SuppTech4
+	ProvidesPrerequisite@SuppSpeed: 
+		Prerequisite: SuppSpeed4
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech4
+Leviathan.Support.speed.lv5:
+	Inherits: Leviathan.Support.speed.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech4, ~!SuppTech5
+	ProvidesPrerequisite@SuppSpeed: 
+		Prerequisite: SuppSpeed5
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech5
+Leviathan.Support.speed.lv6:
+	Inherits: Leviathan.Support.speed.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech5, ~!SuppTech6
+	ProvidesPrerequisite@SuppSpeed: 
+		Prerequisite: SuppSpeed6
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech6
+Leviathan.Support.speed.lv7:
+	Inherits: Leviathan.Support.speed.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech6, ~!SuppTech7
+	ProvidesPrerequisite@SuppSpeed: 
+		Prerequisite: SuppSpeed7
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech7
+Leviathan.Support.speed.lv8:
+	Inherits: Leviathan.Support.speed.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech7, ~!SuppTech8
+	ProvidesPrerequisite@SuppSpeed: 
+		Prerequisite: SuppSpeed8
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech8
+Leviathan.Support.speed.lv9:
+	Inherits: Leviathan.Support.speed.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech8, ~!SuppTech9
+	ProvidesPrerequisite@SuppSpeed: 
+		Prerequisite: SuppSpeed9
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech9
+Leviathan.Support.speed.lv10:
+	Inherits: Leviathan.Support.speed.lv1
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: ~leviathanfact, ~SuppTech9, !SuppTech10
+	ProvidesPrerequisite@SuppSpeed: 
+		Prerequisite: SuppSpeed10
+	ProvidesPrerequisite@suppTech: 
+		Prerequisite: SuppTech10
