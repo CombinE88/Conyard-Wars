@@ -2071,6 +2071,8 @@ explosion:
 		Length: *
 	lexplosion: lexplos
 		Length: *
+	empexp: empexp
+		Length: *
         
 constantexplode:
 	idle: veh-hit1
@@ -2352,7 +2354,8 @@ ltnk:
 	flakmuzzle: apcmuz
 		Length: 3
 		Stride: 6
-		Facings: 8   
+		Facings: 8  
+     
 
 ## --- leviathan ---        
 		
@@ -2378,7 +2381,7 @@ leviathan:
 	flakturret: apctur
 		Facings: 32
 		ZOffset: 265
-		Offset: 0, 6
+		Offset: 0, 8
 	normalturret: mtnk
 		Facings: 32
 		Start: 32
@@ -2395,7 +2398,7 @@ leviathan:
 		Facings: 32
 		Start: 32
 		ZOffset: 265
-		Offset: 0, 6
+		Offset: 0, 8
 	muzzle: minigun
 		Length: 6
 		Facings: 8
@@ -2422,6 +2425,28 @@ leviathan:
 		Stride: 6
 		Facings: 8    
 		
+levileve: 
+	lev1: pdigits
+		Start: 1
+	lev2: pdigits
+		Start: 2
+	lev3: pdigits
+		Start: 3
+	lev4: pdigits
+		Start: 4
+	lev5: pdigits
+		Start: 5
+	lev6: pdigits
+		Start: 6
+	lev7: pdigits
+		Start: 7
+	lev8: pdigits
+		Start: 8
+	lev9: pdigits
+		Start: 9
+	lev10: pdigits
+		Start: 0
+        
 livafact:
 	pin: atomicup
 	idle: fixmake

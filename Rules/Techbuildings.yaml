@@ -841,6 +841,8 @@ DOME:
 		Prerequisite: tech0  
 	ProvidesPrerequisite@cashtech3: 
 		Prerequisite: cashtech3
+	ProvidesPrerequisite@Endgame: 
+		Prerequisite: endgame
 
 # -- neutral buildings capturable ---
    

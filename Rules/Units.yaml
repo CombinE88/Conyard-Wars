@@ -10,9 +10,9 @@ MCV:
 
 RMBONEW:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	GrantConditionOnPrerequisite@rmboDamage:
 		Condition: rmboDamage
 		Prerequisites: rmboUpgradeDamage
@@ -121,9 +121,9 @@ RMBONEW:
 	RejectsOrders:
 E1New:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^AutoTargetInfantry
 	GrantConditionOnPrerequisite@E1Damage:
 		Condition: E1Damage
@@ -230,9 +230,9 @@ PLACEHOLDER:
   
 E2New:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	GrantConditionOnPrerequisite@e2Damage:
 		Condition: e2Damage
 		Prerequisites: e2UpgradeDamage
@@ -339,9 +339,9 @@ E2New:
 	
 E22New:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	GrantConditionOnPrerequisite@e22Damage:
 		Condition: e22Damage
 		Prerequisites: e22UpgradeDamage
@@ -449,9 +449,9 @@ E22New:
 	
 E3New:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^AutoTargetVehicleAircrafts
 	GrantConditionOnPrerequisite@e3fire:
 		Condition: e3fire
@@ -541,9 +541,9 @@ E3New:
 
 E4New:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	GrantConditionOnPrerequisite@e4Damage:
 		Condition: e4Damage
 		Prerequisites: e4UpgradeDamage
@@ -634,9 +634,9 @@ E4New:
 
 E5New:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	GrantConditionOnPrerequisite@e5Damage:
 		Condition: e5Damage
 		Prerequisites: e5UpgradeDamage
@@ -773,9 +773,9 @@ VICE:
 
 JEEPNEW:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^AutoTargetInfantry
 	GrantConditionOnPrerequisite@jeepfire:
 		Condition: jeepfire
@@ -877,9 +877,9 @@ JEEPNEW:
  
 BGGYNEW:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^AutoTargetInfantry  
 	GrantConditionOnPrerequisite@jeepfire:
 		Condition: jeepfire
@@ -981,9 +981,9 @@ BGGYNEW:
  
 MTNKNEW:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll		  
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll		  
 	Inherits: ^AutoTargetVehicle
 	Inherits: ^Tank
 	
@@ -1004,7 +1004,7 @@ MTNKNEW:
 		RequiresCondition: mtnkDamage
 	DamageMultiplier:
 		RequiresCondition: mtnkHealth
-		Modifier: 85
+		Modifier: 90
 	ReloadDelayMultiplier:
 		RequiresCondition: mtnkReload
 		Modifier: 85
@@ -1055,7 +1055,7 @@ MTNKNEW:
 	Mobile:
 		Speed: 85
 	Health:
-		HP: 450
+		HP: 425
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1088,9 +1088,9 @@ MTNKNEW:
 	
 NEW3TNK:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll		  
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll		  
 	Inherits: ^AutoTargetVehicle
 	Inherits: ^Tank
 	
@@ -1163,7 +1163,7 @@ NEW3TNK:
 	Mobile:
 		Speed: 70
 	Health:
-		HP: 600
+		HP: 725
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1202,9 +1202,9 @@ NEW3TNK:
 
 HTNKNEW:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll	   
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll	   
 	Inherits: ^AutoTargetVehicle
 	Inherits: ^Tank
 	
@@ -1329,9 +1329,9 @@ HTNKNEW:
 
 MSAMNEW:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^Tank
 	
 	GrantConditionOnPrerequisite@msamDamage:
@@ -1442,9 +1442,9 @@ MSAMNEW:
 
 HELINEW:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 	Inherits: ^AutoTargetInfantry	 
 	Inherits: ^Helicopter
@@ -1575,9 +1575,9 @@ HELINEW:
 
 ORCANEW:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns  
 	Inherits: ^AutoTargetVehicleAircrafts
 	Inherits: ^Helicopter
@@ -1706,9 +1706,9 @@ ORCANEW:
 
 ORCAHUNTER:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns  
 	Inherits: ^AutoTargetVehicleAircrafts
 	Inherits: ^Helicopter
@@ -1866,9 +1866,9 @@ ORCAHUNTER.Husk:
         
 HINDNEW:
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns  
 	Inherits: ^AutoTargetVehicleAircrafts
 	Inherits: ^Helicopter
@@ -2042,9 +2042,9 @@ HIND.Husk:
 STNKNEW:
 	Inherits: ^Vehicle
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	
 	GrantConditionOnPrerequisite@stnkDamage:
 		Condition: stnkDamage
@@ -2148,9 +2148,9 @@ STNKNEW:
 BIKENEW:
 	Inherits: ^Vehicle
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	
 	GrantConditionOnPrerequisite@bikeDamage:
 		Condition: bikeDamage
@@ -2275,9 +2275,9 @@ BIKENEW:
 MLRSNEW:
 	Inherits: ^Vehicle
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	
 	GrantConditionOnPrerequisite@mlrsfire:
 		Condition: mlrsfire
@@ -2292,14 +2292,14 @@ MLRSNEW:
 		Condition: mlrsReload
 		Prerequisites: mlrsUpgradeReload
 	FirepowerMultiplier:
-		Modifier: 110
+		Modifier: 125
 		RequiresCondition: mlrsDamage
 	DamageMultiplier:
 		RequiresCondition: mlrsHealth
 		Modifier: 60
 	RangeMultiplier:
 		RequiresCondition: mlrsReload
-		Modifier: 135
+		Modifier: 145
 	WithDecoration@1:
 		Image: ranks
 		Sequence: rank1
@@ -2350,11 +2350,15 @@ MLRSNEW:
 		Speed: 99
 		TurnSpeed: 7
 	Health:
-		HP: 120
+		HP: 150
 	Armor:
 		Type: Light
-	RevealsShroud:
+	RevealsShroud@normal:
 		Range: 8c0
+		RequiresCondition: !mlrsReload
+	RevealsShroud@Upgrade:
+		Range: 14c0
+		RequiresCondition: mlrsReload
 	DetectCloaked:
 		Range: 6c0
 	Turreted:
@@ -2389,9 +2393,9 @@ MLRSNEW:
 ARTYNEW:
 	Inherits: ^Tank
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	
 	GrantConditionOnPrerequisite@artyDamage:
 		Condition: artyDamage
@@ -2494,9 +2498,9 @@ ARTYNEW:
 FTNKNEW:
 	Inherits: ^Tank
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^AutoTargetInfantry
 	
 	GrantConditionOnPrerequisite@ftnkDamage:
@@ -2598,9 +2602,9 @@ FTNKNEW:
 FATWR:
 	Inherits: ^Helicopter
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 	
 #	GrantConditionOnPrerequisite@fawrDamage:
@@ -2708,9 +2712,9 @@ FATWR:
 TMPLANGEL:
 	Inherits: ^Helicopter
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 	
 #	GrantConditionOnPrerequisite@tmplsDamage:
@@ -2804,9 +2808,9 @@ TMPLANGEL:
 GUNTANK:
 	Inherits: ^Vehicle
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	
 #	GrantConditionOnPrerequisite@guntnkDamage:
 #		Condition: guntnkDamage
@@ -2904,9 +2908,9 @@ GUNTANK:
 MOICO:
 	Inherits: ^Vehicle
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	
 #	GrantConditionOnPrerequisite@moicoDamage:
 #		Condition: moicoDamage
@@ -3125,9 +3129,9 @@ C17BOMB:
 TRANNEW:
 	Inherits: ^Helicopter
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^AutoTargetInfantry  
 	Inherits: ^EMPNoGuns
 	
@@ -3276,9 +3280,9 @@ TRANNEW:
 SILLYCA:
 	Inherits: ^Helicopter
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 	
 	-Selectable:
@@ -3407,9 +3411,9 @@ SILLYCA.Husk:
 HARVNEW:
 	Inherits: ^Tank
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	
 	Valued:
 		Cost: 0
@@ -3450,9 +3454,9 @@ HARVNEW:
 SILLYBADR:
 	Inherits: ^Helicopter
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 	
 	-Selectable:
@@ -3614,9 +3618,9 @@ SILLYBADR.Husk:
 FLAGPLAT:
 	Inherits: ^Tank
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	
 	-Crushable:
 	RenderSprites:
@@ -3745,9 +3749,9 @@ FLAGPLAT.Husk:
 SUBWAY:
 	Inherits: ^Vehicle
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	
 	RenderSprites:
 		Image: ss
@@ -3789,9 +3793,9 @@ SUBWAY:
 LSTNEW:
 	Inherits: ^Helicopter
 	Inherits: ^Master10k
-	Inherits: ^Master50k
-	Inherits: ^Master100k
-	Inherits: ^AutoTargetAll
+	Inherits@1: ^Master50k
+	Inherits@2: ^Master100k
+	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 
 	-Selectable:

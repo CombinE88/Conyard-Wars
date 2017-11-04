@@ -36,7 +36,7 @@ FACT2:
 		Amount: 1
 	ProvidesPrerequisite@buildingname:
 	Production:
-		Produces: Building.Fact, Defenses.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact
+		Produces: Building.Fact, Defenses.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact, Upgrade.Levi
 	ProductionQueue@FactBuilding:
 		Type: Building.Fact
 		Factions: gdi, nod
@@ -77,6 +77,14 @@ FACT2:
 		LowPowerSlowdown: 2
 		QueuedAudio: Building
 		ReadyAudio: 
+	ProductionQueue@addon:
+		Type: Upgrade.Levi
+		Factions: gdi, nod
+		Group: Aircraft
+		BuildSpeed: 40
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
 	BaseBuilding:
 	ProductionBar@DefenseFact:
 		ProductionType: Defenses.Fact
@@ -335,7 +343,7 @@ E5FACTORY:
 	RenderSprites:
 		Image: e5fact
 	Valued:
-		Cost: 1650
+		Cost: 1400
 	Tooltip:
 		Name: Chemical Training Barracks
 	Buildable:
@@ -1174,7 +1182,7 @@ CARFACTORY6:
 	RenderSprites:
 		Image: carfact6
 	Valued:
-		Cost: 2100
+		Cost: 1800
 	Tooltip:
 		Name: Flame Tank Supply Drop
 	ProvidesPrerequisite:
@@ -1723,7 +1731,7 @@ LEVIATHANFACT:
 		Sequence: pin
 		Offset: 2260,2260,0
 	Valued:
-		Cost: 4000
+		Cost: 5000
 	Tooltip:
 		Name: Leviathan Assembly
 	Buildable:
@@ -1741,7 +1749,7 @@ LEVIATHANFACT:
 	SelectionDecorations:
 		VisualBounds: 96,96
 	Health:
-		HP: 4500
+		HP: 6500
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
@@ -1751,7 +1759,7 @@ LEVIATHANFACT:
 		SpawnOffset: -0,-0,0
 		ExitCell: 2,-1
 	Production:
-		Produces: leviathan.Fact, Upgrade.Levi
+		Produces: leviathan.Fact
 	ProductionQueue:
 		Type: leviathan.Fact
 		RequireOwner: false
@@ -1765,12 +1773,4 @@ LEVIATHANFACT:
 	ProvidesPrerequisite:
 		Prerequisite: vehicleproduction
 	-WithDeathAnimation:
-	ProductionQueue@addon:
-		Type: Upgrade.Levi
-		Factions: gdi, nod
-		Group: Aircraft
-		BuildSpeed: 40
-		LowPowerSlowdown: 2
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
 	-Sellable:

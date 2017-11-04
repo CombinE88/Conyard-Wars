@@ -26,7 +26,7 @@ LEVIATHAN:
 		TurnSpeed: 3
 		Crushes: wall, heavywall, crate, infantry, Tank, Car, Husk
 	Health:
-		HP: 1750
+		HP: 2050
 	Armor:
 		Type: Heavy
 		
@@ -807,7 +807,7 @@ LEVIATHAN:
 	DamageMultiplier@SuppHealth10:
 		Modifier: 25
 		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10) == 10
-	
+
 		
 # rest code
 		
@@ -853,6 +853,87 @@ LEVIATHAN:
 	SpawnActorOnDeath:
 		Actor: LEVIATHAN.Husk
 	ProvidesPrerequisite@buildingname:
+    
+	WithDecoration@lev1:
+		Image: levileve
+		Sequence: lev1
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10 + SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10 + SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 1
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@lev2:
+		Image: levileve
+		Sequence: lev2
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10 + SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10 + SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 2
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@lev3:
+		Image: levileve
+		Sequence: lev3
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10 + SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10 + SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 3
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@lev4:
+		Image: levileve
+		Sequence: lev4
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10 + SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10 + SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 4
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@lev5:
+		Image: levileve
+		Sequence: lev5
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10 + SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10 + SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 5
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@lev6:
+		Image: levileve
+		Sequence: lev6
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10 + SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10 + SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 6
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@lev7:
+		Image: levileve
+		Sequence: lev7
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10 + SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10 + SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 7
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@lev8:
+		Image: levileve
+		Sequence: lev8
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10 + SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10 + SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 8
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@lev9:
+		Image: levileve
+		Sequence: lev9
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10 + SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10 + SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) == 9
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
+	WithDecoration@lev10:
+		Image: levileve
+		Sequence: lev10
+		RequiresCondition: (SuppHealth1 + SuppHealth2 + SuppHealth3 + SuppHealth4 + SuppHealth5 + SuppHealth6 + SuppHealth7 + SuppHealth8 + SuppHealth9 + SuppHealth10 + SuppRange1 + SuppRange2 + SuppRange3 + SuppRange4 + SuppRange5 + SuppRange6 + SuppRange7 + SuppRange8 + SuppRange9 + SuppRange10 + SuppSpeed1 + SuppSpeed2 + SuppSpeed3 + SuppSpeed4 + SuppSpeed5 + SuppSpeed6 + SuppSpeed7 + SuppSpeed8 + SuppSpeed9 + SuppSpeed10) >= 10
+		ReferencePoint: Top, Left
+		Palette: effect
+		ZOffset: 256
+		ValidStances: ally, enemy, neutral
 		
 LEVIATHAN.Husk:
 	Inherits: ^Husk

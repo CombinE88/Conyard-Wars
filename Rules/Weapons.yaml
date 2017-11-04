@@ -209,7 +209,7 @@ EMPSAMMissile:
 	Range: 9c0
 	MinRange: 1c0
 	Report: rocket2.aud
-	ValidTargets: Air, Structure, Ground
+	ValidTargets: Air, Structure
 	Projectile: Missile
 		Blockable: false
 		Image: patriot
@@ -220,16 +220,23 @@ EMPSAMMissile:
 		RangeLimit: 10c819
 	Warhead@1Dam: SpreadDamage
 		Spread: 682
-		ValidTargets: Air
+		ValidTargets: Air, Structure
 		Versus:
 			Heavy: 75
 		Damage: 75
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@emp: GrantExternalCondition
-		Range: 1c512
+		Range: 3c0
 		Duration: 50
 		Condition: empdisable
 		ValidTargets: Air, Structure
+	Warhead@3Eff1: CreateEffect
+		ImpactSounds: mobemp1.aud
+	Warhead@3Eff2: CreateEffect
+		Delay: 62
+		Explosions: empexp
+        
+        
 
 
 MLaser:
@@ -646,7 +653,7 @@ Heavy227mm:
 			None: 35
 			Wood: 60
 			Light: 100
-			Heavy: 50
+			Heavy: 75
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
@@ -687,7 +694,7 @@ Quad227mm:
 			None: 35
 			Wood: 60
 			Light: 100
-			Heavy: 50
+			Heavy: 75
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
