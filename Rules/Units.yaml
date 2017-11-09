@@ -3078,6 +3078,41 @@ A10STRIKER:
 	Contrail@2:
 		Offset: -640,-171,0
 		TrailLength: 15
+        
+MIGFIGHTER:
+	Inherits: ^Plane
+	HitShape:
+	Tooltip:
+		Name: Mig
+	Valued:
+		Cost: 2000
+	RenderSprites:
+		Image: mig
+		PlayerPalette: raplayer
+	Aircraft:
+		TurnSpeed: 4
+		Speed: 273
+		Repulsable: False
+	Health:
+		HP: 150
+	Armor:
+		Type: Heavy
+	AttackBomber:
+		Armaments: bombs, bombs2
+		Bombs: bombs
+	WithMuzzleOverlay:
+	Armament@BOMBS:
+		Name: bombs
+		Weapon: MigMissile
+		LocalOffset: 0,-640,0
+	Armament@BOMBS2:
+		Name: bombs2
+		Weapon: MigMissile
+		LocalOffset: 0,640,0
+	Contrail@1:
+		Offset: -598,-683,0
+	Contrail@2:
+		Offset: -598,683,0
 		
 C17:
 	HitShape:
@@ -3637,11 +3672,11 @@ FLAGPLAT:
 		Queue: Silly4.Fact
 		Description: Anti Air Platform
 	Mobile:
-		Speed: 45
+		Speed: 37
 		TurnSpeed: 3
 		Crushes: wall, heavywall, crate, infantry, Tank, Car, Husk
 	Health:
-		HP: 1900
+		HP: 1400
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -3812,7 +3847,7 @@ LSTNEW:
 		Queue: Silly6.Fact
 		Description: Landing Craft
 	Health:
-		HP: 750
+		HP: 650
 	Armor:
 		Type: Heavy
 	RevealsShroud:

@@ -1246,6 +1246,7 @@ carfact1:
 
 icon:
 	c17bombs: c17strike.shp
+	mig: migicon.shp
 		
 carfact1b:
 	idle: scweap
@@ -2619,3 +2620,8 @@ orbm:
 		Start: 32
 		Facings: 32
 	icon: orbmicnh
+    
+mig:
+	idle:
+		Facings: 16
+	icon: migicon

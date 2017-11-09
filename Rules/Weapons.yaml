@@ -2102,6 +2102,51 @@ JevalinMissile:
 	Warhead@3Eff: CreateEffect
 		Explosions: big_frag
 		ImpactSounds: xplobig6.aud
+        
+        
+MigMissile:
+	ReloadDelay: 8
+	Range: 100c512
+	MinRange: 0c0
+	Report: rocket1.aud
+	TargetActorCenter: true
+	ValidTargets: Ground
+	Projectile: Missile
+		Arm: 0
+		LockOnProbability: 0
+		Blockable: false
+		Image: DRAGON
+		HorizontalRateOfTurn: 10
+		VerticalRateOfTurn: 10
+		Speed: 450
+		LaunchAngle: -45
+		RangeLimit: 30c0
+		TrailImage: smokey
+		ContrailLength: 8
+		Inaccuracy: 0c512
+		MinimumLaunchSpeed: 450
+		MaximumLaunchSpeed: 450
+		MinimumLaunchAngle: -45
+		MaximumLaunchAngle: -45
+		HomingActivationDelay: 1000
+		Acceleration: 1c5
+		Gravity: 1
+		Shadow: true
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c756
+		ValidTargets: Vehicle, Infantry
+		Versus:
+			None: 100
+			Wood: 50
+			Light: 100
+			Heavy: 100
+		Damage: 95
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: Crater
+	Warhead@3Eff: CreateEffect
+		Explosions: med_frag
+		ImpactSounds: xplos.aud
 
 JevalinMissileAir:
 	ReloadDelay: 150

@@ -843,6 +843,33 @@ DOME:
 		Prerequisite: cashtech3
 	ProvidesPrerequisite@Endgame: 
 		Prerequisite: endgame
+	AirstrikePower@AirstrikeMiG
+		Prerequisites: ~techlevel.superweapons
+		Icon: mig
+		ChargeTime: 390
+		SquadSize: 3
+		QuantizedFacings: 2
+		SquadOffset: -512,1950,0
+		BeaconDistanceOffset: 12c0
+		Description: Air Strike
+		LongDesc: Deploy an linear bomblets strike along a complete lane.
+		EndChargeSound: airredy1.aud
+		SelectTargetSound: select1.aud
+		InsufficientPowerSound: nopower1.aud
+		IconPalette: ra
+		IncomingSound: enemya.aud
+		UnitType: migfighter
+		DisplayBeacon: True
+		BeaconPoster: airstrike
+		BeaconPosterPalette: beaconposter
+		DisplayRadarPing: True
+		CameraActor: camera
+		ArrowSequence: arrow
+		ClockSequence: clock
+		CircleSequence: circles
+		AllowMultiple: true
+		OrderName: Bomberstrike
+	SupportPowerChargeBar:   
 
 # -- neutral buildings capturable ---
    
