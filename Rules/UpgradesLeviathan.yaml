@@ -2,6 +2,7 @@
 
 Leviathan.Main.Msam:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Rocket Launcher
 	Buildable:
@@ -10,7 +11,7 @@ Leviathan.Main.Msam:
 		Prerequisites: radarnew, !MainA10, !MainCannon
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Puts a rocket launcher as main cannon.
+		Description: Type: Long Range Rockets\n\nGood Against:\n  Ground\n\nBad Against:\n  Air
 	Valued:
 		Cost: 0
 	RenderSprites:
@@ -20,6 +21,7 @@ Leviathan.Main.Msam:
 		
 Leviathan.Main.Cannon:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Mammoth Cannon
 	Buildable:
@@ -28,7 +30,7 @@ Leviathan.Main.Cannon:
 		Prerequisites: fammo, !MainA10, !MainRocket
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Puts a mammoth cannon as main cannon.
+		Description: Type: Ballistic\n\nGood Against:\n  Vehicles, Structures\n\nBad Against:\n  Air
 	Valued:
 		Cost: 0
 	RenderSprites:
@@ -38,6 +40,7 @@ Leviathan.Main.Cannon:
 		
 Leviathan.Main.Flame:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Flamethrower
 	Buildable:
@@ -46,7 +49,7 @@ Leviathan.Main.Flame:
 		Prerequisites: forb, !MainCannon, !MainRocket
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Puts a flamethrower as main cannon.
+		Description: Type: Chemical\n\nGood Against:\n  Infantry, Light Vehicles\n\nBad Against:\n  Air
 	Valued:
 		Cost: 0
 	RenderSprites:
@@ -58,6 +61,7 @@ Leviathan.Main.Flame:
 
 Leviathan.Front.Tow:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: TOW Rocket
 	Buildable:
@@ -66,7 +70,7 @@ Leviathan.Front.Tow:
 		Prerequisites: forb, !FrontMtnk, !FrontCommando
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Puts TOW rocket launchers as front turrets, which can attack air.
+		Description: Type: Rockets\n\nGood Against:\n  Air\n\nBad Against:\n  Ground
 	Valued:
 		Cost: 0
 	RenderSprites:
@@ -76,6 +80,7 @@ Leviathan.Front.Tow:
 		
 Leviathan.Front.Commando:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Sniper Turrets
 	Buildable:
@@ -84,7 +89,7 @@ Leviathan.Front.Commando:
 		Prerequisites: radarnew, !FrontMtnk, !FrontTow
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Puts sniper turrets as front turrets.
+		Description: Type: Sniper\n\nGood Against:\n  Infantry\n\nBad Against:\n  Vehicles, Air, Structures
 	Valued:
 		Cost: 0
 	RenderSprites:
@@ -94,6 +99,7 @@ Leviathan.Front.Commando:
 		
 Leviathan.Front.Mtnk:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Medium Tank Cannons
 	Buildable:
@@ -102,7 +108,7 @@ Leviathan.Front.Mtnk:
 		Prerequisites: fammo, !FrontTow, !FrontCommando
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Puts medium tank cannons as front turrets.
+		Description: Type: Ballistic\n\nGood Against:\n  Vehicles, Structures\n\nBad Against:\n  Infantry, Air
 	Valued:
 		Cost: 0
 	RenderSprites:
@@ -114,6 +120,7 @@ Leviathan.Front.Mtnk:
 
 Leviathan.Side.ltnk:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Flak Cannon
 	Buildable:
@@ -122,7 +129,7 @@ Leviathan.Side.ltnk:
 		Prerequisites: radarnew, !SuppArty, !SuppAtRock
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Puts flak cannons as side turrets, which can attack air.
+		Description: Type: Explosives\n\nGood Against:\n  Air\n\nBad Against:\n  Structures
 	Valued:
 		Cost: 0
 	RenderSprites:
@@ -132,6 +139,7 @@ Leviathan.Side.ltnk:
 		
 Leviathan.Side.ATRockets:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Anti-Tank Rockets
 	Buildable:
@@ -140,7 +148,7 @@ Leviathan.Side.ATRockets:
 		Prerequisites: fammo, !SuppArty, !SuppLtnk
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Puts AT rocket launchers as side turrets.
+		Description: Type: Rockets\n\nGood Against:\n  Ground\n\nBad Against:\n  Air, Infantry
 	Valued:
 		Cost: 0
 	RenderSprites:
@@ -150,6 +158,7 @@ Leviathan.Side.ATRockets:
 		
 Leviathan.Side.arty:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Artillery Shells
 	Buildable:
@@ -158,7 +167,7 @@ Leviathan.Side.arty:
 		Prerequisites: forb, !SuppLtnk, !SuppAtRock
 		Queue: Upgrade.Levi
 		BuildLimit: 1
-		Description: Puts artilleries as side turrets.
+		Description: Type: Long Range Ballistic\n\nGood Against:\n  Ground\n\nBad Against:\n  Air
 	Valued:
 		Cost: 0
 	RenderSprites:
@@ -170,6 +179,7 @@ Leviathan.Side.arty:
 		
 Leviathan.Support.Range.lv1:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Range Upgrade
 	Valued:
@@ -273,6 +283,7 @@ Leviathan.Support.Range.lv10:
 		
 Leviathan.Support.Health.lv1:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Armor Upgrade
 	Buildable:
@@ -375,6 +386,7 @@ Leviathan.Support.Health.lv10:
 		
 Leviathan.Support.speed.lv1:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Speed Upgrade
 	Buildable:

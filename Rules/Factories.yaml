@@ -21,10 +21,10 @@ FACT2:
 		LocalCenterOffset: 0,-512,0
 	Selectable:
 		Bounds: 72,48
-	SelectionDecorations:
-		VisualBounds: 72,64,0,-16
+#	SelectionDecorations:
+#		VisualBounds: 72,64,0,-16
 	Health:
-		HP: 10000
+		HP: 1000000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -36,6 +36,7 @@ FACT2:
 		Amount: 1
 	ProvidesPrerequisite@buildingname:
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Building.Fact, Defenses.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact, Upgrade.Levi
 	ProductionQueue@FactBuilding:
 		Type: Building.Fact
@@ -131,7 +132,7 @@ E1FACTORY:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 500
+		HP: 50000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -139,6 +140,7 @@ E1FACTORY:
 		SpawnOffset: 512,1024,0
 		ExitCell: 1,2
 	Production:
+		RequiresCondition: !empdisable
 		Produces: E1Infantery
 	ProductionQueue:
 		Type: E1Infantery
@@ -149,10 +151,10 @@ E1FACTORY:
 		QueuedAudio: Blank
 		ReadyAudio: Blank
 	
-	-Selectable:
+#	-Selectable:
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 24,24,0,12
+#	SelectionDecorations:
+#		VisualBounds: 24,24,0,12
 	
 E2FACTORY:
 	Inherits: ^BaseBuilding2
@@ -174,7 +176,7 @@ E2FACTORY:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 650
+		HP: 65000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -185,6 +187,7 @@ E2FACTORY:
 		SpawnOffset: 298,298,0
 		ExitCell: 1,2
 	Production:
+		RequiresCondition: !empdisable
 		Produces: E2Infantery
 	ProductionQueue:
 		Type: E2Infantery
@@ -195,10 +198,10 @@ E2FACTORY:
 		QueuedAudio: Blank
 		ReadyAudio: Blank
  	
-	-Selectable:
+#	-Selectable:
 	ProvidesPrerequisite@buildingname: 
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3 
 
 E22FACTORY:
 	Inherits: ^BaseBuilding2
@@ -220,7 +223,7 @@ E22FACTORY:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 700
+		HP: 70000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -231,6 +234,7 @@ E22FACTORY:
 		SpawnOffset: -215,344,0
 		ExitCell: 1,2
 	Production:
+		RequiresCondition: !empdisable
 		Produces: E22Infantery
 	ProductionQueue:
 		Type: E22Infantery
@@ -241,10 +245,10 @@ E22FACTORY:
 		QueuedAudio: Blank
 		ReadyAudio: Blank
  	
-	-Selectable:
+#	-Selectable:
 	ProvidesPrerequisite@buildingname:	 
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3
 	
 E3FACTORY:
 	Inherits: ^BaseBuilding2
@@ -266,7 +270,7 @@ E3FACTORY:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 900
+		HP: 90000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -277,6 +281,7 @@ E3FACTORY:
 		SpawnOffset: -430,602,0
 		ExitCell: 1,2
 	Production:
+		RequiresCondition: !empdisable
 		Produces: E3Infantery
 	ProductionQueue:
 		Type: E3Infantery
@@ -287,10 +292,10 @@ E3FACTORY:
 		QueuedAudio: Blank
 		ReadyAudio: Blank
  	
-	-Selectable:
+#	-Selectable:
 	ProvidesPrerequisite@buildingname: 
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3
 	
 E4FACTORY:
 	Inherits: ^BaseBuilding2
@@ -312,7 +317,7 @@ E4FACTORY:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 670
+		HP: 67000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -323,6 +328,7 @@ E4FACTORY:
 		SpawnOffset: -774,559,0
 		ExitCell: 1,2
 	Production:
+		RequiresCondition: !empdisable
 		Produces: E4Infantery
 	ProductionQueue:
 		Type: E4Infantery
@@ -333,10 +339,10 @@ E4FACTORY:
 		QueuedAudio: Blank
 		ReadyAudio: Blank
  	
-	-Selectable:
+#	-Selectable:
 	ProvidesPrerequisite@buildingname: 
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3
 E5FACTORY:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
@@ -357,7 +363,7 @@ E5FACTORY:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 1000
+		HP: 100000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -368,6 +374,7 @@ E5FACTORY:
 		SpawnOffset: -774,559,0
 		ExitCell: 1,2
 	Production:
+		RequiresCondition: !empdisable
 		Produces: E5Infantery
 	ProductionQueue:
 		Type: E5Infantery
@@ -378,10 +385,10 @@ E5FACTORY:
 		QueuedAudio: Blank
 		ReadyAudio: Blank
  	
-	-Selectable:
+#	-Selectable:
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3
 		
 RMBOFACTORY:
 	Inherits: ^BaseBuilding2
@@ -403,7 +410,7 @@ RMBOFACTORY:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 1500
+		HP: 150000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -414,6 +421,7 @@ RMBOFACTORY:
 		SpawnOffset: 298,298,0
 		ExitCell: 1,2
 	Production:
+		RequiresCondition: !empdisable
 		Produces: E6Infantery
  	
 	ProductionQueue:
@@ -424,10 +432,10 @@ RMBOFACTORY:
 		LowPowerSlowdown: 3
 		QueuedAudio: Blank
 		ReadyAudio: Blank
-	-Selectable:
+#	-Selectable:
 	ProvidesPrerequisite@buildingname:  
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3
 	   
 CARFACTORY1:
 	Inherits: ^BaseBuilding2
@@ -450,9 +458,9 @@ CARFACTORY1:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 900
+		HP: 90000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
@@ -462,6 +470,7 @@ CARFACTORY1:
 		SpawnOffset: 1041,141,0
 		ExitCell: 0,2
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Jeep.Fact
 	ProductionQueue:
 		Type: Jeep.Fact
@@ -474,8 +483,8 @@ CARFACTORY1:
 	ProvidesPrerequisite@buildingname:	
 	ProvidesPrerequisite@jeepfireupgrade: 
 		Prerequisite: jeepfireupgrade
-	SelectionDecorations:
-		VisualBounds: 72,64,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 72,64,0,-5
 	
 	
 CARFACTORYBG:
@@ -499,9 +508,9 @@ CARFACTORYBG:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 900
+		HP: 90000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
@@ -511,6 +520,7 @@ CARFACTORYBG:
 		SpawnOffset: 1041,141,0
 		ExitCell: 0,2
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Jeep2.Fact
 	ProductionQueue:
 		Type: Jeep2.Fact
@@ -523,8 +533,8 @@ CARFACTORYBG:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@jeepfireupgrade: 
 		Prerequisite: jeepfireupgrade
-	SelectionDecorations:
-		VisualBounds: 72,64,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 72,64,0,-5
 	
 		
 CARFACTORY2:
@@ -553,9 +563,9 @@ CARFACTORY2:
 		Footprint: xxx === ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 1300
+		HP: 130000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
@@ -566,6 +576,7 @@ CARFACTORY2:
 		ExitCell: 0,2
 		ExitDelay: 3
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Car2.Fact
 	ProductionQueue:
 		Type: Car2.Fact
@@ -579,9 +590,9 @@ CARFACTORY2:
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 72,48
-	SelectionDecorations:
-		VisualBounds: 72,64,0,-16
-	-Selectable:
+#	SelectionDecorations:
+#		VisualBounds: 72,64,0,-16
+#	-Selectable:
     
 3TNKFACTORY:
 	Inherits: ^BaseBuilding2
@@ -608,9 +619,9 @@ CARFACTORY2:
 		Footprint: ___ ___ xxx xxx ===
 		Dimensions: 3,5
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 1700
+		HP: 170000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
@@ -621,6 +632,7 @@ CARFACTORY2:
 		ExitCell: 1,4
 		ExitDelay: 3
 	Production:
+		RequiresCondition: !empdisable
 		Produces: tank3.Fact
 	ProductionQueue:
 		Type: tank3.Fact
@@ -633,9 +645,9 @@ CARFACTORY2:
 	ProvidesPrerequisite@buildingname:
 	Selectable:
 		Bounds: 72,72
-	SelectionDecorations:
-		VisualBounds: 72,72,0,0
-	-Selectable:
+#	SelectionDecorations:
+#		VisualBounds: 72,72,0,0
+#	-Selectable:
     
 CARFACTORY3:
 	Inherits: ^BaseBuilding2
@@ -658,9 +670,9 @@ CARFACTORY3:
 		Footprint: _x_ xxx x=x ===
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 1000
+		HP: 100000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
@@ -671,6 +683,7 @@ CARFACTORY3:
 		ExitCell: 2,2
 		ExitDelay: 3
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Car4.Fact
 	ProductionQueue:
 		Type: Car4.Fact
@@ -682,8 +695,8 @@ CARFACTORY3:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 72,64,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 72,64,0,-5
 		
 CARFACTORY4:
 	Inherits: ^BaseBuilding2   
@@ -709,9 +722,9 @@ CARFACTORY4:
 		Footprint: _____ xxxxx xxxxx x===x x===x =====
 		Dimensions: 5,6
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 4000
+		HP: 400000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
@@ -722,6 +735,7 @@ CARFACTORY4:
 		ExitCell: 1,5 
 		ExitDelay: 3
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Car3.Fact
 	ProductionQueue:
 		Type: Car3.Fact
@@ -733,12 +747,12 @@ CARFACTORY4:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 90,90,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 90,90,0,-5
 SECRETFACTORY1:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x3Shape
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: secret1
 	Valued:
@@ -756,7 +770,7 @@ SECRETFACTORY1:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 1500
+		HP: 150000
 	RevealsShroud:
 		Range: 5c0
 	Exit:
@@ -766,6 +780,7 @@ SECRETFACTORY1:
 	WithProductionDoorOverlay:
 		Sequence: build-top
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Secret1.Fact
 	ProductionQueue:
 		Type: Secret1.Fact
@@ -776,13 +791,13 @@ SECRETFACTORY1:
  	
 	Power:
 		Amount: 0 
-	SelectionDecorations:
-		VisualBounds:  72,72,0,-5
+#	SelectionDecorations:
+#		VisualBounds:  72,72,0,-5
 	ProvidesPrerequisite@buildingname:
 SECRETFACTORY2:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x3Shape
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: secret2
 	Valued:
@@ -800,7 +815,7 @@ SECRETFACTORY2:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 2000
+		HP: 200000
 	WithProductionDoorOverlay:
 		Sequence: build-top
 	RevealsShroud:
@@ -810,6 +825,7 @@ SECRETFACTORY2:
 		ExitCell: 1,-1
 		ExitDelay: 10
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Secret2.Fact
 	ProductionQueue:
 		Type: Secret2.Fact
@@ -821,8 +837,8 @@ SECRETFACTORY2:
 	Power:
 		Amount: 0 
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 72,72,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 72,72,0,-5
 SECRETFACTORY3:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x2Shape
@@ -844,9 +860,9 @@ SECRETFACTORY3:
 		Footprint: ____ xxxx xxxx ====
 		Dimensions: 4,4
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 6000
+		HP: 600000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
@@ -857,6 +873,7 @@ SECRETFACTORY3:
 		ExitCell: 2,3
 		ExitDelay: 3
 	Production:
+		RequiresCondition: !empdisable
 		Produces: secret3.fact 
 	ProductionQueue:
 		Type: secret3.fact 
@@ -868,8 +885,8 @@ SECRETFACTORY3:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 72,72,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 72,72,0,-5
 SECRETFACTORY4:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x2Shape
@@ -891,9 +908,9 @@ SECRETFACTORY4:
 		Footprint: ____ xxxx xxxx ====
 		Dimensions: 4,4
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 4500
+		HP: 450000
 	RevealsShroud:
 		Range: 4c0
 	WithBuildingBib:
@@ -904,6 +921,7 @@ SECRETFACTORY4:
 		ExitCell: 2,3
 		ExitDelay: 3
 	Production:
+		RequiresCondition: !empdisable
 		Produces: secret4.fact 
 	ProductionQueue:
 		Type: secret4.fact 
@@ -915,12 +933,12 @@ SECRETFACTORY4:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 72,72,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 72,72,0,-5
 AIRFACT0:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: airfact0
 	Valued:
@@ -937,12 +955,13 @@ AIRFACT0:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 700
+		HP: 70000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Fly0.Fact
 	Reservable:
 	RepairsUnits:
@@ -957,12 +976,12 @@ AIRFACT0:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 36,36,0,-5	 
+#	SelectionDecorations:
+#		VisualBounds: 36,36,0,-5	 
 AIRFACT1:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: airfact2
 	Valued:
@@ -979,12 +998,13 @@ AIRFACT1:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 1000
+		HP: 100000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Fly1.Fact
 	Reservable:
 	RepairsUnits:
@@ -999,13 +1019,13 @@ AIRFACT1:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 36,36,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 36,36,0,-5
 	
 AIRFACT2:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: airfact1
 	Valued:
@@ -1022,12 +1042,13 @@ AIRFACT2:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 1000
+		HP: 100000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Fly2.Fact
 	Reservable:
 	RepairsUnits:
@@ -1042,13 +1063,13 @@ AIRFACT2:
 	Power:
 		Amount: 0 
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 36,36,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 36,36,0,-5
         
 AIRFACTHIND:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x3Shape
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: airfacthind
 		PlayerPalette: raplayer
@@ -1067,12 +1088,13 @@ AIRFACTHIND:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Health:
-		HP: 1200
+		HP: 120000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Flyhind.Fact
 	Reservable:
 	ProductionQueue:
@@ -1084,13 +1106,13 @@ AIRFACTHIND:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 72,62,0,-5	
+#	SelectionDecorations:
+#		VisualBounds: 72,62,0,-5	
         
 AIRFACTHUNTER:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x3Shape
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: airfacthunter
 	Valued:
@@ -1107,12 +1129,13 @@ AIRFACTHUNTER:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Health:
-		HP: 1100
+		HP: 110000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
 		SpawnOffset: 0,-256,0
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Flyhunt.Fact
 	Reservable:
 	ProductionQueue:
@@ -1124,8 +1147,8 @@ AIRFACTHUNTER:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 72,62,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 72,62,0,-5
         
  
 CARFACTORY5:
@@ -1150,7 +1173,7 @@ CARFACTORY5:
 		Dimensions: 4,4
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 1500
+		HP: 150000
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
@@ -1168,13 +1191,14 @@ CARFACTORY5:
 		ReadyAudio:
  	
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Car5.Fact
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname: 
-	-Selectable:   
-	SelectionDecorations:
-		VisualBounds: 64,72,0,-5
+#	-Selectable:   
+#	SelectionDecorations:
+#		VisualBounds: 64,72,0,-5
 	
 CARFACTORY6:
 	Inherits: ^BaseBuilding2
@@ -1198,7 +1222,7 @@ CARFACTORY6:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 2000
+		HP: 200000
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
@@ -1218,9 +1242,9 @@ CARFACTORY6:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname: 
-	-Selectable:
-	SelectionDecorations:
-		VisualBounds: 72,64,0,-5
+#	-Selectable:
+#	SelectionDecorations:
+#		VisualBounds: 72,64,0,-5
 	
 CARFACTORY7:
 	Inherits: ^BaseBuilding2
@@ -1244,7 +1268,7 @@ CARFACTORY7:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 1100
+		HP: 110000
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
@@ -1267,9 +1291,9 @@ CARFACTORY7:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname: 
-	-Selectable:
-	SelectionDecorations:
-		VisualBounds: 48,72,0,-5
+#	-Selectable:
+#	SelectionDecorations:
+#		VisualBounds: 48,72,0,-5
 
 CARFACTORY8:
 	Inherits: ^BaseBuilding2
@@ -1293,7 +1317,7 @@ CARFACTORY8:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 800
+		HP: 80000
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
@@ -1316,9 +1340,9 @@ CARFACTORY8:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname: 
-	-Selectable:
-	SelectionDecorations:
-		VisualBounds: 48,64,0,-5
+#	-Selectable:
+#	SelectionDecorations:
+#		VisualBounds: 48,64,0,-5
 	
 CARFACTORY10:
 	Inherits: ^BaseBuilding2
@@ -1342,7 +1366,7 @@ CARFACTORY10:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 1200
+		HP: 120000
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
@@ -1353,6 +1377,7 @@ CARFACTORY10:
 	WithProductionDoorOverlay:
 		Sequence: build-top
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Car10.Fact
 	ProductionQueue:
 		Type: Car10.Fact
@@ -1364,9 +1389,9 @@ CARFACTORY10:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname: 
-	-Selectable:
-	SelectionDecorations:
-		VisualBounds: 48,64,0,-5
+#	-Selectable:
+#	SelectionDecorations:
+#		VisualBounds: 48,64,0,-5
 		
 #---- silly factories ----
 
@@ -1394,7 +1419,7 @@ SILLYFACT1:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 1500
+		HP: 150000
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
@@ -1403,6 +1428,7 @@ SILLYFACT1:
 		ExitCell: 1,2
 		ExitDelay: 3
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Silly1.Fact
 	ProductionQueue:
 		Type: Silly1.Fact
@@ -1414,9 +1440,9 @@ SILLYFACT1:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname: 
-	-Selectable:
-	SelectionDecorations:
-		VisualBounds: 48,64,0,-5
+#	-Selectable:
+#	SelectionDecorations:
+#		VisualBounds: 48,64,0,-5
 		
 SILLYFACT2:
 	Inherits: ^BaseBuilding2
@@ -1449,7 +1475,7 @@ SILLYFACT2:
 		ExitCell: 1,2
 		ExitDelay: 3
 	Health:
-		HP: 3000
+		HP: 300000
 	RevealsShroud:
 		Range: 6c0
 	WithBuildingBib:
@@ -1458,10 +1484,11 @@ SILLYFACT2:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 73,72
-	-Selectable:
+#	SelectionDecorations:
+#		VisualBounds: 73,72
+#	-Selectable:
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Silly2.Fact
 	ProductionQueue:
 		Type: Silly2.Fact
@@ -1494,7 +1521,7 @@ SILLYFACT3:
 		Footprint: xxx xxx 
 		Dimensions: 3,2
 	Health:
-		HP: 4000
+		HP: 400000
 	RevealsShroud:
 		Range: 7c0
 	Exit@1:
@@ -1502,6 +1529,7 @@ SILLYFACT3:
 		ExitCell: 1,1
 		ExitDelay: 3
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Silly3.Fact
 	ProductionQueue:
 		Type: Silly3.Fact
@@ -1513,9 +1541,9 @@ SILLYFACT3:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname: 
-	-Selectable:
-	SelectionDecorations:
-		VisualBounds: 48,64,0,-5
+#	-Selectable:
+#	SelectionDecorations:
+#		VisualBounds: 48,64,0,-5
 		
 		
 SILLYFACT4:	   
@@ -1542,7 +1570,7 @@ SILLYFACT4:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
 	Health:
-		HP: 2500
+		HP: 250000
 	RevealsShroud:
 		Range: 7c0
 	Exit@1:
@@ -1550,6 +1578,7 @@ SILLYFACT4:
 		ExitCell: 1,1
 		ExitDelay: 3
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Silly4.Fact
 	ProductionQueue:
 		Type: Silly4.Fact
@@ -1561,9 +1590,9 @@ SILLYFACT4:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname: 
-	-Selectable:
-	SelectionDecorations:
-		VisualBounds: 48,64,0,-5	  
+#	-Selectable:
+#	SelectionDecorations:
+#		VisualBounds: 48,64,0,-5	  
 	WithProductionDoorOverlay:
 		Sequence: build-top
 	
@@ -1595,10 +1624,10 @@ SILLYFACT5:
 		Dimensions: 3,3
 	Selectable:
 		Bounds: 64,34,0,3
-	SelectionDecorations:
-		VisualBounds: 72,48
+#	SelectionDecorations:
+#		VisualBounds: 72,48
 	Health:
-		HP: 3000
+		HP: 300000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -1616,7 +1645,7 @@ SILLYFACT5:
 		Group: none
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
-	-Selectable:
+#	-Selectable:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
@@ -1653,10 +1682,10 @@ SILLYFACT6:
 		Dimensions: 3,3
 	Selectable:
 		Bounds: 64,34,0,3
-	SelectionDecorations:
-		VisualBounds: 72,48
+#	SelectionDecorations:
+#		VisualBounds: 72,48
 	Health:
-		HP: 4000
+		HP: 400000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -1674,6 +1703,7 @@ SILLYFACT6:
 		SpawnOffset: -0,-0,0
 		ExitCell: 2,0
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Silly6.Fact
 	ProductionQueue:
 		Type: Silly6.Fact
@@ -1681,7 +1711,7 @@ SILLYFACT6:
 		Group: none
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
-	-Selectable:
+#	-Selectable:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:
@@ -1746,10 +1776,10 @@ LEVIATHANFACT:
 		Dimensions: 5,5
 	Selectable:
 		Bounds: 96,96,0,3
-	SelectionDecorations:
-		VisualBounds: 96,96
+#	SelectionDecorations:
+#		VisualBounds: 96,96
 	Health:
-		HP: 6500
+		HP: 650000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
@@ -1759,6 +1789,7 @@ LEVIATHANFACT:
 		SpawnOffset: -0,-0,0
 		ExitCell: 2,-1
 	Production:
+		RequiresCondition: !empdisable
 		Produces: leviathan.Fact
 	ProductionQueue:
 		Type: leviathan.Fact
@@ -1766,7 +1797,7 @@ LEVIATHANFACT:
 		Group: none
 		BuildSpeed: 40
 		LowPowerSlowdown: 3
-	-Selectable:
+#	-Selectable:
 	Power:
 		Amount: 0
 	ProvidesPrerequisite@buildingname:

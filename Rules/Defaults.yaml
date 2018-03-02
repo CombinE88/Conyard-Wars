@@ -40,8 +40,8 @@
 	WithColoredOverlay@IDISABLE:
 		RequiresCondition: empdisable
 		Palette: disabled
-	DisableOnCondition@IDISABLE:
-		RequiresCondition: empdisable
+#	DisableOnCondition@IDISABLE:
+#		RequiresCondition: empdisable
 ^EMPNoGuns:
 	#UpgradeOverlay@EMPDISABLE:
 	#	UpgradeTypes: empdisable
@@ -127,8 +127,63 @@
 		RequiresCondition: Master100k
 		Modifier: 150
 		
+^BaseBuilding:
+	Interactable:
+^Helicopter:
+	Interactable:
+^Viceroid:
+	Interactable:
+^Soldier:
+	Interactable:
+^Tank:
+	Interactable:
+        
+^Building2:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^SpriteActor
+	Inherits@shape: ^1x1Shape
+	Huntable:
+#	SelectionDecorations:
+#	WithSpriteControlGroupDecoration:
+#	Selectable:
+#		Priority: 3
+	Interactable:
+	Targetable:
+		TargetTypes: Ground, C4, Structure
+	Armor:
+		Type: Wood
+	Health:
+		HP: 40000
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+	SoundOnDamageTransition:
+		DamagedSounds: xplos.aud
+		DestroyedSounds: crumble.aud
+	WithSpriteBody:
+	Explodes:
+		Type: Footprint
+		Weapon: BuildingExplode
+		EmptyWeapon: BuildingExplode
+	CaptureNotification:
+		Notification: BuildingCaptured
+		NewOwnerVoice: no
+	ActorLostNotification:
+		Notification: BuildingLost
+	ShakeOnDeath:
+	Guardable:
+		Range: 3c0
+	Tooltip:
+		GenericName: Structure
+	FrozenUnderFog:
+	Demolishable:
+	EditorTilesetFilter:
+		Categories: Building
+	CommandBarBlacklist:
+	AcceptsDeliveredCash: 
+        
 ^BaseBuilding2:
-	Inherits: ^Building
+	Inherits: ^Building2
 	Inherits: ^EMPupgrades
 	Building:
 		Adjacent: 6
@@ -142,6 +197,10 @@
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
 	GivesBuildableArea:
+		AreaTypes: building
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 4
 	EngineerRepairable:
 	Sellable:
 		SellSounds: cashturn.aud
@@ -158,11 +217,11 @@ PROC:
 	-Buildable:
 	Power:
 		Amount: 0
-	-Selectable:
+#	-Selectable:
 	-Sellable:
 		
 HARV: 
-	-Selectable:
+#	-Selectable:
 	-Targetable:
 	
 ^4x3Shape:
@@ -239,6 +298,6 @@ HARV:
         
 ^Infantry:
 	SelectionDecorations:
-		Bounds: 12,17,0,-6 
+#		Bounds: 12,17,0,-6 
 		
 		

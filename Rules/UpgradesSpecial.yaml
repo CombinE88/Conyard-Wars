@@ -2,6 +2,7 @@
 
 Upgrade.e1fire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Minigunner - Laser Gun
 	Buildable:
@@ -20,6 +21,7 @@ Upgrade.e1fire:
 		
 Upgrade.mtnknapalm:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Medium Tank - Chemical Shells
 	Buildable:
@@ -37,6 +39,7 @@ Upgrade.mtnknapalm:
         
 Upgrade.msamfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Rocket Launcher - Double Pack-Size
 	Buildable:
@@ -54,6 +57,7 @@ Upgrade.msamfire:
 		
 Upgrade.ftnknapalm:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Flame Tank - Chemical Fire
 	Buildable:
@@ -71,6 +75,7 @@ Upgrade.ftnknapalm:
 
 Upgrade.jeepfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Buggy/Hum-Vee
 	Buildable:
@@ -88,6 +93,7 @@ Upgrade.jeepfire:
 		
 jeepfireupgrade:
 	AlwaysVisible:
+	Interactable:
 	ProvidesPrerequisite@buildingname: 
 		Prerequisite: jeepfireupgrade
 	Tooltip:
@@ -96,6 +102,7 @@ jeepfireupgrade:
 
 Upgrade.e3fire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Rocket Soldier - Triple Rockets
 	Buildable:
@@ -114,6 +121,7 @@ Upgrade.e3fire:
 
 Upgrade.helifire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Apache Longbow - Sniper
 	Buildable:
@@ -131,6 +139,7 @@ Upgrade.helifire:
 		
 Upgrade.grenadefire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Grenadier - Bouncing Grenades
 	Buildable:
@@ -148,6 +157,7 @@ Upgrade.grenadefire:
 		
 Upgrade.flamerfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Flamethrower - Grenade Launcher
 	Buildable:
@@ -165,6 +175,7 @@ Upgrade.flamerfire:
 		
 Upgrade.ltnkfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Light Tank - Flak Cannon
 	Buildable:
@@ -182,6 +193,7 @@ Upgrade.ltnkfire:
 		
 Upgrade.artyfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Artillery - Quintuple Shot
 	Buildable:
@@ -199,6 +211,7 @@ Upgrade.artyfire:
 		
 Upgrade.mammofire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Mammoth Tank - Tusk Laser
 	Buildable:
@@ -216,6 +229,7 @@ Upgrade.mammofire:
         
 Upgrade.orbmfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Orca Hunter - Tusk Laser
 	Buildable:
@@ -234,6 +248,7 @@ Upgrade.orbmfire:
 		
 Upgrade.rmbofire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Commando - Dual Shot
 	Buildable:
@@ -251,6 +266,7 @@ Upgrade.rmbofire:
 		
 Upgrade.stnkfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Stealth Tank - Quick Re-Cloak
 	Buildable:
@@ -268,6 +284,7 @@ Upgrade.stnkfire:
 		
 Upgrade.e22fire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Mortar - Javelin
 	Buildable:
@@ -285,6 +302,7 @@ Upgrade.e22fire:
 
 Upgrade.chemfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Chemical Warrior - Rocket Launcher
 	Buildable:
@@ -302,6 +320,7 @@ Upgrade.chemfire:
 		
 Upgrade.tranfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Chinook Transport - Twin Rocket Launchers
 	Buildable:
@@ -319,6 +338,7 @@ Upgrade.tranfire:
         
 Upgrade.orcafire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Orca - TV Missiles
 	Buildable:
@@ -336,6 +356,7 @@ Upgrade.orcafire:
         
 Upgrade.hindfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Hind - Flame Bombs
 	Buildable:
@@ -353,6 +374,7 @@ Upgrade.hindfire:
         		
 Upgrade.mlrsfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Mobile S.A.M. - EMP Missiles
 	Buildable:
@@ -370,6 +392,7 @@ Upgrade.mlrsfire:
         		
 Upgrade.3tnkfire:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Heavy Tank - Rocket Pod
 	Buildable:
@@ -388,6 +411,7 @@ Upgrade.3tnkfire:
 
 Master.Upgrade.10k:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Master Upgrade - 10K
 	Buildable:
@@ -406,6 +430,7 @@ Master.Upgrade.10k:
 		
 Master.Upgrade.50k:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Master Upgrade - 50K
 	Buildable:
@@ -425,6 +450,7 @@ Master.Upgrade.50k:
 		
 Master.Upgrade.100k:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Master Upgrade - 100K
 	Buildable:
@@ -445,6 +471,7 @@ Master.Upgrade.100k:
         
 Master10k:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Master Upgrade - 10K
 	ProvidesPrerequisite@Master10k: 
@@ -452,6 +479,7 @@ Master10k:
 		
 Master50k:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Master Upgrade - 50K
 	ProvidesPrerequisite@Master50k: 

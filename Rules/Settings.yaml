@@ -1,21 +1,25 @@
 World:
 	LuaScript:
 		Scripts: script.lua
-	CrateSpawner:
-		Enabled: False
-		Locked: True
+	-CrateSpawner:
 	MapOptions:
 		ShortGameEnabled: True
 	SpawnMPUnits:
-		StartingUnitsClass: none
-		Locked: true
+		StartingUnitsClass: nexus
 	MapBuildRadius:
 		AllyBuildRadiusEnabled: False
-	MPStartUnits:
-		Class: none
+	MPStartUnits@nexus:
+		Class: nexus
 		Factions: gdi, nod
 		BaseActor: mcv
-		ClassName: Special Nexus Start
+		ClassName: Special Nexus Start	
+	-MPStartUnits@mcvonly:
+	-MPStartUnits@defaultgdia:
+	-MPStartUnits@defaultnoda:
+	-MPStartUnits@heavynoda:
+	-MPStartUnits@heavynodb:
+	-MPStartUnits@heavygdia:
+	-MPStartUnits@heavygdib:
 
 	
 ^Palettes:

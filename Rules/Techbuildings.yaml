@@ -1,5 +1,6 @@
 EXTRACASH:
 	Inherits: ^TechBuilding
+	Interactable:
 	CashTrickler:
 		Period: 50
 		Amount: 50
@@ -13,7 +14,7 @@ EXTRACASH:
 		Actor: V19.Husk
 	RenderSprites:
 		Image: V19
-	-Selectable:
+#	-Selectable:
 	-Targetable:
 	DamageMultiplier:
 		Modifier: 0
@@ -43,9 +44,9 @@ CASH:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 200
+		HP: 20000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -78,9 +79,9 @@ CASH2:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 300
+		HP: 30000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -114,9 +115,9 @@ CASH3:
 		Footprint: __ xx xx ==
 		Dimensions: 2,4
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 300
+		HP: 30000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -133,8 +134,8 @@ CASH3:
  
 OILER:
 	Inherits: ^BaseBuilding2
-	SelectionDecorations:
-		VisualBounds: 24,24,0,-3     
+#	SelectionDecorations:
+#		VisualBounds: 24,24,0,-3     
 	RenderSprites:
 		Image: oiler
 		PlayerPalette: raplayer
@@ -160,9 +161,9 @@ OILER:
 	Building:
 		Footprint: x
 		Dimensions: 1,1
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 200
+		HP: 20000
 	RevealsShroud:
 		Range: 5c0
 	Reservable:
@@ -176,8 +177,8 @@ OILER:
 OILER2:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x1Shape
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3 
 	RenderSprites:
 		Image: oiler2
 		PlayerPalette: raplayer
@@ -197,11 +198,11 @@ OILER2:
 		Footprint: __ xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	-Targetable:
 	-Sellable:
 	Health:
-		HP: 400
+		HP: 40000
 	RevealsShroud:
 		Range: 5c0
 	Reservable:
@@ -222,8 +223,8 @@ OILER2:
 ARRAY:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x1Shape
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3 
 	RenderSprites:
 		Image: array
 		PlayerPalette: raplayer
@@ -242,9 +243,9 @@ ARRAY:
 		Footprint: __ xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 1000
+		HP: 100000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -254,6 +255,7 @@ ARRAY:
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer 
 	Production:
+		RequiresCondition: !empdisable
 		Produces: Upgrade.Array
 	ProductionQueue@FactBuilding:
 		Type: Upgrade.Array
@@ -275,8 +277,8 @@ ARRAY:
 LABNEW:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3 
 	RenderSprites:
 		Image: bio
 	Valued:
@@ -293,9 +295,9 @@ LABNEW:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 500
+		HP: 50000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -312,8 +314,8 @@ LABNEW:
 NEWHOSP:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3 
 	RenderSprites:
 		Image: newhosp
 	Valued:
@@ -330,9 +332,9 @@ NEWHOSP:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 800
+		HP: 80000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -351,8 +353,8 @@ NEWHOSP:
 FORB:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x2Shape
-	SelectionDecorations:
-		VisualBounds: 72,72,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 72,72,0,-3 
 	RenderSprites:
 		Image: lfact
 		PlayerPalette: raplayer
@@ -370,9 +372,9 @@ FORB:
 	Building:
 		Footprint: ___ xxx xx= ===
 		Dimensions: 3,4
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 1000
+		HP: 100000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -382,7 +384,7 @@ FORB:
 	AirstrikePower@AirstrikeBomB:
 		Prerequisites: ~techlevel.superweapons
 		Icon: c17bombs
-		ChargeTime: 420
+		ChargeInterval: 10500
 		SquadSize: 4
 		QuantizedFacings: 2
 		SquadOffset: 0,1550,0
@@ -436,17 +438,17 @@ NUKENEW:
 		Footprint: _x xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 400
+		HP: 40000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
 	Reservable:
 	Power:
 		Amount: 0
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3 
 	ProvidesPrerequisite@self: 
 		Prerequisite: nukenew
 	ProvidesPrerequisite@tech0: 
@@ -467,17 +469,17 @@ LFACT:
 	Building:
 		Footprint: ___ xxx xx= ===
 		Dimensions: 3,4
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 2000
+		HP: 200000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
 	Reservable:
 	Power:
 		Amount: 0
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3
 	WithDeathAnimation:
 		DeathSequencePalette: raplayer
 	ProvidesPrerequisite@self: 
@@ -505,9 +507,9 @@ NUK2NEW:
 		Footprint: x_ xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 500
+		HP: 50000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -515,8 +517,8 @@ NUK2NEW:
 	Power:
 		Amount: 0
 	ProvidesRadar:
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3	
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3	
 	ProvidesPrerequisite@self: 
 		Prerequisite: nuk2new	
 		RequiresPrerequisites: nukenew
@@ -528,8 +530,8 @@ NUK2NEW:
 RADARNEW:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3 
 	RenderSprites:
 		Image: b2new
 	Valued:
@@ -546,9 +548,9 @@ RADARNEW:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 700
+		HP: 70000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -559,7 +561,7 @@ RADARNEW:
 		Prerequisites: ~techlevel.superweapons
 		Icon: ioncannon
 		Cursor: ioncannon
-		ChargeTime: 360
+		ChargeInterval: 9000
 		Description: Ion Cannon
 		LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
 		BeginChargeSound: ionchrg1.aud
@@ -584,8 +586,8 @@ RADARNEW:
 LAMMO:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x1Shape
-	SelectionDecorations:
-		VisualBounds: 24,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 24,60,0,-3 
 	RenderSprites:
 		Image: nukenew
 	Valued:
@@ -602,17 +604,17 @@ LAMMO:
 		Footprint: __ xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 600
+		HP: 60000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
 	Reservable:
 	Power:
 		Amount: 0
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3  
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3  
 	ProvidesPrerequisite@self: 
 		Prerequisite: lammo
 	ProvidesPrerequisite@tech0: 
@@ -623,8 +625,8 @@ LAMMO:
 HAMMO:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x3Shape
-	SelectionDecorations:
-		VisualBounds: 72,72,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 72,72,0,-3 
 	RenderSprites:
 		Image: nuk2new
 	Valued:
@@ -641,17 +643,17 @@ HAMMO:
 		Footprint: ___ xxx xxx ===
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 700
+		HP: 70000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
 	Reservable:
 	Power:
 		Amount: 0
-	SelectionDecorations:
-		VisualBounds: 72,64,0,-5
+#	SelectionDecorations:
+#		VisualBounds: 72,64,0,-5
 	ProvidesPrerequisite@self: 
 		Prerequisite: hammo
 		RequiresPrerequisites: lammo
@@ -662,8 +664,8 @@ HAMMO:
 FAMMO:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3 
 	RenderSprites:
 		Image: fixnew
 	Valued:
@@ -679,7 +681,7 @@ FAMMO:
 	AirstrikePower:
 		Prerequisites: ~techlevel.superweapons
 		Icon: airstrike
-		ChargeTime: 420
+		ChargeInterval: 10500
 		SquadSize: 5
 		QuantizedFacings: 2
 		SquadOffset: -1500,1936,0
@@ -704,9 +706,9 @@ FAMMO:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 1000
+		HP: 100000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -743,17 +745,17 @@ FLYTOW:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 500
+		HP: 50000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
 	Reservable:
 	Power:
 		Amount: 0
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3	
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3	
 	ProvidesPrerequisite@self: 
 		Prerequisite: flytow	
 	ProvidesPrerequisite@tech0: 
@@ -782,17 +784,17 @@ CFLARF:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 700
+		HP: 70000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
 	Reservable:
 	Power:
 		Amount: 0
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3	
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3	
 	ProvidesPrerequisite@self: 
 		Prerequisite: cflarf	
 		RequiresPrerequisites: flytow
@@ -822,9 +824,9 @@ DOME:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 100
+		HP: 10000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -832,8 +834,8 @@ DOME:
 	Power:
 		Amount: 0
 	ProvidesRadar:
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3	
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3	
 	ProvidesPrerequisite@self: 
 		Prerequisite: dome
 		RequiresPrerequisites: cflarf
@@ -846,7 +848,7 @@ DOME:
 	AirstrikePower@AirstrikeMiG
 		Prerequisites: ~techlevel.superweapons
 		Icon: mig
-		ChargeTime: 390
+		ChargeInterval: 9750
 		SquadSize: 3
 		QuantizedFacings: 2
 		SquadOffset: -512,1950,0
@@ -868,7 +870,7 @@ DOME:
 		ClockSequence: clock
 		CircleSequence: circles
 		AllowMultiple: true
-		OrderName: Bomberstrike
+		OrderName: Migstrike
 	SupportPowerChargeBar:   
 
 # -- neutral buildings capturable ---
@@ -876,8 +878,8 @@ DOME:
 MISSNEW:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x2Shape
-	SelectionDecorations:
-		VisualBounds: 72,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 72,60,0,-3 
 	RenderSprites:
 		Image: miss
 	Valued:
@@ -888,13 +890,13 @@ MISSNEW:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	-Targetable:
 	-Sellable:
 	DamageMultiplier:
 		Modifier: 0
 	Health:
-		HP: 1900
+		HP: 190000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -907,8 +909,8 @@ MISSNEW:
 FIXTECH:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3 
 	RenderSprites:
 		Image: fixtech
 	CashTrickler@empty:
@@ -923,11 +925,11 @@ FIXTECH:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	-Targetable:
 	-Sellable:
 	Health:
-		HP: 1900
+		HP: 190000
 	RevealsShroud:
 		Range: 5c0
 	Reservable:
@@ -941,8 +943,8 @@ FIXTECH:
 TMPLNEW:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x2Shape
-	SelectionDecorations:
-		VisualBounds: 72,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 72,60,0,-3 
 	RenderSprites:
 		Image: tmpl
 	Valued:
@@ -953,11 +955,11 @@ TMPLNEW:
 		Footprint: xxx xxx ===
 		Dimensions: 3,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	-Targetable:
 	-Sellable:
 	Health:
-		HP: 1900
+		HP: 190000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -972,8 +974,8 @@ TMPLNEW:
 SILLYONE:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^2x2Shape
-	SelectionDecorations:
-		VisualBounds: 48,60,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 48,60,0,-3 
 	RenderSprites:
 		Image: pdox
 		PlayerPalette: raplayer
@@ -992,9 +994,9 @@ SILLYONE:
 		Footprint: xx xx ==
 		Dimensions: 2,3
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 2000
+		HP: 200000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -1012,8 +1014,8 @@ SILLYONE:
 SILLYTWO:
 	Inherits: ^BaseBuilding2
 	Inherits@shape: ^3x2Shape
-	SelectionDecorations:
-		VisualBounds: 72,72,0,-3 
+#	SelectionDecorations:
+#		VisualBounds: 72,72,0,-3 
 	RenderSprites:
 		Image: stek
 		PlayerPalette: raplayer
@@ -1032,9 +1034,9 @@ SILLYTWO:
 		Footprint: ___ xxx xx= ===
 		Dimensions: 3,4
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 4000
+		HP: 400000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:
@@ -1055,8 +1057,8 @@ SILLYTHREE:
 	Inherits@shape: ^2x1Shape
 	Selectable:
 		Bounds: 48,28,0,2
-	SelectionDecorations:
-		VisualBounds: 50,50,0,-12
+#	SelectionDecorations:
+#		VisualBounds: 50,50,0,-12
 	RenderSprites:
 		Image: iron
 		PlayerPalette: raplayer
@@ -1075,9 +1077,9 @@ SILLYTHREE:
 		Footprint: xx ==
 		Dimensions: 2,2
 		LocalCenterOffset: 0,-512,0
-	-Selectable:
+#	-Selectable:
 	Health:
-		HP: 4000
+		HP: 400000
 	RevealsShroud:
 		Range: 5c0
 	WithBuildingBib:

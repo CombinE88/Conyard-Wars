@@ -1,7 +1,7 @@
 LargeHeliCrash:
 	Inherits: ^DamagingExplosion
 	Warhead@1Dam: SpreadDamage
-		Damage: 175
+		Damage: 17500
 		Spread: 1024
 	Warhead@2Eff: CreateEffect
 		Explosions: lexplosion
@@ -11,7 +11,7 @@ LargeHeliCrash:
 GiantHeliCrash:
 	Inherits: ^DamagingExplosion
 	Warhead@1Dam: SpreadDamage
-		Damage: 250
+		Damage: 25000
 		Spread: 1536
 	Warhead@2Eff: CreateEffect
 		Explosions: xlexplosion
@@ -30,7 +30,7 @@ M16tran:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 8
+		Damage: 800
 		InvalidTargets: Wall
 		ValidTargets: Air, Structure, Infantry
 		Versus:
@@ -53,7 +53,7 @@ HarvesterEat:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 12
+		Damage: 1200
 		InvalidTargets: Air
 		ValidTargets: Ground
 		Versus:
@@ -83,7 +83,7 @@ HarvesterEat:
 		ImpactSounds: xplos.aud
 	Warhead@Burst: SpreadDamage
 		Spread: 1c128
-		Damage: 40
+		Damage: 4000
 		Versus:
 			None: 110
 			Wood: 100
@@ -113,7 +113,7 @@ TOWMissile:
 			Wood: 100
 			Light: 100
 			Heavy: 75
-		Damage: 100
+		Damage: 10000
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_building
@@ -136,7 +136,7 @@ RangeSpray:
 		ContrailWidth: 16
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 80
+		Damage: 8000
 		ValidTargets: Ground
 		Versus:
 			None: 70
@@ -171,7 +171,7 @@ TranTow:
 			Wood: 33
 			Light: 40
 			Heavy: 100
-		Damage: 75
+		Damage: 7500
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: small_building
@@ -196,7 +196,7 @@ TVMissile:
 		ValidTargets: Air, Structure, Vehicle
 		Versus:
 			Heavy: 75
-		Damage: 225
+		Damage: 22500
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: poof
@@ -223,7 +223,7 @@ EMPSAMMissile:
 		ValidTargets: Air, Structure
 		Versus:
 			Heavy: 75
-		Damage: 75
+		Damage: 7500
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@emp: GrantExternalCondition
 		Range: 3c0
@@ -251,7 +251,7 @@ MLaser:
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 10
+		Damage: 1000
 		Versus:
 			Wood: 50
 			Heavy: 75
@@ -273,7 +273,7 @@ BigChemmer:
 	BurstDelays: 25
 	Warhead@1Dam: SpreadDamage
 		Spread: 1024
-		Damage: 75
+		Damage: 7500
 		InvalidTargets: Wall
 		ValidTargets: Ground, Trees
 		Versus:
@@ -294,7 +294,7 @@ IonCannonNew:
 	TargetActorCenter: true
 	Warhead@1Dam_impact: SpreadDamage
 		Range: 0, 1c1, 2c1, 2c512
-		Damage: 100
+		Damage: 10000
 		Falloff: 1000, 1000, 250, 100
 		ValidTargets: Vehicle, Infantry, Air
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -333,7 +333,7 @@ IonCannonNew:
 		RangeLimit: 8c409
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 60
+		Damage: 6000
 		ValidTargets: Ground, Air
 		Versus:
 			None: 25
@@ -367,7 +367,7 @@ Atomicnew:
 		Delay: 45
 	Warhead@1Dam_impact: SpreadDamage
 		Range: 1c1, 2c1, 3c1, 4c512
-		Damage: 500
+		Damage: 50000
 		Falloff: 100, 50, 25, 12
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -402,7 +402,7 @@ MegaArtillery:
 		Image: 120MM
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 150
+		Damage: 15000
 		Versus:
 			None: 100
 			Wood: 80
@@ -427,7 +427,7 @@ MegaArtillery:
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 30
+		Damage: 3000
 		Versus:
 			None: 25
 			Wood: 100
@@ -452,7 +452,7 @@ TurretGunNerfed:
 		Speed: 853
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 30
+		Damage: 3000
 		Versus:
 			None: 20
 			Wood: 25
@@ -475,7 +475,7 @@ BombsNoBuild:
 		Image: BOMBLET
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 50
+		Damage: 5000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Vehicle, Infantry
 		Versus:
@@ -502,7 +502,7 @@ VulcanNoBuild:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Vehicle, Infantry
 		Spread: 426
-		Damage: 100
+		Damage: 10000
 		Versus:
 			Wood: 15
 			Light: 100
@@ -517,7 +517,7 @@ HindChaingun:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 25
+		Damage: 2500
 		ValidTargets: Ground
 		Versus:
 			None: 100
@@ -550,7 +550,7 @@ HindRocketLoad:
 		Speed: 341
 	Warhead@1Dam: SpreadDamage
 		Spread: 683
-		Damage: 35
+		Damage: 3500
 		ValidTargets: Ground
 		Versus:
 			None: 35
@@ -583,7 +583,7 @@ HindFireBombs:
 		Speed: 290
 	Warhead@1Dam: SpreadDamage
 		Spread: 1c0
-		Damage: 65
+		Damage: 6500
 		ValidTargets: Ground
 		Versus:
 			None: 35
@@ -607,7 +607,7 @@ NapalmNoBuild:
 		Image: BOMBLET
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 50
+		Damage: 5000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Vehicle, Infantry
 		Versus:
@@ -647,7 +647,7 @@ Heavy227mm:
 		HomingActivationDelay: 10
 	Warhead@1Dam: SpreadDamage
 		Spread: 683
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Ground
 		Versus:
 			None: 35
@@ -688,7 +688,7 @@ Quad227mm:
 		HomingActivationDelay: 10
 	Warhead@1Dam: SpreadDamage
 		Spread: 683
-		Damage: 25
+		Damage: 2500
 		ValidTargets: Ground
 		Versus:
 			None: 35
@@ -717,7 +717,7 @@ MortarShell:
 		Image: BOMB
 	Warhead@1Dam: SpreadDamage
 		Spread: 400
-		Damage: 75
+		Damage: 7500
 		Versus:
 			None: 100
 			Wood: 50
@@ -750,7 +750,7 @@ HunterMissiles:
 		RangeLimit: 10c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Air, Vehicle, Structure
 		Versus:
 			None: 50
@@ -785,7 +785,7 @@ OrcaAGMissilesNew:
 		RangeLimit:7c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Vehicle, Structure
 		Versus:
 			None: 50
@@ -810,7 +810,7 @@ OrcaAAMissilesNew:
 		Speed: 298
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-		Damage: 20
+		Damage: 2000
 		Versus:
 			Light: 75
 			Heavy: 50
@@ -829,7 +829,7 @@ HeliAGGunNew:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Infantry, Light, Structure
 		Versus:
 			None: 100
@@ -853,7 +853,7 @@ HeliAGGunnoInf:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Structure, Light
 		Versus:
 			None: 100
@@ -874,7 +874,7 @@ HeliSnipe:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 400
+		Damage: 40000
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 
@@ -896,7 +896,7 @@ TowerMissleFT:
 		RateOfTurn: 100
 	Warhead@1Dam: SpreadDamage
 		Spread: 683
-		Damage: 32
+		Damage: 3200
 		ValidTargets: Ground
 		Versus:
 			None: 50
@@ -925,7 +925,7 @@ TowerAAMissileFT:
 		Inaccuracy: 0
 	Warhead@1Dam: SpreadDamage
 		Spread: 682
-		Damage: 35
+		Damage: 3500
 		ValidTargets: Air
 		Versus:
 			None: 100
@@ -963,7 +963,7 @@ StageBursts:
 		ValidTargets: Ground, Air
 		Versus:
 			Heavy: 55
-		Damage: 20
+		Damage: 2000
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
@@ -986,7 +986,7 @@ FlakCannon:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 		Spread: 428
-		Damage: 10
+		Damage: 1000
 		Versus:
 			None: 100
 			Wood: 100
@@ -1023,7 +1023,7 @@ Cashgun:
 	Warhead@3Dam: SpreadDamage
 		Delay: 60
 		Spread: 1c682
-		Damage: 15
+		Damage: 1500
 		ValidTargets: Ground
 		Versus:
 			None: 70
@@ -1059,7 +1059,7 @@ FSODWeapon:
 	Warhead@3Dam: SpreadDamage
 		Delay: 35
 		Spread: 3c42
-		Damage: 150
+		Damage: 15000
 		ValidTargets: Ground
 		Versus:
 			Wood: 50
@@ -1078,7 +1078,7 @@ NewVulcan:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Ground, Water
 		Versus:
 			None: 30
@@ -1104,7 +1104,7 @@ NewNapalm:
 		Image: BOMBLET
 	Warhead@1Dam: SpreadDamage
 		Spread: 641
-		Damage: 50
+		Damage: 5000
 		Versus:
 			None: 50
 			Wood: 40
@@ -1139,7 +1139,7 @@ BossRockets:
 		ValidTargets: Ground, Air
 		Versus:
 			Heavy: 55
-		Damage: 35
+		Damage: 3500
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
@@ -1158,7 +1158,7 @@ QuickLaser:
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 500
+		Damage: 50000
 		ValidTargets: Ground
 		Versus:
 			Wood: 25
@@ -1183,7 +1183,7 @@ PortableIoncannon:
 		Delay: 25
 	Warhead@1Dam_impact: SpreadDamage
 		Range: 0, 1c1, 2c1, 2c512
-		Damage: 325
+		Damage: 32500
 		Falloff: 100, 50, 25, 12
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -1213,7 +1213,7 @@ AngryEater:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
-		Damage: 10
+		Damage: 1000
 		InvalidTargets: Wall
 		Versus:
 			None: 100
@@ -1247,7 +1247,7 @@ C17Shell:
 		Shadow: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 641
-		Damage: 200
+		Damage: 20000
 		Versus:
 			None: 100
 			Wood: 80
@@ -1274,7 +1274,7 @@ flyinggunmg:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 10
+		Damage: 1000
 		ValidTargets: Ground, Air
 		Versus:
 			None: 100
@@ -1298,7 +1298,7 @@ Movoblila:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		ValidTargets: Ground, Air
-		Damage: 360
+		Damage: 36000
 		Versus:
 			Wood: 50
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -1327,7 +1327,7 @@ TrippelRockets:
 		HomingActivationDelay: 5
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 35
+		Damage: 3500
 		ValidTargets: Ground, Air
 		Versus:
 			None: 20
@@ -1356,7 +1356,7 @@ TrippelRockets:
 		Inaccuracy: 1c938
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 230
+		Damage: 23000
 		Versus:
 			None: 90
 			Wood: 40
@@ -1382,7 +1382,7 @@ TrippelRockets:
 		ContrailLength: 30
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: 25
+		Damage: 2500
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 60
@@ -1401,7 +1401,7 @@ TrippelRockets:
 		Shadow: True
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 20
+		Damage: 2000
 		Versus:
 			None: 20
 			Wood: 75
@@ -1442,7 +1442,7 @@ BadrBombs:
 			Wood: 100
 			Light: 100
 			Heavy: 75
-		Damage: 55
+		Damage: 5500
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: building
@@ -1460,7 +1460,7 @@ BadrBombs:
 		Inaccuracy: 0c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 265
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Air, Structure
 		Versus:
 			None: 40
@@ -1482,7 +1482,7 @@ ZSU-23:
 	Projectile: Bullet
 		Speed: 3c340
 	Warhead@1Dam: SpreadDamage
-		Damage: 8
+		Damage: 800
 		Versus:
 			None: 30
 			Wood: 75
@@ -1510,7 +1510,7 @@ Torpedo:
 		CruiseAltitude: 0
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 80
+		Damage: 8000
 		ValidTargets: Ground
 		Versus:
 			None: 30
@@ -1548,7 +1548,7 @@ Minelauncher:
 			Wood: 100
 			Light: 100
 			Heavy: 75
-		Damage: 32
+		Damage: 3200
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: building
@@ -1579,7 +1579,7 @@ MinelauncherAir:
 			Wood: 100
 			Light: 100
 			Heavy: 75
-		Damage: 100
+		Damage: 10000
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: building
@@ -1595,7 +1595,7 @@ Sniper:
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 400
+		Damage: 40000
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 		
@@ -1611,7 +1611,7 @@ DualSniper:
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 400
+		Damage: 40000
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 		
@@ -1625,7 +1625,7 @@ Sniperlevia:
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 400
+		Damage: 40000
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 		
@@ -1665,7 +1665,7 @@ MammothMissilesLevia:
 		LaunchAngle: 100
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
-		Damage: 25
+		Damage: 2500
 		Versus:
 			None: 50
 			Wood: 75
@@ -1702,7 +1702,7 @@ Sixteen227mm:
 		Speed: 341
 	Warhead@1Dam: SpreadDamage
 		Spread: 683
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Ground
 		Versus:
 			None: 35
@@ -1729,7 +1729,7 @@ LeviAutoCannon:
 		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground, Air
-		Damage: 15
+		Damage: 1500
 		Spread: 265
 		Versus:
 			None: 60
@@ -1768,7 +1768,7 @@ Leviathan120mmSplash:
 		ImpactSounds: flamer2.aud
 	Warhead@Burst: SpreadDamage
 		Spread: 0c528
-		Damage: 30
+		Damage: 3000
 		Versus:
 			None: 110
 			Wood: 100
@@ -1798,7 +1798,7 @@ LeviathanATmiss:
 		LaunchAngle: 100
 	Warhead@1Dam: SpreadDamage
 		Spread: 683
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Ground
 		Versus:
 			None: 50
@@ -1827,7 +1827,7 @@ ArtilleryShellLeviathan:
 		ContrailLength: 30
 	Warhead@1Dam: SpreadDamage
 		Spread: 641
-		Damage: 85
+		Damage: 8500
 		Versus:
 			None: 100
 			Wood: 80
@@ -1855,7 +1855,7 @@ ArtilleryShellOFive:
 		ContrailLength: 30
 	Warhead@1Dam: SpreadDamage
 		Spread: 421
-		Damage: 130
+		Damage: 13000
 		Versus:
 			None: 100
 			Wood: 80
@@ -1902,7 +1902,7 @@ TOWMissileLeviathan:
 			Wood: 100
 			Light: 100
 			Heavy: 75
-		Damage: 175
+		Damage: 17500
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: small_building
@@ -1922,7 +1922,7 @@ GrenadeBag:
 		LaunchAngle: 112
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 50
+		Damage: 5000
 		Versus:
 			None: 100
 			Wood: 50
@@ -1972,7 +1972,7 @@ FlameGrenade:
 		ContrailUsePlayerColor: true
 	Warhead@1Dam: SpreadDamage
 		Spread: 468
-		Damage: 40
+		Damage: 4000
 		ValidTargets: Ground, Water, Trees
 		InvalidTargets: Wall
 		Versus:
@@ -1997,7 +1997,7 @@ FlameGrenade:
 	Projectile: Bullet
 		Speed: 853
 	Warhead@1Dam: SpreadDamage
-		Damage: 18
+		Damage: 1800
 		Versus:
 			None: 25
 			Wood: 75
@@ -2032,7 +2032,7 @@ TuskLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		ValidTargets: Ground, Air
-		Damage: 60
+		Damage: 6000
 		Versus:
 			Wood: 50
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -2054,7 +2054,7 @@ HunterTuskLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		ValidTargets: Ground, Air
-		Damage: 60
+		Damage: 6000
 		Versus:
 			Wood: 50
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -2097,7 +2097,7 @@ JevalinMissile:
 			Wood: 50
 			Light: 100
 			Heavy: 100
-		Damage: 130
+		Damage: 13000
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: big_frag
@@ -2140,7 +2140,7 @@ MigMissile:
 			Wood: 50
 			Light: 100
 			Heavy: 100
-		Damage: 95
+		Damage: 9500
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: Crater
@@ -2183,7 +2183,7 @@ JevalinMissileAir:
 			Wood: 50
 			Light: 100
 			Heavy: 100
-		Damage: 75
+		Damage: 7500
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: big_frag
@@ -2198,7 +2198,7 @@ LtnkFlakGun:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 15
+		Damage: 1500
 		Versus:
 			None: 50
 			Wood: 25
@@ -2218,7 +2218,7 @@ LtnkFlakAA:
 		Blockable: false
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 15
+		Damage: 1500
 		ValidTargets: Air
 		Versus:
 			None: 100
@@ -2239,7 +2239,7 @@ MiniTusks:
 		RangeLimit: 6c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
-		Damage: 35
+		Damage: 3500
 		Versus:
 			None: 50
 			Wood: 75

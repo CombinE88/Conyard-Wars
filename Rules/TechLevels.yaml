@@ -2782,6 +2782,7 @@ OILER2T3:
         
 OILER2BUILDABLE:
 	AlwaysVisible:
+	Interactable:
 	Tooltip:
 		Name: Activate Lane Oil Pumping
 	Buildable:

@@ -69,7 +69,7 @@ RMBONEW:
 	Inherits: ^Soldier
 	RenderSprites:
 		Image: rmbo
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -85,7 +85,7 @@ RMBONEW:
 	Guard:
 		Voice: Move
 	Health:
-		HP: 150
+		HP: 15000
 	Passenger:
 		PipType: Red
 		Voice: Move
@@ -179,7 +179,7 @@ E1New:
 		ZOffset: 256
 		ValidStances: ally, enemy, neutral
 	Inherits: ^Soldier
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: e1
 	Valued:
@@ -194,7 +194,7 @@ E1New:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 50
+		HP: 5000
 	Armament@m16:
 		Weapon: M16
 		RequiresCondition: !e1fire
@@ -210,7 +210,7 @@ E1New:
 
 PLACEHOLDER:
 	Inherits: ^Vehicle
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: placeholder
 	Valued:
@@ -225,7 +225,7 @@ PLACEHOLDER:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 1
+		HP: 100
 	AttackFrontal:  
   
 E2New:
@@ -287,7 +287,7 @@ E2New:
 		ZOffset: 256
 		ValidStances: ally, enemy, neutral
 	Inherits: ^Soldier
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: e2
 	Valued:
@@ -302,7 +302,7 @@ E2New:
 	Mobile:
 		Speed: 71
 	Health:
-		HP: 50
+		HP: 5000
 	Armament:
 		Weapon: Grenade
 		LocalOffset: 0,0,427
@@ -396,7 +396,7 @@ E22New:
 		ZOffset: 256
 		ValidStances: ally, enemy, neutral
 	Inherits: ^Soldier
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: e22
 		PlayerPalette: raplayer
@@ -414,7 +414,7 @@ E22New:
 	Mobile:
 		Speed: 34
 	Health:
-		HP: 75
+		HP: 7500
 	Armament:
 		Weapon: MortarShell
 		LocalOffset: 200,0,10
@@ -506,7 +506,7 @@ E3New:
 		ZOffset: 256
 		ValidStances: ally, enemy, neutral
 	Inherits: ^Soldier
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: e3
 	Valued:
@@ -521,7 +521,7 @@ E3New:
 	Mobile:
 		Speed: 42
 	Health:
-		HP: 45
+		HP: 4500
 	AutoTarget:
 		ScanRadius: 6
 	Armament:
@@ -598,7 +598,7 @@ E4New:
 		ZOffset: 256
 		ValidStances: ally, enemy, neutral
 	Inherits: ^Soldier
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: e4
 	Valued:
@@ -613,7 +613,7 @@ E4New:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 90
+		HP: 9000
 	Armament:
 		Weapon: Flamethrower
 		LocalOffset: 341,0,256
@@ -691,7 +691,7 @@ E5New:
 		ZOffset: 256
 		ValidStances: ally, enemy, neutral
 	Inherits: ^Soldier
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: e5
 	Valued:
@@ -706,7 +706,7 @@ E5New:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 110
+		HP: 11000
 	Armament:
 		Weapon: Chemspray
 		LocalOffset: 341,0,256
@@ -725,7 +725,7 @@ E5New:
 	RejectsOrders:
 	
 VICE:
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 	GrantConditionOnPrerequisite@e5Damage:
 		Condition: e5Damage
@@ -833,7 +833,7 @@ JEEPNEW:
 	Inherits: ^Vehicle
 	RenderSprites:
 		Image: jeep
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -849,7 +849,7 @@ JEEPNEW:
 		TurnSpeed: 10
 		Speed: 156
 	Health:
-		HP: 160
+		HP: 16000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -871,8 +871,8 @@ JEEPNEW:
 	AutoTarget:
 	SpawnActorOnDeath:
 		Actor: JEEP.Husk
-	SelectionDecorations:
-		VisualBounds: 32,32
+#	SelectionDecorations:
+#		VisualBounds: 32,32
 	RejectsOrders:
  
 BGGYNEW:
@@ -937,7 +937,7 @@ BGGYNEW:
 	Inherits: ^Vehicle
 	RenderSprites:
 		Image: bggy
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -953,7 +953,7 @@ BGGYNEW:
 		TurnSpeed: 10
 		Speed: 156
 	Health:
-		HP: 160
+		HP: 16000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -975,8 +975,8 @@ BGGYNEW:
 	AutoTarget:
 	SpawnActorOnDeath:
 		Actor: BGGY.Husk
-	SelectionDecorations:
-		VisualBounds: 32,32
+#	SelectionDecorations:
+#		VisualBounds: 32,32
 	RejectsOrders:
  
 MTNKNEW:
@@ -1042,7 +1042,7 @@ MTNKNEW:
 		ValidStances: ally, enemy, neutral
 	RenderSprites:
 		Image: mtnk
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -1055,7 +1055,7 @@ MTNKNEW:
 	Mobile:
 		Speed: 85
 	Health:
-		HP: 425
+		HP: 42500
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1082,8 +1082,8 @@ MTNKNEW:
 	AutoTarget:
 	SpawnActorOnDeath:
 		Actor: MTNK.Husk
-	SelectionDecorations:
-		VisualBounds: 32,32
+#	SelectionDecorations:
+#		VisualBounds: 32,32
 	RejectsOrders:
 	
 NEW3TNK:
@@ -1150,7 +1150,7 @@ NEW3TNK:
 	RenderSprites:
 		Image: new3tnk
 		PlayerPalette: raplayer
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -1163,7 +1163,7 @@ NEW3TNK:
 	Mobile:
 		Speed: 70
 	Health:
-		HP: 725
+		HP: 72500
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1196,8 +1196,8 @@ NEW3TNK:
 	AutoTarget:
 	SpawnActorOnDeath:
 		Actor: MTNK.Husk
-	SelectionDecorations:
-		VisualBounds: 32,32
+#	SelectionDecorations:
+#		VisualBounds: 32,32
 	RejectsOrders:
 
 HTNKNEW:
@@ -1263,7 +1263,7 @@ HTNKNEW:
 		ValidStances: ally, enemy, neutral
 	RenderSprites:
 		Image: htnk
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -1278,7 +1278,7 @@ HTNKNEW:
 		Speed: 56
 		TurnSpeed: 3
 	Health:
-		HP: 1400
+		HP: 140000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1323,8 +1323,8 @@ HTNKNEW:
 		DamageCooldown: 200
 	SpawnActorOnDeath:
 		Actor: HTNK.Husk
-	SelectionDecorations:
-		VisualBounds: 34,34,0,-3
+#	SelectionDecorations:
+#		VisualBounds: 34,34,0,-3
 	RejectsOrders:
 
 MSAMNEW:
@@ -1388,7 +1388,7 @@ MSAMNEW:
 		ValidStances: ally, enemy, neutral
 	RenderSprites:
 		Image: msam
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -1404,7 +1404,7 @@ MSAMNEW:
 		Speed: 85
 		TurnSpeed: 4
 	Health:
-		HP: 120
+		HP: 12000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1436,8 +1436,6 @@ MSAMNEW:
 	AutoTarget:
 	SpawnActorOnDeath:
 		Actor: MSAM.Husk
-	CustomSelectionSize:
-		CustomBounds: 36,36,0,-5
 	RejectsOrders:
 
 HELINEW:
@@ -1520,7 +1518,7 @@ HELINEW:
 		Speed: 186
 		RepulsionSpeed: 700
 	Health:
-		HP: 125
+		HP: 12500
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1570,7 +1568,7 @@ HELINEW:
 	Explodes:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 
 ORCANEW:
@@ -1653,7 +1651,7 @@ ORCANEW:
 		Speed: 186
 		RepulsionSpeed: 600
 	Health:
-		HP: 90
+		HP: 9000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1700,7 +1698,7 @@ ORCANEW:
 		EmptyWeapon: HeliExplode
 	WithMoveAnimation:
 		MoveSequence: move
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
     
 
@@ -1784,7 +1782,7 @@ ORCAHUNTER:
 		Speed: 186
 		RepulsionSpeed: 600
 	Health:
-		HP: 215
+		HP: 21500
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1824,7 +1822,7 @@ ORCAHUNTER:
 		EmptyWeapon: HeliExplode
 	WithMoveAnimation:
 		MoveSequence: move
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
     
 ORCAHUNTER.Husk:
@@ -1946,7 +1944,7 @@ HINDNEW:
 		Speed: 116
 		RepulsionSpeed: 600
 	Health:
-		HP: 210
+		HP: 21000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -2006,10 +2004,10 @@ HINDNEW:
 	Explodes:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
-	SelectionDecorations:
-		VisualBounds: 38,32
+#	SelectionDecorations:
+#		VisualBounds: 38,32
 	WithMuzzleOverlay:
 	SmokeTrailWhenDamaged:
 		Offset: -427,0,0
@@ -2115,7 +2113,7 @@ STNKNEW:
 		Speed: 142
 		Crushes: crate, infantry
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2143,7 +2141,7 @@ STNKNEW:
 	SpawnActorOnDeath:
 		Actor: STNK.Husk
 	-MustBeDestroyed:
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 BIKENEW:
 	Inherits: ^Vehicle
@@ -2205,7 +2203,7 @@ BIKENEW:
 		Palette: effect
 		ZOffset: 256
 		ValidStances: ally, enemy, neutral
-	-Selectable:
+#	-Selectable:
 	RenderSprites:
 		Image: ltnk
 	Valued:
@@ -2223,7 +2221,7 @@ BIKENEW:
 		TurnSpeed: 7
 		Speed: 130
 	Health:
-		HP: 325
+		HP: 32500
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2334,7 +2332,7 @@ MLRSNEW:
 		ValidStances: ally, enemy, neutral
 	RenderSprites:
 		Image: mlrs
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -2350,7 +2348,7 @@ MLRSNEW:
 		Speed: 99
 		TurnSpeed: 7
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: Light
 	RevealsShroud@normal:
@@ -2452,7 +2450,7 @@ ARTYNEW:
 		ValidStances: ally, enemy, neutral
 	RenderSprites:
 		Image: arty
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Targetable:
@@ -2468,7 +2466,7 @@ ARTYNEW:
 		TurnSpeed: 2
 		Speed: 85
 	Health:
-		HP: 75
+		HP: 7500
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -2558,7 +2556,7 @@ FTNKNEW:
 		ValidStances: ally, enemy, neutral
 	RenderSprites:
 		Image: ftnk
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -2572,7 +2570,7 @@ FTNKNEW:
 		TurnSpeed: 7
 		Speed: 99
 	Health:
-		HP: 200
+		HP: 20000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -2595,8 +2593,8 @@ FTNKNEW:
 		EmptyWeapon: FlametankExplode
 	SpawnActorOnDeath:
 		Actor: FTNK.Husk
-	SelectionDecorations:
-		VisualBounds: 32,32
+#	SelectionDecorations:
+#		VisualBounds: 32,32
 	RejectsOrders:
 
 FATWR:
@@ -2658,7 +2656,7 @@ FATWR:
 	Tooltip:
 		Name: Flying Advanced Guard Tower
 	Health:
-		HP: 290
+		HP: 29000
 	Buildable:
 		BuildDuration: 5500
 		BuildPaletteOrder: 60
@@ -2706,7 +2704,7 @@ FATWR:
 		SelfReloads: true
 		ReloadCount: 20
 		SelfReloadDelay: 200
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 
 TMPLANGEL:
@@ -2770,7 +2768,7 @@ TMPLANGEL:
 	Tooltip:
 		Name: Temple Angel
 	Health:
-		HP: 365
+		HP: 36500
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -2800,7 +2798,7 @@ TMPLANGEL:
 		SelfReloads: true
 		ReloadCount: 1
 		SelfReloadDelay: 1
-	-Selectable:
+#	-Selectable:
 	SpawnActorOnDeath:
 		Actor: TMPLANGEL.Husk
 	RejectsOrders:
@@ -2866,7 +2864,7 @@ GUNTANK:
 		TurnSpeed: 4
 		Speed: 46
 	Health:
-		HP: 450
+		HP: 45000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -2902,7 +2900,7 @@ GUNTANK:
 		Turret: turr3
 		Sequence: spinneridle
 		AimSequence: spinner1
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 
 MOICO:
@@ -2966,7 +2964,7 @@ MOICO:
 		TurnSpeed: 5
 		Speed: 56
 	Health:
-		HP: 350
+		HP: 35000
 	Armor:
 		Type: Heavy
 	Armament:
@@ -2989,7 +2987,7 @@ MOICO:
 		Sequence: turret
 		AimSequence: attack
 		Turret: turr1
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 
 FGTWRH.Husk:
@@ -3044,6 +3042,7 @@ TMPLANGEL.Husk:
 
 A10STRIKER:
 	Inherits: ^Plane
+	Interactable:
 	HitShape:
 	Tooltip:
 		Name: A10 Bomber
@@ -3056,7 +3055,7 @@ A10STRIKER:
 		Speed: 373
 		Repulsable: False
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: Heavy
 	AttackBomber:
@@ -3081,6 +3080,7 @@ A10STRIKER:
         
 MIGFIGHTER:
 	Inherits: ^Plane
+	Interactable:
 	HitShape:
 	Tooltip:
 		Name: Mig
@@ -3094,7 +3094,7 @@ MIGFIGHTER:
 		Speed: 273
 		Repulsable: False
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: Heavy
 	AttackBomber:
@@ -3116,12 +3116,14 @@ MIGFIGHTER:
 		
 C17:
 	HitShape:
+	Interactable:
 	Health:
-		HP: 25
+		HP: 2500
 		
 C17BOMB:
 	Inherits: ^Plane
 	HitShape:
+	Interactable:
 	RenderSprites:
 		Image: C17
 	Tooltip:
@@ -3136,7 +3138,7 @@ C17BOMB:
 		MaximumPitch: 36
 		RepulsionSpeed: 300
 	Health:
-		HP: 25
+		HP: 2500
 	Armor:
 		Type: Heavy
 	AttackBomber:
@@ -3243,7 +3245,7 @@ TRANNEW:
 	DetectCloaked:
 		Range: 6c0
 	Health:
-		HP: 90
+		HP: 9000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -3307,7 +3309,7 @@ TRANNEW:
 	Explodes:
 		Weapon: HeliExplode
 		EmptyWeapon: HeliExplode
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 	
 # --- sillyunits ---
@@ -3320,7 +3322,7 @@ SILLYCA:
 	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 	
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 	RenderSprites:
 		Image: ca
@@ -3340,7 +3342,7 @@ SILLYCA:
 	Tooltip:
 		Name: Cruiser
 	Health:
-		HP: 400
+		HP: 40000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -3374,8 +3376,8 @@ SILLYCA:
 		RequiresCondition: !empdisable
 	AttackTurreted:
 	WithMuzzleOverlay:
-	SelectionDecorations:
-		VisualBounds: 44,44
+#	SelectionDecorations:
+#		VisualBounds: 44,44
 	WithSpriteTurret@PRIMARY:
 		Turret: primary
 	WithSpriteTurret@SECONDARY:
@@ -3466,15 +3468,15 @@ HARVNEW:
 	Mobile:
 		Speed: 85
 	Health:
-		HP: 2800
+		HP: 280000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
 		Range: 4c0
 	SpawnActorOnDeath:
 		Actor: HARV.Husk
-	SelectionDecorations:
-		VisualBounds: 36,36
+#	SelectionDecorations:
+#		VisualBounds: 36,36
 	WithAttackAnimation:
 		AttackSequence: harvest
 	Armament@PRIMARY:
@@ -3482,7 +3484,7 @@ HARVNEW:
 	AttackFrontal:	
 	AutoTarget:
 		ScanRadius: 5
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 
 	
@@ -3494,7 +3496,7 @@ SILLYBADR:
 	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 	
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 	RenderSprites:
 		Image: badr
@@ -3514,7 +3516,7 @@ SILLYBADR:
 	Tooltip:
 		Name: Rocket Bomber
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -3561,8 +3563,8 @@ SILLYBADR:
 	AttackTurreted:
 		Armaments: primary, secondary, third, fourth
 	WithMuzzleOverlay:
-	SelectionDecorations:
-		VisualBounds: 44,44
+#	SelectionDecorations:
+#		VisualBounds: 44,44
 	WithSpriteTurret@PRIMARY:
 		Turret: primary
 	WithSpriteTurret@SECONDARY:
@@ -3661,7 +3663,7 @@ FLAGPLAT:
 	RenderSprites:
 		Image: flagplat
 		PlayerPalette: raplayer
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -3676,7 +3678,7 @@ FLAGPLAT:
 		TurnSpeed: 3
 		Crushes: wall, heavywall, crate, infantry, Tank, Car, Husk
 	Health:
-		HP: 1400
+		HP: 140000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -3721,8 +3723,8 @@ FLAGPLAT:
 		Armaments: first, second, third
 	WithMuzzleOverlay:
 	AutoTarget:
-	SelectionDecorations:
-		VisualBounds: 34,34,0,-3
+#	SelectionDecorations:
+#		VisualBounds: 34,34,0,-3
 	RejectsOrders:
 	WithSpriteTurret@tracks2:
 		Sequence: tracks
@@ -3791,7 +3793,7 @@ SUBWAY:
 	RenderSprites:
 		Image: ss
 		PlayerPalette: raplayer
-	-Selectable:
+#	-Selectable:
 	Valued:
 		Cost: 0
 	Tooltip:
@@ -3804,7 +3806,7 @@ SUBWAY:
 	Mobile:
 		Speed: 80
 	Health:
-		HP: 450
+		HP: 45000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -3814,8 +3816,8 @@ SUBWAY:
 		LocalOffset: 0,-171,0, 0,171,0
 		FireDelay: 2
 	AttackFrontal:
-	SelectionDecorations:
-		VisualBounds: 38,38
+#	SelectionDecorations:
+#		VisualBounds: 38,38
 	Cloak:
 		InitialDelay: 0
 		CloakDelay: 20
@@ -3833,7 +3835,7 @@ LSTNEW:
 	Inherits@3: ^AutoTargetAll
 	Inherits: ^EMPNoGuns
 
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 	RenderSprites:
 		Image: flyinglst
@@ -3847,7 +3849,7 @@ LSTNEW:
 		Queue: Silly6.Fact
 		Description: Landing Craft
 	Health:
-		HP: 650
+		HP: 65000
 	Armor:
 		Type: Heavy
 	RevealsShroud:

@@ -22,9 +22,8 @@ SAM:
 	Building:
 		Footprint: xx
 		Dimensions: 2,1
-	RequiresPower:
 	Health:
-		HP: 1300
+		HP: 130000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -34,8 +33,7 @@ SAM:
 		InitialFacing: 0
 		RealignDelay: -1
 	-WithSpriteBody:
-	WithTurretedSpriteBody:
-	AutoSelectionSize:
+	WithEmbeddedTurretSpriteBody:
 	Armament:
 		Weapon: Dragon
 		MuzzleSequence: muzzle
@@ -63,7 +61,7 @@ GUN:
 		Description: Basic Anti-Tank base defense.\n  Strong vs Tanks, Vehicles\n  Weak vs Infantry, Air
 	Building:
 	Health:
-		HP: 1500
+		HP: 150000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -142,11 +140,10 @@ OBLI:
 	-Sellable:
 	Selectable:
 		Bounds: 24,24,0,12
-	SelectionDecorations: 
-		VisualBounds: 22,42
-	RequiresPower:
+#	SelectionDecorations: 
+#		VisualBounds: 22,42
 	Health:
-		HP: 1500
+		HP: 150000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -184,7 +181,7 @@ GTWR:
 		Description: Basic base defense.\n  Strong vs Infantry\n  Weak vs Tanks
 	Building:
 	Health:
-		HP: 1500
+		HP: 150000
 	RevealsShroud:
 		Range: 7c0
 	WithBuildingBib:
@@ -256,11 +253,10 @@ ATWR:
 	-Sellable:
 	Selectable:
 		Bounds: 24,24,0,12
-	SelectionDecorations:
-		VisualBounds: 24,48,0,-3
-	RequiresPower:
+#	SelectionDecorations:
+#		VisualBounds: 24,48,0,-3
 	Health:
-		HP: 1500
+		HP: 150000
 	Armor:
 		Type: Heavy
 	RevealsShroud:

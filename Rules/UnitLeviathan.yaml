@@ -9,7 +9,7 @@ LEVIATHAN:
 	RenderSprites:
 		Image: leviathan
 	-Crushable:
-	-Selectable:
+#	-Selectable:
 	RejectsOrders:
 	Valued:
 		Cost: 0
@@ -26,7 +26,7 @@ LEVIATHAN:
 		TurnSpeed: 3
 		Crushes: wall, heavywall, crate, infantry, Tank, Car, Husk
 	Health:
-		HP: 2050
+		HP: 205000
 	Armor:
 		Type: Heavy
 		
@@ -848,8 +848,8 @@ LEVIATHAN:
 	WithMuzzleOverlay:
 	AutoTarget:
 		ScanRadius: 12
-	SelectionDecorations:
-		VisualBounds: 72,72,0,-3
+#	SelectionDecorations:
+#		VisualBounds: 72,72,0,-3
 	SpawnActorOnDeath:
 		Actor: LEVIATHAN.Husk
 	ProvidesPrerequisite@buildingname:
@@ -948,7 +948,7 @@ LEVIATHAN.Husk:
 	RenderSprites:
 		Image: leviathan
 	Health:
-		HP: 450
+		HP: 45000
 	SmokeTrailWhenDamaged@Explode1:
 		Offset: -512,1230,0
 		Interval: 19
@@ -983,7 +983,8 @@ LEVIATHAN.Husk:
 
 PLACEHOLDERLEVI:
 	Inherits: ^Vehicle
-	-Selectable:
+	Interactable:
+#	-Selectable:
 	RenderSprites:
 		Image: levifinish
 	Valued:
@@ -1004,7 +1005,8 @@ PLACEHOLDERLEVI:
 	
 PLACEHOLDSECONDLEV:
 	Inherits: ^Vehicle
-	-Selectable:
+	Interactable:
+#	-Selectable:
 	RenderSprites:
 		Image: leviextra
 	Valued:

@@ -20,7 +20,8 @@ Player:
 			Power: 
 			Barracks: fact2
 			VehiclesFactory: fact2
-			Production: fact2
+			Production:
+		RequiresCondition: !empdisable fact2
 			Silos:
 		BuildingQueues: Building.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact, Infantry1.Fact, Upgrade.Array, Defenses.Fact 
 		DefenseQueues: 
@@ -453,7 +454,8 @@ Player:
 			Power: 
 			Barracks: fact2
 			VehiclesFactory: fact2
-			Production: fact2
+			Production:
+		RequiresCondition: !empdisable fact2
 			Silos:
 		BuildingQueues: Building.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact, Infantry1.Fact, Upgrade.Array, Defenses.Fact 
 		DefenseQueues: 
@@ -886,7 +888,8 @@ Player:
 			Power: 
 			Barracks: fact2
 			VehiclesFactory: fact2
-			Production: fact2
+			Production:
+		RequiresCondition: !empdisable fact2
 			Silos:
 		BuildingQueues: Building.Fact, Infantry.Fact, Vehicle.Fact, Aircraft.Fact, Infantry1.Fact, Upgrade.Array, Defenses.Fact 
 		DefenseQueues: 
